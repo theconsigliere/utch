@@ -1,0 +1,115 @@
+.tab-section {
+  padding: 5vh 0;
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 10vh 0;
+  }
+}
+
+.tabs {
+  @include start-between;
+  flex-wrap: wrap;
+}
+
+
+.tab-input {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  margin: 0.4rem 0;
+
+  @media (min-width: #{$screen-xl}) {
+    width: 48%;
+  }
+
+
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: $light-white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+
+    * {
+      margin: 0;
+    }
+
+    /* Icon */
+    &:hover {
+      background: darken($light-white, 10%);
+    }
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all 0.6s ease;
+      color: $black;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: $black;
+    background: $light-white;
+    transition: all 0.6s ease;
+    margin: 0 !important;
+
+    p {
+      max-width: 95%;
+      text-align: left;
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+  }
+
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: $light-white;
+    cursor: pointer;
+    &:hover {
+      background: darken($light-white, 10%);
+    }
+  }
+}
+
+// :checked
+input:checked {
+  + .tab-label {
+    background: darken($light-white, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+
+    p {
+      opacity: 1;
+    }
+  }
+}
+
+.tabs-button {
+  width: 100%;
+  padding-top: 5vh;
+  @include center-between;
+}

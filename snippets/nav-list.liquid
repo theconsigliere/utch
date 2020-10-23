@@ -1,0 +1,28 @@
+<div class="nav-list {% if class != blank %}{{ class }}{% endif %}">
+	{% assign navList = linklists[handle] %}
+	<ul class='parent_link'>
+
+		{% comment %}
+			Creates new variable called navList, which grabs linklist object for the link list we need, let us define handle variable on the include tag ie in header.liquid or footer footer.liquid
+		{% endcomment %}
+		{% for link in navList.links %}
+
+			<li>
+				{% assign child_list_handle = link.title | handleize %}
+
+				{% if linklists[child_list_handle].links != blank %}
+					<a class="text-link" href="{{ link.url }}">{{ link.title }}</a>
+					<ul class='child_link'>
+						{% for childlink in linklists[child_list_handle].links %}
+							<li>
+								<a class="text-link" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% else %}
+					<a class="text-link" href="{{ link.url }}">{{ link.title }}</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>

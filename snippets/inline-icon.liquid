@@ -1,0 +1,15 @@
+{% comment %}
+	assign a class in template and output it in span so each inline svg's can be styled differently
+{% endcomment %}
+<span class="inline-icon {{ svg | handleize }} {% if class != blank %}{{ class }}{% endif %}">
+	{% include svg %}
+
+	{% comment %}
+		output alt tag if set in template
+	{% endcomment %}
+	{% if alt != blank %}
+		<span class="visually-hidden">
+			{{ alt }}
+		</span>
+	{% endif %}
+</span>

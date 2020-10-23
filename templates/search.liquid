@@ -1,0 +1,64 @@
+<div id="page-search" class="{% if search.performed %}search-performed{% endif %}">
+
+	<div class="wrapper grid" id="search-form-wrap">
+		{% include 'search-form' %}
+	</div>
+
+
+	{% if search.performed %}
+		<div class="wrapper grid" id="search-results">
+			{% comment %}
+				https://help.shopify.com/en/themes/liquid/objects/search#search-results
+			{% endcomment %}
+
+			{% comment %}
+				set product_count at 0, using math filter times: 1, this turns 0 into a integer
+			{% endcomment %}
+			<div class="results-inner">
+				{% assign product_count = 0 | times: 1 %}
+
+
+				{% for item in search.results %}
+					{% if item.object_type == 'product' %}
+						{% comment %}
+							+ 1  to product_count each time we find a item in our forloop
+						{% endcomment %}
+						{% assign product_count = product_count | plus: 1 %}
+					{% endif %}
+				{% endfor %}
+
+
+				{% if product_count > 0 %}
+					{% comment %}
+						https://help.shopify.com/en/themes/liquid/filters/string-filters#pluralize
+					{% endcomment %}
+					{% assign filled_singular = 'search.results.filled_singular' | t %}
+					{% assign filled_plural = 'search.results.filled_plural' | t %}
+
+					<h4 class='uppercase'>{{ product_count }}
+						{{ product_count | pluralize: filled_singular, filled_plural }}</h4>
+
+					<div class="results-grid">
+						{% for item in search.results %}
+							{% if item.object_type == 'product' %}
+
+								{% comment %}
+									assign item as product in our forloop
+								{% endcomment %}
+								{% include 'product-card' with product: item %}
+							{% endif %}
+						{% endfor %}
+					</div>
+
+				{% else %}
+
+					{% comment %}
+						passing search.terms into default.json as searchTerms
+					{% endcomment %}
+					<h1>{{ 'search.results.empty' | t: searchTerms: search.terms }}</h1>
+				{% endif %}
+			</div>
+		</div>
+	{% endif %}
+
+</div>

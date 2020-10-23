@@ -1,0 +1,59 @@
+#error-404 {
+  background-color: $light-white;
+  align-items: flex-start;
+  margin-top: 10vh;
+
+
+  @media (min-width: #{$screen-lg}) {
+    margin-top: 0;
+  }
+
+  .inner-404 {
+    width: 100%;
+    @include center-between-column;
+
+
+    @media (min-width: #{$screen-lg}) {
+      @include center-between;
+    }
+
+    .item-404.image-404 {
+      display: none;
+
+      @media (min-width: #{$screen-lg}) {
+        display: block;
+      }
+
+    }
+
+
+    .item-404 {
+      width: 100%;
+      @include center-center;
+
+      @media (min-width: #{$screen-lg}) {
+        width: 50%;
+      }
+
+      .item-404-inner {
+        width: 80%;
+        margin-top: 5em;
+        margin-bottom: 2em;
+
+        @media (min-width: #{$screen-lg}) {
+          margin: 1em 0;
+        }
+      }
+
+      .search-form {
+        width: 100%;
+        max-width: 600px;
+        margin: $offset-global 0;
+      }
+
+      .button {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

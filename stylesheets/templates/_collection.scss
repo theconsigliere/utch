@@ -1,0 +1,1246 @@
+#adult-collection,
+#kids-collection {
+  margin-top: 8vh;
+}
+
+#page-collection {
+  margin-top: 8vh;
+
+  #collection-image {
+    height: 45vh;
+    min-height: 250px;
+    max-height: 800px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .collection-content {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    @include center-between-column;
+    width: 90%;
+    margin: 0 auto;
+
+    @media (min-width: #{$screen-lg}) {
+      padding-top: 10vh;
+      @include start-between;
+    }
+  }
+
+  .collection-sidebar {
+    width: 100%;
+    margin-bottom: 5vh;
+    text-align: center;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 28%;
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  .collection-products {
+    @include center-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media (min-width: #{$screen-md}) {
+      @include start-between;
+    }
+
+    @media (min-width: #{$screen-lg}) {
+      @include start-start;
+      width: 65%;
+    }
+
+    .product-card {
+      min-width: 40.5%;
+      width: 45%;
+      margin: 5px 5px;
+      border: 1px solid $light-white;
+      position: relative;
+
+      //  margin-bottom: 40px;
+      text-align: left;
+
+      @media (min-width: #{$screen-md}) {
+        min-width: 30%;
+        max-width: 30%;
+        margin: 15px 10px;
+      }
+
+      @media (min-width: #{$screen-lg}) {
+        min-width: 30%;
+        max-width: 30%;
+        margin: 25px 10px;
+      }
+    }
+  }
+
+  .collection-description {
+    margin-top: $line-global;
+  }
+
+  .collection-sorting {
+    margin-top: $offset-global;
+    border-top: $standard-border;
+    padding-top: $offset-global;
+  }
+}
+
+// ADULT COLLECTION PAGE
+//---------------------------------
+
+.collection-header {
+  position: relative;
+  height: 70vh;
+  background: $black;
+
+  @media (min-width: #{$screen-lg}) {
+    height: 90vh;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+
+  .collection-header-content {
+    position: absolute;
+    bottom: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.master-collection-list-wrap {
+  @include center-between;
+
+  .collection-item {
+    width: 100%;
+    height: 100%;
+
+    .nav-item-image {
+      position: relative;
+      margin: 0 15px;
+      border: 1px solid $light-white;
+
+      &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: (1 / 1) * 100%;
+        overflow: hidden;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .nav-item-image-text {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        margin: 0.2rem;
+
+        * {
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+.title-section {
+  clear: both;
+}
+
+.product-block-section {
+  &:nth-child(even) {
+    .product-block-inner .product-block {
+      flex-direction: column;
+
+      @media (min-width: #{$screen-lg}) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .product-block-inner {
+    padding: 5vh 0;
+    max-width: 90%;
+    margin: 0 auto;
+
+    @media (min-width: #{$screen-lg}) {
+      max-width: 80%;
+    }
+
+    @media (min-width: #{$screen-xxl}) {
+      max-width: 70%;
+    }
+
+    .product-block {
+      @include center-between-column;
+
+      @media (min-width: #{$screen-lg}) {
+        @include center-between;
+      }
+
+      .product-block-item {
+        width: 100%;
+
+        @media (min-width: #{$screen-lg}) {
+          width: 50%;
+        }
+      }
+
+      .block-image {
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          vertical-align: bottom;
+        }
+      }
+
+      .block-text {
+        @include center-between-column;
+
+        .product-text-inner {
+          width: 100%;
+
+          @media (min-width: #{$screen-sm}) {
+            width: 90%;
+          }
+
+          @media (min-width: #{$screen-xxxl}) {
+            width: 50%;
+          }
+
+          * {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.collection-product-block-section {
+  clear: both;
+}
+
+.collection-product-block-section {
+  &:nth-child(even) {
+    .collection-product-block-inner .collection-product-block {
+      flex-direction: column-reverse;
+
+      @media (min-width: #{$screen-md}) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .collection-product-block-inner {
+    padding: 1vh 0;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: #{$screen-lg}) {
+      max-width: 80%;
+      padding: 4vh 0;
+    }
+
+    @media (min-width: #{$screen-xxl}) {
+      max-width: 70%;
+      padding: 5vh 0;
+    }
+
+    .collection-product-block {
+      @include center-between-column;
+      flex-direction: column-reverse;
+
+      @media (min-width: #{$screen-md}) {
+        @include center-between;
+        flex-direction: row;
+      }
+
+      .collection-product-block-item {
+        width: 100%;
+
+        @media (min-width: #{$screen-lg}) {
+          width: 50%;
+        }
+      }
+
+      .collection-block-image {
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          vertical-align: bottom;
+        }
+      }
+
+      .collection-block-text {
+        @include center-between-column;
+
+        .collection-product-text-inner {
+          width: 90%;
+          padding: 5vh 0;
+          text-align: center;
+
+          p {
+            margin-bottom: 2vh;
+          }
+
+          @media (min-width: #{$screen-sm}) {
+            padding: 3vh 0;
+            text-align: left;
+            width: 80%;
+          }
+
+          @media (min-width: #{$screen-lg}) {
+            padding: 0;
+            padding: 2vh 0;
+          }
+
+          @media (min-width: #{$screen-xxxl}) {
+            width: 60%;
+            padding: 0;
+          }
+
+          * {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// CLUG COLLECTION PAGE
+//---------------------------------
+
+#clug-hero-text,
+#clug-text,
+.clug-block-text {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.hero-collection-hero {
+  height: 100vh;
+  width: 100vw;
+  background: $black;
+  @include center-between;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  position: relative;
+
+  @media (min-width: #{$screen-xs}) {
+    @include center-between;
+    height: fit-content;
+    flex-direction: column-reverse;
+  }
+
+  /* Ipad Pro screens */
+
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    height: 60vh;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    flex-direction: row;
+    @include center-between;
+    height: 90vh;
+  }
+
+  .hero-img {
+    width: 100%;
+    position: relative;
+
+    @media (min-width: #{$screen-md}) {
+      width: 100%;
+    }
+
+    @media (min-width: #{$screen-xl}) {
+      width: 70%;
+    }
+  }
+
+  .hero-content {
+    width: 80%;
+    @include center-between-column;
+    padding-left: 0;
+
+    @media (min-width: #{$screen-md}) {
+      margin-top: 5vh;
+      width: 100%;
+    }
+
+    @media (min-width: #{$screen-lg}) {
+      @include start-between;
+      margin-top: 5vh;
+      width: 80%;
+      padding-left: 10vw;
+    }
+
+    @media (min-width: #{$screen-xl}) {
+      width: 70%;
+      margin-top: 2vh;
+    }
+
+    @media (min-width: #{$screen-xxl}) {
+      width: 60%;
+      margin-top: 10vh;
+    }
+
+    .hero-content-inner {
+      text-align: center;
+      display: block;
+      width: 100%;
+      padding: 2vh 0;
+      margin: 0;
+
+      @media (min-width: #{$screen-sm}) {
+        padding: 5vh 0 0 0;
+      }
+
+      @media (min-width: #{$screen-md}) {
+        text-align: center;
+        padding: 5vh 0;
+        margin: 0 0 20px 0;
+      }
+
+      @media (min-width: #{$screen-lg}) {
+        text-align: left;
+        padding: 0;
+      }
+    }
+
+    .hero-button-inner {
+      margin-top: 0;
+
+      @media (min-width: #{$screen-lg}) {
+        margin-top: 15vh;
+      }
+
+      @media (min-width: #{$screen-xxl}) {
+        margin-top: 20vh;
+      }
+
+      .button {
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+.clug-product-item {
+  width: 100%;
+  float: none;
+  position: relative;
+  height: 40vh;
+  overflow: hidden;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 33.33%;
+    float: left;
+  }
+
+  &:nth-child(4),
+  &:nth-child(5) {
+    width: 100%;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 50%;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+
+  .clug-product-text-group {
+    padding: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .clug-product-logo {
+      width: 250px;
+      height: auto;
+    }
+  }
+}
+
+.clug-color-stripe {
+  position: absolute;
+  bottom: 70%;
+  left: 0;
+  width: 100%;
+
+  @media (min-width: #{$screen-sm}) {
+    bottom: 50%;
+  }
+
+  @media (min-width: #{$screen-md}) {
+    bottom: 33%;
+  }
+
+  /* Ipad screens */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    bottom: 60%;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    bottom: 20%;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    bottom: 15%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    bottom: 20%;
+  }
+
+  .color-stripes {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 0.6em;
+
+    @media (min-width: #{$screen-sm}) {
+      height: 5px;
+      margin-bottom: 0.6em;
+    }
+
+    @media (min-width: #{$screen-lg}) {
+      margin-bottom: 0.6em;
+    }
+
+    @media (min-width: #{$screen-xl}) {
+      margin-bottom: 0.8em;
+    }
+
+    @media (min-width: #{$screen-xxl}) {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.clug-logo-top {
+  @include start-between;
+}
+
+.review-group {
+  background: $light-white;
+
+  .review-inner {
+    padding: 2vh 0;
+    @include center-between;
+    justify-content: space-around;
+
+    img {
+      max-height: 50px;
+      padding: 0 2px;
+
+      @media (min-width: #{$screen-sm}) {
+        max-height: 70px;
+        padding: 0;
+      }
+
+      @media (min-width: #{$screen-lg}) {
+        max-height: 120px;
+      }
+    }
+  }
+}
+
+.clug-product-logo {
+  width: 150px;
+  margin-right: 0;
+  margin-bottom: 1em;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 200px;
+    margin-right: 25px;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    width: 250px;
+    margin-right: 25px;
+  }
+}
+
+// KIDS COLLECTION PAGE
+//----------------------------------------------
+
+.kids-header-content {
+  bottom: 20% !important;
+
+  .kids-header-logo {
+    width: 20vw;
+    opacity: 1;
+  }
+
+  * {
+    margin: 0;
+    text-shadow: $drop-shadow;
+  }
+}
+
+.product_logo {
+  width: 30vw;
+  margin: 0.5em auto;
+
+  @media (min-width: #{$screen-sm}) {
+    margin: 0 0 1em 0;
+    width: 25vw;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    width: 15vw;
+  }
+}
+
+.kids-block {
+  border-radius: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    border-radius: 50px 0;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    border-radius: 150px 0;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-20px);
+  }
+}
+
+.product-block-section {
+  position: relative;
+  clear: both;
+
+  .left {
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    opacity: 0.3;
+    width: calc(10% - 50px);
+  }
+
+  .right {
+    right: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    opacity: 0.3;
+    width: calc(10% - 50px);
+  }
+}
+
+.hornit-kids-icon {
+  position: absolute;
+  bottom: -2px;
+  left: 5%;
+  width: 100px;
+  // animation-duration: 1.5s;
+  //  -webkit-animation-name: bounce;
+  // animation-name: bounce;
+  // animation-iteration-count: infinite;
+
+  @media (min-width: #{$screen-xs}) {
+    left: 5%;
+  }
+
+  @media (min-width: #{$screen-md}) {
+    width: 150px;
+    left: 5%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    width: auto;
+    left: 15%;
+  }
+
+  img {
+    opacity: 1;
+    transform: rotate(180deg) translateY(-100%);
+  }
+}
+
+.kids-intro-title {
+  padding-top: 8vh;
+}
+
+// COLLECTION LIST
+//-------------------------------------------
+
+.collection-block-collection {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  max-width: 90%;
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 90%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+}
+
+.collection-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .collection-block-info {
+    width: 100%;
+    //margin-bottom: $offset-global;
+
+    * {
+      text-align: center;
+    }
+  }
+
+  .collection-products {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+
+    // @media (min-width: #{$screen-xxl}) {
+    //   width: 80%;
+    // }
+
+    .product-card {
+      min-width: 40.5%;
+      width: 50%;
+      margin: 5px 5px;
+      border: 1px solid $light-white;
+      position: relative;
+      flex: 1;
+      //   margin-bottom: 40px;
+      text-align: left;
+
+      @media (min-width: #{$screen-md}) {
+        min-width: 30%;
+        margin: 25px 10px;
+      }
+
+      @media (min-width: #{$screen-xl}) {
+        min-width: 25%;
+        width: 25%;
+      }
+
+      @media (min-width: #{$screen-xxl}) {
+        min-width: 15%;
+        width: 15%;
+      }
+    }
+  }
+
+  .collection-block-button {
+    margin-top: $offset-global;
+  }
+}
+
+.block-collection-list {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  max-width: 90%;
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-xxl}) {
+    max-width: 70%;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+  }
+}
+
+// CLUG CATEGORY
+
+.clug-category-slideshow {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: #{$screen-xl}) {}
+
+  .slick-list {
+    padding: 0 20% 0 0;
+  }
+
+  .slick-prev {
+    position: absolute;
+    border: none;
+    font-size: 0;
+    top: auto;
+    bottom: -15%;
+    left: 10%;
+    display: block;
+    margin: 30px auto;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid $black;
+    border-left: 2px solid $black;
+    transform: rotate(-45deg);
+    background: $white;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 2px;
+      position: absolute;
+      height: 45px;
+      background-color: $black;
+      transform: rotate(-45deg) translate(15px, 4px);
+      left: 0;
+      top: 0;
+    }
+
+    @media (min-width: #{$screen-lg}) {
+      top: -10%;
+      bottom: auto;
+    }
+  }
+
+  .slick-next {
+    position: absolute;
+    border: none;
+    font-size: 0;
+    top: auto;
+    bottom: -15%;
+    right: 10%;
+    display: block;
+    margin: 30px auto;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid $black;
+    border-left: 2px solid $black;
+    transform: rotate(135deg);
+    background: $white;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 45px;
+      background-color: $black;
+      transform: rotate(-45deg) translate(15px, 4px);
+      left: 0;
+      top: 0;
+    }
+
+    @media (min-width: #{$screen-lg}) {
+      top: -10%;
+      bottom: auto;
+    }
+  }
+
+  .slick-slide {
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .slick-center {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.clug-cat-item {
+  padding: 1rem;
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 2rem;
+  }
+
+  .clug-cat-text {
+    padding: 0.5rem;
+    padding-top: 2rem;
+    background: rgb(248, 248, 248);
+
+    @media (min-width: #{$screen-lg}) {
+      padding: 2rem;
+    }
+  }
+}
+
+.clug-categories {
+  margin-bottom: 5vh;
+
+  @media (min-width: #{$screen-xl}) {
+    margin-bottom: 10vh;
+  }
+
+  .title-section {
+    padding-top: 2vh;
+  }
+}
+
+.clug-info-row {
+  @include center-between-column;
+
+  @media (min-width: #{$screen-xxxl}) {
+    @include center-between;
+  }
+
+  .clug-info-item-text {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: #{$screen-xxxl}) {
+      width: 70%;
+      margin: 0;
+      text-align: left;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .clug-info-item-button {
+    width: fit-content;
+    margin: 2vh 0 0 0;
+
+    @media (min-width: #{$screen-xxxl}) {
+      width: 30%;
+      margin: 0;
+    }
+  }
+}
+
+// COLLECTION ARTICLE SIDE BAR (HELMETS PAGE)
+
+.article-sidebar-inner {
+  width: 100%;
+  padding-top: 2vh;
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 0;
+    width: 80%;
+  }
+
+  .blog_item {
+    @include start-between;
+    border: 1px solid #fafafa;
+    padding: 10px 0;
+
+    @media (min-width: #{$screen-lg}) {
+      @include center-between-column;
+      border: none;
+      padding: 0;
+    }
+
+    .article_image {
+      width: 30%;
+
+      @media (min-width: #{$screen-lg}) {
+        width: 100%;
+      }
+    }
+
+    .grid-product__meta {
+      width: 60%;
+
+      @media (min-width: #{$screen-lg}) {
+        width: 100%;
+      }
+
+      .article__content-meta {
+        text-align: left;
+
+        @media (min-width: #{$screen-lg}) {
+          text-align: center;
+        }
+
+        .block-button {
+          padding: 0;
+          border: none;
+          background: transparent;
+
+          &:hover {
+            color: $grey;
+
+            @media (min-width: #{$screen-lg}) {
+              color: $white;
+              background: $black;
+            }
+          }
+
+          @media (min-width: #{$screen-lg}) {
+            padding: ($line-global/2) $line-global;
+            border: 1px solid $yellow;
+            background: $yellow;
+          }
+        }
+
+        .blog_item_text {
+          p {
+            display: none;
+
+            @media (min-width: #{$screen-lg}) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ALL PRODUCTS PAGE
+//---------------------------------
+
+.all-collection-products {
+  @include start-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .product-card {
+    width: 40%;
+    margin: 5px 5px;
+    border: 1px solid $light-white;
+    position: relative;
+    //   margin-bottom: 40px;
+    text-align: left;
+
+    @media (min-width: #{$screen-md}) {
+      margin: 25px 10px;
+    }
+
+    @media (min-width: #{$screen-xl}) {
+      width: 22%;
+    }
+  }
+}
+
+.all-collection-topper {
+  background: $light-white;
+  @include center-between;
+
+  .topper-inner {
+    max-width: 90%;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2em 0;
+    @include center-between-column;
+
+    @media (min-width: #{$screen-md}) {
+      @include center-between;
+    }
+
+    .topper__title {
+      width: fit-content;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      margin: 25px 0;
+    }
+
+    .all-collection-sorting {
+      width: fit-content;
+      margin: 25px 0;
+      @include center-between;
+
+      * {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+
+
+// airo 
+
+
+.airo-header-content {
+  max-width: 80%;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 50%;
+  }
+
+
+  @media (min-width: #{$screen-xl}) {
+    max-width: 30%;
+  }
+
+  .airo-product-logo {
+    width: 200px;
+    margin-bottom: 25px;
+    opacity: 1;
+  }
+}
+
+.bike-header {
+  background: $black;
+
+  img {
+    opacity: 0.6;
+  }
+
+  .hornit-kids-icon {
+    img {
+      opacity: 1;
+    }
+  }
+}
+
+.airo-desc {
+  margin-top: 10px;
+}
+
+.airo-item-text {
+  h4 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+}
+
+
+.dislaimer-section,
+.colour-section {
+  padding: 2em 0;
+}
+
+
+.disclaimer-group,
+.colour-inner {
+  @include center-between-column;
+  max-width: 90%;
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-md}) {
+    @include start-between;
+    max-width: 80%;
+  }
+}
+
+.disclaimer-item {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+
+  @media (min-width: #{$screen-md}) {
+    width: 40%;
+    margin: 0;
+  }
+}
+
+
+.disclaimer-image {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 50%;
+  background: whitesmoke;
+  margin: 0 auto;
+  @include center-between;
+  margin-bottom: 25px;
+
+  &:hover {
+    img {
+      width: 70px;
+    }
+  }
+
+  img {
+    width: 60px;
+    transition: all 0.6s ease-in;
+  }
+}
+
+.colour-item {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+
+  @media (min-width: #{$screen-md}) {
+    width: 20%;
+    margin: 0;
+  }
+}
+
+.colour-circle {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  border: 2px solid $black;
+  transition: all 0.6s ease-in;
+
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.colour-content {
+  text-align: center;
+}

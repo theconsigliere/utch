@@ -1,0 +1,52 @@
+{% schema %}
+
+{
+    "name": "404 Page",
+    "class": "page-404",
+    "blocks": [
+        {
+            "type": "404-content",
+            "name": "404 Content",
+            "settings": [
+                {
+                    "id": "image_extra",
+                    "type": "image_picker",
+                    "label": "Background Image"
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+<div id="error-404">
+    <div class="inner-404">
+
+        {% for block in section.blocks %}
+
+
+            <div class="item-404">
+                <div class="item-404-inner">
+                    <h1>{{ 'general.404.error_code' | t }}</h1>
+
+                    {% assign search_label = 'general.404.title' | t %}
+                    {% include 'search-form' with label: search_label %}
+
+                    <a class="block-button" href="/">
+                        {{ 'general.404.back' | t }}
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="item-404 image-404">
+                <img data-src="{{ block.settings.image_extra | img_url: 'master' }}" alt="{{ block.settings.image_extra.alt }}" class="lazyload"/>
+            </div>
+
+
+        {% endfor %}
+
+
+    </div>
+</div>

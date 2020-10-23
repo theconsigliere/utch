@@ -1,0 +1,39 @@
+<div class="cart-contents">
+    {% if cart.item_count > 0 %}
+        <form action="/cart" method="post" novalidate>
+            {% comment %}
+				disable form when updating with ajax
+			{% endcomment %}
+            <fieldset class="js-cart-fieldset" id="cart-fieldset">
+                <div class="cart-lines">
+                    {% for item in cart.items %}
+                        {% include 'line-item' %}
+                    {% endfor %}
+                </div>
+                <div class="cart-totals">
+                    <div class="subtotal-line">
+                        <p class="font-bolder black uppercase">{{ 'cart.filled.subtotal' | t }}</p>
+                        <span class="price">{{ cart.total_price | money }}</span>
+                    </div>
+                    <div class="main-contact-buttons">
+                        <button class="underline-button" name="update" type="submit">{{ 'cart.filled.update' | t }}</button>
+                        <a class="black-button" href="/cart">{{ 'cart.filled.title' | t }}</a>
+                        <button class="block-button" name="checkout" type="submit">{{ 'cart.filled.mini_cart_title' | t }}</button>
+                    </div>
+
+                </div>
+
+                <p class="currency-note js-cart-currency-note">
+                    {{ 'cart.filled.currency_note_html' | t: currency: shop.currency }}
+                </p>
+            </fieldset>
+
+        </form>
+    {% else %}
+        {% comment %}
+			Cart empty text
+		{% endcomment %}
+        <p class="cart-empty-text ta-center">{{ 'cart.empty.title' | t }}</p>
+        <a class="block-button keep-shopping js-keep-shopping" href="/">{{ 'cart.empty.button' | t }}</a>
+    {% endif %}
+</div>

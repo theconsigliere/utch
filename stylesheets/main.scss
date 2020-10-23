@@ -1,0 +1,39 @@
+// Global Styles
+@import "global/variables";
+@import "global/mixins";
+@import "global/typography";
+@import "global/base";
+@import "global/functions";
+@import "global/button";
+@import "global/glide";
+
+// landscape media Queries
+@import "global/landscape";
+
+
+// Snippets
+@import "snippets/inline-icon";
+@import "snippets/header";
+@import "snippets/footer";
+@import "snippets/quantity-picker";
+@import "snippets/line-item";
+@import "snippets/cart-contents";
+@import "snippets/option-color";
+@import "snippets/search-form";
+@import "snippets/error-404";
+@import "snippets/slider-buttons";
+@import "snippets/tabs";
+@import "snippets/video";
+
+
+// Sections
+@import "sections/sections";
+
+// Templates
+@import "templates/collection";
+@import "templates/product";
+@import "templates/cart";
+@import "templates/search";
+@import "templates/page";
+@import "templates/customers";
+@import "templates/blog";

@@ -1,0 +1,67 @@
+{% comment %}
+	https://help.shopify.com/en/themes/liquid/objects/product_option
+{% endcomment %}
+{% comment %}
+	using the product_option object to get the colors / finish / upholstery
+{% endcomment %}
+
+<div class="product-option-row">
+	<label class="h3" for="{% if type == 'select' %}select-{{ option_name }}{% endif %}">
+		{{ option.name }}
+	</label>
+
+	<div class="option-values">
+		{% if type == 'select' %}
+			<div class="styled-select">
+				<select name="{{ option_name }}" id="select-{{ option_name }}">
+
+					{% comment %}
+						default value for select
+					{% endcomment %}
+
+
+					<option value="placeholder" disabled {% if selected == false %} selected {% endif %}>Select
+						{{ option.name }}</option>
+
+					{% comment %}
+						select options
+					{% endcomment %}
+					{% for value in option.values %}
+						<option value="{{ value }}" {% if value == selected %} selected {% endif %}>{{ value }}</option>
+					{% endfor %}
+				</select>
+				{% include 'inline-icon' with svg: 'icon-arrow-down.svg', class: 'current-color-stroke' %}
+			</div>
+
+		{% else %}
+
+			{% comment %}
+				else default to  radio buttons
+			{% endcomment %}
+
+			{% for value in option.values %}
+
+				{% comment %}
+					using assign to create a radio_id
+				{% endcomment %}
+				{% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
+				<div class="option-values-items">
+					<input class="variant-radio" id="{{ radio_id }}" type="radio" name="{{ option_name }}" value="{{ value }}" {% if value == selected %} checked {% endif %}>
+					<label class='option-label' for="{{ radio_id }}">
+
+						{% comment %}
+							if use of coloured radio buttons have been forced use color-swatch snippet
+						{% endcomment %}
+
+						{% if force_colors == true %}
+							{% include 'option-color' with color: value %}
+						{% else %}
+							{{ value }}
+						{% endif %}
+					</label>
+				</div>
+			{% endfor %}
+
+		{% endif %}
+	</div>
+</div>

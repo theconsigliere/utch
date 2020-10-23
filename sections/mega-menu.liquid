@@ -1,0 +1,338 @@
+{% schema %}
+
+{
+    "name": "Mega Menu",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_menu",
+            "label": "Show Mega Menu",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "type": "nav_item",
+            "name": "Nav Item",
+            "settings": [
+                {
+                    "id": "nav_item_title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Nav Item Title"
+                }, {
+                    "id": "nav_item_title_url",
+                    "type": "url",
+                    "label": "Nav Item URL"
+                }, {
+                    "type": "checkbox",
+                    "id": "show_megamenu",
+                    "label": "Show Mega Menu for Nav Item",
+                    "default": true
+                }, {
+                    "id": "first_image",
+                    "type": "image_picker",
+                    "label": "First Block Image"
+                }, {
+                    "id": "first_title",
+                    "type": "text",
+                    "label": "First Block Title",
+                    "placeholder": "First Block Title"
+                }, {
+                    "id": "first_url",
+                    "type": "url",
+                    "label": "First Block Item URL"
+                }, {
+                    "id": "second_image",
+                    "type": "image_picker",
+                    "label": "second Block Image"
+                }, {
+                    "id": "second_title",
+                    "type": "text",
+                    "label": "second Block Title",
+                    "placeholder": "second Block Title"
+                }, {
+                    "id": "second_url",
+                    "type": "url",
+                    "label": "second Block Item URL"
+                }, {
+                    "id": "third_image",
+                    "type": "image_picker",
+                    "label": "third Block Image"
+                }, {
+                    "id": "third_title",
+                    "type": "text",
+                    "label": "third Block Title",
+                    "placeholder": "third Block Title"
+                }, {
+                    "id": "third_url",
+                    "type": "url",
+                    "label": "third Block Item URL"
+                }, {
+                    "id": "fourth_image",
+                    "type": "image_picker",
+                    "label": "fourth Block Image"
+                }, {
+                    "id": "fourth_title",
+                    "type": "text",
+                    "label": "fourth Block Title",
+                    "placeholder": "fourth Block Title"
+                }, {
+                    "id": "fourth_url",
+                    "type": "url",
+                    "label": "fourth Block Item URL"
+                }, {
+                    "id": "fifth_image",
+                    "type": "image_picker",
+                    "label": "fifth Block Image"
+                }, {
+                    "id": "fifth_title",
+                    "type": "text",
+                    "label": "fifth Block Title",
+                    "placeholder": "fifth Block Title"
+                }, {
+                    "id": "fifth_url",
+                    "type": "url",
+                    "label": "fifth Block Item URL"
+                }, {
+                    "id": "sixth_image",
+                    "type": "image_picker",
+                    "label": "sixth Block Image"
+                }, {
+                    "id": "sixth_title",
+                    "type": "text",
+                    "label": "sixth Block Title",
+                    "placeholder": "sixth Block Title"
+                }, {
+                    "id": "sixth_url",
+                    "type": "url",
+                    "label": "sixth Block Item URL"
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+<div class="mobile-nav">
+
+    <div class="mobile-nav-inner">
+        {% section "mega-menu" %}
+
+        {%- comment -%}
+            <div class="mobile-currency">
+                                {% include 'currency-picker' %}
+                            </div>
+        {%- endcomment -%}
+
+
+    </div>
+
+
+</div>
+
+
+<div id="header-global">
+
+    <div class="header-mobile">
+        <div class="mobile-menu-icon">
+            <div id="toggle">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header-left">
+
+        {% if section.settings.show_menu %}
+
+        <div class="header-nav-list">
+            <ul class="nav">
+                {% for block in section.blocks %}
+                    <li class='nav_item'>
+    
+                        {% if block.settings.show_megamenu %}
+    
+                            <p class='text-link mega_item  mobile_item'>{{ block.settings.nav_item_title }}
+    
+                                <span class='header-icon'>
+                                    <i class="down"></i>
+                                </span>
+    
+                            </p>
+    
+                            <div class="mega-menu-full">
+                                <div class="mega-menu-group">
+
+                                    <div class="nav-column-box-group">
+                                        <div class="nav-column">
+                                            <a href="{{ block.settings.first_url }}">
+                                                <div class="nav-item-image">
+                                                    {% if block.settings.first_image != blank %}
+                                                        <img data-src="{{ block.settings.first_image | img_url: 'master' }}" alt="{{ block.settings.first_image.alt }}" class="lazyload"/>
+                                                    {% endif %}
+
+                                                </div>
+                                                <div class="nav-item-title">
+                                                    <p class=''>{{ block.settings.first_title }}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav-column">
+                                            <a href="{{ block.settings.second_url }}">
+                                                <div class="nav-item-image">
+                                                    {% if block.settings.second_image != blank %}
+                                                        <img data-src="{{ block.settings.second_image | img_url: 'master' }}" alt="{{ block.settings.second_image.alt }}" class="lazyload"/>
+                                                    {% endif %}
+
+                                                </div>
+                                                <div class="nav-item-title">
+                                                    <p class=''>{{ block.settings.second_title }}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav-column">
+                                            <a href="{{ block.settings.third_url }}">
+                                                <div class="nav-item-image">
+                                                    {% if block.settings.third_image != blank %}
+                                                        <img data-src="{{ block.settings.third_image | img_url: 'master' }}" alt="{{ block.settings.third_image.alt }}" class="lazyload"/>
+                                                    {% endif %}
+
+                                                </div>
+                                                <div class="nav-item-title">
+                                                    <p class=''>{{ block.settings.third_title }}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav-column">
+                                            <a href="{{ block.settings.fourth_url }}">
+                                                <div class="nav-item-image">
+                                                    {% if block.settings.fourth_image != blank %}
+                                                        <img data-src="{{ block.settings.fourth_image | img_url: 'master' }}" alt="{{ block.settings.fourth_image.alt }}" class="lazyload"/>
+                                                    {% endif %}
+
+                                                </div>
+                                                <div class="nav-item-title">
+                                                    <p class=''>{{ block.settings.fourth_title }}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav-column">
+                                            <a href="{{ block.settings.fifth_url }}">
+                                                <div class="nav-item-image">
+                                                    {% if block.settings.fifth_image != blank %}
+                                                        <img data-src="{{ block.settings.fifth_image | img_url: 'master' }}" alt="{{ block.settings.fifth_image.alt }}" class="lazyload"/>
+                                                    {% endif %}
+
+                                                </div>
+
+                                                <div class="nav-item-title">
+                                                    <p class=''>{{ block.settings.fifth_title }}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav-column">
+                                            <a href="{{ block.settings.sixth_url }}">
+                                                <div class="nav-item-image">
+                                                    {% if block.settings.sixth_image != blank %}
+                                                        <img data-src="{{ block.settings.sixth_image | img_url: 'master' }}" alt="{{ block.settings.sixth_image.alt }}" class="lazyload"/>
+                                                    {% endif %}
+
+                                                </div>
+                                                <div class="nav-item-title">
+                                                    <p class=''>{{ block.settings.sixth_title }}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        {% else %}
+    
+                            <a class='text-link mega_item mobile_item' href="{{ block.settings.nav_item_title_url }}">{{ block.settings.nav_item_title }}</a>
+    
+                        {% endif %}
+    
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+    
+        {% comment %}
+            Menu links, define handle for navList variable within nav-list.liquid. This is important as we can use the same loop menu code for both footer and main-menu menu's
+        {% endcomment %}
+        {% include 'nav-list', handle: 'main-menu', class: 'header-nav-list' %}
+    {% endif %}
+    
+
+    </div>
+
+
+    <div class="header-middle">
+
+        
+
+                    {% comment %}
+            Link to Homepage
+        {% endcomment %}
+        <a class="link-logo" href="/">
+
+            {% comment %}
+                using inline-item to select svg for us
+            {% endcomment %}
+            {% assign shop_title = 'general.shop.title' | t %}
+            {% include 'inline-icon' with svg: 'hutch-logo.svg', alt: shop_title, class: 'logo-main' %}
+        </a>
+
+
+    </div>
+
+
+    <div class="header-right">
+
+
+        <a class="text-link" href="/search">
+            {% include 'inline-icon' with svg: 'icon-search.svg' %}
+        </a>
+
+        {% comment %}
+            include currency picker
+                                                                                                                                                                            
+            <div class="header-right-currency-picker">
+                {% include 'currency-picker' %}
+            </div>
+
+        {% endcomment %}
+
+        {% comment %}
+            Cart with cart link
+        {% endcomment %}
+        <a class="text-link cart-link js-cart-link" href="/cart">
+
+            {% include "inline-icon" with svg: 'cart.svg' %}
+
+            {% if cart.item_count > 0 %}
+                {{ 'cart.button.count_html' | t: itemCount: cart.item_count }}
+
+            {% else %}
+                {{ 'cart.button.count_html' | t: itemCount: cart.item_count  }}
+            {% endif %}
+
+        </a>
+    </div>
+
+
+</div>
+
+{% comment %}
+    if we are not on cart page, show mini cart
+{% endcomment %}
+{% if template != 'cart' %}
+    {% include 'mini-cart' %}
+{% endif %}
+
+

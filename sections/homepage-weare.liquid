@@ -1,0 +1,101 @@
+{% schema %}
+
+{
+    "name": "We Are Hutch Section",
+    "class": "we-are-hutch-section",
+    "blocks": [
+        {
+            "type": "title",
+            "name": "Inner Section",
+            "limit": 1,
+            "settings": [
+            {
+                "id": "weare_image",
+                "type": "image_picker",
+                "label": "Image"
+            }, {
+                "id": "weare_title",
+                "type": "text",
+                "label": "Title",
+                "placeholder": "Section Title"
+            }, {
+                "id": "weare_subtitle",
+                "type": "textarea",
+                "label": "Section Sub Title"
+            }, {
+                "id": "weare_content",
+                "type": "textarea",
+                "label": "Section Content"
+            }, {
+                "id": "weare_button_url",
+                "type": "url",
+                "label": "Button url"
+            }, {
+                "id": "weare_button_text",
+                "type": "text",
+                "label": "Button Text"
+            }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "content",
+            "name": "We are Hutch Section"
+        }
+    ]
+}
+
+{% endschema %}
+
+<section>
+
+    {% for block in section.blocks %}
+
+    <section class="collection-product-block-section">
+
+        <div class="collection-product-block-inner">
+            <div class="collection-product-block" >
+
+
+                <div class="collection-product-block-item collection-block-image">
+                    <img data-src="{{ block.settings.weare_image | img_url: 'master' }}" alt="{{ block.settings.weare_image.alt }}" class="lazyload"/>
+
+                </div>
+
+                <div class="collection-product-block-item collection-block-text">
+
+                    <div class="collection-product-text-inner">
+
+                       
+
+                            <h2 class="">{{ block.settings.weare_title }}</h3>
+                            <h5 class="">{{ block.settings.weare_subtitle }}</h4>
+
+                            <p>{{ block.settings.weare_content }}</p>
+
+                            {% if block.settings.weare_button_url != blank %}
+                                <a href="{{ block.settings.weare_button_url }}" class="black-button">
+                                    {% if block.settings.weare_button_text != blank %}
+                                        {{ block.settings.weare_button_text }}
+                                    {% else %}
+                                        {{ "general.shop.shop_now" | t }}
+                                    {% endif %}
+                                </a>
+                            {% endif %}
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+    {% endfor %}
+
+</section>

@@ -1,0 +1,110 @@
+{% assign has_multiple_variants = false %}
+{% if product.variants.size > 1 %}
+	{% assign has_multiple_variants = true %}
+{% endif %}
+
+{% assign has_multiple_options = false %}
+{% if product.options.size > 1 %}
+	{% assign has_multiple_options = true %}
+{% endif %}
+
+<!-- https://help.shopify.com/en/themes/liquid/objects/product#product-selected_variant -->
+{% assign has_selected_variant = false %}
+{% if product.selected_variant != nil %}
+	{% assign has_selected_variant = true %}
+{% endif %}
+
+<!-- if we have multiple variants get quantity using snippet -->
+{% if has_multiple_variants %}
+	{% include 'get-variants-with-quantity-json' with product: product %}
+{% endif %}
+
+<!-- can add to cart if we dont have multiple variants, can't by default with out selecting color, finishing and etc -->
+{% assign can_add_to_cart = false %}
+{% if has_selected_variant and product.selected_variant.available %}
+	{% assign can_add_to_cart = true %}
+{% elsif has_multiple_variants == false and product.available %}
+	{% assign can_add_to_cart = true %}
+{% endif %}
+
+
+
+
+<form id="add-to-cart-form" action="/cart/add" method="post" enctype="multipart/form-data" data-variants="{{ variants_with_quantity_json | url_param_escape }}">
+
+<!-- only show select if we have multiple variants -->
+
+{% if has_multiple_options or has_multiple_variants %}
+
+	{% comment %}
+		for each option grab product option row
+	{% endcomment %}
+	{% for option in product.options_with_values %}
+		{% comment %}
+			using assign to pass a variable into our for loop to use in snippet. So we can give out input buttons names
+		{% endcomment %}
+		{% assign option_name = 'option' | append: option.position %}
+		{% comment %}
+			https://help.shopify.com/en/themes/liquid/objects/variant
+		{% endcomment %}
+		{% assign selected = false %}
+		{% if has_selected_variant %}
+			{% assign selected = product.selected_variant[option_name] %}
+		{% endif %}
+
+		{% comment %}
+			if option is not color render the select button in 'product-option-row' snippet
+		{% endcomment %}
+
+		{% if option.name == 'Color' or option.name == 'Colour'  %}
+			{% include 'product-option-row' with option: option, option_name: option_name, selected: selected, force_colors: true %}
+		{% else %}
+			{% include 'product-option-row' with option: option, option_name: option_name, type: 'select', selected: selected %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
+
+<!-- will render price, quantity and value for all variants -->
+<input class="js-variant-id" type="hidden" name="id" value="{% if has_selected_variant %}{{ product.selected_variant.id }}{% elsif has_multiple_variants != true %}{{ product.variants.first.id }}{% endif %}">
+
+{% comment %}
+	<label for="Quantity">quantity</label>
+				                <input id="Quantity" min="1" name="quantity" type="number" value="1">
+{% endcomment %}
+
+<!-- add to cart button, disabled if we have multiple variants that have not been picked -->
+
+<button type="submit" name="add" id="add-to-cart-button" class="button-cta block-button" {% if can_add_to_cart != true %} disabled {% endif %}>
+	{{ 'product.form.submit' | t }}
+	&ndash;
+	<span class="js-price" data-default-price="{{ product.price | money }}">
+
+		{% if has_multiple_options or has_multiple_variants %}
+			{{ current_variant.price | money }}
+		{% else %}
+			{{ product.price | money }}
+		{% endif %}
+	</span>
+</button>
+
+<!-- if Product out of stock  (see application.js)-->
+
+{% if can_add_to_cart != true %}
+
+
+<div id='mhaRnProduct'></div>
+
+{% endif %}
+
+
+
+</form>
+
+
+<!-- Do you have a question? -->
+
+{% if product.metafields.custom_fields["product_faq_link"] != blank %}  
+
+<a class='plain-button' href="{{ product.metafields.custom_fields["product_faq_link"] }}">{{ product.metafields.custom_fields["product_faq_link_title"] }} </a>
+ 
+ {% endif %}

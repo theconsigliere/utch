@@ -1,0 +1,29 @@
+<div class="extra-page" id="page-cart">
+
+
+  <div class="cart-bottom" id="cart-bottom">
+      <div class="cart-item-one">
+
+          {{ 'cart.jpg' | asset_url | img_tag }}
+
+
+      </div>
+      <div class="cart-item-two">
+          <div class="cart-item-inner">
+
+              <h4 class="uppercase ta-center">{{ 'cart.filled.title' | t }}</h4>
+
+
+              <div class="cart-page-contents js-cart-page-contents" data-cart-item-count="{{ cart.item_count }}">
+                  {% include 'cart-contents' %}
+              </div>
+
+
+              {% section 'cart-collection' %}
+          </div>
+
+
+      </div>
+
+  </div>
+</div>

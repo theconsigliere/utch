@@ -1,0 +1,178 @@
+{% schema %}
+
+{
+    "name": "Footer Content Menu",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_footer_content",
+            "label": "Show Footer Menu",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "type": "footer_list",
+            "name": "Footer Nav Item",
+            "settings": [
+                {
+                    "id": "footer_item_title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Footer Item Title"
+                }, {
+                    "type": "link_list",
+                    "id": "footer_list",
+                    "label": "Nav Item Menu"
+                }
+            ]
+        }, {
+            "type": "footer_social",
+            "name": "Footer Social Item",
+            "settings": [
+                {
+                    "id": "footer_social_title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Footer Item Title"
+                }, {
+                    "id": "insta_url",
+                    "type": "url",
+                    "label": "Instagram URL"
+                }, {
+                    "id": "fb_url",
+                    "type": "url",
+                    "label": "Facebook URL"
+                }, {
+                    "id": "twitter_url",
+                    "type": "url",
+                    "label": "Twitter URL"
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+
+<div class="footer-inner text-white">
+	<div class="footer-left">
+		<a class="link-logo" href="/">
+			{% comment %}
+				using inline-item to select svg for us
+			{% endcomment %}
+			{% assign shop_title = 'general.shop.title' | t %}
+			{% include 'inline-icon' with svg: 'hutch-white-logo.svg', alt: shop_title, class: 'logo-main' %}
+		</a>
+
+
+
+	</div>
+
+
+	<div class="footer-right">
+
+
+		{% if section.settings.show_footer_content %}
+
+
+			{% for block in section.blocks %}
+
+				{% case block.type %}
+
+					{% when 'footer_list' %}
+
+						<div class="nav-column nav-column-list">
+
+							<div class="nav_first">
+								<h6 class="text-link-footer ">{{ block.settings.footer_item_title }}</h6>
+							</div>
+
+							{% assign linkListHandle = block.settings.footer_list %}
+							{% include 'nav-list', handle: linkListHandle, class: 'footer-menu-list' %}
+
+
+						</div>
+
+
+					{% when 'footer_social' %}
+
+
+						<div class="nav-column nav-social">
+
+							<div class="nav_first">
+								<h6 class="text-link-footer">{{ block.settings.footer_social_title }}</h6>
+							</div>
+
+							<div class="socials">
+								{% assign fbLink = block.settings.fb_url %}
+								{% assign twitterLink = block.settings.twitter_url %}
+								{% assign instaLink = block.settings.insta_url %}
+
+								{% if fbLink %}
+									<div class="social-pic">{{ 'fb.svg' | asset_url | img_tag | link_to: fbLink, 'follow me on Facebook' }}</div>
+								{% endif %}
+
+								{% if instaLink %}
+									<div class="social-pic">{{ 'insta.svg' | asset_url | img_tag | link_to: instaLink, 'follow me on Instagram' }}</div>
+								{% endif %}
+
+								{% if twitterLink %}
+									<div class="social-pic">{{ 'twitter.svg' | asset_url | img_tag | link_to: twitterLink, 'follow me on Twitter' }}</div>
+								{% endif %}
+
+							</div>
+							{% comment %}
+								<div class="payment-options">
+																	{{ 'payment-options.png' | asset_url | img_tag }}
+																</div>
+							{% endcomment %}
+
+
+						</div>
+
+
+				{% endcase %}
+
+
+			{% endfor %}
+
+
+		{% else %}
+
+
+			{% comment %}
+				Menu links, define handle for navList variable within nav-list.liquid. This is important as we can use the same loop menu code for both footer and main-menu menu's
+			{% endcomment %}
+			{% include 'nav-list', handle: 'main-menu', class: 'header-nav-list' %}
+		{% endif %}
+
+
+	</div>
+</div>
+
+<div class="footer-bottom">
+
+
+	<div class="footer-bottom-inner">
+		{% comment %}
+			Copyright info
+		{% endcomment %}
+		{% assign copyright_date = 'now' | date: '%Y' %}
+		<span class="copyright-info">
+			{{ 'footer.bottom.copyright' | t: date: copyright_date }}- All Rights Reserved. Made with
+			<span>♡</span>
+			by
+			<a class='colophon' href="https://dirty-martini.com/" target="new">Dirty Martini Marketing</a>
+		</span>
+
+		{% comment %}
+			include currency picker
+																					{% include 'currency-picker' %}
+		{% endcomment %}
+
+	</div>
+
+
+</div>

@@ -1,0 +1,66 @@
+{% schema %}
+
+{
+    "name": "Cart Collection",
+    "class": "cart-collection",
+    "blocks": [
+        {
+            "type": "collection",
+            "name": "Collection",
+            "settings": [
+                {
+                    "id": "collection",
+                    "type": "collection",
+                    "label": "Collection"
+                }, {
+                    "id": "max_products",
+                    "type": "range",
+                    "min": 2,
+                    "max": 6,
+                    "step": 1,
+                    "unit": "ct",
+                    "label": "Products to Show",
+                    "default": 2
+                }, {
+                    "id": "title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Defaults to Collection Title"
+                }, {
+                    "id": "show_button",
+                    "type": "checkbox",
+                    "label": "Show Button?",
+                    "default": true
+                }, {
+                    "id": "button_text",
+                    "type": "text",
+                    "label": "Button Text",
+                    "placeholder": "Shop Now",
+                    "info": "Defaults to \"Shop Now\""
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+<div class="content-wrap">
+
+    {% for block in section.blocks %}
+        <div class="{{ block.type }}" {{ block.shopify_attributes }}>
+
+
+            {% assign collection = collections[block.settings.collection] %}
+
+            <div class="collection-list-wrap">
+                {% include "collection-list-simple" with title: block.settings.title, show_button: block.settings.show_button,
+      button_text: block.settings.button_text, max_products:
+      block.settings.max_products %}
+
+            </div>
+
+
+        </div>
+    {% endfor %}
+</div>

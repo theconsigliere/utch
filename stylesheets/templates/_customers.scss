@@ -1,0 +1,319 @@
+.contact-area {
+  @include center-between-column;
+  padding: 5vh 0;
+
+  .form {
+    width: 90%;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 60%;
+    }
+
+    .main-contact-area {
+      width: 100%;
+
+      label,
+      input {
+        display: block;
+        width: 100%;
+        margin: 1em auto;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.main-contact-buttons {
+  padding: 5vh 0;
+  width: 100%;
+  @include center-between;
+
+  input {
+    width: 45%;
+    margin: 0;
+  }
+}
+
+.form-address {
+  border-bottom: 1px solid black;
+  width: 90%;
+  margin: 0 auto;
+
+  .main-contact-buttons {
+    width: 80%;
+    padding-bottom: 2vh;
+  }
+}
+
+.address {
+  width: 95%;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+}
+
+.address-label {
+  margin-top: 5vh;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-top: 0;
+  }
+}
+
+.address-block {
+  margin: 5vh 0;
+
+  .address-block-inner {
+    @include start-between-column;
+    max-width: 80%;
+    margin: 2vh auto;
+    border-bottom: 1px solid $grey;
+
+    @media (min-width: #{$screen-lg}) {
+      @include start-between;
+    }
+
+    .address-item {
+      width: 100%;
+
+      @media (min-width: #{$screen-lg}) {
+        width: 40%;
+      }
+
+      .main-contact-buttons {
+        padding: 2vh 0;
+        width: 100%;
+
+        @media (min-width: #{$screen-lg}) {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+.address-button {
+  width: 100%;
+  @include center-between;
+}
+
+.add-address {
+  max-width: 80%;
+  margin: 5vh auto;
+  border-bottom: 1px solid $grey;
+
+  .main-contact-buttons {
+    padding: 2vh 0;
+    width: 100%;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 60%;
+    }
+  }
+}
+
+.default-address {
+  background: $yellow;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 2vh;
+
+  * {
+    margin: 0;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    width: 60%;
+  }
+}
+
+// ACCOUNT PAGE
+
+.account-section {
+  padding: 5vh 0;
+
+  .account-information {
+    @include center-between-column;
+
+    @media (min-width: #{$screen-lg}) {
+      @include start-between;
+    }
+
+    .account-main {
+      width: 100%;
+
+      @media (min-width: #{$screen-lg}) {
+        width: 70%;
+      }
+
+      .account-main-item {
+        margin-bottom: 2rem;
+
+        table {
+          width: 100%;
+          overflow-x: scroll;
+          display: block;
+
+          @media (min-width: #{$screen-lg}) {
+            display: inline-table;
+          }
+
+          th {
+            @extend .font-bolder;
+            @extend .uppercase;
+            text-align: left;
+            font-size: 0.8rem;
+            padding-right: 5px;
+            min-width: 100px;
+
+            @media (min-width: #{$screen-lg}) {
+              font-size: 1rem;
+              padding-right: 0;
+            }
+          }
+
+          td {
+            vertical-align: middle;
+            font-size: 0.8rem;
+            min-width: 100px;
+
+            @media (min-width: #{$screen-lg}) {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .account-sidebar {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      @media (min-width: #{$screen-lg}) {
+        width: 30%;
+        margin-bottom: 0;
+      }
+
+      .support-inner {
+        h4 {
+          padding-left: 0;
+
+          @media (min-width: #{$screen-lg}) {
+            padding-left: 50px;
+          }
+        }
+        .support-link-item {
+          width: 100%;
+          margin: 0.5em 0;
+          @include center-start;
+          padding-left: 20px;
+
+          @media (min-width: #{$screen-lg}) {
+            padding-left: 50px;
+          }
+
+          .support-text {
+            @include center-between;
+            padding: 10px 0;
+
+            p {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.order-image {
+  width: 50px;
+  height: auto;
+  padding-right: 5px;
+
+  @media (min-width: #{$screen-md}) {
+    width: 100px;
+    padding-right: 0;
+  }
+}
+
+//ORDER SECTION
+
+.order-section {
+  padding: 5vh 0;
+}
+
+.order-address-group {
+  @include center-between-column;
+
+  @media (min-width: #{$screen-lg}) {
+    @include center-between;
+  }
+
+  .order-address {
+    margin: 2vh 0;
+    width: 100%;
+    text-align: center;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 45%;
+    }
+  }
+}
+
+.single-order {
+  text-align: center;
+  margin-bottom: 2vh;
+  padding-bottom: 20px;
+  border-bottom: 2px solid $grey;
+
+  @media (min-width: #{$screen-lg}) {
+    padding-bottom: 5vh;
+  }
+
+  .responsive-table {
+    width: 100%;
+
+    th {
+      text-align: right;
+      width: 20%;
+      padding-bottom: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+
+      @media (min-width: #{$screen-lg}) {
+        font-size: 1rem;
+      }
+    }
+
+    td {
+      text-align: right;
+      padding-bottom: 10px;
+      color: $grey;
+      font-weight: 300;
+      font-size: 0.8rem;
+
+      @media (min-width: #{$screen-lg}) {
+        font-size: 1rem;
+      }
+
+      strong {
+        color: $black;
+
+        .money {
+          color: $black;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .money {
+      font-weight: 300;
+      color: $grey;
+    }
+  }
+}
+
+.small--hide {
+  text-align: right;
+}

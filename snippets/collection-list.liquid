@@ -1,0 +1,70 @@
+<div class="collection-list">
+    <div class="collection-block-info">
+
+        {% if collection.handle contains 'kids' or collection.handle contains 'mini' %}
+
+
+            <h1 class="uppercase kids-header-font">
+                {% if title != blank %}
+                    {{ title }}
+                {% else %}
+                    {{ collection.title }}
+                {% endif %}
+            </h3>
+
+        {% else %}
+
+            <h3 class="uppercase">
+                {% if title != blank %}
+                    {{ title }}
+                {% else %}
+                    {{ collection.title }}
+                {% endif %}
+            </h3>
+
+
+        {% endif %}
+
+
+        {% comment %}   {{ 'underline.svg' | asset_url | img_tag: 'Background', 'underline-svg' }} {% endcomment %}
+
+        {% comment %}
+			If we want to disable this completely, we just need to pass the variable 'false' where 'collection-list' is called
+		{% endcomment %}
+
+        {% if content != false %}
+            <div class="collection-description">
+                {% if content != blank %}
+                    <p class="p-fade">{{ content }}</p>
+                {% else %}
+                    <p class="p-fade">{{ collection.description }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="collection-products">
+        {% for product in collection.products limit: max_products %}
+            {% comment %}
+				Exclude product from collection if we are already looking at said product
+			{% endcomment %}
+            {% unless exclude != blank and exclude contains product.handle %}
+
+                {% include 'product-card' %}
+            {% endunless %}
+        {% endfor %}
+    </div>
+
+
+    <aside class="collection-block-button">
+        {% if show_button %}
+            <a href="{{ collection.url }}" class="block-button">
+                {% if button_text != blank %}
+                    {{ button_text }}
+                {% else %}
+                    {{ 'general.shop.shop_now' | t }}
+                {% endif %}
+            </a>
+        {% endif %}
+    </aside>
+</div>

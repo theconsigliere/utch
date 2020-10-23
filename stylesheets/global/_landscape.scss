@@ -1,0 +1,601 @@
+// /* Google Pixel XL & Galaxy S6 Landscape  */
+// @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: landscape) {
+//   #header-global {
+//     padding: 0 5px;
+//   }
+// }
+
+// /* Galaxy S4, S5 and Note 3 and Google Pixel Landscape */
+// @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+//   #header-global {
+//     padding: 0 5px;
+//   }
+// }
+
+// /* iPhone 5, 5S, 5C and 5SE Landscape */
+// @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+//   #header-global {
+//     padding: 0 5px;
+//   }
+// }
+
+// /* iPhone 6, 6S, 7 and 8 Landscape */
+// @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+//   #header-global {
+//     padding: 0 5px;
+//   }
+// }
+
+// /* iPhone 6+, 7+ and 8+ Landscape */
+// @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+//   #header-global {
+//     padding: 0 5px;
+//   }
+// }
+
+/* Iphone X Landscape */
+@media only screen and (min-width : #{$screen-xs}) and (max-width : #{$screen-lg}) and (orientation: landscape) {
+  header #header-global {
+    padding: 5px 10px;
+  }
+
+  .hero-slideshow .slide-image .hero-large-screen {
+    display: block;
+  }
+
+  .insta_inner-section .insta_item:last-of-type {
+    display: none;
+  }
+
+  .hero-slideshow .slide-image .hero-portrait-screen {
+    display: none;
+  }
+
+  .header-left .link-logo .hornit-logo-svg {
+    max-width: 150px;
+  }
+
+  main .hero-slideshow .slide-content .button {
+    margin-top: 10px;
+  }
+
+  .slideshow-wrap .slick-dots {
+    margin-bottom: 0;
+    bottom: 10%;
+  }
+
+  .shopify-section .announcement-bar__message {
+    font-size: 0.8rem;
+    padding: 0;
+  }
+
+  .slide .slide-content .logo-slide .hero-product-logo {
+    margin-bottom: 10px;
+    width: 120px;
+  }
+
+  .slide .slide-content .logo-slide .helmet-product-logo {
+    margin-bottom: 10px;
+  }
+
+  main .hero-slideshow {
+    height: 80vh;
+  }
+
+  body main {
+    margin-top: 20vh;
+  }
+
+  main .hero-slideshow .slide-content {
+    bottom: 30%;
+    padding: 20px;
+  }
+
+  header .mobile-nav {
+    overflow-x: scroll;
+
+    &:-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+
+    &:-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+
+    .mobile-nav-inner {
+      margin-top: 20vh;
+    }
+  }
+
+  .shopify-section .homepage-category .category-item-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .category-link {
+      flex: auto;
+      width: 50%;
+
+      .category-item {
+        margin: 1em 0.5em;
+
+        .category-image {
+          height: 70vh;
+        }
+      }
+    }
+  }
+
+  .shopify-section .page-video-section {
+    height: 100vh;
+  }
+
+  section .cyclist-page-section {
+    height: 100vh;
+
+    .title-section {
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+
+      p {
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+
+  .page-insta-section .insta_inner-section {
+    flex-direction: row;
+  }
+
+  .insta-item-text-group p {
+    display: none;
+  }
+
+  .footer-bottom-inner .copyright-info {
+    font-size: 0.6rem;
+  }
+
+  body main p,
+  .collection-block-info .collection-description p {
+    font-size: 0.9rem !important;
+  }
+
+  .footer-bottom-inner .copyright-info .colophon {
+    font-size: 0.6rem;
+  }
+
+  // menu
+
+  .header-nav-list .nav .nav_item .mega_item {
+    line-height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .nav-column-first .nav_first {
+    margin-bottom: 0.4rem;
+
+    .first-link {
+      font-size: 0.8rem;
+    }
+  }
+
+  .mobile-nav .header-nav-list .text-link {
+    font-size: 0.8rem;
+  }
+
+  // TYPOGRAPHY
+
+  h1,
+  .kids-header-content h1,
+  .kids-intro-title .kids-header-font,
+  .collection-product-text-inner .kids-header-font,
+  .collection-sidebar .kids-header-font {
+    font-size: 3rem;
+  }
+
+  h2,
+  .collection-block-info .kids-header-font,
+  .product-content-section .kids-header-font,
+  .product-description h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  // SHOW SCROLL BAR
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 1px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $black;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+
+  // ADULTS COLLECTION PAGE
+
+  .master-collection-full .collection-header {
+    height: 80vh;
+  }
+
+  .master-collection-full .collection-product-block-section .collection-product-block-inner {
+    padding: 0;
+  }
+
+  .master-collection-full .title-section {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+
+  .collection-list-wrap .collection-list {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+
+  .master-collection-full,
+  #shopify-section-clug-collection {
+    .collection-product-block-section {
+      &:nth-child(even) {
+        .collection-product-block-inner .collection-product-block {
+          flex-direction: row-reverse;
+        }
+      }
+
+      .collection-product-block-inner {
+        .collection-product-block {
+          @include center-between;
+          flex-direction: row;
+
+          .collection-product-block-item {
+            width: 50%;
+          }
+
+          .collection-block-text {
+            .collection-product-text-inner {
+              padding-top: 20px;
+              padding-bottom: 10px;
+              text-align: left;
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // CLUG COLLECTION PAGE
+
+  .master-collection-full {
+    .hero-collection-hero {
+      height: 80vh;
+      width: 100vw;
+      @include center-between;
+
+      .hero-img {
+        position: relative;
+        width: 50%;
+        margin-bottom: 10vh;
+      }
+
+      .clug-color-stripe {
+        bottom: 0;
+
+        .color-stripes {
+          margin-bottom: 0.3em;
+        }
+      }
+
+      .hero-content {
+        width: 50%;
+        @include center-start-column;
+        padding-left: 10vh;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+
+        .hero-content-inner {
+          text-align: left;
+          display: block;
+          width: 80%;
+          padding: 5vh 0;
+          margin: 0;
+
+          .clug-product-logo {
+            width: 100px;
+          }
+        }
+
+        .hero-button-inner {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #shopify-section-clug-collection {
+    .clug-categories {
+      margin-bottom: 5em;
+    }
+
+    .clug-category-slideshow .slick-next,
+    .clug-category-slideshow .slick-prev {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .clug-cat-text .clug-info-row .clug-info-item-text {
+    margin-bottom: 1em;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .slick-slide .clug-cat-item {
+    padding: 10px;
+  }
+
+  // KIDS COLLECTION PAGE
+
+  .collection-header .hornit-kids-icon {
+    width: 80px;
+    left: 15%;
+  }
+
+  // CONTACT PAGE
+
+  .contact-page {
+    .contact-info .contact-section .contact-profile {
+      // width: 30%;
+
+      .contact-profile-image {
+        height: 120px;
+        width: 120px;
+      }
+    }
+  }
+
+  // VIDEO LIBRARY
+
+  .video-inner .video-library-item iframe {
+    height: 80vh;
+  }
+
+  // ABOUT / OUR STORY
+
+  .story-info .about-us-section .about-image {
+    margin: 2em 0;
+  }
+
+  // BLOG PAGE
+
+  .blog-page-header .blog-hero {
+    .blog-hero-img {
+      height: 80vh;
+    }
+
+    .blog-hero-text .blog-hero-text-inner {
+      width: 90%;
+      margin: 1em auto;
+      text-align: center;
+    }
+  }
+
+  #article-page .article-header .article-header-img {
+    display: none;
+  }
+
+  // WHAT CYCLIST ARE YOU
+
+  .cyclist-section-group .cyclist-title {
+    align-items: flex-start;
+
+    .title-section h1 {
+      font-size: 3rem;
+    }
+  }
+
+  .cyclist-page-main .cyclist-block-section .cyclist-block {
+    .block-image {
+      height: 80vh;
+    }
+
+    .block-text {
+      .cyclist-text-inner {
+        .cyclist-collection-list {
+          justify-content: space-between;
+
+          .product-card {
+            min-width: 22%;
+            max-width: 25%;
+            margin: 5px;
+          }
+        }
+
+        .cyclist-block-title {
+          text-align: center;
+
+          h1 {
+            font-size: 2.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // PRODUCT PAGES
+
+  main #page-product #product-top .product-top-inner {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    .product-images {
+      width: 40%;
+      margin: 1vh 20px;
+
+      .slick-arrow {
+        opacity: 1;
+
+        .inline-icon.icon-arrow-left-svg,
+        .inline-icon.icon-arrow-right-svg {
+          width: 15px;
+        }
+      }
+
+      .slider-nav,
+      .image-counter {
+        display: none;
+      }
+    }
+
+    .product-actions {
+      width: 50%;
+      text-align: left;
+
+      .product-short-desc p {
+        margin-bottom: 2vh;
+      }
+
+      .payment-options {
+        display: none;
+      }
+
+      .product-title {
+        font-size: 1.8rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .product-short-desc {
+        p {
+          display: none;
+        }
+
+        .kids-sub-header-font {
+          margin-bottom: 0.5em;
+        }
+      }
+
+      .product-option-row {
+        padding: 2px 0;
+
+        .option-values {
+          align-items: flex-end;
+          flex-direction: row;
+          width: 90%;
+        }
+
+        .option-color-title {
+          margin: 0 10px;
+
+          p {
+            display: none;
+            font-size: 0.7rem !important;
+          }
+        }
+
+        label {
+          font-size: 0.9rem;
+        }
+
+        .styled-select select {
+          font-size: 0.9rem;
+        }
+      }
+
+      .music-player {
+        .bbplayer {
+          padding: 5px;
+          flex-direction: column;
+
+          .controls {
+            width: fit-content;
+            margin: 0 auto;
+          }
+
+          .player-title {
+            padding-top: 5px;
+            width: fit-content;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .breadcrumb {
+        margin-bottom: 5vh;
+
+        .current-page,
+        a {
+          font-size: 0.8rem;
+        }
+      }
+
+      #add-to-cart-form {
+        margin-top: 0;
+
+        #add-to-cart-button {
+          margin-top: 10px;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+
+  #product-bottom {
+    .video-section {
+      height: 80vh;
+    }
+
+    .image-section {
+      height: 80vh;
+      overflow: hidden;
+
+      .image-item:last-of-type {
+        display: block;
+      }
+
+      .image-item {
+        width: 30%;
+      }
+    }
+
+    .button-section {
+      margin-bottom: 2em;
+
+      a {
+        width: 50%;
+      }
+    }
+  }
+
+  #product-bottom .info-list {
+    h4 {
+      margin-bottom: 1em;
+    }
+
+    .info-list-inner {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+}

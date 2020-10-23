@@ -1,0 +1,99 @@
+<div class="product-card">
+    <a class="link-to-product" href="{{ product.url | within: collection }}">
+        {% if product.featured_image %}
+        <div class="card-image">
+
+            <div class="reveal">
+
+                {% if product.images.size > 1 %}
+
+                <img data-src="{{ product.featured_image.src | img_url: '1000x1000', crop: 'center' }}"
+                    alt="{{ product.featured_image.alt | escape }}" class="lazyload">
+
+                <div class="hidden">
+                    <img data-src="{{ product.images.last | img_url: '1000x1000', crop: 'center' }}"
+                        alt="{{ product.images.last.alt | escape }}" class="lazyload" />
+                </div>
+
+                {% else %}
+
+                <img data-src="{{ product.featured_image.src | img_url: '1000x1000', crop: 'center' }}"
+                    alt="{{ product.featured_image.alt | escape }}" class="lazyload">
+
+                {% endif %}
+            </div>
+
+        </div>
+        {% endif %}
+
+        <div class="card-info">
+            <div class="card-info-top">
+                <div class="product-title">
+                    <p class="uppercase black font-bolder">{{ product.title }}</p>
+
+
+                    {% if product.available %}
+
+
+
+                    {% if product.handle contains 'helmet' %}
+
+                    {% if product.options.size == 1 and product.variants.size == 1 %}
+
+
+                    <p class="small-p">
+                        {{ 'product.card.sizes_styles_singular' | t: optionCount: product.options.size, styleCount: product.variants.size }}
+                    </p>
+
+                    {% elsif product.options.size > 1 and product.variants.size > 1 %}
+
+                    <p class="small-p">
+                        {{ 'product.card.sizes_styles_plural' | t: optionCount: product.options.size, styleCount: product.variants.size }}
+                    </p>
+
+                    {% else %}
+
+                    <p class="small-p">
+                        {{'product.card.sizes_styles' | t:  optionCount: product.options.size, styleCount: product.variants.size }}
+                    </p>
+
+                    {% endif %}
+
+                    {% else %}
+
+                    {% if product.options.size == 1 and product.variants.size == 1 %}
+
+
+                    <p class="small-p">
+                        {{ 'product.card.options_styles_singular' | t: optionCount: product.options.size, styleCount: product.variants.size }}
+                    </p>
+
+                    {% elsif product.options.size > 1 and product.variants.size > 1 %}
+
+                    <p class="small-p">
+                        {{ 'product.card.options_styles_plural' | t: optionCount: product.options.size, styleCount: product.variants.size }}
+                    </p>
+
+                    {% else %}
+
+                    <p class="small-p">
+                        {{'product.card.option_styles' | t:  optionCount: product.options.size, styleCount: product.variants.size }}
+                    </p>
+
+                    {% endif %}
+
+                    {% endif %}
+
+                    {% else %}
+                    <p class="small-p">{{ 'product.form.sold_out' | t }}</p>
+                    {% endif %}
+
+                </div>
+                <div class="product-price">
+                    {{ product.price | money }}
+                </div>
+            </div>
+
+        </div>
+    </a>
+{% render 'preorder-now-collection-item', product: product %}</div>

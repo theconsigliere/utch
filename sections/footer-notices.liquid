@@ -1,0 +1,170 @@
+{% schema %}
+
+{
+    "name": "Delivery Footer Section",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_delivery",
+            "label": "Show delivery information",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "type": "notice",
+            "name": "Notice",
+            "settings": [
+                {
+                    "id": "icon",
+                    "type": "select",
+                    "options": [
+                        {
+                            "value": "no-logo",
+                            "label": "Nothing Selected"
+                        }, {
+                            "value": "user-icon",
+                            "label": "Login Icon"
+                        }, {
+                            "value": "gear-icon",
+                            "label": "Settings Icon"
+                        }, {
+                            "value": "email-icon",
+                            "label": "Email Icon"
+                        }, {
+                            "value": "send-icon",
+                            "label": "Delivery Icon"
+                        }, {
+                            "value": "list-icon",
+                            "label": "Info Icon"
+                        }, {
+                            "value": "help-icon",
+                            "label": "Help Icon"
+                        }
+                    ],
+                    "label": "Select Product Logos"
+                }, {
+                    "id": "title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Slide Title"
+                }, {
+                    "id": "content",
+                    "type": "textarea",
+                    "label": "Slide Content"
+                }, {
+                    "type": "checkbox",
+                    "id": "enable_login",
+                    "label": "Enable Login Button",
+                    "info": "If Enabled, Button url will not show"
+                }, {
+                    "id": "button_url",
+                    "type": "url",
+                    "label": "Button URL"
+                }, {
+                    "id": "button_text",
+                    "type": "text",
+                    "label": "Button Text",
+                    "placeholder": "Shop Now",
+                    "info": "Defaults to \"Shop Now\""
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+
+{% if section.settings.show_delivery %}
+    <section class="delivery-info-section" id="your-account">
+
+
+        <div class="delivery-info-group">
+            {% for block in section.blocks %}
+
+
+                <div class="delivery-notice text-align">
+
+
+                    <div class="support-icon">
+                        {% if block.settings.icon == 'user-icon' %}
+
+                            <img data-src="{{ '001-user.png' | asset_url }}" class="lazyload"/>
+
+                        {% elsif block.settings.icon == 'gear-icon' %}
+
+                            <img data-src="{{ '002-gear.png' | asset_url }}" class="lazyload"/>
+
+                        {% elsif block.settings.icon == 'email-icon' %}
+
+                            <img data-src="{{ '003-email.png' | asset_url }}" class="lazyload"/>
+
+                        {% elsif block.settings.icon == 'send-icon' %}
+
+                            <img data-src="{{ '004-send.png' | asset_url }}" class="lazyload"/>
+
+                        {% elsif block.settings.icon == 'list-icon' %}
+
+                            <img data-src="{{ '005-list.png' | asset_url }}" class="lazyload"/>
+
+                        {% elsif block.settings.icon == 'help-icon' %}
+
+                            <img data-src="{{ '006-help.png' | asset_url }}" class="lazyload"/>
+
+                        {% endif %}
+                    </div>
+
+
+                    <h5 class="uppercase">{{ block.settings.title }}</h5>
+
+                    <p>{{ block.settings.content }}</p>
+
+
+                    {% if block.settings.enable_login %}
+
+                        {% if shop.customer_accounts_enabled %}
+                            {% if customer  %}
+                                <div class="footer-notice-buttons">
+
+                                    <a class="black-button" href="/account">
+                                        My Account
+                                    </a>
+
+                                    <div class="grey-button">
+                                        {{ 'layout.customer.log_out' | t | customer_logout_link }}
+                                    </div>
+                                </div>
+
+                            {% else %}
+                                <div class="grey-button">
+                                    {{ 'Log in' | customer_login_link }}
+                                </div>
+                            {% endif %}
+                        {% endif %}
+
+
+                    {% else %}
+
+
+                        {% if block.settings.button_url %}
+
+                            <a href="{{ block.settings.button_url }}" class="black-button">
+                                {{ block.settings.button_text }}
+                            </a>
+
+                        {% endif %}
+
+
+                    {% endif %}
+
+
+                </div>
+
+
+            {% endfor %}
+        </div>
+    </section>
+
+
+{% endif %}

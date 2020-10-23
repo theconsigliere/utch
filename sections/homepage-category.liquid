@@ -1,0 +1,120 @@
+{% schema %}
+
+{
+    "name": "Page Categories",
+    "class": "page-category",
+    "settings":  
+    [    
+        {
+            "id": "cat_title",
+            "type": "text",
+            "label": "Title",
+            "placeholder": "Slide Title"
+        }, {
+            "id": "cat_content",
+            "type": "textarea",
+            "label": "Slide Content"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "category",
+            "name": "Category",
+            "settings": [
+                {
+                    "id": "image",
+                    "type": "image_picker",
+                    "label": "Background Image"
+                }, {
+                    "id": "title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Slide Title"
+                }, {
+                    "id": "content",
+                    "type": "textarea",
+                    "label": "Slide Content"
+                }, {
+                    "id": "button_url",
+                    "type": "url",
+                    "label": "Button URL"
+                }, {
+                    "id": "button_text",
+                    "type": "text",
+                    "label": "Button Text",
+                    "placeholder": "Shop Now",
+                    "info": "Defaults to \"Shop Now\""
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "content",
+            "name": "Page Categories",
+            "blocks": [
+                {
+                    "type": "category",
+                    "settings": {
+                        "title": "Add Category",
+                        "content": "Lorem ipsum"
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+<div class="homepage-category">
+    
+    {% if section.settings.cat_title != blank %}
+        <div class="title-section" id="page__title_section">
+            <h3 class="">{{ section.settings.cat_title }}</h3>
+            <h6 class="p-fade">{{ section.settings.cat_content }}</h6>
+        </div>
+    {% endif %}
+
+    <div class="category-item-group">
+        {% for block in section.blocks %}
+
+            <a href="{{ block.settings.button_url }}" class="category-link">
+
+                <div class="category-item" {{ block.shopify_attributes }}>
+
+                    {% if block.settings.image != blank %}
+                        <div class="category-image">
+                            <img data-src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" class="lazyload"/>
+
+                        </div>
+                    {% endif %}
+
+                    <div class="category-content">
+
+                        <h5 class="white uppercase">{{ block.settings.title }}</h5>
+                        {% if block.settings.content != blank %}
+                            <p>{{ block.settings.content }}</p>
+                        {% endif %}
+
+                    </div>
+
+                    <div class="category-bottom">
+                        {% if block.settings.button_url != blank %}
+                            <div class="item-button">
+                                {% if block.settings.button_text != blank %}
+                                    {{ block.settings.button_text }}
+                                {% else %}
+                                    {{ "general.shop.shop_now" | t }}
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="item-overlay"></div>
+                </div>
+
+            </a>
+        {% endfor %}
+    </div>
+</div>

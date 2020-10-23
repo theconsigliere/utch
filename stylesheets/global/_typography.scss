@@ -1,0 +1,286 @@
+// Typography
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@font-face {
+  font-family: "BW Helder Extra Bold";
+  src: url("../assets/BwHelder-W2ExtraBold.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BW Helder Medium";
+  src: url("../assets/BwHelder-W2Medium.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BW Helder Bold";
+  src: url("../assets/BwHelder-W2Bold.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BW Helder Light";
+  src: url("../assets/BwHelder-W2Light.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+$headline-font: "BW Helder Extra Bold";
+$text-font: "BW Helder Medium";
+
+b,
+strong {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: $black;
+  line-height: 1.2;
+
+  @media (min-width: #{$screen-sm}) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    margin-bottom: 2rem;
+  }
+}
+
+h1 {
+  font-family: $headline-font, sans-serif;
+  font-weight: $type-bold;
+  font-size: 3rem;
+  font-display: swap;
+
+  @media (min-width: #{$screen-sm}) {
+    font-size: 4.6rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 4.8rem;
+  }
+}
+
+h2 {
+  font-family: $headline-font, sans-serif;
+  font-weight: $type-bold;
+  font-size: 2.8rem;
+  font-display: swap;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 3.2rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 4rem;
+  }
+}
+
+h3 {
+  font-family: $headline-font, sans-serif;
+  font-weight: $type-bold;
+  font-size: 2.2rem;
+  font-display: swap;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 2.4rem;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    font-size: 2.6rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 2.9rem;
+  }
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: $type-bold;
+  font-display: swap;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 2.2rem;
+  }
+}
+
+h5 {
+  font-weight: $type-bold;
+  font-size: 1.4rem;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 1.8rem;
+  }
+}
+
+h6 {
+  font-weight: $type-thin;
+  font-size: 1.2rem;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 1.4rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 1.6rem;
+  }
+}
+
+p,
+a {
+  margin-top: 0;
+  color: $text-color;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-weight: $type-thin;
+  font-size: 0.8rem;
+
+  @media (min-width: #{$screen-sm}) {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+}
+
+li {
+  margin-top: 0;
+  color: $text-color;
+  font-weight: $type-thin;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+ul {
+  margin-bottom: 2rem;
+  list-style-type: none;
+
+  li {
+    text-indent: 5px;
+
+    &:before {
+      content: "-";
+      padding-right: 5px;
+    }
+  }
+}
+
+
+
+.h1-big {
+  font-size: 4.2rem;
+  line-height: 1;
+
+  @media (min-width: #{$screen-sm}) {
+    font-size: 4.6rem;
+    line-height: 1.2;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 5.6rem;
+  }
+}
+
+
+.p-large {
+  font-family: $text-font, sans-serif;
+  font-display: swap;
+  font-size: 1.2rem;
+  line-height: $line-global;
+
+  @media (min-width: #{$screen-lg}) {
+    font-size: $type-body-lg;
+    line-height: $line-global * 2;
+  }
+}
+
+.small-p {
+  font-size: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+  margin-bottom: 0;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.link-logo {
+  display: inline-block;
+}
+
+.text-link {
+  font-family: $text-font, sans-serif;
+  color: $text-color;
+  fill: currentColor;
+  font-display: swap;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-uppercase {
+  text-transform: uppercase;
+  font-weight: $type-bold;
+  margin-bottom: 0;
+  color: $black;
+}
+
+.font-bold {
+  font-weight: 400;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-bolder {
+  font-weight: $type-bold;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.text-width-small {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: #{$screen-md}) {
+    width: 40%;
+  }
+}

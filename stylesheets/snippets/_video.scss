@@ -1,0 +1,50 @@
+// POP UP VIDEO
+
+.pop-up-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  background: rgba(43, 43, 43, 0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  .popup-close {
+    cursor: pointer;
+    position: absolute;
+    left: 80%;
+    top: 5%;
+    z-index: 998;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 24px;
+    background-color: $black;
+    line-height: 47px;
+    color: #fff;
+    border: 2px solid $yellow;
+
+    @media (min-width: #{$screen-lg}) {
+      left: 95%;
+    }
+  }
+
+  iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    width: 90vw;
+    height: 90vh;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 70vw;
+      height: 70vh;
+    }
+  }
+}

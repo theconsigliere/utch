@@ -1,0 +1,101 @@
+@import url("https://use.typekit.net/fsp3qru.css");
+
+/*********************
+ screen sizes
+ *********************/
+
+$screen-xxs: 0;
+$screen-xs: 350px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1440px;
+$screen-xxxl: 1920px;
+
+// Attributes ---------------------------------------------------------- */
+
+$drop-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+$bb: 2px solid white;
+$page-margin-column: 5vw;
+$page-margin-row: 5vh;
+$text-space: 2rem;
+
+// Animation ---------------------------------------------------------- */
+
+$bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
+$timing: 1s;
+
+// Font ---------------------------------------------------------- */
+
+$headline-font: "din-2014",
+sans-serif;
+$text-font: "din-2014",
+sans-serif;
+
+$type-headline-lg: 40px;
+$type-headline-med: 20px;
+$type-headline-sm: 15px;
+$type-body-lg: 31px;
+$type-body-med: 13px;
+
+$type-bold: 700;
+$type-thin: 300;
+
+// Colours ---------------------------------------------------------- */
+
+$black: #24272c;
+$yellow: #ffd200;
+$white: #ffffff;
+$brown: rgb(147,121,122);
+$green: rgb(169,182, 164);
+$dark-green: #485448;
+
+$orange: #f04f23;
+$pink: #e63888;
+$grey: #9ea2a2;
+$blue: #02a9e0;
+
+$light-black: #333333;
+$light-white: #fafafa;
+
+$text-color: #485448;
+$text-color-white: #cccccc;
+$text-color-light: #707070;
+$text-color-light-white: #aaaaaa;
+
+$border-color: rgba(0, 0, 0, 0.15);
+$border-color-white: rgba(255, 255, 255, 0.15);
+
+$standard-border: 1px solid $border-color;
+$standard-border-white: 1px solid $border-color-white;
+
+$line-global: 20px;
+$gutter-global: $line-global * 2; // 40px
+$offset-global: $gutter-global;
+
+$header-height: 100px;
+
+$button-height: $line-global * 2;
+
+
+.dark-green {
+    color: $dark-green;
+}
+
+.white {
+    color: $white;
+  }
+  
+  .yellow {
+    color: $yellow;
+  }
+  
+  .black {
+    color: $black;
+  }
+  
+  .red {
+    color: red;
+  }
+  

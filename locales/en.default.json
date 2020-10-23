@@ -1,0 +1,239 @@
+{
+  "general": {
+    "shop": {
+      "title": "Hutch Houseplants",
+      "description": "Hutch is an independent shop based in Exeter, specialising in rare and exotic houseplants,",
+      "shop_now": "Shop Now",
+      "read_more": "Read More",
+      "support": "Support"
+    },
+    "404": {
+      "error_code": "404",
+      "title": "Sorry, we couldn't find that page. Try searching instead?",
+      "back": "Back to Shop"
+    },
+    "password_page": {
+      "opening_soon": "Opening Soon",
+      "login_form_heading": "Enter store using password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>",
+      "password_link": "Enter using password",
+      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
+    }
+  },
+  "footer": {
+    "list": {
+      "products": "Our Products"
+    },
+    "bottom": {
+      "copyright": "©{{ date }} Hutch Houseplants. All Rights Reserved."
+    }
+  },
+  "layout": {
+    "customer": {
+      "account": "Account",
+      "log_out": "Log out",
+      "log_in": "Log in",
+      "create_account": "Create account"
+    }
+  },
+  "collection": {
+    "sort": {
+      "title": "Sort",
+      "price_low_high": "Price, Low - High",
+      "price_high_low": "Price, High - Low",
+      "clear": "Clear"
+    }
+  },
+  "cart": {
+    "button": {
+      "count_html": "<span class=\"cart-item-count yellow-background js-cart-item-count\">{{ itemCount }}<\/span>"
+    },
+    "empty": {
+      "title": "Your cart is empty",
+      "button": "Keep Shopping"
+    },
+    "filled": {
+      "title": "Your Cart",
+      "mini_cart_title": "Continue",
+      "subtotal": "Subtotal",
+      "update": "Update",
+      "button": "Checkout",
+      "currency_note_html": "We process all orders in {{ currency }}. While the contents of your cart are currently displayed in <span class=\"js-active-currency\"><\/span>, the checkout will use {{ currency }} at the current exchange rate."
+    }
+  },
+  "product": {
+    "card": {
+      "options_styles_singular": "{{ optionCount }} option \/ {{ styleCount }} style",
+      "sizes_styles_singular": "{{ optionCount }} option \/ {{ styleCount }} sizes",
+      "sizes_styles_plural": "{{ optionCount }} options \/ {{ styleCount }} sizes",
+      "options_styles_plural": "{{ optionCount }} options \/ {{ styleCount }} styles",
+      "option_styles": "{{ optionCount }} option \/ {{ styleCount }} styles",
+      "sizes_styles": "{{ optionCount }} option \/ {{ styleCount }} sizes"
+    },
+    "clug": {
+      "install": "Install Instructions",
+      "video": "Click to View"
+    },
+    "questions": {
+      "title": "Frequently Asked Questions"
+    },
+    "slider": {
+      "count": "{{ slideStart }} of {{ slideTotal }}"
+    },
+    "description": {
+      "title": "Information"
+    },
+    "shipping": {
+      "title": "Shipping",
+      "content": "Products ship via FedEx within 48 hours of order. Due to the nature of our products, signature confirmation is required upon delivery. For more information, see the Delivery & Returns page."
+    },
+    "returns": {
+      "title": "Returns",
+      "content": "We accept returns within 10 days of delivery. For more information, see the Delivery & Returns page."
+    },
+    "form": {
+      "submit": "Add to Cart",
+      "quantity": "Quantity",
+      "sold_out": "Sold Out"
+    },
+    "more": {
+      "vendor": "by {{ vendor }}"
+    },
+    "colors": {
+      "white": "FFFFFF",
+      "black": "000000",
+      "raw": "707070",
+      "orange-white": "FA4F23",
+      "white-orange": "FA4F23",
+      "black-white": "000000",
+      "white-black": "000000",
+      "black-black": "000000"
+    }
+  },
+  "search": {
+    "form": {
+      "label": "Search Hutch Houseplants",
+      "placeholder": "Your search term",
+      "submit": "Submit"
+    },
+    "results": {
+      "empty": "No results for {{ searchTerms }}",
+      "filled_singular": "result",
+      "filled_plural": "results"
+    }
+  },
+  "blog": {
+    "title": "Latest News",
+    "back": "Back to Blog"
+  },
+  "contact": {
+    "form": {
+      "send": "Submit"
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "My Account",
+      "details": "Account Details",
+      "view_addresses": "View Addresses",
+      "return": "Return to Account Details"
+    },
+    "activate_account": {
+      "title": "Activate Account",
+      "subtext": "Create your password to activate your account.",
+      "password": "Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Activate Account",
+      "cancel": "Decline Invitation"
+    },
+    "addresses": {
+      "title": "Your Addresses",
+      "default": "Your Default Address",
+      "add_new": "Add a New Address",
+      "edit_address": "Edit address",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "company": "Company",
+      "address1": "Address1",
+      "address2": "Address2",
+      "city": "City",
+      "country": "Country",
+      "province": "Province",
+      "zip": "Postal\/Zip Code",
+      "phone": "Phone",
+      "set_default": "Set as default address",
+      "add": "Add Address",
+      "update": "Update Address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete_confirm": "Are you sure you wish to delete this address?"
+    },
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "forgot_password": "Forgot your password?",
+      "sign_in": "Sign In",
+      "guest_title": "Continue as a guest",
+      "guest_continue": "Continue"
+    },
+    "orders": {
+      "title": "Order History",
+      "order_number": "Order",
+      "date": "Date",
+      "payment_status": "Payment Status",
+      "fulfillment_status": "Fulfillment Status",
+      "total": "Total",
+      "none": "You haven't placed any orders yet."
+    },
+    "order": {
+      "title": "Order {{ name }}",
+      "date": "Placed on {{ date }}",
+      "cancelled": "Order Cancelled on {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}",
+      "billing_address": "Billing Address",
+      "payment_status": "Payment Status",
+      "shipping_address": "Shipping Address",
+      "fulfillment_status": "Fulfillment Status",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "fulfilled_at": "Fulfilled {{ date }}",
+      "subtotal": "Subtotal"
+    },
+    "recover_password": {
+      "title": "Reset your password",
+      "email": "Email",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "subtext": "We will send you an email to reset your password.",
+      "success": "We've sent you an email with a link to update your password."
+    },
+    "reset_password": {
+      "title": "Reset account password",
+      "subtext": "Enter a new password for {{ email }}",
+      "password": "Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Reset Password"
+    },
+    "register": {
+      "title": "Create Account",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create"
+    }
+  }
+}

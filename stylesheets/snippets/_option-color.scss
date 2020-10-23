@@ -1,0 +1,135 @@
+.option-color {
+  display: inline-block;
+  width: $line-global;
+  height: $line-global;
+  position: relative;
+
+  .option-color-inner,
+  .color-swatch {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  $outline-space: -5px;
+  .option-color-inner {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: $outline-space;
+      bottom: $outline-space;
+      left: $outline-space;
+      right: $outline-space;
+      border: 1px solid $text-color-light;
+      pointer-events: none;
+      border-radius: 100%;
+      opacity: 0;
+    }
+  }
+
+  .color-swatch {
+    border-radius: 100%;
+    border: 1px solid $black;
+  }
+
+  &.color-white {
+    .color-swatch {
+      border: $standard-border;
+    }
+  }
+
+  input[type="radio"]:not(:checked):hover + label & {
+    .option-color-inner:after {
+      opacity: 1;
+    }
+  }
+
+  input[type="radio"]:checked + label & {
+    .option-color-inner:after {
+      opacity: 1;
+      border-color: $light-black;
+    }
+  }
+}
+
+// Product Colors
+
+.orange-white-color,
+.white-orange-color {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(250, 79, 35, 1) 49%
+  );
+}
+
+.black-white-color,
+.white-black-color {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(0, 0, 0, 1) 49%
+  );
+}
+
+.black-color,
+.black-black-color {
+  background: $black;
+}
+
+.white-color {
+  background: $white;
+}
+
+.option-values {
+  @include end-center;
+  width: 80%;
+
+  @media (min-width: #{$screen-md}) {
+    @include start-end-column;
+  }
+
+  @media (min-width: #{$screen-xxxl}) {
+    @include end-center;
+  }
+
+  .option-values-items {
+    padding: 10px 0;
+  }
+}
+
+.option-label {
+  display: flex !important;
+  @include center-between;
+}
+
+.option-color-title {
+  margin: 0 15px;
+
+  p {
+    margin: 0;
+  }
+}
+
+// COLORS
+
+.orange {
+  background: $orange;
+}
+
+.blue {
+  background: $blue;
+}
+
+.green {
+  background: $green;
+}
+
+.grey {
+  background: $grey;
+}
+
+.pink {
+  background: $pink;
+}
