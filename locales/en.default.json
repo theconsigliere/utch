@@ -67,6 +67,7 @@
     }
   },
   "product": {
+  
     "card": {
       "options_styles_singular": "{{ optionCount }} option \/ {{ styleCount }} style",
       "sizes_styles_singular": "{{ optionCount }} option \/ {{ styleCount }} sizes",
@@ -86,7 +87,9 @@
       "count": "{{ slideStart }} of {{ slideTotal }}"
     },
     "description": {
-      "title": "Information"
+      "title": "Information",
+      "why": "Why Hutch selects me",
+      "how": "How to look after me"
     },
     "shipping": {
       "title": "Shipping",

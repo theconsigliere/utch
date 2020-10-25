@@ -1,0 +1,17 @@
+// ========================================================================
+// INSTAGRAM FEED STYLES - To be added to assets/theme.scss.liquid
+// ========================================================================
+#instafeed-container {
+  @include center-center;
+
+  a {
+    flex: 1;
+    @include center-center;
+
+    img {
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+}

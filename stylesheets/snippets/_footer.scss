@@ -222,7 +222,6 @@
     @media (min-width: #{$screen-lg}) {
       font-size: 0.8rem;
     }
-
   }
 }
 
@@ -303,5 +302,17 @@ input.required {
 
   @media (min-width: #{$screen-lg}) {
     text-align: left;
+  }
+}
+
+.payment-list-logos {
+  padding: 0;
+  @include center-center;
+
+  li {
+    &:before {
+      content: "";
+      padding-right: none;
+    }
   }
 }

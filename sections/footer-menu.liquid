@@ -152,27 +152,3 @@
 	</div>
 </div>
 
-<div class="footer-bottom">
-
-
-	<div class="footer-bottom-inner">
-		{% comment %}
-			Copyright info
-		{% endcomment %}
-		{% assign copyright_date = 'now' | date: '%Y' %}
-		<span class="copyright-info">
-			{{ 'footer.bottom.copyright' | t: date: copyright_date }}- All Rights Reserved. Made with
-			<span>♡</span>
-			by
-			<a class='colophon' href="https://dirty-martini.com/" target="new">Dirty Martini Marketing</a>
-		</span>
-
-		{% comment %}
-			include currency picker
-																					{% include 'currency-picker' %}
-		{% endcomment %}
-
-	</div>
-
-
-</div>

@@ -63,7 +63,7 @@
     }
 
     * {
-     // text-shadow: $drop-shadow;
+      // text-shadow: $drop-shadow;
       margin: 0;
       text-align: center;
       width: 100%;
@@ -85,7 +85,7 @@
     }
 
     * {
-    //  text-shadow: $drop-shadow;
+      //  text-shadow: $drop-shadow;
       margin: 0;
       text-align: center;
 
@@ -102,7 +102,7 @@
     justify-content: center;
 
     * {
-     // text-shadow: $drop-shadow;
+      // text-shadow: $drop-shadow;
       margin: 0;
       text-align: center;
     }
@@ -124,7 +124,6 @@
     p {
       margin-top: $line-global;
     }
-
 
     .button {
       margin-top: $offset-global;
@@ -168,7 +167,6 @@
   }
 }
 
-
 // Hero Waves
 //----------------------------------------------
 
@@ -182,11 +180,12 @@
 }
 
 @keyframes swell {
-  0%, 100% {
-    transform: translate3d(0,-25px,0);
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
   }
   50% {
-    transform: translate3d(0,5px,0);
+    transform: translate3d(0, 5px, 0);
   }
 }
 
@@ -195,25 +194,26 @@
   overflow: hidden;
 
   .hero-waves {
-  //  height: 5%;
-    width:100%;
-    position:absolute;
-    bottom:0;
-    left:0;
+    //  height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
     .hero-wave {
       position: absolute;
       top: -198px;
       width: 200vw;
       height: 20vh;
-      animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+      animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
       transform: translate3d(0, 0, 0);
       opacity: 0.4;
     }
 
     .hero-wave:nth-of-type(2) {
       top: -175px;
-      animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+      animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+        swell 7s ease -1.25s infinite;
       opacity: 1;
     }
   }
@@ -225,17 +225,15 @@
     @media (min-width: #{$screen-lg}) {
       width: 250px;
     }
+  }
 }
-
-}
-
-
-
-
-
 
 // PAGE CATEGROY
 //---------------------------------
+
+.category-item-group {
+  @include center-between;
+}
 
 .category-image {
   height: 25vh;
@@ -253,79 +251,6 @@
 
     @media (min-width: #{$screen-xxl}) {
       opacity: 1;
-    }
-  }
-}
-
-.homepage-category {
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-
-  @media (min-width: #{$screen-xxxl}) {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    width: 70%;
-  }
-
-  .category-item-group {
-    @include center-center-column;
-
-    @media (min-width: #{$screen-lg}) {
-      @include center-between;
-    }
-
-    .category-link {
-      flex: 1;
-      width: 100%;
-
-      @media (min-width: #{$screen-lg}) {
-        width: auto;
-      }
-
-      .category-item {
-        position: relative;
-        margin: 1em 0;
-        overflow: hidden;
-
-        @media (min-width: #{$screen-lg}) {
-          margin: 0.5em;
-        }
-
-        @media (min-width: #{$screen-xl}) {
-          margin: 1em;
-        }
-
-        .category-content {
-          position: absolute;
-          top: 0;
-          left: 0;
-          padding: 1em;
-          width: 100%;
-          z-index: 1;
-
-          p {
-            opacity: 0;
-            color: $black;
-            transition-delay: 0.3s;
-            transition: all 0.3s ease-in-out;
-          }
-
-          * {
-            margin-bottom: 1rem;
-            transition: all 0.3s ease-in-out;
-          }
-        }
-
-        .category-bottom {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          z-index: 1;
-          padding: 1em;
-        }
-      }
     }
   }
 }
@@ -614,7 +539,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
 
-    >* {
+    > * {
       flex: 0 0 50%;
     }
 
@@ -679,7 +604,8 @@
 }
 
 .delivery-info-section {
-  @media (min-width: #{$screen-xxl}) {}
+  @media (min-width: #{$screen-xxl}) {
+  }
 
   .delivery-info-group {
     display: flex;
@@ -708,8 +634,6 @@
     }
   }
 }
-
-
 
 // TITLE SECTION
 
@@ -892,7 +816,6 @@
       -webkit-text-fill-color: transparent;
       margin-bottom: 0;
     }
-
 
     h1 {
       font-size: 4rem;
@@ -1089,5 +1012,26 @@
 
   @media (min-width: #{$screen-lg}) {
     display: none;
+  }
+}
+
+// Logo Bar
+
+.image-logo-bar {
+  padding: 0.5em 0;
+
+  .logo-bar-title {
+    text-align: center;
+  }
+
+  .image-bar {
+    @include center-between;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+
+    img {
+      max-width: 180px;
+    }
   }
 }

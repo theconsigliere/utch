@@ -1,20 +1,8 @@
 <div class="collection-list">
     <div class="collection-block-info">
 
-        {% if collection.handle contains 'kids' or collection.handle contains 'mini' %}
 
-
-            <h1 class="uppercase kids-header-font">
-                {% if title != blank %}
-                    {{ title }}
-                {% else %}
-                    {{ collection.title }}
-                {% endif %}
-            </h3>
-
-        {% else %}
-
-            <h3 class="uppercase">
+            <h3>
                 {% if title != blank %}
                     {{ title }}
                 {% else %}
@@ -23,7 +11,6 @@
             </h3>
 
 
-        {% endif %}
 
 
         {% comment %}   {{ 'underline.svg' | asset_url | img_tag: 'Background', 'underline-svg' }} {% endcomment %}

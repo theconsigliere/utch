@@ -648,7 +648,6 @@
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -750,10 +749,11 @@
 
   .collection-block-info {
     width: 100%;
+    border-bottom: 2px solid $dark-green;
     //margin-bottom: $offset-global;
 
     * {
-      text-align: center;
+      text-align: left;
     }
   }
 
@@ -820,7 +820,8 @@
   margin: 0 auto;
   position: relative;
 
-  @media (min-width: #{$screen-xl}) {}
+  @media (min-width: #{$screen-xl}) {
+  }
 
   .slick-list {
     padding: 0 20% 0 0;
@@ -1112,10 +1113,7 @@
   }
 }
 
-
-
-// airo 
-
+// airo
 
 .airo-header-content {
   max-width: 80%;
@@ -1123,7 +1121,6 @@
   @media (min-width: #{$screen-lg}) {
     max-width: 50%;
   }
-
 
   @media (min-width: #{$screen-xl}) {
     max-width: 30%;
@@ -1161,12 +1158,10 @@
   }
 }
 
-
 .dislaimer-section,
 .colour-section {
   padding: 2em 0;
 }
-
 
 .disclaimer-group,
 .colour-inner {
@@ -1190,7 +1185,6 @@
     margin: 0;
   }
 }
-
 
 .disclaimer-image {
   width: 150px;
@@ -1235,7 +1229,6 @@
   border: 2px solid $black;
   transition: all 0.6s ease-in;
 
-
   &:hover {
     transform: scale(1.2);
   }
@@ -1244,3 +1237,6 @@
 .colour-content {
   text-align: center;
 }
+
+// Collection Slides
+//--------------------------------

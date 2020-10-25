@@ -1,0 +1,71 @@
+{% schema %}
+
+{
+    "name": "Footer Payment Section",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_payment_content",
+            "label": "Show Payment Logo Section",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "type": "footer_payment-logos",
+            "name": "Footer Nav Item",
+            "limit": 1,
+            "settings": [
+            {
+                "type": "checkbox",
+                "id": "show_payment_content",
+                "label": "Show Payment Logo Section",
+                "default": false
+            
+              }
+
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+
+
+
+<div class="footer-bottom">
+
+
+	<div class="footer-bottom-inner">
+		{% comment %}
+			Copyright info
+		{% endcomment %}
+		{% assign copyright_date = 'now' | date: '%Y' %}
+		<span class="copyright-info">
+			{{ 'footer.bottom.copyright' | t: date: copyright_date }}- All Rights Reserved. Made with
+			<span>❤️</span>
+			by
+			<a class='colophon' href="https://dirty-martini.com/" target="new">Dirty Martini Marketing</a>
+		</span>
+
+        {% if section.settings.show_payment_content %}
+
+        {%- unless shop.enabled_payment_types == empty -%}
+      
+        <ul class='payment-list-logos'>
+          {%- for type in shop.enabled_payment_types -%}
+            <li>
+              {{ type | payment_type_svg_tag: class: 'payment-icon icon--full-color' }}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endunless -%}
+
+        {% endif %}
+
+
+	</div>
+
+
+</div>

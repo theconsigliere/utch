@@ -29,7 +29,7 @@
         <div class="card-info">
             <div class="card-info-top">
                 <div class="product-title">
-                    <p class="uppercase black font-bolder">{{ product.title }}</p>
+                    <p class="">{{ product.title }}</p>
 
 
                     {% if product.available %}
@@ -90,10 +90,10 @@
 
                 </div>
                 <div class="product-price">
-                    {{ product.price | money }}
+                   <p>From <span>{{ product.price | money }}</span> </p> 
                 </div>
             </div>
 
         </div>
     </a>
-{% render 'preorder-now-collection-item', product: product %}</div>
+</div>

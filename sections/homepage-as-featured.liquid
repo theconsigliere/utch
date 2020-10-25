@@ -1,0 +1,48 @@
+{% schema %}
+
+{
+    "name": "Logo Bar",
+    "class": "page-content-section",
+    "settings": [
+        {
+            "id": "featured_title",
+            "type": "text",
+            "label": "Title",
+            "placeholder": "Slide Title"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Add an Image",
+            "settings": [
+                {
+                    "id": "image",
+                    "type": "image_picker",
+                    "label": "Background Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "content",
+            "name": "As Featured In"
+        }
+    ]
+}
+
+{% endschema %}
+
+<div class="image-logo-bar">
+
+  
+        <p class='logo-bar-title'>{{ section.settings.featured_title }}</p>
+   
+
+    <div class="image-bar">
+    {% for block in section.blocks %}
+        <img data-src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" class="lazyload"/>
+    {% endfor %}
+    </div>
+</div>

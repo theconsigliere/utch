@@ -1,0 +1,76 @@
+  <section class="instafeed-container">
+
+    <div class="title-section">
+        {%- if section.settings.header != blank -%}
+          {%- if section.settings.link != blank -%}
+            <a href="{{ section.settings.link }}" target="blank">
+          {%- endif -%}
+          <h1>{{ section.settings.header }}</h1>
+          {%- if section.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if section.settings.subheader != blank -%}
+          <p class="text-center">{{ section.settings.subheader}}</p>
+        {%- endif -%}
+      </div>
+    <div id="instafeed-container"></div>
+
+  </section>
+  
+  
+  {% schema %}
+    {
+      "name": "Instagram Block",
+      "settings": [
+      {
+        "type": "text",
+        "id": "access_token",
+        "label": "Access Token"
+      },
+      {
+        "type":      "range",
+        "id":        "limit",
+        "min":       1,
+        "max":        12,
+        "step":       1,
+        "label":     "Limit",
+        "info":     "how many recent images do you want to show?",
+        "default":   9
+    },
+      {
+        "type": "text",
+        "id": "header",
+        "label": "Header",
+        "default": "Instagram"
+      },
+      {
+        "type": "text",
+        "id": "subheader",
+        "label": "Subheader",
+        "info": "Shown above images"
+      }
+      
+      ],
+      "presets": [
+        {
+          "name": "Instagram Block",
+          "category": "Socials"
+        }
+      ]
+    }
+  {% endschema %}
+
+  <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+  
+  <script type="text/javascript">
+    var userFeed = new Instafeed({
+      get: 'user',
+      target: "instafeed-container",
+      resolution: 'low_resolution',
+      limit: {{ section.settings.limit }},
+      accessToken: '{{ section.settings.access_token }}'
+    });
+    userFeed.run();
+  </script>

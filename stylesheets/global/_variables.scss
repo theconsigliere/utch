@@ -28,10 +28,8 @@ $timing: 1s;
 
 // Font ---------------------------------------------------------- */
 
-$headline-font: "din-2014",
-sans-serif;
-$text-font: "din-2014",
-sans-serif;
+$headline-font: "din-2014", sans-serif;
+$text-font: "din-2014", sans-serif;
 
 $type-headline-lg: 40px;
 $type-headline-med: 20px;
@@ -47,9 +45,10 @@ $type-thin: 300;
 $black: #24272c;
 $yellow: #ffd200;
 $white: #ffffff;
-$brown: rgb(147,121,122);
-$green: rgb(169,182, 164);
+$brown: rgb(147, 121, 122);
+$green: rgb(169, 182, 164);
 $dark-green: #485448;
+$light-green: #e4eae1;
 
 $orange: #f04f23;
 $pink: #e63888;
@@ -78,24 +77,22 @@ $header-height: 100px;
 
 $button-height: $line-global * 2;
 
-
 .dark-green {
-    color: $dark-green;
+  color: $dark-green;
 }
 
 .white {
-    color: $white;
-  }
-  
-  .yellow {
-    color: $yellow;
-  }
-  
-  .black {
-    color: $black;
-  }
-  
-  .red {
-    color: red;
-  }
-  
+  color: $white;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.black {
+  color: $black;
+}
+
+.red {
+  color: red;
+}

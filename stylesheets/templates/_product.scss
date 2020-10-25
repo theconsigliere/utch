@@ -127,7 +127,6 @@
   .product-title {
     margin-top: $line-global;
     margin-bottom: $line-global;
-
   }
 
   #add-to-cart-form {
@@ -170,13 +169,13 @@
   .variant-radio {
     @extend .visually-hidden;
 
-    &+label {
+    & + label {
       display: inline-block;
       cursor: pointer;
       color: $text-color;
     }
 
-    &:checked+label {
+    &:checked + label {
       color: $black;
     }
 
@@ -186,7 +185,7 @@
     }
 
     &:not(:first-of-type) {
-      &+label {
+      & + label {
         margin-left: $line-global/4;
       }
     }
@@ -426,13 +425,13 @@
     }
   }
 
-  input[type="radio"]:not(:checked):hover+label & {
+  input[type="radio"]:not(:checked):hover + label & {
     .option-color-inner:after {
       opacity: 1;
     }
   }
 
-  input[type="radio"]:checked+label & {
+  input[type="radio"]:checked + label & {
     .option-color-inner:after {
       opacity: 1;
       border-color: $light-black;
@@ -446,12 +445,11 @@
   padding: 20px 10px;
 
   .card-info-top {
-    @include center-between-column;
+    @include center-between;
 
     .product-title {
       margin-top: 0 !important;
-      width: 100%;
-      text-align: center;
+      text-align: left;
 
       .uppercase {
         font-size: 0.9rem;
@@ -464,7 +462,7 @@
     }
 
     .product-price {
-      background: $yellow;
+      //  background: $yellow;
       padding: 0.2em 0.5em;
       text-align: center;
     }
@@ -571,7 +569,7 @@
   .collection-list {
     grid-template-columns: 16.66vw repeat(5, 33.33vw) 16.66vw;
 
-    >*:last-child {
+    > *:last-child {
       padding-right: $offset-global;
     }
 
@@ -657,14 +655,11 @@
 }
 
 .product-actions {
-
   .video-pop-up-group {
-
     .grey-button {
       margin: 10px 0;
     }
   }
-
 }
 
 // reivews

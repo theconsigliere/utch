@@ -35,3 +35,162 @@ $slider-button-size: 50px;
     outline: none;
   }
 }
+
+/* Slider */
+
+.collection-slides {
+  background: $light-white;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  margin: 0 30px;
+  outline: none;
+  transition: all 0.6s ease;
+  border-radius: 25px;
+  background: $dark-green;
+
+  [dir="rtl"] & {
+    float: right;
+  }
+  img {
+    display: block;
+    opacity: 1;
+    width: 100%;
+  }
+
+  &.slick-loading img {
+    display: none;
+  }
+
+  display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slick-center {
+  img {
+    opacity: 0.4;
+  }
+}
+
+.slide-active {
+  transition: all 0.6s ease;
+
+  &:hover {
+    .carousel-cell {
+      transform: translateX(-2%);
+    }
+  }
+}
+
+.glide * {
+  outline: none;
+}
+
+.main-slide-item {
+  position: relative;
+}
+
+.main-slide-content {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  max-width: 70%;
+  @include center-center-column;
+}
+
+.slick-slide {
+  width: 80%;
+  transition: all 0.6s ease;
+}
+
+.slick-center {
+  width: 100%;
+}
