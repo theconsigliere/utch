@@ -8,7 +8,25 @@
             "id": "show_footer_content",
             "label": "Show Footer Menu",
             "default": false
-        }
+		},
+		{
+			"id": "location_title",
+			"type": "text",
+			"label": "Location Title",
+			"placeholder": "Location Title"
+		},
+		{
+			"id": "email_title",
+			"type": "text",
+			"label": "Email Title",
+			"placeholder": "Email Title"
+		},
+		{
+			"id": "telephone_title",
+			"type": "text",
+			"label": "Telephone Title",
+			"placeholder": "Telephone Title"
+		}
     ],
     "blocks": [
         {
@@ -58,13 +76,23 @@
 
 <div class="footer-inner text-white">
 	<div class="footer-left">
-		<a class="link-logo" href="/">
-			{% comment %}
-				using inline-item to select svg for us
-			{% endcomment %}
-			{% assign shop_title = 'general.shop.title' | t %}
-			{% include 'inline-icon' with svg: 'hutch-white-logo.svg', alt: shop_title, class: 'logo-main' %}
-		</a>
+
+		<div class="footer-logo-info">
+			<a class="link-logo" href="/">
+				{% comment %}
+					using inline-item to select svg for us
+				{% endcomment %}
+				{% assign shop_title = 'general.shop.title' | t %}
+				{% include 'inline-icon' with svg: 'hutch-white-logo.svg', alt: shop_title, class: 'logo-main' %}
+			</a>
+			<div class="footer-logo-text">
+				<h6 class="white">{{ section.settings.location_title }}</h6>
+				<p class="">{{ section.settings.email_title }}</p>
+				<p class="">{{ section.settings.telephone_title }}</p>
+			</div>
+
+		</div>
+
 
 
 

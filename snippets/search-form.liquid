@@ -5,7 +5,7 @@
 <div class="search-form">
     <form action="/search" method="get" role="search">
         <label for="search-term">
-            <h2 class="">{{ label }}</h2>
+            <h2 class="search-title">{{ label }}</h2>
         </label>
         <input id="search-term" class="js-search-input" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'search.form.placeholder' | t }}">
         <button class="js-search-submit block-button" type="submit" {% if search.terms == blank %} disabled {% endif %}>{{ 'search.form.submit' | t }}</button>

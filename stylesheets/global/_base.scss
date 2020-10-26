@@ -252,8 +252,13 @@ blockquote {
 
 .grid {
   display: grid;
-  grid-column-gap: $gutter-global;
-  grid-row-gap: $gutter-global;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    grid-column-gap: $gutter-global;
+    grid-row-gap: $gutter-global;
+  }
 
   > * {
     min-width: 0;
@@ -426,9 +431,7 @@ label {
 }
 
 .js-display {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
+  transform: translateY(0%) !important;
 }
 
 .js-this-display {

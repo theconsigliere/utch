@@ -1,0 +1,31 @@
+{% if value == blank %}
+{% assign value = 1 %}
+{% endif %}
+
+<div class="quantity-picker js-quantity-picker">
+
+  <label class="option-title" for="{{ id }}">{{ 'product.form.quantity' | t }}</label>
+  
+  <div class="option-fieldset">
+   {% comment %} please see snippet 'line-item' for more information {% endcomment %}
+    <div class="visually-hidden">
+              {% comment %} field_class is used in 'line-item' {% endcomment %}
+      <input type="number" class="js-quantity-field {% if field_class != blank %}{{ field_class }}{% endif %}" id="{{ id }}" name="{{ name }}" value="{{ value }}" 
+                   {% comment %} wrapping min in a conditional just incase min was not set {% endcomment %}
+      {% if min != blank %}min="{{ min }}"{% endif %} {% if max != blank %}max="{{ max }}"{% endif %}>
+    </div>
+
+      {% comment %} button only disabled if button value = min {% endcomment %}
+    <button class="quantity-button js-quantity-button minus" type="button" {% if value == min %}disabled{% endif %}>
+      &ndash;
+    </button>
+    <span class="quantity-text js-quantity-text">
+      {{ value }}
+    </span>
+
+              {% comment %} button only disabled if button value = max {% endcomment %}
+    <button class="quantity-button js-quantity-button plus" type="button" {% if value == max %}disabled{% endif %}>
+      +
+    </button>
+  </div>
+</div>

@@ -158,18 +158,7 @@
     </div>
 
     {%- comment -%} Waves {%- endcomment -%}
-    <div class="hero-waves">
- 
-        <div class="hero-wave"></div>
-        <div class="hero-wave"></div>
-       
-    </div>
+{% include 'waves' %}
 </div>
 
 
-<style>
-	.hero-wave {
-        background-image: url({{ 'wave.svg' | asset_url  }});;
-	}
-
-</style>

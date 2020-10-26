@@ -1,18 +1,94 @@
-{% paginate collection.products by 2 %}
-  <h1>{{ collection.title }}</h1>
-  {% for product in collection.products %}
-    <div>
-      <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-      {{ product.price | money }}
-      {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
-      <a href="{{ product.url | within: collection }}">
-        <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
-      </a>
-    </div>
-  {% else %}
-    <p>no matches</p>
-  {% endfor %}
-  {% if paginate.pages > 1 %}
-    {{ paginate | default_pagination }}
-  {% endif %}
+{% comment %}
+	https://help.shopify.com/en/themes/liquid/objects/collection#collection-products
+{% endcomment %}
+{% paginate collection.products by 9999 %}
+	<div id="page-collection">
+
+
+		<div class="all-collection-content">
+   
+
+          {% if collection.image %}
+
+              <div class="collection-header">
+
+                <img data-src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.image.alt }}" class="lazyload"/>
+
+      
+                <div class="collection-header-content">
+
+                  <h1 class="white">{{ collection.title }}</h1>
+
+                </div>
+
+                {% include 'waves' %}
+              </div>
+
+          {% endif %}
+
+          <div class="all-collection-topper">
+
+
+            <div class="topper-inner">
+              <div class="topper__title">
+    
+                <h3 class="">{{ collection.title }}</h3>
+                <p class="">{{ collection.description }}</p>
+    
+              </div>
+
+              <div class="all-collection-sorting">
+                {%- comment -%}<h5 class="uppercase">{{ "collection.sort.title" | t }}</h5>{%- endcomment -%}
+    
+    
+                {% for option in collection.sort_options %}
+                  {% if option.value contains 'price-' %}
+    
+                    <a class="text-link {% if collection.sort_by == option.value %}active{% endif %}" href="?sort_by={{ option.value }}">
+    
+                      {% if option.value contains 'ascending' %}
+                        <h6 class="">{{ "collection.sort.price_low_high" | t }}</h6>
+                      {% else %}
+                        <h6 class="">{{ "collection.sort.price_high_low" | t }}</h6>
+                      {% endif %}
+                    </a>
+    
+                  {% endif %}
+
+                {% endfor %}
+    
+    
+                {% comment %}
+                  https://help.shopify.com/en/themes/liquid/objects/collection#collection-sort_by
+                {% endcomment %}
+    
+    
+                {% if collection.sort_by %}
+                  <a class="block-button" href="{{ collection.url }}">
+                    {{ "collection.sort.clear" | t}}
+                  </a>
+                {% endif %}
+    
+              </div>
+            </div>  
+          </div>   
+            
+          
+
+
+
+
+
+
+				</div>
+			</div>
+
+			<div class="all-collection-products  big-inner">
+				{% for product in collection.products %}
+					{% include 'product-card' %}
+				{%endfor %}
+			</div>
+		</div>
+	</div>
+
 {% endpaginate %}

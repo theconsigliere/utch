@@ -83,15 +83,15 @@
 }
 
 .option-values {
-  @include end-center;
+  @include center-center;
   width: 80%;
 
   @media (min-width: #{$screen-md}) {
-    @include start-end-column;
+    @include center-end;
   }
 
   @media (min-width: #{$screen-xxxl}) {
-    @include end-center;
+    @include center-end;
   }
 
   .option-values-items {

@@ -87,7 +87,7 @@
       "count": "{{ slideStart }} of {{ slideTotal }}"
     },
     "description": {
-      "title": "Information",
+      "title": "Quick Description",
       "why": "Why Hutch selects me",
       "how": "How to look after me"
     },

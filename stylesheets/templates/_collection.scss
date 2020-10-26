@@ -4,7 +4,7 @@
 }
 
 #page-collection {
-  margin-top: 8vh;
+ // margin-top: 8vh;
 
   #collection-image {
     height: 45vh;
@@ -1058,7 +1058,7 @@
 //---------------------------------
 
 .all-collection-products {
-  @include start-between;
+  @include start-start;
   flex-wrap: wrap;
   width: 100%;
 
@@ -1081,7 +1081,7 @@
 }
 
 .all-collection-topper {
-  background: $light-white;
+  background: $white;
   @include center-between;
 
   .topper-inner {

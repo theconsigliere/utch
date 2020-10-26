@@ -25,3 +25,22 @@ $('.main-carousel').slick({
     }
   ]
 });
+
+const slide = document.querySelector('.slick-center')
+
+function handleMouseMove(event) {
+  
+  const r = slide.getBoundingClientRect()
+
+  slide.style.setProperty('--x', event.clientX - (r.left + Math.floor(r.width / 2)))
+  slide.style.setProperty('--y', event.clientY - (r.top + Math.floor(r.height / 2)))
+}
+
+function handleMouseLeave() {   
+  
+  slide.style.setProperty('--x', 0)
+  slide.style.setProperty('--y', 0)
+}
+
+window.addEventListener('mousemove', handleMouseMove)
+window.addEventListener('mouseleave', handleMouseLeave)

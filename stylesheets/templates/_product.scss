@@ -37,7 +37,7 @@
     .product-top-inner {
       @include center-between-column;
       height: fit-content;
-      max-width: 100%;
+      width: 90%;
       margin: 0 auto;
       padding: 0;
 
@@ -46,9 +46,7 @@
         @include center-between;
       }
 
-      @media (min-width: #{$screen-xxl}) {
-        max-width: 70%;
-      }
+     
     }
   }
 
@@ -162,7 +160,7 @@
     }
 
     .inline-icon {
-      margin-top: 0.7em;
+    //  margin-top: 0.7em;
     }
   }
 
@@ -445,7 +443,7 @@
   padding: 20px 10px;
 
   .card-info-top {
-    @include center-between;
+    @include start-between;
 
     .product-title {
       margin-top: 0 !important;
@@ -670,4 +668,89 @@
 
 .yotpo.bottomLine {
   margin-bottom: 15px;
+}
+
+
+
+.single-image {
+  img {
+    width: 100%;
+    object-fit: cover;
+}
+}
+
+// product Detail Rows
+
+.cross-icon {
+  transition: transform .2s linear;
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+
+    &:before {
+      position: absolute;
+      background-color: $dark-green;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      transform: translateX(-50%);
+  }
+
+  &:after {
+    position: absolute;
+    background-color: $dark-green;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    transform: translateY(-50%);
+  }
+}
+
+.product-detail-tabs details[open] summary span.cross-icon {
+  transform: rotate(45deg);
+}
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+.product-detail-tabs {
+
+
+  summary{
+    padding: 15px 0;
+    border-bottom: 1px solid $green;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    cursor: pointer;
+    
+
+
+    p {
+      @include center-between;
+      margin: 0;
+    }
+
+  }
+
+  .content {
+    padding-bottom: 15px;
+  }
+}
+
+.product-detail-tabs details[open] summary {
+  border-bottom: none;
+}
+
+.product-detail-tabs details[open] .content {
+  border-bottom: 1px solid $green;
+}
+
+select#select-option1 {
+  padding-right: 55px;
 }

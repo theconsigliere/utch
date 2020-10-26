@@ -1,0 +1,15 @@
+<!-- grab json object which we can then read with javascript -->
+{% assign variants_with_quantity_json = product.variants | json %}
+
+<!-- get inventory quantity with json -->
+{% unless variants_with_quantity_json contains 'inventory_quantity' %}
+
+    <!-- https://help.shopify.com/en/themes/liquid/objects/variant#variant-inventory_quantity -->
+    {% for variant in product.variants %}
+        {% assign replace_hook_variant_id = '"id":' | append: variant.id %}
+        {% assign replace_id_plus_inventory = replace_hook_variant_id | append: ',' | append: '"inventory_quantity":' | append: variant.inventory_quantity %}
+        {% assign variants_with_quantity_json = variants_with_quantity_json | replace: replace_hook_variant_id, replace_id_plus_inventory %}
+        <!-- Outputs json with 'inventory_quantity' add to json object -->
+                        <!-- Outputs as add-to-cart form data-variant='data-variants='{{ variants_with_quantity_json | url_param_escape }}' -->
+    {% endfor %}
+{% endunless %}

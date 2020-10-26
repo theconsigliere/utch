@@ -20,7 +20,6 @@
 
   {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.scss' | asset_url | stylesheet_tag }}
-  {{ 'application.js' | asset_url | script_tag }}
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH15N17QCB"></script>
@@ -32,6 +31,7 @@
     gtag('config', 'G-LH15N17QCB');
   </script>
   
+
 </head>
 <body>
 
@@ -61,6 +61,7 @@
   <script async src="{{ 'lazysizes.min.js' | asset_url }}"></script>
   {{ "jquery-3.3.1.min.js" | asset_url | script_tag }}
 
+
   {% comment %}
 			if we have multiple currencies engaged enqueue scripts below
 		{% endcomment %}
@@ -68,19 +69,20 @@
     {{ "//cdn.shopify.com/s/javascripts/currencies.js" | script_tag }}
     {{ "jquery.currencies.min.js" | asset_url | script_tag }}
 {% endif %}
+
 {% include 'currencies' %}
-
-
 
 {{ "slick.min.js" | asset_url | script_tag }}
 {{ "slick-user.js" | asset_url | script_tag }}
 
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
   {{ "search.js" | asset_url | script_tag }}
-  {{ "currency-picker.js" | asset_url | script_tag }}
+  {%- comment -%}
+  {{ "currency-picker.js" | asset_url | script_tag }} {%- endcomment -%}
+
   {{ "application.js" | asset_url | script_tag }}
   {{ "drag-scroll.js" | asset_url | script_tag }}
-  {{ "animation.js" | asset_url | script_tag }}
   {{ "header.js" | asset_url | script_tag }}
 
 </body>

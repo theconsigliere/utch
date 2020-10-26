@@ -27,71 +27,86 @@
 
 {% endif %}
 
-
 <div id="page-product">
 
   {% comment %}Begin Product Top{% endcomment %}
   <div id="product-top" class="wrapper grid">
 
-    <div class="product-images js-product-slideshow">
-      <div class="slides js-slides">
-        {% for image in product.images %}
-          <div class="single-image">
-            <img src="{{ image.src | img_url: '600x' }}" alt="{{ image.alt | escape }}">
-          </div>
-        {% endfor %}
-      </div>
-      
-
-      {% if product.images.size > 1 %}
-        {% include 'slider-buttons' %}
-
-        <div class="image-counter">
-          <span class="js-current-slide">
-            1
-          </span>
-          of {{ product.images.size }}
+<div class="product-top-inner">
+  <div class="product-images js-product-slideshow">
+    <div class="slides js-slides">
+      {% for image in product.images %}
+        <div class="single-image">
+          <img src="{{ image.src | img_url: '600x' }}" alt="{{ image.alt | escape }}">
         </div>
-      {% endif %}
+      {% endfor %}
     </div>
+    
 
-    <div class="product-actions">
-      {% if collection %}
-        <a href="{{ collection.url }}">{{ collection.title }}</a>
-      {% endif %}
-      <p>{{ latin }}</p>
-      <h1 class="product-title">{{ product.title }}</h1>
+    {% if product.images.size > 1 %}
+      {% include 'slider-buttons' %}
 
-      {% include 'add-to-cart-form' %}
-      
+      <div class="image-counter">
+        <span class="js-current-slide">
+          1
+        </span>
+        of {{ product.images.size }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="product-actions">
+    {% if collection %}
+      <a href="{{ collection.url }}">{{ collection.title }}</a>
+    {% endif %}
+    <p>{{ latin | strip_html }}</p>
+    <h3 class="product-title">{{ product.title }}</h3>
+    <h6>{{ quickdescription }}</h6>
+
+    {% include 'add-to-cart-form' %}
+
+
+    <div class="product-detail-tabs">
+      <details>
+        <summary><p>{{ 'product.description.title' | t }}<span class="cross-icon"></span></p></summary>
+        <div class="content">
+            <span>{{ quickdescription }}</span>
+        </div>
+      </details>
+      <details>
+        <summary><p>{{ 'product.description.why' | t }}<span class="cross-icon"></span></p></summary>
+        <div class="content">
+            <span>{{ why }}</span>
+        </div>
+      </details>
+      <details>
+        <summary><p>{{ 'product.description.how' | t }}<span class="cross-icon"></span></p></summary>
+        <div class="content">
+            <span>{{ how }}</span>
+        </div>
+      </details>
+
     </div>
+    
+  </div>
+</div>
 
   </div>
   {% comment %}End Product Top{% endcomment %}
 
-  {% comment %}Begin Product Bottom{% endcomment %}
-  <div id="product-bottom" class="wrapper grid">
+
     
-    <div class="info-section description">
-      <p>{{ 'product.description.title' | t }}</p>
-      <p>{{ quickdescription }}</p>
-    </div>
 
-
-    <div class="info-section shipping">
-      <p>{{ 'product.description.why' | t }}</p>
-      <p>{{ why }}</p>
-    </div>
-
-    <div class="info-section returns">
-      <p>{{ 'product.description.how' | t }}</p>
-      <p>{{ how }}</p>
-    </div>
-  </div>
-
-  {% comment %}End Product Bottom{% endcomment %}
 
   {% if collection %}
+
+    {% comment %}Begin Product Bottom{% endcomment %}
+    <div id="product-bottom" class="wrapper grid">
+
   {% include 'product-more' with collection: collection, limit: 6, exclude: product.handle %}
   {% endif %}
   
+
+</div>
+
+  {% comment %}End Product Bottom{% endcomment %}

@@ -13,7 +13,7 @@
         "settings": {
           "newsletter_enable": true,
           "newsletter_form_heading": "Enter store using password:",
-          "newsletter_placeholder": "Email address",
+          "newsletter_placeholder": "Password",
           "newsletter_button_text": "Login"
         }
       },
@@ -49,10 +49,10 @@
               "first_title": "New Arrivals",
               "first_url": "shopify:\/\/collections\/new-arrivals",
               "second_image": "shopify:\/\/shop_images\/Mask_Group_82.jpg",
-              "second_title": "Trailing Plants",
+              "second_title": "Trailing",
               "second_url": "shopify:\/\/collections\/trailing-plants",
               "third_image": "shopify:\/\/shop_images\/Mask_Group_83.jpg",
-              "third_title": "Low Maintenance",
+              "third_title": "Easy Care",
               "third_url": "shopify:\/\/collections\/low-maintenance",
               "fourth_image": "shopify:\/\/shop_images\/Mask_Group_84.jpg",
               "fourth_title": "All Products",
@@ -192,18 +192,20 @@
             "type": "category",
             "settings": {
               "image": "shopify:\/\/shop_images\/Mask_Group_72.jpg",
-              "title": "Air Purifying Plants",
+              "title": "Air Purifying",
               "content": "Here are our favourite air-purifying indoor plants which have been \nproven to be most effective.",
-              "button_text": ""
+              "button_url": "shopify:\/\/collections\/air-purifying-plants",
+              "button_text": "See the range"
             }
           },
           "428196c8-fc48-4973-997b-55487585822e": {
             "type": "category",
             "settings": {
               "image": "shopify:\/\/shop_images\/Mask_Group_70.jpg",
-              "title": "New Arrivals",
+              "title": "Easy Care",
               "content": "Add warmth and style to your space with a dose of green.",
-              "button_text": ""
+              "button_url": "shopify:\/\/collections\/low-maintenance",
+              "button_text": "See the Range"
             }
           },
           "631d008f-8a71-43ca-93e9-ee1a314931ef": {
@@ -212,16 +214,18 @@
               "image": "shopify:\/\/shop_images\/Mask_Group_73.jpg",
               "title": "Pet Friendly",
               "content": "A collection of our favourite pet-friendly plants. These \nbeauties are non-toxic so you (and your pets) can rest easy!",
-              "button_text": ""
+              "button_url": "shopify:\/\/collections\/pet-friendly-plants",
+              "button_text": "See the range"
             }
           },
           "d5324d88-b16e-45e2-a557-8f9e86bc9f83": {
             "type": "category",
             "settings": {
               "image": "shopify:\/\/shop_images\/Mask_Group_74.jpg",
-              "title": "Low Maintenance",
+              "title": "Low Light",
               "content": "Our favourite bullet proof plants. It takes a lot of hard work\n to kill these guys. Great for beginners, offices, slackers and the negligent.",
-              "button_text": ""
+              "button_url": "shopify:\/\/collections\/low-light",
+              "button_text": "See the Range"
             }
           },
           "58644f88-cae8-4f57-ab3b-b8a14df54510": {
@@ -230,7 +234,8 @@
               "image": "shopify:\/\/shop_images\/Mask_Group_71_22afa03b-6f6d-41c6-acda-b38f633b3ac4.jpg",
               "title": "Trailing Plants",
               "content": "Our range of hanging plants are perfect for hanging baskets\n or to trail-off a bookshelf or side-table.",
-              "button_text": ""
+              "button_url": "shopify:\/\/collections\/trailing-plants",
+              "button_text": "See the range"
             }
           }
         },
@@ -245,13 +250,96 @@
           "slide_title": "Find the plant, that is best for you",
           "slide_content": "Add warmth and style to your space with a dose of green."
         }
+      },
+      "1603628529b0d30e42": {
+        "type": "homepage-instagram",
+        "settings": {
+          "access_token": "IGQVJWZAFNBNFo4THpRTE5LNU1kTXkxV09KODJFNVY4N1dNWkdnZA2lXMnRDdXFWN3JLRDRCRXplZAEpDU0IzWklLYTlCOUJaSTI3RndncnRwU3ktY2F4dXZAaRVFPQ0cwYklPX2F6ZAVJaNC02SThGU2MtaAZDZD",
+          "limit": 12,
+          "header": "Hutch on the gram",
+          "subheader": "Established in 2017, Hutch is Exeter’s only dedicated Houseplant shop.  Created by husband and wife duo Rob and Frankie,"
+        }
+      },
+      "160363890093de0868": {
+        "type": "page-collection",
+        "blocks": {
+          "160363890093de0868-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "all-products",
+              "max_products": 4,
+              "title": "New Arrivals",
+              "content": "Add warmth and style to your space with a dose of green.",
+              "show_button": false,
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "160363890093de0868-0"
+        ],
+        "settings": {}
+      },
+      "160364103275634db7": {
+        "type": "homepage-as-featured",
+        "blocks": {
+          "8a9d1836-8e2c-476d-b795-e309fe94450a": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Image_153.png"
+            }
+          },
+          "8d68cc09-7cbb-4696-964b-bb62de637896": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Image_154.png"
+            }
+          },
+          "784ac6ee-4301-45ca-bd38-82bb975c355d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Image_149.png"
+            }
+          },
+          "2242c086-2887-42f3-b9ec-4d004234b361": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Image_152.png"
+            }
+          },
+          "df6fac6f-bbc1-42cd-a8a0-f76a3dcae0e9": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Mask_Group_93.png"
+            }
+          }
+        },
+        "block_order": [
+          "8a9d1836-8e2c-476d-b795-e309fe94450a",
+          "8d68cc09-7cbb-4696-964b-bb62de637896",
+          "784ac6ee-4301-45ca-bd38-82bb975c355d",
+          "2242c086-2887-42f3-b9ec-4d004234b361",
+          "df6fac6f-bbc1-42cd-a8a0-f76a3dcae0e9"
+        ],
+        "settings": {
+          "featured_title": "As featured in:"
+        }
+      },
+      "footer-payment-logos": {
+        "type": "footer-payment-logos",
+        "settings": {
+          "show_payment_content": true
+        }
       }
     },
     "content_for_index": [
       "1603190209721fb672",
+      "160364103275634db7",
+      "160363890093de0868",
       "1603370339ca809046",
+      "1603368293f47fa7bf",
       "1603367866acddd362",
-      "1603368293f47fa7bf"
+      "1603628529b0d30e42"
     ]
   },
   "presets": {

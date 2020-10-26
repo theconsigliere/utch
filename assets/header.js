@@ -20,12 +20,7 @@ const megaMenus = document.querySelectorAll('.mega-menu-full')
 
 function handleNavClick(event) {
 
-
-
-  // console.log(this.getElementsByClassName('mega-menu-full')[0] )
-
   let thisMenu = this.getElementsByClassName('mega-menu-full')[0]
-
   this.classList.remove('yellow-nav-item')
 
 
@@ -61,6 +56,8 @@ function handleNavClick(event) {
 
     console.log('doesnt contain')
     thisMenu.classList.add('js-display')
+
+    
 
   }
 
