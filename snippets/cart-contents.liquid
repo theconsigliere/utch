@@ -12,20 +12,25 @@
                 </div>
                 <div class="cart-totals">
                     <div class="subtotal-line">
-                        <p class="font-bolder black uppercase">{{ 'cart.filled.subtotal' | t }}</p>
+                        <p class="">{{ 'cart.filled.subtotal' | t }}</p>
                         <span class="price">{{ cart.total_price | money }}</span>
                     </div>
-                    <div class="main-contact-buttons">
+
+                    <p class="currency-note js-cart-currency-note">
+                        {{ 'product.shipping.note' | t }}
+                    </p>
+
+                    <div class="mini-cart-buttons">
+                        {%- comment -%}
                         <button class="underline-button" name="update" type="submit">{{ 'cart.filled.update' | t }}</button>
+                        {%- endcomment -%}
                         <a class="black-button" href="/cart">{{ 'cart.filled.title' | t }}</a>
                         <button class="block-button" name="checkout" type="submit">{{ 'cart.filled.mini_cart_title' | t }}</button>
                     </div>
 
                 </div>
 
-                <p class="currency-note js-cart-currency-note">
-                    {{ 'cart.filled.currency_note_html' | t: currency: shop.currency }}
-                </p>
+            
             </fieldset>
 
         </form>

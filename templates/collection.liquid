@@ -26,16 +26,79 @@
 
           {% endif %}
 
+
+          <div class="collection-images">
+
+            <div class="collection_image_title">
+    
+              <h3 class="">{{ collection.title }}</h3>
+              <p class="">{{ collection.description }}</p>
+  
+            </div>
+
+           
+
+            {% case collection.handle %}
+
+                {% when 'accessories' %}
+
+                <div class="collection-illustration">
+                  <img src="{{ 'accessories.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'low-light' %}
+
+                <div class="collection-illustration">
+                  <img src="{{ 'low-light.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'pet-friendly' %}
+
+                <div class="collection-illustration">
+                  <img src="{{ 'pet-friendly.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'sun-worshippers' %}
+
+                <div class="collection-illustration">
+                  <img src="{{ 'sun-worshippers.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'trailing-plants' %}
+
+                <div class="collection-illustration">
+                  <img src="{{ 'trailing.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'easy-care' %}
+
+                <div class="collection-illustration">
+                  <img src="{{ 'easy-care.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'air-purifying' %}
+
+                <div class="collection-illustration">
+                  <img src="{{ 'air-purifying.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% else %}
+                  
+          {% endcase %}
+
+          </div>
+
           <div class="all-collection-topper">
 
 
             <div class="topper-inner">
               <div class="topper__title">
     
-                <h3 class="">{{ collection.title }}</h3>
-                <p class="">{{ collection.description }}</p>
-    
+                <h5 class="">{{ collection.title }}</h5>
+              
               </div>
+
+
 
               <div class="all-collection-sorting">
                 {%- comment -%}<h5 class="uppercase">{{ "collection.sort.title" | t }}</h5>{%- endcomment -%}

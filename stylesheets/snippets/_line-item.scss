@@ -1,26 +1,35 @@
 .line-item {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   flex-wrap: nowrap;
   padding: $line-global 0;
-  border-top: $standard-border;
+ // border-top: $standard-border;
 
   &:first-of-type {
     border-top: 0;
   }
 
   .line-image {
-    width: 80px;
+    width: 30%;
     margin-right: $line-global;
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+  }
   }
 
   .line-info {
-    width: 100%;
+    width: 60%;
+    @include center-between-column;
   }
 
   .info-content,
   .info-actions {
     @include center-between;
+    width: 100%;
+
     > *:first-child {
       margin-right: $line-global;
     }
@@ -43,4 +52,8 @@
   &:last-of-type {
     border-bottom: $standard-border;
   }
+}
+
+.variant-line-item-title {
+  font-size: 12px;
 }

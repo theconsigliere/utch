@@ -15,8 +15,13 @@
   border: 3px solid $white;
   border-radius: 100em;
   position: relative;
-  padding: 20px 40px 20px 40px;
+  padding: 10px 20px;
   display: inline-block;
+
+
+  @media (min-width: #{$screen-md}) {
+    padding: 20px 40px 20px 40px;
+  }
 
   &:before {
     position: absolute;
@@ -75,14 +80,14 @@
   display: inline-block;
   width: auto;
   padding: ($line-global/2) $line-global;
-  border: 3px solid $dark-green;
+  border: 2px solid $dark-green;
   text-align: center;
   font-size: 0.8rem;
   line-height: $line-global;
   background: $brown;
   color: $white;
   transition: all 0.3s ease-in-out;
-  border-radius: 15px;
+  border-radius: 25px;
 
 
   @media (min-width: #{$screen-sm}) {
@@ -104,17 +109,17 @@
   }
 
   &:not(:disabled):hover {
-    background: $black;
+    background: $dark-green;
   }
 
   .money {
-    color: $black;
+    color: $white;
     transition: all 0.3s ease-in-out;
   }
 
   &:hover {
     color: $white;
-    background: $black;
+    background: $dark-green;
 
     .money {
       color: $white;
@@ -227,33 +232,78 @@
   }
 }
 
-.black-button {
+.black-button, .green-button {
   @include reset-input;
   display: inline-block;
-  width: 100%;
+  width: auto;
   padding: ($line-global/2) $line-global;
-  border: 1px solid $black;
+  border: 3px solid $dark-green;
   text-align: center;
   font-size: 0.8rem;
   line-height: $line-global;
-  background: $black;
-  color: $white;
-  text-transform: uppercase;
+  background: $green;
+  color: $dark-green;
   transition: all 0.3s ease-in-out;
-  letter-spacing: 2px;
-  font-weight: $type-bold;
-  margin-bottom: 0.5rem;
+  border-radius: 15px;
+
 
   @media (min-width: #{$screen-sm}) {
+    font-size: $type-body-med;
+  }
+
+  a {
     font-size: 0.8rem;
-    margin-bottom: 0;
-    width: auto;
+    font-weight: $type-bold;
+    letter-spacing: 2px;
+    color:  $dark-green;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    background: $dark-green;
+  }
+
+  .money {
+    color: $dark-green;
+    transition: all 0.3s ease-in-out;
   }
 
   &:hover {
-    background: transparent;
-    color: $black;
-    border: 1px solid $black;
+    color: $white;
+    background: $dark-green;
+
+    .money {
+      color: $white;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+
+  &.button-cta {
+    width: 100%;
+    padding: $line-global;
+  }
+
+  .text-white & {
+    background: $white;
+    color: $white;
+
+    &:hover {
+      color: $black;
+      background: darken($white, 10%);
+
+      .money {
+        color: $white;
+      }
+    }
   }
 
   * {

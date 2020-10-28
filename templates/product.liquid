@@ -57,9 +57,19 @@
 
   <div class="product-actions">
     {% if collection %}
-      <a href="{{ collection.url }}">{{ collection.title }}</a>
+
+    <div class="collection-anchor-title">
+      <a href="{{ collection.url }}">
+        <span class="collection-mark">
+          {{ collection.title }}
+        </span>
+      </a>
+
+    </div>
+
     {% endif %}
-    <p>{{ latin | strip_html }}</p>
+
+    <h6 class='green-text product-latin'>{{ latin | strip_html }}</h6>
     <h3 class="product-title">{{ product.title }}</h3>
     <h6>{{ quickdescription }}</h6>
 
@@ -68,19 +78,19 @@
 
     <div class="product-detail-tabs">
       <details>
-        <summary><p>{{ 'product.description.title' | t }}<span class="cross-icon"></span></p></summary>
+        <summary><p class='font-bolder'>{{ 'product.description.title' | t }}<span class="cross-icon"></span></p></summary>
         <div class="content">
             <span>{{ quickdescription }}</span>
         </div>
       </details>
       <details>
-        <summary><p>{{ 'product.description.why' | t }}<span class="cross-icon"></span></p></summary>
+        <summary><p class='font-bolder'>{{ 'product.description.why' | t }}<span class="cross-icon"></span></p></summary>
         <div class="content">
             <span>{{ why }}</span>
         </div>
       </details>
       <details>
-        <summary><p>{{ 'product.description.how' | t }}<span class="cross-icon"></span></p></summary>
+        <summary><p class='font-bolder'>{{ 'product.description.how' | t }}<span class="cross-icon"></span></p></summary>
         <div class="content">
             <span>{{ how }}</span>
         </div>

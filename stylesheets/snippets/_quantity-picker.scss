@@ -8,6 +8,9 @@
     @extend p;
     width: $line-global;
     text-align: center;
+    border: 1px solid $dark-green;
+    margin: 0 5px;
+
     &:disabled {
       opacity: 0.5;
       cursor: not-allowed;

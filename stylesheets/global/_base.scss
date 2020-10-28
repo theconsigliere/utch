@@ -30,6 +30,7 @@ body {
 
 main {
   // margin-top: 10vh;
+  overflow: hidden;
 }
 
 img {
@@ -459,19 +460,19 @@ label {
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 1px;
-  height: 10px;
+  height: 5px;
   background: #e0e0e0;
   cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $black;
-  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  background-color: $green;
+  box-shadow: 0 0 1px $light-white;
   transition: all 0.3s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: $yellow;
+  background-color: $dark-green;
 }
 
 // Preorder button

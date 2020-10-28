@@ -72,7 +72,7 @@
     {% if section.settings.cat_title != blank %}
         <div class="title-section" id="page__title_section">
             <h3 class="">{{ section.settings.cat_title }}</h3>
-            <h6 class="p-fade">{{ section.settings.cat_content }}</h6>
+            <p class="p-fade">{{ section.settings.cat_content }}</p>
         </div>
     {% endif %}
 
@@ -92,7 +92,7 @@
 
                     <div class="category-content">
 
-                        <h5 class="white uppercase">{{ block.settings.title }}</h5>
+                        <h5 class="">{{ block.settings.title }}</h5>
                         {% if block.settings.content != blank %}
                             <p>{{ block.settings.content }}</p>
                         {% endif %}
@@ -101,7 +101,7 @@
 
                     <div class="category-bottom">
                         {% if block.settings.button_url != blank %}
-                            <div class="item-button">
+                            <div class="block-button">
                                 {% if block.settings.button_text != blank %}
                                     {{ block.settings.button_text }}
                                 {% else %}
@@ -111,7 +111,7 @@
                         {% endif %}
                     </div>
 
-                    <div class="item-overlay"></div>
+                 
                 </div>
 
             </a>

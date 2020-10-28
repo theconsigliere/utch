@@ -57,3 +57,39 @@
 #cart-fieldset {
   border: 0;
 }
+
+.mini-cart-contents {
+  height: 100%;
+
+  .cart-contents {
+    height: 90%;
+
+    form {
+      height: 100%;
+
+
+      #cart-fieldset {
+        border: 0;
+        height: 100%;
+        @include center-between-column;
+      }
+  }
+  }
+}
+
+.mini-cart-title {
+  border-bottom: 1px solid $dark-green;
+  margin-top: 25px;
+}
+
+.mini-cart-buttons {
+  @include center-center-column;
+  padding: 10px 0;
+
+  * {
+    width: 100%;
+    margin: 5px 0;
+    height: 3rem;
+  }
+
+}

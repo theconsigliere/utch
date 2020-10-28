@@ -67,7 +67,6 @@
     }
   },
   "product": {
-  
     "card": {
       "options_styles_singular": "{{ optionCount }} option \/ {{ styleCount }} style",
       "sizes_styles_singular": "{{ optionCount }} option \/ {{ styleCount }} sizes",
@@ -93,6 +92,7 @@
     },
     "shipping": {
       "title": "Shipping",
+      "note": "Shipping and taxes calculated at checkout.",
       "content": "Products ship via FedEx within 48 hours of order. Due to the nature of our products, signature confirmation is required upon delivery. For more information, see the Delivery & Returns page."
     },
     "returns": {

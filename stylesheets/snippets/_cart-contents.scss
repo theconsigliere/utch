@@ -5,7 +5,8 @@
 
   .cart-lines {
     max-height: 50vh;
-    overflow-y: scroll;
+    overflow-y: auto;
+    width: 100%;
   }
 
   .subtotal-line {
@@ -27,7 +28,7 @@
 
   .currency-note {
     text-align: center;
-    margin-top: $line-global;
+    margin: 0;
     font-size: 12px;
   }
 
@@ -74,4 +75,9 @@
 
 .styled-submit {
   @extend .block-button;
+}
+
+.cart-totals {
+  width: 100%;
+  border-top: 1px solid $dark-green;
 }

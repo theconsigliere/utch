@@ -1,0 +1,119 @@
+{% schema %}
+
+{
+    "name": "Collection Portfolio",
+    "class": "collection-slides",
+    "settings":  
+    [    
+        {
+            "id": "slide_title",
+            "type": "text",
+            "label": "Title",
+            "placeholder": "Slide Title"
+        }, {
+            "id": "slide_content",
+            "type": "textarea",
+            "label": "Slide Content"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "category",
+            "name": "Category",
+            "settings": [
+                {
+                    "id": "image",
+                    "type": "image_picker",
+                    "label": "Background Image"
+                }, {
+                    "id": "title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Slide Title"
+                }, {
+                    "id": "button_url",
+                    "type": "url",
+                    "label": "Button URL"
+                },
+                {
+                    "type": "color",
+                    "id": "background_colour",
+                    "label": "Background color",
+                    "default": "#ffffff"
+                 }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "content",
+            "name": "Collection Portfolio",
+            "blocks": [
+                {
+                    "type": "category",
+                    "settings": {
+                        "title": "Add Collection"
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+<section class="collection-slides background-portfolio" >
+
+    <div class="title-section" id="page__title_section">
+        {% if section.settings.slide_title != blank %}
+            <h3 class="">{{ section.settings.slide_title }}</h3>
+        {% endif %}
+
+        <p class="p-fade">{{ section.settings.slide_content }}</p>
+    </div>
+
+
+    <div class="category-item-group">
+
+        <div id="hutch-homepage-slider" class="glide">
+         
+        
+              <div class="portfolio">
+
+                <div class="portfolio__categories">
+
+
+               
+                
+                {% for block in section.blocks %}
+
+                    <a class='portfolio-link'
+                    href="{{ block.settings.button_url }}"
+                    data-color="{{ block.settings.background_colour }}"
+                    data-imagelarge="{{ block.settings.image | img_url: 'master' }}"
+                    data-imagesmall="{{ block.settings.image | img_url: 'master' }}"
+                    >{{ block.settings.title }}
+                    </a>
+        
+                 
+                {% endfor %}
+
+
+                </div>
+
+                <div class="portfolio__image--l">
+                    <div class="image_inside"></div>
+                </div>
+                <div class="portfolio__image--s">
+                    <div class="image_inside"></div>
+                </div>
+                
+            </div>
+
+
+        </div>
+    </div>
+
+</section>    
+
+

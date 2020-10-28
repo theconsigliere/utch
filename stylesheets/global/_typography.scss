@@ -31,6 +31,7 @@
 
 $headline-font: "BW Helder Extra Bold";
 $text-font: "BW Helder Medium";
+$light-font: "BW Helder Light";
 
 b,
 strong {
@@ -76,8 +77,12 @@ h1 {
 h2 {
   font-family: $headline-font, sans-serif;
   font-weight: $type-bold;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-display: swap;
+
+  @media (min-width: #{$screen-sm}) {
+    font-size: 2.8rem;
+  }
 
   @media (min-width: #{$screen-md}) {
     font-size: 3.2rem;
@@ -91,8 +96,12 @@ h2 {
 h3 {
   font-family: $headline-font, sans-serif;
   font-weight: $type-bold;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-display: swap;
+
+  @media (min-width: #{$screen-sm}) {
+    font-size: 2.2rem;
+  }
 
   @media (min-width: #{$screen-md}) {
     font-size: 2.4rem;
@@ -124,6 +133,7 @@ h4 {
 h5 {
   font-weight: $type-bold;
   font-size: 1.4rem;
+  font-family: $text-font;
 
   @media (min-width: #{$screen-md}) {
     font-size: 1.6rem;
@@ -136,7 +146,12 @@ h5 {
 
 h6 {
   font-weight: $type-thin;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-family: $text-font;
+
+  @media (min-width: #{$screen-sm}) {
+    font-size: 1.2rem;
+  }
 
   @media (min-width: #{$screen-md}) {
     font-size: 1.4rem;
@@ -155,6 +170,7 @@ a {
   line-height: 1.5;
   font-weight: $type-thin;
   font-size: 0.8rem;
+  font-family: $light-font;
 
   @media (min-width: #{$screen-sm}) {
     margin-bottom: 1.5rem;
@@ -268,7 +284,11 @@ a {
 }
 
 .font-bolder {
-  font-weight: $type-bold;
+  font-family: $text-font !important;
+}
+
+span {
+  font-family: $light-font; 
 }
 
 .text-align {

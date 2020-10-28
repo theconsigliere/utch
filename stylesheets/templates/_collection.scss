@@ -290,11 +290,15 @@
       }
 
       .collection-block-image {
+        @include center-center;
+        padding: 1em;
+
         img {
           height: 100%;
           width: 100%;
           object-fit: cover;
           vertical-align: bottom;
+          max-width: 650px;
         }
       }
 
@@ -1083,12 +1087,13 @@
 .all-collection-topper {
   background: $white;
   @include center-between;
+  max-width: 90%;
+  margin: 0 auto;
 
   .topper-inner {
-    max-width: 90%;
-    margin: 0 auto;
+background: $light-white;
     width: 100%;
-    padding: 2em 0;
+    padding: 2em;
     @include center-between-column;
 
     @media (min-width: #{$screen-md}) {
@@ -1097,17 +1102,33 @@
 
     .topper__title {
       width: fit-content;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
       margin: 25px 0;
+
+      * {
+        margin: 0;
+      }
     }
 
     .all-collection-sorting {
-      width: fit-content;
+      width: 100%;
       margin: 25px 0;
-      @include center-between;
+      @include center-between-column;
+
+      @media (min-width: #{$screen-md}) {
+        @include center-between;
+        width: fit-content;
+      }
 
       * {
-        margin: 0 10px;
+        margin: 7px 0;
+        width: 100%;
+        text-align: center;
+
+        @media (min-width: #{$screen-md}) {
+          margin: 0 10px;
+             width: fit-content;
+             text-align: left;
+        }
       }
     }
   }
@@ -1240,3 +1261,48 @@
 
 // Collection Slides
 //--------------------------------
+
+
+.collection-images {
+  max-width: 90%;
+  margin: 5vh auto;
+  @include center-between-column;
+
+  @media (min-width: #{$screen-md}) {
+    @include center-between;
+    max-width: 70%;
+  }
+
+  .collection_image_title {
+    width: 100%;
+
+    @media (min-width: #{$screen-md}) {
+     width: 40%;
+    }
+
+  }
+
+  .collection-illustration {
+    width: 100%;
+    @include center-end;
+
+    @media (min-width: #{$screen-md}) {
+     width: 60%;
+    }
+
+  }
+
+}
+
+.illo {
+  width: 300px;
+
+  @media (min-width: #{$screen-md}) {
+    width: 450px;
+   }
+}
+
+.category-content {
+  text-align: center;
+  margin: 10px 0;
+}
