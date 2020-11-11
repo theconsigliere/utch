@@ -1067,19 +1067,25 @@
   width: 100%;
 
   .product-card {
-    width: 40%;
+    max-width: 45%;
+    min-width: 45%;
     margin: 5px 5px;
-    border: 1px solid $light-white;
+
     position: relative;
     //   margin-bottom: 40px;
     text-align: left;
+    flex:1;
 
     @media (min-width: #{$screen-md}) {
       margin: 25px 10px;
+      max-width: 30%;
+      min-width: 30%;
     }
 
     @media (min-width: #{$screen-xl}) {
-      width: 22%;
+      max-width: 25%;
+      min-width: 20%;
+
     }
   }
 }
@@ -1265,12 +1271,14 @@ background: $light-white;
 
 .collection-images {
   max-width: 90%;
-  margin: 5vh auto;
+  margin: 10px auto;
   @include center-between-column;
+  flex-direction: column-reverse;
 
   @media (min-width: #{$screen-md}) {
     @include center-between;
     max-width: 70%;
+    margin: 5vh auto;
   }
 
   .collection_image_title {
@@ -1284,10 +1292,12 @@ background: $light-white;
 
   .collection-illustration {
     width: 100%;
-    @include center-end;
+    @include center-center;
+    
 
     @media (min-width: #{$screen-md}) {
      width: 60%;
+     @include center-end;
     }
 
   }

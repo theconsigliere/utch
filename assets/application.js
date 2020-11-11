@@ -67,7 +67,7 @@ let productForm = {
     // when we have variant amke sure we have the correct price
     if (hasVariant) {
       // Changes price from 24900 to $249.00
-      formattedVariantPrice = "$" + (selectedVariant.price / 100).toFixed(2);
+      formattedVariantPrice = "£" + (selectedVariant.price / 100).toFixed(2);
       priceHtml = '<span class="money">' + formattedVariantPrice + "</span>";
 
       // create url of each variant

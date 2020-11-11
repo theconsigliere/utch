@@ -1,0 +1,93 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
+
+
+<div id="page-product">
+
+  {% comment %}Begin Product Top{% endcomment %}
+  <div id="product-top" class="wrapper grid">
+
+<div class="product-top-inner">
+
+ {% include 'product-images' %}
+
+  <div class="product-actions">
+
+
+    {% if collection %}
+
+    <div class="collection-anchor-title">
+      <a href="{{ collection.url }}">
+        <span class="collection-mark">
+          {{ collection.title }}
+        </span>
+      </a>
+
+    </div>
+
+    {% endif %}
+
+    <h6 class='green-text product-latin'>{{ latin | strip_html }}</h6>
+    <h3 class="product-title">{{ product.title }}</h3>
+    <h6>{{ product.description | strip_html }}</h6>
+
+<div class="variants_product-box">
+  <p class="font-bolder">
+    {% for option in product.options %}
+  {{ option }}
+{% endfor %}
+  </p>
+
+<p>
+  {% for variant in product.variants %}
+
+    {% for option in variant.options %}
+    <span> {{ option }}, </span>
+    {% endfor %}
+
+{% endfor %}
+
+</p>
+</div>
+
+    {% include 'add-to-cart-form' %}
+
+    <div class="product-detail-tabs">
+
+  
+        <details>
+          <summary><p class='font-bolder'>{{ 'product.shipping.title' | t }}<span class="cross-icon"></span></p></summary>
+          <div class="content">
+              <p>{{ shop.shipping_policy }}</p>
+          </div>
+        </details>
+  
+     </div>
+
+
+
+
+    
+  </div>
+</div>
+
+  </div>
+  {% comment %}End Product Top{% endcomment %}
+
+
+    
+
+
+  {% if collection %}
+
+    {% comment %}Begin Product Bottom{% endcomment %}
+    <div id="product-bottom" class="wrapper grid">
+
+  {% include 'product-more' with collection: collection, limit: 6, exclude: product.handle %}
+  {% endif %}
+  
+
+</div>
+
+  {% comment %}End Product Bottom{% endcomment %}

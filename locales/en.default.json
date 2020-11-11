@@ -69,11 +69,11 @@
   "product": {
     "card": {
       "options_styles_singular": "{{ optionCount }} option \/ {{ styleCount }} style",
-      "sizes_styles_singular": "{{ optionCount }} option \/ {{ styleCount }} sizes",
-      "sizes_styles_plural": "{{ optionCount }} options \/ {{ styleCount }} sizes",
-      "options_styles_plural": "{{ optionCount }} options \/ {{ styleCount }} styles",
-      "option_styles": "{{ optionCount }} option \/ {{ styleCount }} styles",
-      "sizes_styles": "{{ optionCount }} option \/ {{ styleCount }} sizes"
+      "sizes_styles_singular": "",
+      "sizes_styles_plural": "",
+      "options_styles_plural": "",
+      "option_styles": "",
+      "sizes_styles": ""
     },
     "clug": {
       "install": "Install Instructions",
@@ -88,7 +88,10 @@
     "description": {
       "title": "Quick Description",
       "why": "Why Hutch selects me",
-      "how": "How to look after me"
+      "how": "How to look after me",
+      "watering": "Watering:",
+      "light": "Light:",
+      "unique": "Why I'm unique"
     },
     "shipping": {
       "title": "Shipping",

@@ -58,6 +58,10 @@
       }
 
       @media (min-width: #{$screen-lg}) {
+        width: 180px;
+      }
+
+      @media (min-width: #{$screen-xxxl}) {
         width: 250px;
       }
     }
@@ -130,6 +134,10 @@
 
     @media (min-width: #{$screen-lg}) {
       padding: 40px 10vw;
+      bottom: 20%;
+    }
+
+    @media (min-width: #{$screen-xxxl}) {
       bottom: 30%;
     }
 
@@ -1083,6 +1091,7 @@
 .portfolio__categories a:hover {
   z-index: 1;
 }
+
 .portfolio__image--l,
 .portfolio__image--s {
   pointer-events: none; /* important to be able to hover over links under the image */
@@ -1107,11 +1116,15 @@
   left: 50%;
 
   @media (min-width: #{$screen-lg}) {
-    top: 0;
+    top: 20%;
     display: block;
     padding-bottom: 30vw;
     left: 10%;
     transform: 0;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    top: 0%;
   }
 }
 .portfolio__image--s {
@@ -1123,19 +1136,39 @@
 
   @media (min-width: #{$screen-lg}) {
     display: block;
+    top: 30%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    top: 0;
   }
 }
 .image_inside {
   position: absolute;
   opacity: 0.8;
-  top: -10%;
-  left: 0;
-  width: 100%;
-  height: 115%;
+  top: 0;
+  left: -3%;
+  width: 105%;
+  height: 100%;
   background-size: cover;
 }
 
 
 .category-item-group {
   padding-bottom: 2em;
+}
+
+#insta-feed {
+  margin-bottom: 30px !important;
+
+  .instafeed-container {
+    width: 30%;
+    border: 3px solid white;
+
+  }
+}
+
+section.instafeed-container {
+  position: relative;
+  z-index: 1;
 }
