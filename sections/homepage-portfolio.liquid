@@ -25,7 +25,13 @@
                     "id": "image",
                     "type": "image_picker",
                     "label": "Background Image"
-                }, {
+                }, 
+                {
+                    "id": "imageTwo",
+                    "type": "image_picker",
+                    "label": "Background Image"
+                },
+                {
                     "id": "title",
                     "type": "text",
                     "label": "Title",
@@ -91,7 +97,7 @@
                     href="{{ block.settings.button_url }}"
                     data-color="{{ block.settings.background_colour }}"
                     data-imagelarge="{{ block.settings.image | img_url: 'master' }}"
-                    data-imagesmall="{{ block.settings.image | img_url: 'master' }}"
+                    data-imagesmall="{{ block.settings.imageTwo | img_url: 'master' }}"
                     >{{ block.settings.title }}
                     </a>
         

@@ -20,8 +20,9 @@
 					{% endcomment %}
 
 
-					<option value="placeholder" disabled {% if selected == false %} selected {% endif %}>Select
+					<option value="placeholder" disabled {% if selected == false or variant == product.selected_or_first_available_variant %} selected {% endif %}>Select
 						{{ option.name }}</option>
+
 
 					{% comment %}
 						select options

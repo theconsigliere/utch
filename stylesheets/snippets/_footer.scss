@@ -205,6 +205,7 @@
 .copyright-info {
   margin: 5px auto;
   font-size: 9px;
+  line-height: 12px;
   text-align: center;
 
   @media (min-width: #{$screen-sm}) {
@@ -218,7 +219,7 @@
 
   .colophon {
     color: $black;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 400;
 
     @media (min-width: #{$screen-sm}) {
@@ -329,8 +330,12 @@ input.required {
 }
 
 .payment-icon {
-  width: 2em;
+  width: 1.5em;
   margin: 0 5px;
+
+  @media (min-width: #{$screen-md}) {
+    width: 2em;
+  }
   
   @media (min-width: #{$screen-lg}) {
     width: 3.5em;
@@ -375,4 +380,30 @@ input.required {
       color: $white;
     }
   }
+}
+
+.mobile-footer-nav-inner {
+  display: block;
+
+  @media (min-width: #{$screen-md}) {
+  display: none;
+}
+
+}
+
+
+.mobile-footer-nav-inner {
+  ul {
+    padding: 0;
+
+    li {
+      text-align: center;
+
+      &:before {
+        content: none;
+      }
+    }
+
+  }
+
 }

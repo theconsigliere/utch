@@ -67,6 +67,7 @@
 <!-- will render price, quantity and value for all variants -->
 <input class="js-variant-id" type="hidden" name="id" value="{% if has_selected_variant %}{{ product.selected_variant.id }}{% elsif has_multiple_variants != true %}{{ product.variants.first.id }}{% endif %}">
 
+
 {% comment %}
 	<label for="Quantity">quantity</label>
 				                <input id="Quantity" min="1" name="quantity" type="number" value="1">
@@ -74,9 +75,22 @@
 
 <!-- add to cart button, disabled if we have multiple variants that have not been picked -->
 
+{% if can_add_to_cart != true %} 
+
+<h6>{{'product.form.sold_out' | t }}</h6>
+
+{% endif %}
+
 <button type="submit" name="add" id="add-to-cart-button" class="button-cta block-button" {% if can_add_to_cart != true %} disabled {% endif %}>
 	{{ 'product.form.submit' | t }}
 	&ndash;
+
+	{% if can_add_to_cart != true %} 
+
+	<span class="js-price">{{'product.form.sold_out' | t }}</span>
+
+	{% else %}
+
 	<span class="js-price" data-default-price="{{ product.price | money }}">
 
 		{% if has_multiple_options or has_multiple_variants %}
@@ -85,6 +99,10 @@
 			{{ product.price | money }}
 		{% endif %}
 	</span>
+		
+	
+	{% endif %}
+
 </button>
 
 <!-- if Product out of stock  (see application.js)-->

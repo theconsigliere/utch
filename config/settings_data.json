@@ -39,7 +39,7 @@
           "home_page_only": false,
           "announcement_bar_color": "#c6d1c2",
           "announcement_bar_text_color": "#485448",
-          "text": "Come visit us Monday-Saturday 11:00-17:00 and Sunday Noon-16:00. | Order online for Click & Collect!"
+          "text": "FREE SHIPPING ON ALL ORDERS OVER £35"
         }
       },
       "mega-menu": {
@@ -48,7 +48,7 @@
           "fcc5c330-c27a-46ae-a65e-e9dba7fe39c3": {
             "type": "nav_item",
             "settings": {
-              "nav_item_title": "Plants",
+              "nav_item_title": "Plant Collections",
               "nav_item_title_url": "#",
               "show_megamenu": true,
               "first_image": "shopify:\/\/shop_images\/Low_light.png",
@@ -84,11 +84,26 @@
               "fifth_title": "",
               "sixth_title": ""
             }
+          },
+          "e7cce121-38fd-4b6d-a704-a8bcc9be27fc": {
+            "type": "nav_item",
+            "settings": {
+              "nav_item_title": "All Plants",
+              "nav_item_title_url": "shopify:\/\/collections\/all-plants",
+              "show_megamenu": false,
+              "first_title": "",
+              "second_title": "",
+              "third_title": "",
+              "fourth_title": "",
+              "fifth_title": "",
+              "sixth_title": ""
+            }
           }
         },
         "block_order": [
           "fcc5c330-c27a-46ae-a65e-e9dba7fe39c3",
-          "7e16304b-209e-4ed5-b40c-72decb6108a0"
+          "7e16304b-209e-4ed5-b40c-72decb6108a0",
+          "e7cce121-38fd-4b6d-a704-a8bcc9be27fc"
         ],
         "settings": {
           "show_menu": true,
@@ -135,7 +150,7 @@
         "settings": {
           "show_footer_content": true,
           "location_title": "9 Paris Street, Exeter, Devon EX1 2JB",
-          "email_title": "E:  info@hutchplants.co.uk",
+          "email_title": "E:  info@hutchhouseplants.co.uk",
           "telephone_title": "T:  01392 758 130"
         }
       },
@@ -145,12 +160,12 @@
           "1603190209721fb672-0": {
             "type": "slide",
             "settings": {
-              "image": "shopify:\/\/shop_images\/hutch-home_1.jpg",
-              "portrait_image": "shopify:\/\/shop_images\/home-portrait.jpg",
+              "image": "shopify:\/\/shop_images\/cdsa.jpg",
+              "portrait_image": "shopify:\/\/shop_images\/fds.jpg",
               "title": "Make a house a home",
-              "content": "Exeter’s only dedicated houseplant store, working to bloom your house into a home.",
-              "button_url": "#",
-              "button_text": "See the range",
+              "content": "Exeter’s only dedicated houseplant store, working to bloom your house into a home. Shop in store and online.",
+              "button_url": "shopify:\/\/collections\/all-plants",
+              "button_text": "Shop the range",
               "text_position": "middle-aligned"
             }
           }
@@ -172,8 +187,7 @@
               "weare_image": "shopify:\/\/shop_images\/shop-illustration_fa482b9c-f46d-4f12-bb1e-cb42cfdf700d.png",
               "weare_title": "We are Hutch",
               "weare_subtitle": "Exeter Based & Proud",
-              "weare_content": "Established in 2017, Hutch is Exeter’s only dedicated Houseplant shop. \nCreated by husband and wife duo Rob and Frankie, Hutch specialises in \nunique and exotic houseplants and bespoke terrariums.\n\nSituated in the centre of Exeter, Hutch is an indoor jungle bursting with an \nenormous selection of greenery, pots, hangers, airplants, books and other \nplant related gifts.",
-              "weare_button_url": "#",
+              "weare_content": "Established in 2017, by husband and wife team Rob and Frankie, Hutch specialises in \nhelping you bring the perfect houseplants home.\n<br>\n\nWhether you're looking for advice on the best plant for your living room, have an office in need of a touch of green or are looking to turn your cafe into a jungle, the team at Hutch have a wealth of houseplant experience to share. \n<br>\n\nBrowse our collection right here online, or why not pay us a visit and plant shop til you drop in our Devon-based plant haven.",
               "weare_button_text": "Coming Soon"
             }
           }
@@ -189,19 +203,19 @@
           "1603368293f47fa7bf-0": {
             "type": "category",
             "settings": {
-              "image": "shopify:\/\/shop_images\/category-plants.jpg",
+              "image": "shopify:\/\/shop_images\/HUTCH_FOREST_4.jpg",
               "title": "Our Plants",
-              "content": "Add warmth and style to your space with a dose of green.",
-              "button_url": "shopify:\/\/collections\/all-products",
+              "content": "Lovingly shared from our jungle to yours",
+              "button_url": "shopify:\/\/collections\/all-plants",
               "button_text": "Shop now"
             }
           },
           "6620794b-043c-4b4b-b902-498dc45e201c": {
             "type": "category",
             "settings": {
-              "image": "shopify:\/\/shop_images\/category-accessories.jpg",
+              "image": "shopify:\/\/shop_images\/HUTCH_202012040_2.jpg",
               "title": "Accessories",
-              "content": "Add warmth and style to your space with a dose of green.",
+              "content": "From pots to books and everything in between",
               "button_url": "shopify:\/\/collections\/accessories",
               "button_text": "Shop now"
             }
@@ -209,9 +223,9 @@
           "bd74ef9c-1c90-47a2-b2e8-9096dea834c2": {
             "type": "category",
             "settings": {
-              "image": "shopify:\/\/shop_images\/page-workshop.jpg",
+              "image": "shopify:\/\/shop_images\/HUTCH_202011917_1.jpg",
               "title": "Workshops",
-              "content": "Add warmth and style to your space with a dose of green.",
+              "content": "We'll be launching a new programme of workshops in 2021",
               "button_url": "#",
               "button_text": "Coming Soon"
             }
@@ -223,83 +237,17 @@
           "bd74ef9c-1c90-47a2-b2e8-9096dea834c2"
         ],
         "settings": {
-          "cat_title": "Shop Hutch for every situation",
-          "cat_content": "Add warmth and style to your space with a dose of green."
-        }
-      },
-      "1603370339ca809046": {
-        "type": "homepage-slides",
-        "blocks": {
-          "1603370339ca809046-0": {
-            "type": "category",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Mask_Group_72.jpg",
-              "title": "Air Purifying",
-              "content": "Here are our favourite air-purifying indoor plants which have been \nproven to be most effective.",
-              "button_url": "shopify:\/\/collections\/air-purifying-plants",
-              "button_text": "See the range"
-            }
-          },
-          "428196c8-fc48-4973-997b-55487585822e": {
-            "type": "category",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Mask_Group_70.jpg",
-              "title": "Easy Care",
-              "content": "Add warmth and style to your space with a dose of green.",
-              "button_url": "shopify:\/\/collections\/low-maintenance",
-              "button_text": "See the Range"
-            }
-          },
-          "631d008f-8a71-43ca-93e9-ee1a314931ef": {
-            "type": "category",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Mask_Group_73.jpg",
-              "title": "Pet Friendly",
-              "content": "A collection of our favourite pet-friendly plants. These \nbeauties are non-toxic so you (and your pets) can rest easy!",
-              "button_url": "shopify:\/\/collections\/pet-friendly-plants",
-              "button_text": "See the range"
-            }
-          },
-          "d5324d88-b16e-45e2-a557-8f9e86bc9f83": {
-            "type": "category",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Mask_Group_74.jpg",
-              "title": "Low Light",
-              "content": "Our favourite bullet proof plants. It takes a lot of hard work\n to kill these guys. Great for beginners, offices, slackers and the negligent.",
-              "button_url": "shopify:\/\/collections\/low-light",
-              "button_text": "See the Range"
-            }
-          },
-          "58644f88-cae8-4f57-ab3b-b8a14df54510": {
-            "type": "category",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Mask_Group_71_22afa03b-6f6d-41c6-acda-b38f633b3ac4.jpg",
-              "title": "Trailing Plants",
-              "content": "Our range of hanging plants are perfect for hanging baskets\n or to trail-off a bookshelf or side-table.",
-              "button_url": "shopify:\/\/collections\/trailing-plants",
-              "button_text": "See the range"
-            }
-          }
-        },
-        "block_order": [
-          "1603370339ca809046-0",
-          "428196c8-fc48-4973-997b-55487585822e",
-          "631d008f-8a71-43ca-93e9-ee1a314931ef",
-          "d5324d88-b16e-45e2-a557-8f9e86bc9f83",
-          "58644f88-cae8-4f57-ab3b-b8a14df54510"
-        ],
-        "settings": {
-          "slide_title": "Find the plant, that is best for you",
-          "slide_content": "Add warmth and style to your space with a dose of green."
+          "cat_title": "Houseplants, it's what we do",
+          "cat_content": "We'll help you choose the right plant for the right spot and maybe even pick a pot to go with it"
         }
       },
       "1603628529b0d30e42": {
         "type": "homepage-instagram",
         "settings": {
-          "access_token": "IGQVJWZAFNBNFo4THpRTE5LNU1kTXkxV09KODJFNVY4N1dNWkdnZA2lXMnRDdXFWN3JLRDRCRXplZAEpDU0IzWklLYTlCOUJaSTI3RndncnRwU3ktY2F4dXZAaRVFPQ0cwYklPX2F6ZAVJaNC02SThGU2MtaAZDZD",
-          "limit": 4,
+          "access_token": "",
+          "limit": 10,
           "header": "Hutch on the gram",
-          "subheader": "Established in 2017, Hutch is Exeter’s only dedicated Houseplant shop.  Created by husband and wife duo Rob and Frankie,"
+          "subheader": "@hutchhouseplants #hutchhouseplants"
         }
       },
       "160363890093de0868": {
@@ -308,10 +256,10 @@
           "160363890093de0868-0": {
             "type": "collection",
             "settings": {
-              "collection": "all-products",
-              "max_products": 4,
+              "collection": "new-arrivals",
+              "max_products": 6,
               "title": "New Arrivals",
-              "content": "Add warmth and style to your space with a dose of green.",
+              "content": "New plants, fresh in this week",
               "show_button": false,
               "button_text": ""
             }
@@ -372,16 +320,118 @@
         "settings": {
           "show_payment_content": true
         }
+      },
+      "1603875928ebba6ce2": {
+        "type": "homepage-portfolio",
+        "blocks": {
+          "1603875928ebba6ce2-0": {
+            "type": "category",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/LARGE_LEAF_1.jpg",
+              "imageTwo": "shopify:\/\/shop_images\/Group_703.png",
+              "title": "Air Purifying",
+              "button_url": "shopify:\/\/collections\/air-purifying",
+              "background_colour": "#ede2e2"
+            }
+          },
+          "0d71160c-2348-4bf7-ab82-e616b43c6613": {
+            "type": "category",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SHOT_03_031.jpg",
+              "imageTwo": "shopify:\/\/shop_images\/Group_702.png",
+              "title": "Easy Care",
+              "button_url": "shopify:\/\/collections\/easy-care",
+              "background_colour": "#e2d6d6"
+            }
+          },
+          "9c0a37ab-0c7d-4a7a-996d-9d609c3fd814": {
+            "type": "category",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SHOT_09_009.jpg",
+              "imageTwo": "shopify:\/\/shop_images\/Group_701.png",
+              "title": "Low Light",
+              "button_url": "shopify:\/\/collections\/low-light",
+              "background_colour": "#dde9e4"
+            }
+          },
+          "f1d074a0-ac0c-4baf-b47b-8b41034767f9": {
+            "type": "category",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Mask_Group_100.jpg",
+              "imageTwo": "shopify:\/\/shop_images\/Group_702_a783ec23-3e17-4e2e-bba9-a2ce8bb8a2f0.png",
+              "title": "Pet Friendly",
+              "button_url": "shopify:\/\/collections\/pet-friendly",
+              "background_colour": "#e9ddd2"
+            }
+          },
+          "4786fd92-6785-479e-b468-05a35cc3c3fc": {
+            "type": "category",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SHOT_05_290.jpg",
+              "imageTwo": "shopify:\/\/shop_images\/Group_699.png",
+              "title": "Sun Worshippers",
+              "button_url": "shopify:\/\/collections\/sun-worshippers",
+              "background_colour": "#dce7e9"
+            }
+          },
+          "13e792fc-29dc-4f65-9f64-4f5e22b9586c": {
+            "type": "category",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/HUTCH_202012032_1.jpg",
+              "imageTwo": "shopify:\/\/shop_images\/Group_698.png",
+              "title": "Trailing Plants",
+              "button_url": "shopify:\/\/collections\/trailing-plants",
+              "background_colour": "#d7e1d3"
+            }
+          },
+          "69527da5-3f79-4a89-be2d-4efebc3f3c6b": {
+            "type": "category",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/HUTCH_202012040_99011f26-02ce-4839-8865-750977506b40.jpg",
+              "imageTwo": "shopify:\/\/shop_images\/Group_697.png",
+              "title": "Accessories",
+              "button_url": "shopify:\/\/collections\/accessories",
+              "background_colour": "#e6e7c6"
+            }
+          }
+        },
+        "block_order": [
+          "1603875928ebba6ce2-0",
+          "0d71160c-2348-4bf7-ab82-e616b43c6613",
+          "9c0a37ab-0c7d-4a7a-996d-9d609c3fd814",
+          "f1d074a0-ac0c-4baf-b47b-8b41034767f9",
+          "4786fd92-6785-479e-b468-05a35cc3c3fc",
+          "13e792fc-29dc-4f65-9f64-4f5e22b9586c",
+          "69527da5-3f79-4a89-be2d-4efebc3f3c6b"
+        ],
+        "settings": {
+          "slide_title": "Shop Hutch for every situation",
+          "slide_content": "Add warmth and style to your space with a dose of green"
+        }
+      },
+      "cart-collection": {
+        "type": "cart-collection",
+        "settings": {}
+      },
+      "16040664432d54a6e4": {
+        "type": "instafeed",
+        "settings": {
+          "heading_font": "helvetica_n4",
+          "heading_size": 20,
+          "feed_width": 80,
+          "html_area": ""
+        }
       }
     },
     "content_for_index": [
       "1603190209721fb672",
       "160364103275634db7",
       "160363890093de0868",
-      "1603370339ca809046",
+      "1603875928ebba6ce2",
       "1603368293f47fa7bf",
       "1603367866acddd362",
-      "1603628529b0d30e42"
+      "1603628529b0d30e42",
+      "16040664432d54a6e4"
     ]
   },
   "presets": {

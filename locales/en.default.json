@@ -68,7 +68,7 @@
   },
   "product": {
     "card": {
-      "options_styles_singular": "{{ optionCount }} option \/ {{ styleCount }} style",
+      "options_styles_singular": "",
       "sizes_styles_singular": "",
       "sizes_styles_plural": "",
       "options_styles_plural": "",
@@ -105,7 +105,7 @@
     "form": {
       "submit": "Add to Cart",
       "quantity": "Quantity",
-      "sold_out": "Sold Out"
+      "sold_out": "Out of Stock"
     },
     "more": {
       "vendor": "by {{ vendor }}"

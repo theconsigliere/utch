@@ -4,15 +4,18 @@
 {% assign description = product.description | strip_html %}
 
 {% if description contains '---' %}
+
   {% assign quickdescription = description | split: '---' | first %}
   {% assign description_array = description | split: '---' %}
 
-  {% assign productInfoKeys = 'Latin|Why|How|Unique' | split: '|' %}
+  {% assign productInfoKeys = 'Subtitle|Latin|Why|How|Unique' | split: '|' %}
   {% for key in productInfoKeys %}
 
   {% assign split_key = key | prepend: '~*~' | append: '~*~' %}
   {% if description contains split_key %}
-    {% if key == 'Latin' %}
+  {% if key == 'Subtitle' %}
+  {% assign Subtitle = description | split: split_key | last | split: '---' | first %}
+    {% elsif key == 'Latin' %}
     {% assign latin = description | split: split_key | last | split: '---' | first %}
   {% elsif key == 'Why' %}
     {% assign why = description | split: split_key | last | split: '---' | first %}
@@ -59,7 +62,23 @@
 
     <h6 class='green-text product-latin'>{{ latin | strip_html }}</h6>
     <h3 class="product-title">{{ product.title }}</h3>
-    <h6>{{ quickdescription }}</h6>
+
+
+    {% if Subtitle %}
+
+<div class="product-desc-box">
+  <p class='font-bolder'>{{ Subtitle }}</p>
+  <p>{{ quickdescription }}</p>
+</div>
+
+
+      {% else %}
+        
+      <h6>{{ quickdescription }}</h6>
+
+    {% endif %}
+
+
 
     {% if product.variants.size == 1 %}
 
@@ -73,8 +92,17 @@
       <p>
         {% for variant in product.variants %}
       
+        
           {% for option in variant.options %}
+          
+          {% if variant.options > 1 %}
           <span> {{ option }}, </span>
+          {% else %}
+          <span> {{ option }} </span>
+            
+          {% endif %}
+        
+
           {% endfor %}
       
       {% endfor %}

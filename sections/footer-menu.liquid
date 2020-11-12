@@ -26,7 +26,13 @@
 			"type": "text",
 			"label": "Telephone Title",
 			"placeholder": "Telephone Title"
-		}
+		},
+		{
+            "type": "link_list",
+            "id": "footer_mobile_nav",
+            "label": "Mobile menu to display",
+            "info": "Only viewable on mobile screens"
+         }
     ],
     "blocks": [
         {
@@ -175,6 +181,21 @@
 			{% endcomment %}
 			{% include 'nav-list', handle: 'main-menu', class: 'header-nav-list' %}
 		{% endif %}
+
+
+
+	</div>
+
+	<div class="mobile-footer-nav-inner">
+        
+		{% assign mobileList = section.settings.footer_mobile_nav %}
+		{% include 'nav-list', handle: mobileList, class: 'footer-mobile-list' %}
+
+		{%- comment -%}
+			<div class="mobile-currency">
+								{% include 'currency-picker' %}
+							</div>
+		{%- endcomment -%}
 
 
 	</div>

@@ -9,7 +9,6 @@ mobile.addEventListener('click', function () {
   mobileNav.classList.toggle('js-mobile-menu-appear')
   toggleIcon.classList.toggle('on');
 
-
 })
 
 // click menu item menu stays open
@@ -76,3 +75,46 @@ window.onload = function () {
     menu.style.display = 'none !important';
   })
 };
+
+
+// Dont show header until scrolled passed reveal Hero
+
+const hero = document.querySelector('.hero-slideshow');
+const circleLogo = document.querySelector('.logo-main')
+const textLogo = document.querySelector('.logo-text')
+
+
+
+if (hero) {
+
+  window.onload = circleLogo.classList.add('js-dont-display-logo')
+
+
+  function toggleHeader() {
+
+    const pixels = window.pageYOffset;
+    let bottom = hero.offsetHeight;
+    hero.scrollTop = hero.scrollHeight;
+
+    if (pixels > bottom) {
+      circleLogo.classList.remove('js-dont-display-logo')
+      textLogo.classList.add('js-dont-display-logo')
+
+
+    } else {
+
+      circleLogo.classList.add('js-dont-display-logo')
+      textLogo.classList.remove('js-dont-display-logo')
+    }
+
+  }
+
+  document.addEventListener("scroll", toggleHeader);
+
+} else {
+  
+  circleLogo.classList.remove('js-dont-display-logo')
+textLogo.classList.add('js-dont-display-logo')
+}
+
+
