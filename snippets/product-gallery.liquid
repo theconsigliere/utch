@@ -1,0 +1,34 @@
+
+
+<div class="product-images js-product-slideshow">
+
+  
+
+        {% assign featured_image = product.selected_variant.featured_image | default: product.featured_image %}
+
+            <div class="single-image featured-product-image" data-thumbnail-color='{{ featured_image.alt }}' >
+                <img class='js-featured-image-image' src="{{ featured_image.src | img_url: '2048x' }}" alt="{{ featured_image.alt | escape }}" />
+             </div>     
+
+
+        {% if product.images.size > 1 %}
+
+            <div class="thumbnail-wrapper">
+                {% for image in product.images %}
+
+                <div class="thumbnail-grid-item" data-thumbnail-color='{{ image.alt }}'>
+                    <img class="product-single__thumbnail-image" src="{{ image.src | img_url: '600x' }}" alt="{{ image.alt | escape }}" />
+                </div>
+
+                {% endfor %}
+                
+            </div>
+
+        
+        {% endif %}
+        
+   
+ 
+    
+
+  </div>

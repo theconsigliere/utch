@@ -1,6 +1,29 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
 {% assign featured_image = current_variant.featured_image | default: product.featured_image %}
 
+{% assign description = product.description | strip_html %}
+
+{% if description contains '---' %}
+
+  {% assign quickdescription = description | split: '---' | first %}
+  {% assign description_array = description | split: '---' %}
+
+  {% assign productInfoKeys = 'Subtitle|Specification' | split: '|' %}
+
+    {% for key in productInfoKeys %}
+      {% assign split_key = key | prepend: '~*~' | append: '~*~' %}
+      {% if description contains split_key %}
+        {% if key == 'Subtitle' %}
+        {% assign Subtitle = description | split: split_key | last | split: '---' | first %}
+          {% elsif key == 'Specification' %}
+          {% assign Specification = description | split: split_key | last | split: '---' | first %}
+        {% endif %}   
+      {% endif %} 
+
+    {% endfor %}
+
+{% endif %}
+
 
 
 <div id="page-product">
@@ -30,7 +53,19 @@
 
     <h6 class='green-text product-latin'>{{ latin | strip_html }}</h6>
     <h3 class="product-title">{{ product.title }}</h3>
+
+    {% if Subtitle %}
+
+    <div class="product-desc-box">
+      <p class='font-bolder'>{{ Subtitle }}</p>
+      <p>{{ quickdescription }}</p>
+    </div>
+
+    {% else %}
+      
     <h6>{{ product.description | strip_html }}</h6>
+    {% endif %}
+    
 
 <div class="variants_product-box">
   <p class="font-bolder">
@@ -62,6 +97,17 @@
               <p>{{ shop.shipping_policy }}</p>
           </div>
         </details>
+
+        {% if Specification %}
+
+          <details>
+            <summary><p class='font-bolder'>{{ 'product.description.Specification' | t }}<span class="cross-icon"></span></p></summary>
+            <div class="content">
+                <p>{{ Specification }}</p>
+            </div>
+          </details>
+          
+        {% endif %}
   
      </div>
 

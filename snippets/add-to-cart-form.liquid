@@ -68,42 +68,36 @@
 <input class="js-variant-id" type="hidden" name="id" value="{% if has_selected_variant %}{{ product.selected_variant.id }}{% elsif has_multiple_variants != true %}{{ product.variants.first.id }}{% endif %}">
 
 
-{% comment %}
-	<label for="Quantity">quantity</label>
-				                <input id="Quantity" min="1" name="quantity" type="number" value="1">
-{% endcomment %}
 
-<!-- add to cart button, disabled if we have multiple variants that have not been picked -->
+  {% if product.available != true %}
 
-{% if can_add_to_cart != true %} 
-
-<h6>{{'product.form.sold_out' | t }}</h6>
-
-{% endif %}
-
-<button type="submit" name="add" id="add-to-cart-button" class="button-cta block-button" {% if can_add_to_cart != true %} disabled {% endif %}>
-	{{ 'product.form.submit' | t }}
-	&ndash;
-
-	{% if can_add_to_cart != true %} 
-
-	<span class="js-price">{{'product.form.sold_out' | t }}</span>
+	<button type="submit" name="add" id="add-to-cart-button" class="button-cta block-button" disabled>
+		<span class="js-price">{{'product.form.sold_out' | t }}</span>
+	</button>
 
 	{% else %}
 
-	<span class="js-price" data-default-price="{{ product.price | money }}">
-
-		{% if has_multiple_options or has_multiple_variants %}
-			{{ current_variant.price | money }}
-		{% else %}
-			{{ product.price | money }}
-		{% endif %}
-	</span>
-		
+	<button type="submit" name="add" id="add-to-cart-button" class="button-cta block-button" {% if can_add_to_cart != true %} disabled {% endif %}>
+		{{ 'product.form.submit' | t }}
+		&ndash;
 	
-	{% endif %}
+	
+		<span class="js-price" data-default-price="{{ product.price | money }}">
+	
+			{% if has_multiple_options or has_multiple_variants %}
+				{{ current_variant.price | money }}
+			{% else %}
+				{{ product.price | money }}
+			{% endif %}
+		</span>
+			
+	
+	</button>
+		
 
-</button>
+{% endif %}
+  
+
 
 <!-- if Product out of stock  (see application.js)-->
 

@@ -91,7 +91,8 @@
       "how": "How to look after me",
       "watering": "Watering:",
       "light": "Light:",
-      "unique": "Why I'm unique"
+      "unique": "Why I'm unique",
+      "Specification": "Specification"
     },
     "shipping": {
       "title": "Shipping",
@@ -118,7 +119,10 @@
       "white-orange": "FA4F23",
       "black-white": "000000",
       "white-black": "000000",
-      "black-black": "000000"
+      "black-black": "000000",
+      "pink": "#f9dce3",
+      "clear": "#ffffff",
+      "green": "#c6d1c2"
     }
   },
   "search": {

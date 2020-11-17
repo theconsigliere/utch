@@ -11,15 +11,59 @@ let addToCartFormSelector = "#add-to-cart-form",
 let productForm = {
   onProductOptionChanged: function (event) {
     let $form = $(this).closest(addToCartFormSelector),
-      selectedVariant = productForm.getActiveVariant($form);
+      selectedVariant = productForm.getActiveVariant($form)
+
 
     // make accessible to validate function
     $form.trigger("form:change", [selectedVariant]);
+    // on form change run filter thumbnails method
+    $form.trigger("form:change", productForm.filterThumbnails(selectedVariant))
   },
+
+  filterThumbnails: function (variant) {
+
+       // console.log("thumbnail updated", variant)
+
+        if ( variant.featured_image != null && variant.featured_image.alt != null) {
+          // show thumbnail for selected color
+      // [data-thumnbail-color='red']
+
+
+
+
+        // hide all thumbnails 
+
+      //  $('[data-thumbnail-color]').hide();
+
+
+      // show selected variant thumbnails
+
+       // var selected_color = variant.featured_image.alt;
+       // var thumbnail_selector = '[data-thumbnail-color="' + selected_color + '"]';
+
+       // $(thumbnail_selector).show()
+
+
+      // replace featured image with variant
+   //   var src = $(this).find('img').attr('src').replace('600x','2048x');
+
+      var selectedVariant = variant.featured_image.src.replace('600x','2048x');
+
+      console.log(selectedVariant)
+      $('.js-featured-image-image').attr('src', selectedVariant);
+
+
+        } else {
+
+          // show all thumbnail
+          $('[data-thumbnail-color]').show();
+
+        }
+  },
+
   getActiveVariant: function ($form) {
     // get variants from JSON data-variants='{{ variants_with_quantity_json | url_param_escape }} in add to cart form
     let //read JSON
-
       variants = JSON.parse(decodeURIComponent($form.attr("data-variants"))),
       formData = $form.serializeArray(),
       // create blank object
@@ -64,7 +108,7 @@ let productForm = {
     $emailButton = $form.find('#mhaRnProduct')
 
 
-    // when we have variant amke sure we have the correct price
+    // when we have variant make sure we have the correct price
     if (hasVariant) {
       // Changes price from 24900 to $249.00
       formattedVariantPrice = "£" + (selectedVariant.price / 100).toFixed(2);
@@ -88,11 +132,15 @@ let productForm = {
     } else {
       $id.val("");
       $addToCartButton.prop("disabled", true);
+      priceHtml = '<span class="money">Out of Stock</span>';
+
+      // if variant not in stock display out of stock message
+
       $emailButton.css("display", "block")
     }
 
     $price.html(priceHtml);
-    currencyPicker.onMoneySpanAdded();
+  // currencyPicker.onMoneySpanAdded();
   },
   init: function () {
 
@@ -155,7 +203,7 @@ let ajaxify = {
 
         $cartItemCount.text(dataCartItemCount);
         $miniCartContents.html(dataCartHtml);
-        currencyPicker.onMoneySpanAdded();
+       // currencyPicker.onMoneySpanAdded();
 
         if (parseInt(dataCartItemCount) > 0) {
           ajaxify.openCart();
@@ -333,3 +381,19 @@ let lineItem = {
 };
 
 lineItem.init();
+
+
+
+// replace variant selector as featured image
+
+$('.thumbnail-grid-item').click(function () {
+
+  //console.log('clicked')
+
+  var src = $(this).find('img').attr('src').replace('600x','2048x');
+  $('.js-featured-image-image').attr('src', src);
+
+});
+
+
+

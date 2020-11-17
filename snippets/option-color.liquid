@@ -1,0 +1,19 @@
+{% assign value_handle = value | handleize %}
+{% assign color_translation_key = 'product.colors.' | append: value_handle %}
+{% assign color_hex = color_translation_key | t %}
+
+
+{% unless color_hex contains 'translation missing' %}
+    <span class="option-color color-{{ value_handle }}">
+        <div class="option-color-inner">
+            <span class="color-swatch  {{ value_handle | append: '-color' }}"></span>
+        </div>
+    </span>
+
+    <div class="option-color-title">
+        <p>{{ value }}</p>
+    </div>
+
+{% else %}
+    {{ value }}
+{% endunless %}
