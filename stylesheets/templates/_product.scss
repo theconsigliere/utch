@@ -819,11 +819,19 @@ select#select-option1 {
   display: flex;
 
   .icon-how {
-    height: 32px;
-    width: 32px;
-    margin: 0 10px;
+    margin-right: 15px;
+
   }
 }
+
+
+.light-icon {
+
+  .icon-logo {
+    width: 32px;
+  }
+}
+
 
 .variants_product-box {
   @include center-between-column;
