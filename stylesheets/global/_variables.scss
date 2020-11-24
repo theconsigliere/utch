@@ -45,9 +45,9 @@ $type-thin: 300;
 $black: #24272c;
 $yellow: #ffd200;
 $white: #ffffff;
-$brown: rgb(147, 121, 122);
-$green: rgb(169, 182, 164);
+$brown: rgb(145, 118, 119);
 $dark-green: #485448;
+$green: #859785;
 $light-green: #e4eae1;
 
 $orange: #f04f23;
@@ -82,7 +82,7 @@ $button-height: $line-global * 2;
 }
 
 .green-text {
-  color: $green;
+  color: $dark-green;
 }
 
 

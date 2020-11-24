@@ -51,7 +51,8 @@
     }
 
     .hero-logo {
-      width: 80px;
+      width: 30vw;
+      margin-bottom: 10px;
 
       @media (min-width: #{$screen-sm}) {
         width: 150px;
@@ -127,23 +128,15 @@
   .slide-content {
     width: 100%;
     position: absolute;
-    bottom: 15%;
+    bottom: 50%;
+    transform: translate( 0, 50%);
     padding: 10px;
     left: 0;
     right: 0;
 
 
-    @media (min-width: #{$screen-md}) {
-      bottom: 25%;
-    }
-
     @media (min-width: #{$screen-lg}) {
       padding: 40px 10vw;
-      bottom: 20%;
-    }
-
-    @media (min-width: #{$screen-xxxl}) {
-      bottom: 30%;
     }
 
     p {
@@ -1020,6 +1013,7 @@
 
   .logo-bar-title {
     text-align: center;
+    margin-top: 1rem;
   }
 
   .image-bar {
@@ -1070,6 +1064,8 @@
 
 .category-bottom {
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 // Portfolio

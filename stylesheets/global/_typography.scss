@@ -62,8 +62,12 @@ a {
 h1 {
   font-family: $headline-font, sans-serif;
   font-weight: $type-bold;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   font-display: swap;
+
+  @media (min-width: #{$screen-xs}) {
+    font-size: 1.9rem;
+  }
 
   @media (min-width: #{$screen-sm}) {
     font-size: 3.2rem;
@@ -81,8 +85,12 @@ h1 {
 h2 {
   font-family: $headline-font, sans-serif;
   font-weight: $type-bold;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   font-display: swap;
+
+  @media (min-width: #{$screen-xs}) {
+    font-size: 1.9rem;
+  }
 
   @media (min-width: #{$screen-sm}) {
     font-size: 2.8rem;
@@ -229,8 +237,13 @@ ul {
 .p-large {
   font-family: $text-font, sans-serif;
   font-display: swap;
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
 }
 
 .small-p {

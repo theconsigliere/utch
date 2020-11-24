@@ -10,14 +10,28 @@
  // @include reset-input;
   text-align: center;
   font-size: 1rem;
-  background: transparent;
   color: $white;
-  border: 3px solid $white;
+//  border: 3px solid $white;
   border-radius: 100em;
   position: relative;
   padding: 10px 20px;
   display: inline-block;
-  transition: all 0.6s ease-in;
+
+  &:before {
+    background-color: $brown;
+    width: 100%;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    opacity: 1;
+    z-index: -1;
+    height: 100%;
+    border-radius: 2.4rem;
+    transform: translate3d(-50%,0,0) scale(1);
+    transition: opacity .33s linear,width .5s cubic-bezier(.26,1,.48,1),background-color .6s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.26,1,.48,1);
+  }
 
 
   @media (min-width: #{$screen-md}) {
@@ -31,16 +45,22 @@
   }
 
   &:not(:disabled):hover {
-    color: $white;
 
     &:before {
-      background: $dark-green;
+      transform: translate3d(-50%,0,0) scale(1.05);
+      background-color: darken($brown, 5%);
     }
+    color: $white;
+ 
+  
   }
 
   &:hover {
+    &:before {
+      transform: translate3d(-50%,0,0) scale(1.05);
+      background-color: darken($brown, 5%);
+    }
     color: $white;
-    background: $brown;
 
   }
 
@@ -60,11 +80,88 @@
   }
 }
 
-.block-button, input[type=submit], 
-.shopify-challenge__button {
+.block-button {
+ // @include reset-input;
+  text-align: center;
+  font-size: 1rem;
+  color: $white;
+//  border: 3px solid $white;
+  border-radius: 100em;
+  position: relative;
+  padding: 10px 20px;
+  display: inline-block;
+
+  &:before {
+    background-color: $dark-green;
+    width: 100%;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    opacity: 1;
+    z-index: -1;
+    height: 100%;
+    border-radius: 2.4rem;
+    transform: translate3d(-50%,0,0) scale(1);
+    transition: opacity .33s linear,width .5s cubic-bezier(.26,1,.48,1),background-color .6s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.26,1,.48,1);
+  }
+
+
+  @media (min-width: #{$screen-md}) {
+    padding: 20px 40px 20px 40px;
+  }
+
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+
+    &:before {
+      transform: translate3d(-50%,0,0) scale(1.05);
+      background-color: darken($dark-green, 5%);
+    }
+    color: $white;
+ 
+  
+  }
+
+  .money {
+    color: $white;
+  }
+
+  &:hover {
+    &:before {
+      transform: translate3d(-50%,0,0) scale(1.05);
+      background-color: darken($dark-green, 5%);
+    }
+    color: $white;
+
+  }
+
+  &.button-cta {
+    width: 100%;
+    padding: $line-global;
+  }
+
+  .text-white & {
+    background: $white;
+    color: $black;
+
+    &:hover {
+      color: $black;
+      background: $yellow;
+    }
+  }
+}
+
+
+.add-to-cart-button, input[type=submit] {
   @include reset-input;
   display: inline-block;
-  width: auto;
   padding: ($line-global/2) $line-global;
   border: 2px solid $dark-green;
   text-align: center;
@@ -74,6 +171,8 @@
   color: $white;
   transition: all 0.3s ease-in-out;
   border-radius: 25px;
+  width: 100%;
+  padding: 15px 20px;
 
 
   @media (min-width: #{$screen-sm}) {
@@ -140,6 +239,8 @@
   }
 }
 
+
+
 .item-button {
   color: white;
   padding-bottom: 5px;
@@ -157,7 +258,6 @@
   }
 }
 
-.underline-button,
 .underline-button {
   @include reset-input;
   display: inline-block;
@@ -382,72 +482,3 @@
   margin: 0 auto;
 }
 
-
-// magentic-button
-
-body {
-	--button-border-radius: 40px;
-	--button-bg: transparent;
-	--button-stroke: #000;
-	--button-stroke-width: 1px;
-	--button-text: #000;
-	--button-bg-hover: #d8d4cf;
-	--button-stroke-hover: #000;
-	--button-stroke-width-hover: 1px;
-	--button-text-hover: #fff;
-	--cursor-stroke: #fff;
-    --cursor-fill: #fff;
-    --cursor-stroke-width: 1px;
-	--button-filler: #000;
-	--color-bg: #ccc;
-}
-
-.magnetic-button {
-	cursor: pointer;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	border-width: var(--button-stroke-width);
-	border-color: var(--button-stroke);
-	border-style: solid;
-	color: var(--button-text);
-	background: var(--button-bg);
-	border-radius: var(--button-border-radius);
-	min-width: 14rem;
-	height: 6rem;
-	padding: 0;
-	margin: 1rem;
-	font-family: inherit;
-	font-size: 1.5rem;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.magnetic-button:focus,
-.magnetic-button--hover {
-	outline: none;
-	border-width: var(--button-stroke-width-hover);
-	border-color: var(--button-stroke-hover);
-	color: var(--button-text-hover);
-}
-
-.magnetic-button__filler {
-	background: var(--button-filler);
-	position: absolute;
-	width: 150%;
-	height: 200%;
-	border-radius: 50%;
-	top: -50%;
-	left: -25%;
-	transform: translate3d(0,75%,0);
-}
-
-.magnetic-button__text, 
-.magnetic-button__text-inner {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-}

@@ -123,12 +123,23 @@ header {
   .cart-item-count {
     display: inline-block;
     background-color: $text-color;
-    min-width: $line-global;
-    height: $line-global;
-    border-radius: $line-global/2;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    padding: 5px;
     text-align: center;
     color: $white;
     // padding-top: 1px;
+
+    @media (min-width: #{$screen-sm}) {
+      min-width: 35px;
+      min-height: 30px;
+    }
+
+    @media (min-width: #{$screen-md}) {
+      min-width: 35px;
+      min-height: 35px;
+    }
   }
 
   .yellow-background {
@@ -540,8 +551,13 @@ main {
   .cart-svg {
     margin: 5px;
     display: flex;
-    width: 1.2em;
+    width: 2em;
   }
+}
+
+.icon-search-svg {
+  display: flex;
+  width: 1.6em;
 }
 
 #mini-cart {
@@ -633,6 +649,9 @@ html.mini-cart-open {
 
 p.announcement-bar__message {
   margin: 0;
+  letter-spacing: 1px;
+  font-family: $text-font !important;
+
 }
 
 .announcement-bar,
@@ -671,81 +690,47 @@ p.announcement-bar__message {
 
 .mobile-menu-icon {
   cursor: pointer;
+  width: 3em;
 }
 
 #toggle {
   @include center-between;
-  width: 18px;
-  height: 15px;
-
-  @media (min-width: #{$screen-sm}) {
-    width: 28px;
-    height: 25px;
-  }
-
-  @media (min-width: #{$screen-md}) {
-    display: block;
-    margin: 30px 20px 10px;
-  }
+  height: 30px;
+  width: 30px;
+  margin: 0 1em;
+display: block;
 
   @media (min-width: #{$screen-lg}) {
     display: none;
   }
 }
 
-#toggle span:after,
-#toggle span:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -5px;
-
-  @media (min-width: #{$screen-sm}) {
-    top: -9px;
-  }
-}
-
-#toggle span:after {
-  top: 5px;
-
-  @media (min-width: #{$screen-sm}) {
-    top: 9px;
-  }
-}
-
-#toggle span {
-  position: relative;
+.stem {
+  width: 100%;
+ // height: 2px;
+  background-color: $dark-green;
+  transition: all 0.3s ease-in-out;
   display: block;
 }
 
-#toggle span,
-#toggle span:after,
-#toggle span:before {
-  width: 100%;
-  height: 2px;
-  background-color: $dark-green;
-  transition: all 0.3s ease-in-out;
-  backface-visibility: hidden;
-}
+
 
 /* on activation */
-#toggle.on span {
-  background-color: transparent;
-}
-
-#toggle.on span:before {
-  transform: rotate(45deg) translate(5px, 5px);
-  background-color: $green;
-}
-
-#toggle.on span:after {
-  transform: rotate(-45deg) translate(7px, -8px);
-  background-color: $green;
-  top: 12.5px;
-
-  @media (min-width: #{$screen-sm}) {
-    top: 9px;
+#toggle.on .stem-2 {
+  opacity: 0;
+  path {
+    fill: transparent !important;
   }
+  
+}
+
+#toggle.on .stem-1 {
+  transform: translateY(13px) translateX(150px) rotate(45deg);
+}
+
+#toggle.on .stem-3{
+  transform: translateY(180px) translateX(-100px) rotate(-45deg);
+
 }
 
 .mobile-nav {
@@ -886,6 +871,7 @@ p.announcement-bar__message {
 
 .header-search {
   display: none;
+  margin-right: 1em;
 
   @media (min-width: #{$screen-md}) {
     display: inline-block;

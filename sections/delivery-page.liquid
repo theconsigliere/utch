@@ -112,12 +112,12 @@
 				<div class="about-text-area">
 				
                     <div class="title-area">
-                        <h6>
-                            {{ block.settings.subtitle }}
-                        </h6>
-                        <h1>
-                            {{ block.settings.title }}
-                        </h1>
+
+                        {% if block.settings.subtitle != blank %}
+                            <h6>{{ block.settings.subtitle }}</h6>
+                        {% endif %}
+
+                        <h1>{{ block.settings.title }}</h1>
                     </div>
 
 

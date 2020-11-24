@@ -299,185 +299,7 @@
   }
 }
 
-// What cyclist are you
-//---------------------------------
 
-.cyclist-block-section {
-  &:nth-child(even) {
-    .cyclist-block {
-      flex-direction: column-reverse;
-
-      @media (min-width: #{$screen-lg}) {
-        flex-direction: row-reverse;
-      }
-    }
-  }
-
-  .cyclist-block {
-    @include center-between-column;
-    flex-direction: column-reverse;
-    height: 100%;
-
-    @media (min-width: #{$screen-lg}) {
-      @include center-between;
-    }
-
-    .cyclist-block-item {
-      width: 100%;
-      height: 100%;
-      @include center-between;
-
-      @media (min-width: #{$screen-lg}) {
-        width: 50%;
-      }
-    }
-
-    .block-image {
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        vertical-align: bottom;
-      }
-    }
-
-    .block-text {
-      .cyclist-text-inner {
-        width: 100%;
-        margin: 0 auto;
-
-        @media (min-width: #{$screen-lg}) {
-          width: 80%;
-        }
-
-        .cyclist-block-title {
-          margin-top: 10vh;
-          padding-top: 5vh;
-          margin-bottom: 5vh;
-          width: 95%;
-          margin: 0 auto;
-
-          @media (min-width: #{$screen-lg}) {
-            margin: 0;
-          }
-
-          @media (min-width: #{$screen-xxl}) {
-            width: 80%;
-            margin: 0;
-            padding-bottom: 2em;
-          }
-        }
-
-        .cyclist-collection-list {
-          position: relative;
-          display: flex;
-          flex-wrap: nowrap;
-          overflow-x: scroll;
-          width: 90%;
-          margin: 5vh auto;
-
-          @media (min-width: #{$screen-lg}) {
-            margin: 0;
-            width: 100%;
-          }
-
-          .product-card {
-            min-width: 42.5%;
-            width: 50%;
-            margin: 5px;
-            border: 1px solid $light-white;
-            position: relative;
-            flex: 1;
-            margin-bottom: 40px;
-            text-align: left;
-
-            @media (min-width: #{$screen-md}) {
-              min-width: 30%;
-              width: 30%;
-            }
-
-            @media (min-width: #{$screen-xxl}) {
-              min-width: 30%;
-              width: 30%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.cyclist-section-group {
-  // scroll-snap-type: y mandatory;
-  // overflow-y: scroll;
-  height: fit-content;
-
-  @media (min-width: #{$screen-lg}) {
-    //  height: 100vh;
-  }
-
-  .cyclist-block-section {
-    scroll-snap-align: start;
-    height: fit-content;
-    overflow: hidden;
-
-    @media (min-width: #{$screen-lg}) {
-      min-height: 90vh;
-    }
-  }
-}
-
-.cyclist-title {
-  background: $black;
-  @include center-between;
-  min-height: 100vh !important;
-
-  .title-section {
-    .stroke {
-      -webkit-text-stroke: 2px;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0;
-    }
-
-    h1 {
-      font-size: 4rem;
-      margin-top: 0;
-
-      @media (min-width: #{$screen-md}) {
-        font-size: 5rem;
-      }
-
-      @media (min-width: #{$screen-lg}) {
-        font-size: 7rem;
-      }
-
-      @media (min-width: #{$screen-xxl}) {
-        font-size: 10rem;
-      }
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    h2 .stroke {
-      -webkit-text-stroke: 1px;
-    }
-
-    p {
-      color: white;
-      max-width: 100%;
-
-      @media (min-width: #{$screen-lg}) {
-        max-width: 80%;
-      }
-
-      @media (min-width: #{$screen-xxl}) {
-        max-width: 60%;
-      }
-    }
-  }
-}
 
 // FAQ PAGE
 //---------------------------------
@@ -532,45 +354,7 @@
   }
 }
 
-// VIDEO LIBRARY
-//---------------------------------
 
-.video-inner {
-  max-width: 95%;
-  margin: 0 auto;
-
-  .title-section {
-    max-width: 90%;
-  }
-
-}
-
-.video-library-item {
-  padding-top: 50%;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-
-  iframe {
-    width: 100%;
-    height: inherit;
-    /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-
-  }
-}
-
-.video-library-section {
-  margin-top: 5vh;
-}
 
 // OUR STORY /ABOUT
 //----------------------
@@ -581,6 +365,24 @@
   @media (min-width: #{$screen-md}) {
     margin-top: 0;
   }
+
+  .full-width-section {
+
+    &:nth-child(odd) {
+      background: $light-white;
+
+      .about-us-section {
+        flex-direction: column;
+
+        @media (min-width: #{$screen-lg}) {
+          flex-direction: row-reverse;
+        
+        }
+
+      }
+      
+  }
+}
 }
 
 .about-intro {
@@ -623,14 +425,21 @@
 
   * {
     color: $white;
+    margin-bottom: .5rem;
+
+    @media (min-width: #{$screen-md}) {
+      margin-bottom: 1rem;
+    }
   }
 }
 
 .about-us-section {
   @include center-center-column;
+  padding: 5vh 0;
 
   @media (min-width: #{$screen-lg}) {
-    @include center-center;
+    @include center-between;
+    padding: 10vh 0;
   }
 
 
@@ -644,12 +453,22 @@
       padding: 0;
       text-align: left;
     }
+
+    .illo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 
 }
 
 .about-h6 {
-  padding-bottom: 5em;
+  padding-bottom: 0;
+
+  @media (min-width: #{$screen-md}) {
+    padding-bottom: 5em;
+  }
 }
 
 .mission-section {
@@ -668,7 +487,8 @@ text-align: center;
 .mission-statement-circle {
   width: 90vw;
   height: 90vw;
-  background: $brown;
+ // background: $brown;
+ background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgwKSAiPjxyZWN0IGlkPSJwYXR0ZXJuLWJhY2tncm91bmQiIHdpZHRoPSI0MDAlIiBoZWlnaHQ9IjQwMCUiIGZpbGw9InJnYmEoMTMzLCAxMTIsIDEwNywxKSI+PC9yZWN0PiA8cGF0aCBmaWxsPSJyZ2JhKDE0MiwgMTE5LCAxMTMsMSkiIGQ9Ik0yMCA1IGEgMjAgMjAgMCAwIDEgNDAgMCBoMTAgYSAxMCAxMCAwIDAgMSAtMjAgMCBhIDEwIDEwIDAgMCAwIC0yMCAwIGEgMTAgMTAgMCAwIDEgLTIwIDAgYSAxMCAxMCAwIDAgMCAtMjAgMCBoLTEwIGEgMjAgMjAgMCAwIDEgNDAgMCB6Ij48L3BhdGg+PHBhdGggZmlsbD0icmdiYSgxNDQsIDEyMiwgMTE2LDEpIiBkPSJNMCAyNSBhIDIwIDIwIDAgMCAxIDQwIDAgaDEwIGEgMTAgMTAgMCAwIDEgLTIwIDAgYSAxMCAxMCAwIDAgMCAtMjAgMCBhIDEwIDEwIDAgMCAxIC0yMCAwIHoiPjwvcGF0aD48cGF0aCBmaWxsPSJyZ2JhKDE0MiwgMTE5LCAxMTMsMSkiIGQ9Ik0yMCA0NSBhIDIwIDIwIDAgMCAxIDQwIDAgaDEwIGEgMTAgMTAgMCAwIDEgLTIwIDAgYSAxMCAxMCAwIDAgMCAtMjAgMCBhIDEwIDEwIDAgMCAxIC0yMCAwIGEgMTAgMTAgMCAwIDAgLTIwIDAgaC0xMCBhIDIwIDIwIDAgMCAxIDQwIDAgeiI+PC9wYXRoPjwvcGF0dGVybj4gIDwvZGVmcz4gPHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSI+PC9yZWN0Pjwvc3ZnPg==");
 @include center-center;
   border-radius: 50%;
   position: relative;
@@ -783,7 +603,7 @@ text-align: center;
   @include center-start-column;
   margin: 25px 0;
 
-  @media (min-width: #{$screen-xl}) {
+  @media (min-width: #{$screen-xxxl}) {
     @include start-between;
     margin: 50px 0;
   }
@@ -798,7 +618,7 @@ text-align: center;
   width: 100%;
   padding: 5px;
 
-  @media (min-width: #{$screen-xl}) {
+  @media (min-width: #{$screen-xxxl}) {
     margin: 0 15px;
     width: fit-content;
     @include start-center;
@@ -811,11 +631,12 @@ text-align: center;
 
 .delivery-text {
   padding: 0 15px;
+  text-align: left;
 
   .font-bolder {
     margin-bottom: 5px;
 
-    @media (min-width: #{$screen-xl}) {
+    @media (min-width: #{$screen-xxxl}) {
       margin-bottom: 10px;
     }
   }

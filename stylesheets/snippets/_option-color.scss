@@ -97,7 +97,7 @@
 
 
 .option-values {
-  @include center-center;
+  @include center-end;
   width: 80%;
 
   @media (min-width: #{$screen-md}) {

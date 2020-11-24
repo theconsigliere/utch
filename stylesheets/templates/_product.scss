@@ -817,12 +817,12 @@ select#select-option1 {
 
   .icon-how {
     margin-right: 15px;
-
+    min-width: 32px;
   }
 }
 
 
-.light-icon {
+.light-icon, .watering-icon {
 
   .icon-logo {
     width: 32px;

@@ -73,9 +73,14 @@
         {% endif %}
     </div>
 
-    <div class="inner about-h6">
-        <p class='font-bolder p-large'>{{ section.settings.textintroarea }}</p>
-    </div>
+    {% if section.settings.textintroarea != blank %}
+
+        <div class="inner about-h6">
+            <p class='font-bolder p-large'>{{ section.settings.textintroarea }}</p>
+        </div>
+        
+    {% endif %}
+
 
 
 	{% for block in section.blocks %}
