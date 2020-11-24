@@ -575,62 +575,258 @@
 // OUR STORY /ABOUT
 //----------------------
 
-.story-info {
-  background: $white;
-  padding-bottom: 5vh;
+.about-page-content {
+  margin-top: 10vh;
+
+  @media (min-width: #{$screen-md}) {
+    margin-top: 0;
+  }
 }
 
-.about-us-section {
-  padding: 5vh 0;
-  @include center-between-column;
+.about-intro {
+  position: relative;
+  border-radius: 25px;
+  margin-top: 4em;
+  margin-bottom: 2em;
 
   @media (min-width: #{$screen-lg}) {
-    @include start-between;
+    margin-top: 5em;
+    margin-bottom: 3em;
   }
 
   @media (min-width: #{$screen-xxl}) {
-    @include center-between;
+    margin-top: 10em;
+    margin-bottom: 5em;
   }
 
-  .about-image {
-    margin: 2vh 0;
-
-    @media (min-width: #{$screen-lg}) {
-      width: 42%;
-      margin: 0;
-    }
-
-    @media (min-width: #{$screen-xxl}) {
-      width: 25%;
-    }
-  }
-
-  .about-text-area {
+  img {
     width: 100%;
+    border-radius: 25px;
+  }
 
-    @media (min-width: #{$screen-lg}) {
-      width: 55%;
-    }
 
-    @media (min-width: #{$screen-xxl}) {
-      width: 70%;
-    }
+}
+
+.about-h6 {
+  * {
+    text-align: center;
   }
 }
 
-.story-info .inner .about-us-section {
-  &:nth-child(even) {
-    flex-direction: column;
+.title-about-section {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate( -50%, 0);
+  width: 100%;
 
-    @media (min-width: #{$screen-lg}) {
-      flex-direction: row-reverse;
-    }
+  * {
+    color: $white;
   }
 }
 
-//
+.about-us-section {
+  @include center-center-column;
 
-.shopify-policy__container {
-  max-width: 90vw;
-  margin: 10em auto;
+  @media (min-width: #{$screen-lg}) {
+    @include center-center;
+  }
+
+
+  .about-image, .about-text-area {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 45%;
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+}
+
+.about-h6 {
+  padding-bottom: 5em;
+}
+
+.mission-section {
+  padding-top: 5em;
+  margin: 5vh 0;
+  position: relative;
+  @include center-center-column;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-top: 10em;
+  }
+
+  .inner {
+text-align: center;
+
+.mission-statement-circle {
+  width: 90vw;
+  height: 90vw;
+  background: $brown;
+@include center-center;
+  border-radius: 50%;
+  position: relative;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 80vh;
+  height: 80vh;
+  }
+
+  .mission-statement-div {
+    padding: 2vh;
+
+    h4 {
+      font-size: 5vw;
+      color: white;
+
+      @media (min-width: #{$screen-lg}) {
+        font-size: 5vh;
+      }
+  }
+}
+  
+}
+  }
+
+  .side-plant {
+    z-index: 0;
+    display: none;
+
+    @media (min-width: #{$screen-lg}) {
+      display: block;
+    }
+  }
+
+  .side-plant-left {
+    position: absolute;
+    left: 0;
+   bottom: 0;
+  }
+  .side-plant-right {
+    position: absolute;
+    right: 0;
+   bottom: 0;
+  }
+}
+
+
+
+// .story-info {
+//   background: $white;
+//   padding-bottom: 5vh;
+// }
+
+// .about-us-section {
+//   padding: 5vh 0;
+//   @include center-between-column;
+
+//   @media (min-width: #{$screen-lg}) {
+//     @include center-between;
+//   }
+
+//   @media (min-width: #{$screen-xxl}) {
+//     @include center-between;
+//   }
+
+//   .about-image {
+//     margin: 2vh 0;
+
+//     @media (min-width: #{$screen-lg}) {
+//       width: 42%;
+//       margin: 0;
+//     }
+
+//     @media (min-width: #{$screen-xxl}) {
+//       width: 25%;
+//     }
+//   }
+
+//   .about-text-area {
+//     width: 100%;
+
+//     @media (min-width: #{$screen-lg}) {
+//       width: 55%;
+//     }
+
+//     @media (min-width: #{$screen-xxl}) {
+//       width: 70%;
+//     }
+//   }
+// }
+
+// .story-info .inner .about-us-section {
+//   &:nth-child(even) {
+//     flex-direction: column;
+
+//     @media (min-width: #{$screen-lg}) {
+//       flex-direction: row-reverse;
+//     }
+//   }
+// }
+
+// //
+
+// .shopify-policy__container {
+//   max-width: 90vw;
+//   margin: 10em auto;
+// }
+
+// Delivery
+
+.delivery-options {
+  @include center-start-column;
+  margin: 25px 0;
+
+  @media (min-width: #{$screen-xl}) {
+    @include start-between;
+    margin: 50px 0;
+  }
+}
+
+.delivery-box {
+  border: 2px $green solid;
+  border-radius: 15px;
+  @include start-between;
+  margin: 10px 0;
+  background: #d7e4d7;
+  width: 100%;
+  padding: 5px;
+
+  @media (min-width: #{$screen-xl}) {
+    margin: 0 15px;
+    width: fit-content;
+    @include start-center;
+  }
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+.delivery-text {
+  padding: 0 15px;
+
+  .font-bolder {
+    margin-bottom: 5px;
+
+    @media (min-width: #{$screen-xl}) {
+      margin-bottom: 10px;
+    }
+  }
+
+  * {
+    margin: 0;
+  }
+
+}
+
+
+.delivery-price {
+  padding-right: 15px;
 }

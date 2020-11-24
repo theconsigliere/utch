@@ -1,0 +1,144 @@
+{% schema %}
+
+{
+    "name": "About Page",
+    "settings": [
+        {
+            "type": "text",
+            "id": "textintro",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "textintroarea",
+            "label": "Description"
+        },
+        {
+            "id": "title_image",
+            "type": "image_picker",
+            "label": "Page Header Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "about-section",
+            "name": "About Description",
+            "settings": [
+                {
+                    "id": "about_image",
+                    "type": "image_picker",
+                    "label": "Image"
+                }, {
+                    "id": "about_title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Slide Title"
+                }, {
+                    "id": "about_content",
+                    "type": "textarea",
+                    "label": "Slide Content"
+                }
+            ]
+        }, {
+            "type": "mission",
+            "name": "Mission Section",
+            "settings": [
+                {
+                    "id": "mission_title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Title"
+                }, {
+                    "id": "our_mission",
+                    "type": "textarea",
+                    "label": "Our Mission"
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+
+<div class="about-page-content">
+
+    <div class="about-intro inner">
+        {% if section.settings.textintro != blank %}
+            <img data-src="{{ section.settings.title_image | img_url: 'master' }}" alt="{{ section.settings.title_image.alt }}" class="about-image-img  lazyload"/>
+
+            <div class="title-about-section">
+                <h1>{{ section.settings.textintro }}</h1>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="inner about-h6">
+        <p class='font-bolder p-large'>{{ section.settings.textintroarea }}</p>
+    </div>
+
+
+	{% for block in section.blocks %}
+
+        {% case block.type %}
+        
+            {% when 'about-section' %}
+
+            <section class="full-width-section">
+
+                <div class="inner about-us-section">
+
+				<div class="about-image">
+                    <img data-src="{{ block.settings.about_image | img_url: 'master' }}" alt="{{ block.settings.about_image.alt }}" class="lazyload about-image-img"/>
+				</div>
+
+
+				<div class="about-text-area">
+				
+                    <div class="title-area">
+                        <h2>
+                            {{ block.settings.about_title }}
+                        </h2>
+
+                    </div>
+
+					
+					<div class="about-para">
+						<p>
+							{{ block.settings.about_content }}
+						</p>
+					</div>
+				
+                </div>
+                
+            </div>
+
+			</section>
+
+        {% when 'mission' %}
+
+     <section class="mission-section">
+
+        <img data-src="{{ 'side-plant.svg' | asset_url }}" class='side-plant-left side-plant lazyload'> 
+        <img data-src="{{ 'side-plant.svg' | asset_url }}" class='side-plant-right side-plant lazyload'> 
+
+         <div class="inner">
+             {% if block.settings.mission_title != blank %}
+                <h4>{{ block.settings.mission_title }}</h4>
+             {% endif %}
+             
+             {% if block.settings.our_mission != blank %}
+                <div class="mission-statement-circle">
+                    <div class="mission-statement-div">
+                        <h4>{{ block.settings.our_mission }}</h4>
+                    </div>
+                </div>
+             {% endif %}
+         </div>
+     </section>
+
+
+
+		{% endcase %}
+	{% endfor %}
+</div>

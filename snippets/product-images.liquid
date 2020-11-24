@@ -3,7 +3,7 @@
     <div class="slides js-slides">
       {% for image in product.images %}
         <div class="single-image">
-                <img src="{{ image.src | img_url: '600x' }}" alt="{{ image.alt | escape }}">
+                <img data-src="{{ image.src | img_url: '1200x' }}" alt="{{ image.alt | escape }}" class="lazyload">
 
                 {%- comment -%}  
             {% assign featured_image =

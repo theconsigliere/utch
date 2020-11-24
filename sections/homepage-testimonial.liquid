@@ -1,0 +1,154 @@
+{% schema %}
+
+{
+    "name": "Testimonial Section",
+    "settings": [
+        {
+            "id": "testimonial_title",
+            "type": "text",
+            "label": "Title",
+            "placeholder": "Title"
+        },
+        {
+            "id": "testimonial_subtitle",
+            "type": "text",
+            "label": "Subtitle",
+            "placeholder": "Subtitle"
+        },
+        {
+            "id": "testimonial_image",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "testimonial-slide",
+            "name": "Add a Testimonial",
+            "settings": [
+                {
+                    "type": "color",
+                    "id": "background_color",
+                    "label": "Background colour",
+                    "default": "#ffffff"
+                 },
+                 {
+                    "type":      "range",
+                    "id":        "review_stars",
+                    "min":       0,
+                    "max":        5,
+                    "step":       1,
+                    "label":     "Stars",
+                    "default":   5
+                },
+                {
+                    "id": "desc",
+                    "type": "textarea",
+                    "label": "Description",
+                    "placeholder": "An absolute gem of a shop. You’ll find what you need here. Incredible selection."
+                },
+                {
+                    "id": "name",
+                    "type": "text",
+                    "label": "Name",
+                    "placeholder": "John Doe"
+                }
+
+
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "content",
+            "name": "Testimonial Section"
+        }
+    ]
+}
+
+{% endschema %}
+
+<section class="testimonial-section">
+
+  <div class="title-section">
+
+      {% if section.settings.testimonial_title != null %}
+        <h2 class='logo-bar-title'>{{ section.settings.testimonial_title }}</h2>
+      {% endif %}
+
+      {% if section.settings.testimonial_subtitle != null %}
+      <h6 class='logo-bar-title'>{{ section.settings.testimonial_subtitle }}</h6>
+    {% endif %}
+    
+
+    {% if section.settings.testimonial_image != null %}
+        <div class="title-image_section">
+            <img data-src="{{ section.settings.testimonial_image | img_url: 'master' }}" alt="{{ section.settings.testimonial_image.alt }}" class="lazyload"/>
+        </div>
+    {% endif %}
+
+  </div>
+     
+
+<!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+
+
+       
+            {% for block in section.blocks %}
+
+            {% case block.type %}
+
+             <!-- Slides -->
+                {% when 'testimonial-slide' %}
+
+             
+                    <div class="swiper-slide testimonial-group" >   
+                        <div class="testimonial-inner" style='background:{{ block.settings.background_color }}; '>
+
+
+                            <div class="testimonial-title-inner">
+
+                                {% include 'inline-icon' with svg: 'comma.svg', alt: speech, class: 'comma comma-top ' %}
+                                {% include 'inline-icon' with svg: 'comma.svg', alt: speech, class: 'comma comma-bottom' %}
+    
+                                <div class="review-stars">
+    
+                                    {% assign i = 0 %}
+                                    {% assign limit = block.settings.review_stars %}
+    
+                                    {% for i in (1..limit) %}
+    
+                                        {% include 'inline-icon' with svg: 'star.svg', alt: hutch-star, class: 'review-star' %}
+                                        
+                                    {% endfor %}
+    
+                                </div>
+    
+                                <h6>{{ block.settings.desc }}</h6>
+                                <p>{{ block.settings.name}}</p>
+
+                            </div>
+
+ 
+                        </div>
+                    </div>
+           
+
+                {% else %}   
+            {% endcase %}
+
+
+        {% endfor %}
+
+
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+</div>
+   
+
+</section>

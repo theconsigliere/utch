@@ -45,7 +45,19 @@
 								{% comment %}
 									assign item as product in our forloop
 								{% endcomment %}
+                      
+                                {% if item.title == 'CONGRATULATIONS!!"%}
+
+
+                                {% else %}
+
+                                {% include 'product-card' with product: item %}
+
+                                {% endif %}
+                      
+                      {% comment %}
 								{% include 'product-card' with product: item %}
+                      {% endcomment %}
 							{% endif %}
 						{% endfor %}
 					</div>
@@ -55,7 +67,7 @@
 					{% comment %}
 						passing search.terms into default.json as searchTerms
 					{% endcomment %}
-					<h1>{{ 'search.results.empty' | t: searchTerms: search.terms }}</h1>
+					<h3>{{ 'search.results.empty' | t: searchTerms: search.terms }}</h3>
 				{% endif %}
 			</div>
 		</div>

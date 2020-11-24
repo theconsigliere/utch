@@ -113,6 +113,19 @@
                     "id": "sixth_url",
                     "type": "url",
                     "label": "sixth Block Item URL"
+                }, {
+                    "id": "seventh_image",
+                    "type": "image_picker",
+                    "label": "Seventh Block Image"
+                }, {
+                    "id": "seventh_title",
+                    "type": "text",
+                    "label": "Seventh Block Title",
+                    "placeholder": "Seventh Block Title"
+                }, {
+                    "id": "seventh_url",
+                    "type": "url",
+                    "label": "seventh Block Item URL"
                 }
             ]
         }
@@ -254,6 +267,19 @@
                                                 </div>
                                             </a>
                                         </div>
+
+                                        {% if block.settings.seventh_image != blank %}
+                                        <div class="nav-column">
+                                            <a href="{{ block.settings.seventh_url }}" class='nav-column-link'>
+                                                <div class="nav-item-image">
+                                                        <img data-src="{{ block.settings.seventh_image | img_url: 'master' }}" alt="{{ block.settings.seventh_image.alt }}" class="lazyload"/>
+                                                </div>
+                                                <div class="nav-item-title">
+                                                    <p class='font-bolder'>{{ block.settings.seventh_title }}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>

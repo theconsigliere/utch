@@ -68,11 +68,14 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     {{ "search.js" | asset_url | script_tag }}
 {%- comment -%}
 {{ "currency-picker.js" | asset_url | script_tag }} {%- endcomment -%}
     {{ "application.js" | asset_url | script_tag }}
+
+    {%- comment -%} self written js{%- endcomment -%}
     {{ "app-dist.js" | asset_url | script_tag }}
 
 

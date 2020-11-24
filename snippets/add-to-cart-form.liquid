@@ -29,8 +29,8 @@
 
 
 
-
 <form id="add-to-cart-form" action="/cart/add" method="post" enctype="multipart/form-data" data-variants="{{ variants_with_quantity_json | url_param_escape }}">
+
 
 <!-- only show select if we have multiple variants -->
 
@@ -64,6 +64,8 @@
 	{% endfor %}
 {% endif %}
 
+
+
 <!-- will render price, quantity and value for all variants -->
 <input class="js-variant-id" type="hidden" name="id" value="{% if has_selected_variant %}{{ product.selected_variant.id }}{% elsif has_multiple_variants != true %}{{ product.variants.first.id }}{% endif %}">
 
@@ -77,10 +79,10 @@
 
 	{% else %}
 
+
 	<button type="submit" name="add" id="add-to-cart-button" class="button-cta block-button" {% if can_add_to_cart != true %} disabled {% endif %}>
 		{{ 'product.form.submit' | t }}
 		&ndash;
-	
 	
 		<span class="js-price" data-default-price="{{ product.price | money }}">
 	

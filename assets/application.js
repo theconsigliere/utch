@@ -98,7 +98,7 @@ let productForm = {
   validate: function (event, selectedVariant) {
     let $form = $(this),
       hasVariant = selectedVariant !== null,
-      canAddToCart = hasVariant && selectedVariant.inventory_quantity > 0,
+      canAddToCart = hasVariant && selectedVariant.inventory_quantity > 0 || hasVariant && selectedVariant.available,
       $id = $form.find(".js-variant-id"),
       $addToCartButton = $form.find("#add-to-cart-button"),
       $price = $form.find(".js-price"),
@@ -386,14 +386,20 @@ lineItem.init();
 
 // replace variant selector as featured image
 
-$('.thumbnail-grid-item').click(function () {
+if ( $('.thumbnail-wrapper') ) {
 
-  //console.log('clicked')
+  $('.thumbnail-grid-item').click(function () {
 
-  var src = $(this).find('img').attr('src').replace('600x','2048x');
-  $('.js-featured-image-image').attr('src', src);
+    //console.log('clicked')
+  
+    var src = $(this).find('img').attr('src').replace('600x','2048x');
+    $('.js-featured-image-image').attr('src', src);
+  
+  });
+  
+}
 
-});
+
 
 
 

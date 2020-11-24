@@ -1181,3 +1181,104 @@ section.instafeed-container {
 .trustpilot-widget {
   margin-bottom: 2em;
 }
+
+
+// Testimonial Sliders
+
+
+.testimonial-group {
+
+ // max-width: 80% !important;
+
+}
+
+
+.testimonial-section {
+  margin: 5vh 0;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 10vh 0;
+  }
+
+
+  .swiper-wrapper {
+    margin-bottom: 4em;
+  }
+}
+
+.testimonial-title-inner {
+  position: relative;
+  margin: 0 auto;
+max-width: 90%;
+
+@media (min-width: #{$screen-lg}) {
+  max-width: 70%;
+}
+
+  @media (min-width: #{$screen-xl}) {
+    max-width: 60%;
+  }
+}
+
+.title-image_section {
+  margin: 0;
+
+  img {
+    margin: 0;
+    width: 80%;
+
+    @media (min-width: #{$screen-sm}) {
+      width: fit-content;
+    }
+  }
+}
+
+.testimonial-inner {
+  padding: 10vh 0;
+  max-width: 95%;
+  margin: 0 auto;
+  border-radius: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: #{$screen-md}) {
+    max-width: 80%;
+  }
+
+
+  .comma {
+    position: absolute;
+    width: 1em;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 4em;
+    }
+}
+
+.comma-top {
+  top: 0;
+  left: 0;
+}
+
+.comma-bottom {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+* {
+  text-align: center;
+}
+}
+
+.review-stars {
+  text-align: center;
+  margin-bottom: 2em;
+
+    .review-star {
+      width: 2em;
+    }
+
+}
+

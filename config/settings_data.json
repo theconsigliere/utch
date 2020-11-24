@@ -39,7 +39,7 @@
           "home_page_only": false,
           "announcement_bar_color": "#c6d1c2",
           "announcement_bar_text_color": "#485448",
-          "text": "FREE SHIPPING ON ALL ORDERS OVER £35"
+          "text": "FREE SHIPPING ON ALL ORDERS OVER £35 WITH OFFER CODE FREESHIP35"
         }
       },
       "mega-menu": {
@@ -59,16 +59,19 @@
               "second_url": "shopify:\/\/collections\/trailing-plants",
               "third_image": "shopify:\/\/shop_images\/Easy_care.png",
               "third_title": "Easy Care",
-              "third_url": "shopify:\/\/collections\/low-maintenance",
+              "third_url": "shopify:\/\/collections\/easy-care",
               "fourth_image": "shopify:\/\/shop_images\/Sun_worshippers.png",
               "fourth_title": "Sun Worshippers",
-              "fourth_url": "shopify:\/\/collections\/sun-worshipers",
+              "fourth_url": "shopify:\/\/collections\/sun-worshippers",
               "fifth_image": "shopify:\/\/shop_images\/Pet_friendly.png",
               "fifth_title": "Pet Friendly",
-              "fifth_url": "shopify:\/\/collections\/pet-friendly-plants",
+              "fifth_url": "shopify:\/\/collections\/pet-friendly",
               "sixth_image": "shopify:\/\/shop_images\/Air_purifiers_b116cb2e-f76e-467d-aa86-03bc9d4db341.png",
               "sixth_title": "Air Purifying",
-              "sixth_url": "shopify:\/\/collections\/air-purifying-plants"
+              "sixth_url": "shopify:\/\/collections\/air-purifying",
+              "seventh_image": "shopify:\/\/shop_images\/d.png",
+              "seventh_title": "Terrariums",
+              "seventh_url": "shopify:\/\/collections\/terrariums"
             }
           },
           "7e16304b-209e-4ed5-b40c-72decb6108a0": {
@@ -82,7 +85,8 @@
               "third_title": "",
               "fourth_title": "",
               "fifth_title": "",
-              "sixth_title": ""
+              "sixth_title": "",
+              "seventh_title": ""
             }
           },
           "e7cce121-38fd-4b6d-a704-a8bcc9be27fc": {
@@ -96,7 +100,8 @@
               "third_title": "",
               "fourth_title": "",
               "fifth_title": "",
-              "sixth_title": ""
+              "sixth_title": "",
+              "seventh_title": ""
             }
           }
         },
@@ -422,6 +427,123 @@
           "feed_width": 80,
           "html_area": ""
         }
+      },
+      "1605709610a1ff4004": {
+        "type": "homepage-testimonial",
+        "blocks": {
+          "a1c78d7a-78cb-45dd-9666-60fa84f6e7b8": {
+            "type": "testimonial-slide",
+            "settings": {
+              "background_color": "#ede2e2",
+              "review_stars": 5,
+              "desc": "An absolute gem of a shop. You’ll find what you \nneed here. Incredible selection.",
+              "name": "Cameron Hodder"
+            }
+          },
+          "97466df3-5176-4610-8f70-d982f2211bb3": {
+            "type": "testimonial-slide",
+            "settings": {
+              "background_color": "#e6e7c6",
+              "review_stars": 5,
+              "desc": "Wonderful shop, so happy to have it practically on my doorstep. Step into a magical jungle, and immerse yourself in the beauty! The staff are so helpful and really know their stuff. I could spend hours in here, it's so tranquil and interesting. Worth a visit",
+              "name": "Tabitha Scott"
+            }
+          },
+          "36281280-450e-4fba-b556-de47cafb1f78": {
+            "type": "testimonial-slide",
+            "settings": {
+              "background_color": "#dce7e9",
+              "review_stars": 5,
+              "desc": "Such friendly, knowledgeable & helpful people. Both me & my husband have had very positive experiences here for a variety of needs. Great for presents, advice & inspiration. We will be back!",
+              "name": "Amy Broadley"
+            }
+          },
+          "bd727e7f-c71b-4d88-8794-1d14ced7847d": {
+            "type": "testimonial-slide",
+            "settings": {
+              "background_color": "#e9ddd2",
+              "review_stars": 5,
+              "desc": "Beautiful, healthy unique house plants. Very reasonably priced and the owners are really helpful. A great addition to Exeters independent businesses",
+              "name": "Nicki Carolyn"
+            }
+          },
+          "ef0d34c1-225c-4bc3-9a4d-057cadf94b1a": {
+            "type": "testimonial-slide",
+            "settings": {
+              "background_color": "#e6e7c6",
+              "review_stars": 5,
+              "desc": "Going into Hutch is an experience. The shop is gorgeous, a sea of green plants. I have bought a few things and the staff are lovely and very knowlegable about all their plants.",
+              "name": "Helen Smith"
+            }
+          }
+        },
+        "block_order": [
+          "a1c78d7a-78cb-45dd-9666-60fa84f6e7b8",
+          "97466df3-5176-4610-8f70-d982f2211bb3",
+          "36281280-450e-4fba-b556-de47cafb1f78",
+          "bd727e7f-c71b-4d88-8794-1d14ced7847d",
+          "ef0d34c1-225c-4bc3-9a4d-057cadf94b1a"
+        ],
+        "settings": {
+          "testimonial_title": "Hey, you make us smile",
+          "testimonial_subtitle": "Testimonials",
+          "testimonial_image": "shopify:\/\/shop_images\/images.png"
+        }
+      },
+      "delivery-page": {
+        "type": "delivery-page",
+        "blocks": {
+          "18a4c27b-31bb-4315-b5a1-66740250a94e": {
+            "type": "about-section",
+            "settings": {
+              "subtitle": "Frequently Asked Questions",
+              "title": "Delivery information",
+              "deliveryoption": "Local Delivery",
+              "deliveryarea": "(EX1, EX2, EX4 Only)",
+              "deliveryprice": "£2.50",
+              "deliveryoptiontwo": "UK Delivery",
+              "deliveryareatwo": "Across the UK",
+              "deliverypricetwo": "£4.95",
+              "deliveryoptionthree": "Heavy Goods Delivery",
+              "deliveryareathree": "For plants over a certain size",
+              "deliverypricethree": "£7.50",
+              "textarea": "All orders should be expected to arrive within 2-5 working days, however delivery times are not \nguaranteed. During the COVID-19 pandemic, whilst we will work hard to avoid delays, customers \nshould allow extra time on all orders.\n\nResidents of EX1, EX2 and EX4, simply select Local Delivery at the checkout. Once your order is \nplaced, you will be contacted to notify you of a delivery day. Please note, there are a limited \nnumber of local slots available; specific time requests are not possible.\n\nDelivery instructions are provided at your own risk and discretion. Hutch cannot accept liability \nfor any parcels left in accordance with any specific instructions (e.g leave outside or with neighbour)."
+            }
+          }
+        },
+        "block_order": [
+          "18a4c27b-31bb-4315-b5a1-66740250a94e"
+        ],
+        "settings": {}
+      },
+      "about-page": {
+        "type": "about-page",
+        "blocks": {
+          "e326d3e0-43cf-428e-82c4-456db32805ce": {
+            "type": "about-section",
+            "settings": {
+              "about_image": "shopify:\/\/shop_images\/ds.png",
+              "about_title": "Houseplants, it's what we do",
+              "about_content": "Established in 2017, Hutch is Exeter’s only dedicated Houseplant shop. Created by husband and wife duo Rob \nand Frankie, Hutch specialises in  unique and exotic houseplants and bespoke terrariums. Situated in the centre of Exeter,\nHutch is an indoor jungle bursting with an enormous selection of greenery, pots, hangers, airplants, books and other \nplant related gifts.\n<br>\n The wide array of plant life ensures that Hutch caters for everyone’s tastes and needs. Passionate about all things plant \nrelated, the Hutch team are always on hand to give advice and help you choose the perfect plant for you.\n\n​Hutch also run workshops in their Exeter shop. Run on a regular basis, you can learn how to build your own closed jar \nterrarium, create a Macrame plant hanger, design and produce beautiful botanical lino prints and master your \ncalligraphy skills."
+            }
+          },
+          "27fef558-2ffb-4c58-b7be-ccc95384059e": {
+            "type": "mission",
+            "settings": {
+              "mission_title": "Our Mission",
+              "our_mission": "To make the experience of \ndiscovering the perfect houseplants as \nwonderful as the plants \nthemselves."
+            }
+          }
+        },
+        "block_order": [
+          "e326d3e0-43cf-428e-82c4-456db32805ce",
+          "27fef558-2ffb-4c58-b7be-ccc95384059e"
+        ],
+        "settings": {
+          "textintro": "We are Hutch",
+          "textintroarea": "Established in 2017, by husband and wife team Rob and Frankie, Hutch specialises in helping you bring the perfect houseplants home. \n\n\nWhether you're looking for advice on the best plant for your living room, have an office in need of a touch of green or are looking to turn your cafe into a jungle, the team at Hutch have a wealth of houseplant experience to share. \n\n  \nBrowse our collection right here online, or why not pay us a visit and plant shop til you drop in our Devon-based plant haven.",
+          "title_image": "shopify:\/\/shop_images\/cscs_1.jpg"
+        }
       }
     },
     "content_for_index": [
@@ -431,6 +553,7 @@
       "1603875928ebba6ce2",
       "1603368293f47fa7bf",
       "1603367866acddd362",
+      "1605709610a1ff4004",
       "1603628529b0d30e42",
       "16040664432d54a6e4"
     ]

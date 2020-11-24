@@ -479,14 +479,13 @@ label {
   background-color: $dark-green;
 }
 
-// Preorder button
 
-#mhaRnProduct {
-  z-index: 1 !important;
+
+
+.full-width-section {
+  margin: 5vh 0;
+
+  @media (min-width: #{$screen-lg}) {
+   margin: 10vh 0;
+  }
 }
-
-
-#mc_embed_signup .mc-field-group input {
-  color: $black;
-}
-

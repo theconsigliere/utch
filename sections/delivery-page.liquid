@@ -1,0 +1,169 @@
+{% schema %}
+
+{
+    "name": "delivery",
+    "class": "delivery-section",
+    "blocks": [
+        {
+            "type": "about-section",
+            "name": "About Section",
+            "settings": [
+                 {
+                    "type": "text",
+                    "id": "subtitle",
+                    "label": "Subtitle",
+                    "info": "subtitle of page"
+                }, 
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "info": "Title of page"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliveryoption",
+                    "label": "Delivery Option",
+                    "info": "Delivery Option Title"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliveryarea",
+                    "label": "Postcode",
+                    "info": "Delivery area description"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliveryprice",
+                    "label": "Price",
+                    "info": "Delivery Price"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliveryoptiontwo",
+                    "label": "Delivery Option",
+                    "info": "Delivery Option Title"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliveryareatwo",
+                    "label": "Postcode",
+                    "info": "Text"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliverypricetwo",
+                    "label": "Price",
+                    "info": "Delivery Price"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliveryoptionthree",
+                    "label": "Delivery Option",
+                    "info": "Delivery Option Title"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliveryareathree",
+                    "label": "Postcode",
+                    "info": "Delivery area description"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliverypricethree",
+                    "label": "Price",
+                    "info": "Delivery Price"
+                }, 
+                
+                
+                {
+                    "type": "textarea",
+                    "id": "textarea",
+                    "label": "Add a text section",
+                    "info": "Text",
+                    "placeholder": "Type here..."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "content",
+            "name": "Our Story"
+        }
+    ]
+}
+
+{% endschema %}
+
+
+<section class="story-info">
+	<div class="inner">
+		{% for block in section.blocks %}
+
+
+			<section class="about-us-section">
+
+				<div class="about-image">
+                    <img data-src="{{ 'delivery.svg' | asset_url }}" class='illo lazyload'> 
+				</div>
+
+
+				<div class="about-text-area">
+				
+                    <div class="title-area">
+                        <h6>
+                            {{ block.settings.subtitle }}
+                        </h6>
+                        <h1>
+                            {{ block.settings.title }}
+                        </h1>
+                    </div>
+
+
+                    <div class="delivery-options">
+                        <div class="delivery-box">
+                            <div class="delivery-text">
+                                <p class="font-bolder">{{ block.settings.deliveryoption }}</p>
+                                <p class='small-p'>{{ block.settings.deliveryarea }}</p>
+                            </div>
+                            <div class="delivery-price">
+                                <p class="font-bolder">{{ block.settings.deliveryprice }}</p>
+                            </div>
+                        </div>
+
+                        <div class="delivery-box">
+                            <div class="delivery-text">
+                                <p class="font-bolder">{{ block.settings.deliveryoptiontwo }}</p>
+                                <p class='small-p'>{{ block.settings.deliveryareatwo  }}</p>
+                            </div>
+                            <div class="delivery-price">
+                                <p class="font-bolder">{{ block.settings.deliverypricetwo  }}</p>
+                            </div>
+                        </div>
+
+                        <div class="delivery-box">
+                            <div class="delivery-text">
+                                <p class="font-bolder">{{ block.settings.deliveryoptionthree }}</p>
+                                <p class='small-p'>{{ block.settings.deliveryareathree }}</p>
+                            </div>
+                            <div class="delivery-price">
+                                <p class="font-bolder">{{ block.settings.deliverypricethree }}</p>
+                            </div>
+                        </div>
+                    </div>
+					
+					<div class="about-para">
+						<p>
+							{{ block.settings.textarea }}
+						</p>
+					</div>
+				
+				</div>
+
+			</section>
+
+
+		{% endfor %}
+	</div>
+</section>
