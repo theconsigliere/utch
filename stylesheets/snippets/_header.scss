@@ -698,7 +698,7 @@ p.announcement-bar__message {
   height: 30px;
   width: 30px;
   margin: 0 1em;
-display: block;
+  display: block;
 
   @media (min-width: #{$screen-lg}) {
     display: none;
