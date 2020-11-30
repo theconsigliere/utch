@@ -1,0 +1,79 @@
+{% schema %}
+    {
+    "name": "FAQ Header",
+     "blocks": [
+        {
+            "type": "faq-block",
+            "name":"FAQ Menu Item",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "fh_subtitle",
+                    "default": "Subtitle",
+                    "label": "Subtitle"
+                },
+                {
+                    "type": "text",
+                    "id": "fh_title",
+                    "default": "Title",
+                    "label": "Title"
+                }, {
+                    "type": "textarea",
+                    "id": "fh_textarea",
+                    "default": "Description",
+                    "label": "Description"
+                }
+            ]
+        }
+     ]
+      }
+
+
+{% endschema %}
+
+<div class="story-info">
+    <div class="inner">
+
+        {% for block in section.blocks %}
+
+            <div class="about-us-section">
+
+     
+
+				<div class="about-image">
+                    <img data-src="{{ 'faqs.svg' | asset_url }}" class='illo lazyload'> 
+				</div>
+
+
+
+                <div class="about-text-area">
+
+                    <div class="title-area">
+
+                        <div class="collection-anchor-title">
+                            <h6 class="collection-mark">
+                                {{ block.settings.fh_subtitle }}
+                            </h6>
+                        </div>
+
+                    
+                    <h1>{{ block.settings.fh_title }}</h1>
+
+                    </div>
+
+                    <div class="about-para">
+                        <p>{{ block.settings.fh_textarea }}</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+
+    </div>
+</div>
+
+

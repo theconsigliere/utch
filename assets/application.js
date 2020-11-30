@@ -198,8 +198,17 @@ let ajaxify = {
         let $dataCartContents = $(context).find(".js-cart-page-contents"),
           dataCartHtml = $dataCartContents.html(),
           dataCartItemCount = $dataCartContents.attr("data-cart-item-count"),
-          $miniCartContents = $(miniCartContentsSelector),
-          $cartItemCount = $(".js-cart-item-count");
+          $cartItemCount = $(".js-cart-item-count"),
+          $miniCartContents = $(miniCartContentsSelector);
+
+        // hides counter if nothing in the cart
+        if ( dataCartItemCount > 0) {
+          $cartItemCount.text(dataCartItemCount);
+          $cartItemCount.show();
+        } else {
+          $cartItemCount.hide()
+        }
+
 
         $cartItemCount.text(dataCartItemCount);
         $miniCartContents.html(dataCartHtml);
@@ -245,6 +254,7 @@ let ajaxify = {
   closeCart: function () {
     $("html").removeClass("mini-cart-open");
   },
+
   init: function () {
     $(document).on("submit", addToCartFormSelector, ajaxify.onAddToCart);
 
@@ -255,6 +265,9 @@ let ajaxify = {
       ".js-cart-link, .js-keep-shopping",
       ajaxify.onCartButtonClick
     );
+
+
+
   }
 };
 
@@ -400,6 +413,17 @@ if ( $('.thumbnail-wrapper') ) {
 }
 
 
+// on page load check if anything in the cart form last visit
 
 
+
+// var number = $(".js-cart-item-count").text();
+// var cartNumber = parseInt(number)
+
+// // hides counter if nothing in the cart
+// if ( cartNumber == 0) {
+//   $(".js-cart-item-count").hide()
+// } else {
+//   $(".js-cart-item-count").show()
+// }
 

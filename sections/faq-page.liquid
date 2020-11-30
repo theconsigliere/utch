@@ -1,0 +1,117 @@
+{% schema %}
+
+{
+    "name": "FAQ Page",
+    "class": "faq-section",
+    "settings": [
+        {
+            "id": "faq_title",
+            "type": "text",
+            "label": "Title",
+            "placeholder": "FAQ Title"
+        }
+
+    ],
+    "blocks": [
+        {
+            "type": "faq-section",
+            "name": "FAQ Section",
+            "settings": [
+                {
+                    "id": "faq_question",
+                    "type": "text",
+                    "label": "FAQ Title",
+                    "placeholder": "FAQ Question Title"
+                }, {
+                    "id": "faq_desc",
+                    "type": "textarea",
+                    "label": "FAQ Answer"
+                }
+            ]
+         
+        },
+        {
+            "type": "faq-heading",
+            "name": "FAQ Heading",
+            "settings": [
+                {
+                    "id": "faq_heading",
+                    "type": "text",
+                    "label": "FAQ Heading Title",
+                    "placeholder": "Title"
+                }
+            ]
+         
+        }
+    ],
+    "presets": [
+        {
+            "category": "faq-page",
+            "name": "Display FAQ Sections"
+        }
+    ]
+}
+
+{% endschema %}
+
+<section>
+
+    <div class="faq-title-page">
+        <div class="inner">
+            <h3 class="faq-title-top-heading">{{ section.settings.faq_title }}</h3>
+        </div>
+        
+    </div>
+
+
+    <div class="inner faq-bottom">
+
+    {% for block in section.blocks %}
+
+
+
+    {% case block.type %}
+        
+    {% when 'faq-section' %}
+
+    <div class="faq-menu-item">
+
+        <div class="product-detail-tabs">
+
+            <details>
+                <summary><h6 class='font-bolder'>{{ block.settings.faq_question }}<span class="cross-icon"></span></h6></summary>
+                <div class="content">
+                <p>{{ block.settings.faq_desc }}</p>
+                </div>
+            </details>
+
+        </div>
+
+
+
+    </div>
+    
+
+
+      {% when 'faq-heading' %}
+
+      {% if block.settings.faq_heading != blank %}
+
+      <div class="faq-menu-item-header">
+
+        <h4>{{ block.settings.faq_heading }}</h4>
+
+
+    </div>
+          
+      {% endif %}
+
+
+      {% endcase %}
+
+    {% endfor %}
+
+
+</div>
+
+</section>

@@ -125,30 +125,32 @@
                         <div class="delivery-box">
                             <div class="delivery-text">
                                 <p class="font-bolder">{{ block.settings.deliveryoption }}</p>
-                                <p class='small-p'>{{ block.settings.deliveryarea }}</p>
+                                <p class="font-bolder">{{ block.settings.deliveryprice }}</p>
+                               
                             </div>
                             <div class="delivery-price">
-                                <p class="font-bolder">{{ block.settings.deliveryprice }}</p>
+                                <p class='small-p'>{{ block.settings.deliveryarea | strip_html  }}</p>
                             </div>
                         </div>
 
                         <div class="delivery-box">
                             <div class="delivery-text">
                                 <p class="font-bolder">{{ block.settings.deliveryoptiontwo }}</p>
-                                <p class='small-p'>{{ block.settings.deliveryareatwo  }}</p>
+                                <p class="font-bolder">{{ block.settings.deliverypricetwo  }}</p>
                             </div>
                             <div class="delivery-price">
-                                <p class="font-bolder">{{ block.settings.deliverypricetwo  }}</p>
+                                
+                                <p class='small-p'>{{ block.settings.deliveryareatwo | strip_html  }}</p>
                             </div>
                         </div>
 
                         <div class="delivery-box">
                             <div class="delivery-text">
                                 <p class="font-bolder">{{ block.settings.deliveryoptionthree }}</p>
-                                <p class='small-p'>{{ block.settings.deliveryareathree }}</p>
+                                <p class="font-bolder">{{ block.settings.deliverypricethree }}</p>
                             </div>
                             <div class="delivery-price">
-                                <p class="font-bolder">{{ block.settings.deliverypricethree }}</p>
+                                <p class='small-p'>{{ block.settings.deliveryareathree | strip_html  }}</p>
                             </div>
                         </div>
                     </div>

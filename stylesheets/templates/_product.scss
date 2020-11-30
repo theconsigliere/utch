@@ -780,7 +780,7 @@ select#select-option1 {
 }
 
 .collection-anchor-title {
-  width: 100%;
+  width: fit-content;
   margin-bottom: 25px;
 
   .collection-mark {
@@ -802,7 +802,6 @@ select#select-option1 {
 
   &:not(:first-child) {
     display: none;
-
   }
 
   img {
@@ -821,14 +820,12 @@ select#select-option1 {
   }
 }
 
-
-.light-icon, .watering-icon {
-
+.light-icon,
+.watering-icon {
   .icon-logo {
     width: 32px;
   }
 }
-
 
 .variants_product-box {
   @include center-between-column;
@@ -840,9 +837,7 @@ select#select-option1 {
   }
 }
 
-
 .product-desc-box {
-
   .font-bolder {
     margin-bottom: 15px;
   }
@@ -855,7 +850,7 @@ select#select-option1 {
   .thumbnail-grid-item {
     margin: 5px;
     cursor: pointer;
- 
+
     .product-single__thumbnail-image {
       border-radius: 15px;
 
@@ -863,7 +858,5 @@ select#select-option1 {
         border-radius: 25px;
       }
     }
+  }
 }
-}
-
-

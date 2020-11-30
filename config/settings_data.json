@@ -194,7 +194,8 @@
               "weare_title": "We are Hutch",
               "weare_subtitle": "Exeter Based & Proud",
               "weare_content": "Established in 2017, by husband and wife team Rob and Frankie, Hutch specialises in \nhelping you bring the perfect houseplants home.\n<br>\n\nWhether you're looking for advice on the best plant for your living room, have an office in need of a touch of green or are looking to turn your cafe into a jungle, the team at Hutch have a wealth of houseplant experience to share. \n<br>\n\nBrowse our collection right here online, or why not pay us a visit and plant shop til you drop in our Devon-based plant haven.",
-              "weare_button_text": "Coming Soon"
+              "weare_button_url": "shopify:\/\/pages\/about",
+              "weare_button_text": "About Us"
             }
           }
         },
@@ -496,18 +497,18 @@
           "18a4c27b-31bb-4315-b5a1-66740250a94e": {
             "type": "about-section",
             "settings": {
-              "subtitle": "Frequently Asked Questions",
+              "subtitle": "",
               "title": "Delivery information",
               "deliveryoption": "Local Delivery",
-              "deliveryarea": "(EX1, EX2, EX4 Only)",
+              "deliveryarea": "Residents living within 5 miles of our Exeter store, simply select Local Delivery at the checkout. Once your order is placed, you will be contacted to notify you of a delivery day. <p> <br>Please note, there are a limited number of local slots available; specific time requests are not always possible. <\/p><p> <br>Delivery instructions are provided at your own risk and discretion. Hutch cannot accept liability for any parcels left in accordance with any specific instructions (e.g leave outside or with neighbour).<\/p>",
               "deliveryprice": "£2.50",
-              "deliveryoptiontwo": "UK Delivery",
-              "deliveryareatwo": "Across the UK",
+              "deliveryoptiontwo": "UK Delivery via Royal Mail",
+              "deliveryareatwo": "All orders should be expected to arrive within 2-5 working days, however delivery times are not guaranteed. All orders outside of our local delivery area are shipped using the Royal Mail Tracked 48 service. Shipping takes place Monday - Friday and any orders placed over the weekend will be shipped on Monday or Tuesday.",
               "deliverypricetwo": "£4.95",
-              "deliveryoptionthree": "Heavy Goods Delivery",
-              "deliveryareathree": "For plants over a certain size",
-              "deliverypricethree": "£7.50",
-              "textarea": "All orders should be expected to arrive within 2-5 working days, however delivery times are not \nguaranteed. During the COVID-19 pandemic, whilst we will work hard to avoid delays, customers \nshould allow extra time on all orders.\n\nResidents of EX1, EX2 and EX4, simply select Local Delivery at the checkout. Once your order is \nplaced, you will be contacted to notify you of a delivery day. Please note, there are a limited \nnumber of local slots available; specific time requests are not possible.\n\nDelivery instructions are provided at your own risk and discretion. Hutch cannot accept liability \nfor any parcels left in accordance with any specific instructions (e.g leave outside or with neighbour)."
+              "deliveryoptionthree": "Click & Collect",
+              "deliveryareathree": "Customers are able to collect their orders for free from our Exeter store. You will be sent a notification email once your order is ready to collect; please have this with you when you pop along to collect your order. <p> <br> During Lockdown 2.0, we are open for collections 11am-3pm Monday, Wednesday and Friday. For collections outside of these hours, please contact us in advance of placing your order.<\/p>",
+              "deliverypricethree": "Free",
+              "textarea": "FREE SHIPPING ON ALL ORDERS OVER £35 WITH OFFER CODE FREESHIP35\n<p>\n\nPlease note that, during the COVID-19 pandemic, whilst we will work hard to avoid delays, customers should allow extra time on all orders.<\/p>"
             }
           }
         },
@@ -524,7 +525,15 @@
             "settings": {
               "about_image": "shopify:\/\/shop_images\/ds.png",
               "about_title": "Houseplants, it's what we do",
-              "about_content": "Established in 2017, Hutch is Exeter’s only dedicated Houseplant shop. Created by husband and wife duo Rob \nand Frankie, Hutch specialises in  unique and exotic houseplants and bespoke terrariums. Situated in the centre of Exeter,\nHutch is an indoor jungle bursting with an enormous selection of greenery, pots, hangers, airplants, books and other \nplant related gifts.\n<br>\n The wide array of plant life ensures that Hutch caters for everyone’s tastes and needs. Passionate about all things plant \nrelated, the Hutch team are always on hand to give advice and help you choose the perfect plant for you.\n\n​Hutch also run workshops in their Exeter shop. Run on a regular basis, you can learn how to build your own closed jar \nterrarium, create a Macrame plant hanger, design and produce beautiful botanical lino prints and master your \ncalligraphy skills."
+              "about_content": "Established in 2017, by husband and wife team Rob and Frankie, Hutch specialises in helping you bring the perfect houseplants home.\n<p>\nBorn out of a passion for all things botanical and Frankie's love of planting up terrariums, Hutch began life as a short term pop up shop in Exeter's city centre. The aim was simple; create a jungle bursting with exotic foliage right in the centre of a bustling city.\n<\/p><p>\nWith thousands of plants to nurture on a daily basis, the team at Hutch have experienced it all and are on a mission to share their knowledge and skills with you. With new plants arriving every week, a stack of old houseplant books carefully foraged from local charity shops and the occasional plant mortality through the years, Hutch exists to show that anybody, anywhere can be a plant parent.<\/p><p>\nWhether you're looking for advice on the best plant for your living room, have an office in need of a touch of green or are looking to turn your cafe into a jungle, the team at Hutch have a wealth of houseplant experience to share.\nBrowse our collection right here online, or why not pay us a visit and plant shop til you drop in our Devon-based plant haven.<\/p>"
+            }
+          },
+          "6e2bb85d-c770-4aa3-95b7-b7225f0f7ef7": {
+            "type": "about-section",
+            "settings": {
+              "about_image": "shopify:\/\/shop_images\/image_6483441_1.jpg",
+              "about_title": "We’re one big family at Hutch",
+              "about_content": "We have an amazing team of talented people who make Hutch what it is!  A big thank you to Lucie, our newest team member, who will sell you plants by day, and  is an incredible artist by night; this illustration of us is all her work.\n<p>\n<br>\nFind Lucie on instagram @luciejemima<\/p>"
             }
           },
           "27fef558-2ffb-4c58-b7be-ccc95384059e": {
@@ -537,11 +546,12 @@
         },
         "block_order": [
           "e326d3e0-43cf-428e-82c4-456db32805ce",
+          "6e2bb85d-c770-4aa3-95b7-b7225f0f7ef7",
           "27fef558-2ffb-4c58-b7be-ccc95384059e"
         ],
         "settings": {
           "textintro": "We are Hutch",
-          "textintroarea": "Established in 2017, by husband and wife team Rob and Frankie, Hutch specialises in helping you bring the perfect houseplants home. \n\n\nWhether you're looking for advice on the best plant for your living room, have an office in need of a touch of green or are looking to turn your cafe into a jungle, the team at Hutch have a wealth of houseplant experience to share. \n\n  \nBrowse our collection right here online, or why not pay us a visit and plant shop til you drop in our Devon-based plant haven.",
+          "textintroarea": "",
           "title_image": "shopify:\/\/shop_images\/cscs_1.jpg"
         }
       }

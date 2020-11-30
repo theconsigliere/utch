@@ -350,7 +350,7 @@
                 {{ 'cart.button.count_html' | t: itemCount: cart.item_count }}
 
             {% else %}
-                {{ 'cart.button.count_html' | t: itemCount: cart.item_count  }}
+                {{ 'cart.button.count_empty_html' | t: itemCount: cart.item_count }}
             {% endif %}
 
         </a>

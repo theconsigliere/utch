@@ -299,8 +299,6 @@
   }
 }
 
-
-
 // FAQ PAGE
 //---------------------------------
 
@@ -354,8 +352,6 @@
   }
 }
 
-
-
 // OUR STORY /ABOUT
 //----------------------
 
@@ -367,7 +363,6 @@
   }
 
   .full-width-section {
-
     &:nth-child(odd) {
       background: $light-white;
 
@@ -376,13 +371,10 @@
 
         @media (min-width: #{$screen-lg}) {
           flex-direction: row-reverse;
-        
         }
-
       }
-      
+    }
   }
-}
 }
 
 .about-intro {
@@ -405,8 +397,6 @@
     width: 100%;
     border-radius: 25px;
   }
-
-
 }
 
 .about-h6 {
@@ -420,12 +410,12 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate( -50%, 0);
+  transform: translate(-50%, 0);
   width: 100%;
 
   * {
     color: $white;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 
     @media (min-width: #{$screen-md}) {
       margin-bottom: 1rem;
@@ -442,8 +432,8 @@
     padding: 10vh 0;
   }
 
-
-  .about-image, .about-text-area {
+  .about-image,
+  .about-text-area {
     width: 100%;
     padding: 25px 0;
     text-align: center;
@@ -460,7 +450,6 @@
       object-fit: cover;
     }
   }
-
 }
 
 .about-h6 {
@@ -482,36 +471,35 @@
   }
 
   .inner {
-text-align: center;
+    text-align: center;
 
-.mission-statement-circle {
-  width: 90vw;
-  height: 90vw;
- // background: $brown;
- background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgwKSAiPjxyZWN0IGlkPSJwYXR0ZXJuLWJhY2tncm91bmQiIHdpZHRoPSI0MDAlIiBoZWlnaHQ9IjQwMCUiIGZpbGw9InJnYmEoMTMzLCAxMTIsIDEwNywxKSI+PC9yZWN0PiA8cGF0aCBmaWxsPSJyZ2JhKDE0MiwgMTE5LCAxMTMsMSkiIGQ9Ik0yMCA1IGEgMjAgMjAgMCAwIDEgNDAgMCBoMTAgYSAxMCAxMCAwIDAgMSAtMjAgMCBhIDEwIDEwIDAgMCAwIC0yMCAwIGEgMTAgMTAgMCAwIDEgLTIwIDAgYSAxMCAxMCAwIDAgMCAtMjAgMCBoLTEwIGEgMjAgMjAgMCAwIDEgNDAgMCB6Ij48L3BhdGg+PHBhdGggZmlsbD0icmdiYSgxNDQsIDEyMiwgMTE2LDEpIiBkPSJNMCAyNSBhIDIwIDIwIDAgMCAxIDQwIDAgaDEwIGEgMTAgMTAgMCAwIDEgLTIwIDAgYSAxMCAxMCAwIDAgMCAtMjAgMCBhIDEwIDEwIDAgMCAxIC0yMCAwIHoiPjwvcGF0aD48cGF0aCBmaWxsPSJyZ2JhKDE0MiwgMTE5LCAxMTMsMSkiIGQ9Ik0yMCA0NSBhIDIwIDIwIDAgMCAxIDQwIDAgaDEwIGEgMTAgMTAgMCAwIDEgLTIwIDAgYSAxMCAxMCAwIDAgMCAtMjAgMCBhIDEwIDEwIDAgMCAxIC0yMCAwIGEgMTAgMTAgMCAwIDAgLTIwIDAgaC0xMCBhIDIwIDIwIDAgMCAxIDQwIDAgeiI+PC9wYXRoPjwvcGF0dGVybj4gIDwvZGVmcz4gPHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSI+PC9yZWN0Pjwvc3ZnPg==");
-@include center-center;
-  border-radius: 50%;
-  position: relative;
-
-  @media (min-width: #{$screen-lg}) {
-    width: 80vh;
-  height: 80vh;
-  }
-
-  .mission-statement-div {
-    padding: 2vh;
-
-    h4 {
-      font-size: 5vw;
-      color: white;
+    .mission-statement-circle {
+      width: 90vw;
+      height: 90vw;
+      // background: $brown;
+      background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgwKSAiPjxyZWN0IGlkPSJwYXR0ZXJuLWJhY2tncm91bmQiIHdpZHRoPSI0MDAlIiBoZWlnaHQ9IjQwMCUiIGZpbGw9InJnYmEoMTMzLCAxMTIsIDEwNywxKSI+PC9yZWN0PiA8cGF0aCBmaWxsPSJyZ2JhKDE0MiwgMTE5LCAxMTMsMSkiIGQ9Ik0yMCA1IGEgMjAgMjAgMCAwIDEgNDAgMCBoMTAgYSAxMCAxMCAwIDAgMSAtMjAgMCBhIDEwIDEwIDAgMCAwIC0yMCAwIGEgMTAgMTAgMCAwIDEgLTIwIDAgYSAxMCAxMCAwIDAgMCAtMjAgMCBoLTEwIGEgMjAgMjAgMCAwIDEgNDAgMCB6Ij48L3BhdGg+PHBhdGggZmlsbD0icmdiYSgxNDQsIDEyMiwgMTE2LDEpIiBkPSJNMCAyNSBhIDIwIDIwIDAgMCAxIDQwIDAgaDEwIGEgMTAgMTAgMCAwIDEgLTIwIDAgYSAxMCAxMCAwIDAgMCAtMjAgMCBhIDEwIDEwIDAgMCAxIC0yMCAwIHoiPjwvcGF0aD48cGF0aCBmaWxsPSJyZ2JhKDE0MiwgMTE5LCAxMTMsMSkiIGQ9Ik0yMCA0NSBhIDIwIDIwIDAgMCAxIDQwIDAgaDEwIGEgMTAgMTAgMCAwIDEgLTIwIDAgYSAxMCAxMCAwIDAgMCAtMjAgMCBhIDEwIDEwIDAgMCAxIC0yMCAwIGEgMTAgMTAgMCAwIDAgLTIwIDAgaC0xMCBhIDIwIDIwIDAgMCAxIDQwIDAgeiI+PC9wYXRoPjwvcGF0dGVybj4gIDwvZGVmcz4gPHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSI+PC9yZWN0Pjwvc3ZnPg==");
+      @include center-center;
+      border-radius: 50%;
+      position: relative;
 
       @media (min-width: #{$screen-lg}) {
-        font-size: 5vh;
+        width: 80vh;
+        height: 80vh;
       }
-  }
-}
-  
-}
+
+      .mission-statement-div {
+        padding: 2vh;
+
+        h4 {
+          font-size: 5vw;
+          color: white;
+
+          @media (min-width: #{$screen-lg}) {
+            font-size: 5vh;
+          }
+        }
+      }
+    }
   }
 
   .side-plant {
@@ -526,16 +514,14 @@ text-align: center;
   .side-plant-left {
     position: absolute;
     left: 0;
-   bottom: 0;
+    bottom: 0;
   }
   .side-plant-right {
     position: absolute;
     right: 0;
-   bottom: 0;
+    bottom: 0;
   }
 }
-
-
 
 // .story-info {
 //   background: $white;
@@ -644,10 +630,65 @@ text-align: center;
   * {
     margin: 0;
   }
-
 }
-
 
 .delivery-price {
   padding-right: 15px;
+}
+
+// Frequently Asked Questions
+
+.faq-title-top-heading {
+  text-align: center;
+}
+
+.faq-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 4em;
+
+  .faq-menu-item {
+    width: 100%;
+    margin-bottom: 2em;
+
+    @media (min-width: #{$screen-xl}) {
+      width: 50%;
+    }
+
+    .product-detail-tabs {
+      max-width: 95%;
+
+      summary {
+        border: 0;
+        position: relative;
+        padding-top: 0;
+
+        h6 {
+          margin-bottom: 15px;
+          max-width: 80%;
+          line-height: 1.5;
+
+          .cross-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .content {
+        border: 0;
+      }
+    }
+  }
+
+  .faq-menu-item-header {
+    width: 100%;
+    border-bottom: 2px solid $green;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
 }
