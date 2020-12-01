@@ -51,19 +51,20 @@
     }
 
     .hero-logo {
-      width: 30vw;
+      width: 45vw;
       margin-bottom: 10px;
 
       @media (min-width: #{$screen-sm}) {
-        width: 150px;
+        width: 250px;
+
       }
 
       @media (min-width: #{$screen-lg}) {
-        width: 180px;
+        width: 350px;
       }
 
       @media (min-width: #{$screen-xxxl}) {
-        width: 250px;
+        width: 400px;
       }
     }
   }

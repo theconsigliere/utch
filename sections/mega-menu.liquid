@@ -197,12 +197,13 @@
                                                 </div>
                                             </a>
                                         </div>
+                                        {% if block.settings.second_image != blank %}
                                         <div class="nav-column">
                                             <a href="{{ block.settings.second_url }}" class='nav-column-link'>
                                                 <div class="nav-item-image">
-                                                    {% if block.settings.second_image != blank %}
+                                           
                                                         <img data-src="{{ block.settings.second_image | img_url: 'master' }}" alt="{{ block.settings.second_image.alt }}" class="lazyload"/>
-                                                    {% endif %}
+                                                 
 
                                                 </div>
                                                 <div class="nav-item-title">
@@ -210,12 +211,14 @@
                                                 </div>
                                             </a>
                                         </div>
+                                        {% endif %}
+                                        {% if block.settings.third_image != blank %}
                                         <div class="nav-column">
                                             <a href="{{ block.settings.third_url }}" class='nav-column-link'>
                                                 <div class="nav-item-image">
-                                                    {% if block.settings.third_image != blank %}
+                                                   
                                                         <img data-src="{{ block.settings.third_image | img_url: 'master' }}" alt="{{ block.settings.third_image.alt }}" class="lazyload"/>
-                                                    {% endif %}
+                                                  
 
                                                 </div>
                                                 <div class="nav-item-title">
@@ -223,12 +226,14 @@
                                                 </div>
                                             </a>
                                         </div>
+                                        {% endif %}
+                                        {% if block.settings.fourth_image != blank %}
                                         <div class="nav-column">
                                             <a href="{{ block.settings.fourth_url }}" class='nav-column-link'>
                                                 <div class="nav-item-image">
-                                                    {% if block.settings.fourth_image != blank %}
+                                                 
                                                         <img data-src="{{ block.settings.fourth_image | img_url: 'master' }}" alt="{{ block.settings.fourth_image.alt }}" class="lazyload"/>
-                                                    {% endif %}
+                                                  
 
                                                 </div>
                                                 <div class="nav-item-title">
@@ -236,12 +241,14 @@
                                                 </div>
                                             </a>
                                         </div>
+                                        {% endif %}
+                                        {% if block.settings.fifth_image != blank %}
                                         <div class="nav-column">
                                             <a href="{{ block.settings.fifth_url }}" class='nav-column-link'>
                                                 <div class="nav-item-image">
-                                                    {% if block.settings.fifth_image != blank %}
+                                                 
                                                         <img data-src="{{ block.settings.fifth_image | img_url: 'master' }}" alt="{{ block.settings.fifth_image.alt }}" class="lazyload"/>
-                                                    {% endif %}
+                                                 
 
                                                 </div>
 
@@ -250,19 +257,21 @@
                                                 </div>
                                             </a>
                                         </div>
+                                        {% endif %}
+                                        {% if block.settings.sixth_image != blank %}
                                         <div class="nav-column">
                                             <a href="{{ block.settings.sixth_url }}" class='nav-column-link'>
                                                 <div class="nav-item-image">
-                                                    {% if block.settings.sixth_image != blank %}
+                                                
                                                         <img data-src="{{ block.settings.sixth_image | img_url: 'master' }}" alt="{{ block.settings.sixth_image.alt }}" class="lazyload"/>
-                                                    {% endif %}
-
+                                                   
                                                 </div>
                                                 <div class="nav-item-title">
                                                     <p class='font-bolder'>{{ block.settings.sixth_title }}</p>
                                                 </div>
                                             </a>
                                         </div>
+                                        {% endif %}
 
                                         {% if block.settings.seventh_image != blank %}
                                         <div class="nav-column">

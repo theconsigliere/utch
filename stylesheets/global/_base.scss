@@ -489,3 +489,19 @@ label {
    margin: 10vh 0;
   }
 }
+
+
+.main-contact-form {
+
+  input {
+    margin: 1em 0;
+  }
+
+  textarea {
+    width: 100%;
+    border: 2px solid #24272c;
+    margin: 1em 0;
+    border-radius: 15px;
+    height: 150px;
+  }
+}

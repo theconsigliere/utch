@@ -589,26 +589,19 @@
   @include center-start-column;
   margin: 25px 0;
 
-  @media (min-width: #{$screen-xxxl}) {
-    @include start-between;
-    margin: 50px 0;
-  }
+
 }
 
 .delivery-box {
   border: 2px $green solid;
   border-radius: 15px;
-  @include start-between;
+  @include center-center-column;
   margin: 10px 0;
   background: #d7e4d7;
   width: 100%;
-  padding: 5px;
+  padding: 15px 5px;
 
-  @media (min-width: #{$screen-xxxl}) {
-    margin: 0 15px;
-    width: fit-content;
-    @include start-center;
-  }
+
 
   &:first-of-type {
     margin-left: 0;
@@ -618,6 +611,8 @@
 .delivery-text {
   padding: 0 15px;
   text-align: left;
+  @include center-between;
+  width: 100%;
 
   .font-bolder {
     margin-bottom: 5px;
@@ -633,7 +628,8 @@
 }
 
 .delivery-price {
-  padding-right: 15px;
+  width: 100%;
+  padding: 0 15px;
 }
 
 // Frequently Asked Questions
@@ -652,8 +648,12 @@
     width: 100%;
     margin-bottom: 2em;
 
-    @media (min-width: #{$screen-xl}) {
+    @media (min-width: #{$screen-lg}) {
       width: 50%;
+    }
+
+    @media (min-width: #{$screen-xxl}) {
+      width: 30%;
     }
 
     .product-detail-tabs {
@@ -665,9 +665,15 @@
         padding-top: 0;
 
         h6 {
+
           margin-bottom: 15px;
           max-width: 80%;
           line-height: 1.5;
+          font-size: 1.2rem;
+
+          @media (min-width: #{$screen-lg}) {
+            font-size: 1.4rem;
+          }
 
           .cross-icon {
             position: absolute;
@@ -691,4 +697,50 @@
     margin-bottom: 50px;
     margin-top: 50px;
   }
+}
+
+
+.collection-anchor-title.middle-highlight-faq {
+  margin: 25px auto;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 25px 0;
+  }
+
+}
+
+#shopify-section-faq-page {
+  background: #fdfdfd;
+  padding-top: 5vh;
+}
+
+.faq-contact_section {
+  margin-bottom: 50px;
+  text-align: center;
+  border-bottom: none !important;
+  margin-top: 50px;
+  padding: 2em 0;
+  border-radius: 35px;
+  box-shadow: 2px 2px 30px #00000008;
+}
+
+.faq-contact-bottom {
+  position: relative;
+  text-align: center;
+  margin-bottom: 0px;
+
+
+  .button {
+    z-index: 1;
+
+  }
+}
+
+.contact-form__section {
+    flex-direction: column-reverse !important;
+
+    @media (min-width: #{$screen-lg}) {
+      flex-direction: row !important;
+    }
+
 }

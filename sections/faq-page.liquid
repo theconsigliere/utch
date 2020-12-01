@@ -42,6 +42,33 @@
                 }
             ]
          
+        },
+        {
+            "type": "faq-contact",
+            "name": "FAQ Contact Us",
+            "settings": [
+                {
+                    "id": "fc_heading",
+                    "type": "text",
+                    "label": "FAQ Contact Title",
+                    "placeholder": "Title"
+                },
+                {
+                    "id": "fc_textarea",
+                    "type": "textarea",
+                    "label": "FAQ Contact Description",
+                    "placeholder": "Description"
+                },{
+                    "id": "fc_button_url",
+                    "type": "url",
+                    "label": "Button url"
+                }, {
+                    "id": "fc_button_text",
+                    "type": "text",
+                    "label": "Button Text"
+                }
+            ]
+         
         }
     ],
     "presets": [
@@ -105,6 +132,32 @@
     </div>
           
       {% endif %}
+
+
+      {% when 'faq-contact' %}
+
+      {% if block.settings.fc_heading != blank %}
+
+      <div class="faq-menu-item-header faq-contact_section">
+
+        <h4>{{ block.settings.fc_heading }}</h4>
+        <p>{{ block.settings.fc_textarea }}</p>
+
+
+      
+        {% if block.settings.fc_button_url != blank %}
+        <div class="faq-contact-bottom">
+            <a href="{{ block.settings.fc_button_url }}" class="button">
+            {{ block.settings.fc_button_text }}
+            </a>
+        </div>
+        {% endif %}
+       
+
+       </div>
+          
+      {% endif %}
+
 
 
       {% endcase %}
