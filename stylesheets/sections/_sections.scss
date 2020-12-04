@@ -53,6 +53,7 @@
     .hero-logo {
       width: 45vw;
       margin-bottom: 10px;
+    //  margin-top: 20px;
 
       @media (min-width: #{$screen-sm}) {
         width: 250px;
@@ -60,7 +61,7 @@
       }
 
       @media (min-width: #{$screen-lg}) {
-        width: 350px;
+        width: 300px;
       }
 
       @media (min-width: #{$screen-xxxl}) {
@@ -145,7 +146,7 @@
     }
 
     .button {
-      margin-top: $offset-global;
+      margin-top: $offset-global / 2;
       width: fit-content;
     }
   }

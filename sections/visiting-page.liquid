@@ -1,0 +1,218 @@
+{% schema %}
+
+{
+    "name": "Visiting Us Page",
+    "class": "delivery-section",
+    "blocks": [
+        {
+            "type": "page-header",
+            "name": "Page Top",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "desc",
+                    "label": "Description"
+                },                {
+                    "type": "text",
+                    "id": "opening_title",
+                    "label": "Opening Hours Title"
+                },  {
+                    "type": "richtext",
+                    "id": "opening_times",
+                    "label": "Openin Hours Description",
+                    "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+                }           
+            ]
+        },
+        {
+            "type": "info-block",
+            "name": "Info Block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },{
+                    "type": "textarea",
+                    "id": "desc",
+                    "label": "Description"
+                }, {
+                    "id": "info_image",
+                    "type": "image_picker",
+                    "label": "Image"
+                }          
+            ]
+        },
+        {
+            "type": "map-block",
+            "name": "Map Block",
+            "settings": [
+                {
+                    "type": "html",
+                    "id": "map_iframe",
+                    "label": "Map",
+                    "default": "<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10102.875941898134!2d-3.5261239!3d50.7251524!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6626b6afceb7ba6!2sHutch%20Houseplants!5e0!3m2!1sen!2suk!4v1606924088206!5m2!1sen!2suk' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>"
+                },
+                {
+                    "id": "logo_image",
+                    "type": "image_picker",
+                    "label": "Logo"
+                },{
+                    "type": "textarea",
+                    "id": "desc",
+                    "label": "Description"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "content",
+            "name": "Our Story"
+        }
+    ]
+}
+
+{% endschema %}
+
+
+<section class="story-info">
+	<div class="inner">
+		{% for block in section.blocks %}
+        {% case block.type %}
+        
+            {% when 'page-header' %}
+
+			<section class="about-us-section">
+
+				<div class="about-image">
+                    <img data-src="{{ 'visiting-us.svg' | asset_url }}" class='illo lazyload'> 
+				</div>
+
+
+				<div class="about-text-area">
+				
+                    <div class="title-area">
+                        {% if block.settings.title != blank %}
+                            <h1>{{ block.settings.title }}</h1>
+                        {% endif %}
+                    </div>
+					
+                    {% if block.settings.desc != blank %}
+                        <div class="about-para">
+                            <p>
+                                {{ block.settings.desc }}
+                            </p>
+                        </div>
+                    {% endif %}
+                    
+
+                    <div class="title-area">
+                        {% if block.settings.opening_title != blank %}
+                            <h4>{{ block.settings.opening_title }}</h4>
+                        {% endif %}
+                    </div>
+                    
+                    {% if block.settings.opening_times != blank %}
+                        <div class="about-para">
+                            <p>
+                                {{ block.settings.opening_times }}
+                            </p>
+                        </div>
+                    {% endif %}
+				
+				</div>
+
+            </section>
+            
+
+            {% when 'info-block' %}
+
+            <section class="full-width-section">
+
+                <div class="inner">
+                    <div class="middle_title-section">
+                        <h2>
+                            {{ block.settings.title }}
+                        </h2>
+
+                    </div>
+                </div>
+
+                <div class="inner about-us-section">
+
+				<div class="about-image">
+                    <img data-src="{{ block.settings.info_image | img_url: 'master' }}" alt="{{ block.settings.info_image.alt }}" class="lazyload about-image-img"/>
+				</div>
+
+
+				<div class="about-text-area">
+				
+					
+					<div class="about-para">
+						<p>
+							{{ block.settings.desc }}
+						</p>
+					</div>
+				
+                </div>
+                
+            </div>
+
+			</section>
+
+
+            {% when 'map-block' %}
+
+
+            {% if block.settings.map_iframe != blank %}
+
+                <section class="map-block">
+                    <div class="inner">
+                        <div class="map-inner">
+                            <div class="map-top">
+                                {{ block.settings.map_iframe }}
+                            </div>
+
+                            <section class="hutch-section">
+               
+                                <div class="hutch__info-bottom visiting-us--hutch">
+                                    <div class="hutch--inner-bottom">
+            
+                                        {% if block.settings.logo_image != blank %}
+                                            <div class="hutch-logo">
+                                                <img data-src="{{ block.settings.logo_image | img_url: 'master' }}" alt="{{ block.settings.logo_image.alt }}" class="lazyload"/>
+                                            </div>
+                                        {% endif %}
+            
+                                        {% if block.settings.desc != blank %}
+            
+                                            <div class="hutch-text">
+                                                <h6>{{ block.settings.desc }}</h6>
+                                            </div>
+                                            
+                                        {% endif %}
+            
+            
+                                    </div>
+                                </div>
+                           
+                        </section>
+
+                        
+                        </div>
+                    </div>
+                </section>
+                
+            {% endif %}
+
+
+            {% endcase %}
+		{% endfor %}
+	</div>
+</section>

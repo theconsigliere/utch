@@ -1,0 +1,213 @@
+{% schema %}
+
+{
+    "name": "One Tree Planted Page",
+    "settings": [
+        {
+            "type": "text",
+            "id": "textintro",
+            "label": "Heading"
+        },
+        {
+            "id": "title_image",
+            "type": "image_picker",
+            "label": "Page Header Image"
+        },
+        {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Sub-Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "textintroarea",
+            "label": "Description"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "about-section",
+            "name": "About Description",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "textintro",
+                    "label": "Heading"
+                },{
+                    "type": "text",
+                    "id": "section_title",
+                    "label": "Heading"
+                },{
+                    "type": "richtext",
+                    "id": "section_desc",
+                    "label": "Description"
+                 }, {
+                    "type": "text",
+                    "id": "section_title_two",
+                    "label": "Heading"
+                },{
+                    "type": "richtext",
+                    "id": "section_desc_two",
+                    "label": "Description"
+                 }
+            ]
+        }, {
+            "type": "image-section",
+            "name": "Image Section",
+            "settings": [
+            {
+                "id": "image_one",
+                "type": "image_picker",
+                "label": "Image"
+            },{
+                "id": "image_two",
+                "type": "image_picker",
+                "label": "Image"
+            },{
+                "id": "image_three",
+                "type": "image_picker",
+                "label": "Image"
+            },{
+                "id": "image_four",
+                "type": "image_picker",
+                "label": "Image"
+            }
+            ]
+        }, {
+            "type": "hutch-section",
+            "name": "Hutch Section",
+            "settings": [
+            {
+                "id": "hutch_image",
+                "type": "image_picker",
+                "label": "Image"
+            },
+                {
+                    "id": "hutch_title",
+                    "type": "text",
+                    "label": "Title",
+                    "placeholder": "Title"
+                }, {
+                    "id": "hutch_desc",
+                    "type": "textarea",
+                    "label": "Our Mission"
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+
+<div class="about-page-content">
+
+    <div class="about-intro inner">
+        {% if section.settings.textintro != blank %}
+            <img data-src="{{ section.settings.title_image | img_url: 'master' }}" alt="{{ section.settings.title_image.alt }}" class="about-image-img  lazyload"/>
+
+            <div class="title-about-section">
+                <h1>{{ section.settings.textintro }}</h1>
+            </div>
+        {% endif %}
+    </div>
+
+    {% if section.settings.textintroarea != blank %}
+
+        <div class="inner about-h6">
+            <h3>{{ section.settings.subtitle }}</h3>
+            <p class='font-bolder p-large'>{{ section.settings.textintroarea }}</p>
+        </div>
+        
+    {% endif %}
+
+
+
+	{% for block in section.blocks %}
+
+        {% case block.type %}
+        
+            {% when 'about-section' %}
+
+            <section class="about-one-section">
+
+                <div class="inner">
+
+                    {% if block.settings.textintro != blank %}
+                        <div class="title-section">
+                            <h3>{{ block.settings.textintro }}</h3>
+                        </div>
+                        
+                    {% endif %}
+
+
+                    <div class="one-tree-text-section">
+                        <div class="inner-text">
+                            <h6>{{ block.settings.section_title }}</h6>
+                            <p>{{ block.settings.section_desc }}</p>
+                        </div>
+                        <div class="inner-text">
+                            <h6>{{ block.settings.section_title_two }}</h6>
+                            <p>{{ block.settings.section_desc_two }}</p>
+                        </div>
+
+                    </div>
+        
+                </div>
+
+			</section>
+
+        {% when 'image-section' %}
+
+            <section class="one-tree-about">
+                <div class="inner">
+                    <div class="image-section-one-tree">
+                        <div class="one-tree-div div1">
+                            <img data-src="{{ block.settings.image_one | img_url: 'master' }}" alt="{{ block.settings.image_one.alt }}" class="lazyload"/>
+                        </div>
+                        <div class="one-tree-div div2">
+                            <img data-src="{{ block.settings.image_two | img_url: 'master' }}" alt="{{ block.settings.image_two.alt }}" class="lazyload"/>
+                        </div>
+                        <div class="one-tree-div div3">
+                            <img data-src="{{ block.settings.image_three | img_url: 'master' }}" alt="{{ block.settings.image_three.alt }}" class="lazyload"/>
+                        </div>
+                        <div class="one-tree-div div4">
+                            <img data-src="{{ block.settings.image_four | img_url: 'master' }}" alt="{{ block.settings.image_four.alt }}" class="lazyload"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        {% when 'hutch-section' %}
+
+            <section class="hutch-section">
+               
+                    <div class="hutch__info-bottom">
+                        <div class="hutch--inner-bottom">
+
+                            {% if block.settings.hutch_image != blank %}
+                                <div class="hutch-logo">
+                                    <img data-src="{{ block.settings.hutch_image | img_url: 'master' }}" alt="{{ block.settings.hutch_image.alt }}" class="lazyload"/>
+                                </div>
+                            {% endif %}
+
+                            {% if block.settings.hutch_title != blank %}
+
+                                <div class="hutch-text">
+                                    <h6>{{ block.settings.hutch_title }}</h6>
+                                    <p>{{ block.settings.hutch_desc }}</p>
+                                </div>
+                                
+                            {% endif %}
+
+
+                        </div>
+                    </div>
+               
+            </section>
+
+
+		{% endcase %}
+	{% endfor %}
+</div>
+
