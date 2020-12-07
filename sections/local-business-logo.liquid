@@ -1,0 +1,71 @@
+{% schema %}
+
+{
+    "name": "Local Business Logo",
+    "settings": [
+        {
+            "type": "text",
+            "id": "textintro",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "textintroarea",
+            "label": "Description"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "logo-item",
+            "name": "Logo Item",
+            "settings": [
+                {
+                    "id": "logo_image",
+                    "type": "image_picker",
+                    "label": "Image"
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
+
+
+
+<section class="logo-business-local">
+
+    {% if section.settings.textintro %}
+
+        <div class="title-section">
+            <h2>{{ section.settings.textintro }}</h2>
+            <h6>{{ section.settings.textintroarea }}</h6>
+        </div>
+        
+    {% endif %}
+
+
+
+<div class="logo-section--outer">
+    <div class="logo-section--inner"></div>
+
+    {% for block in section.blocks %}
+
+    {% case block.type %}
+    
+        {% when 'logo-item' %}
+
+        <div class="logo-item">
+            <img data-src="{{ block.settings.logo_image | img_url: 'master' }}" alt="{{ block.settings.logo_image.alt }}" class="logo-image-img lazyload"/>
+        </div>
+
+     
+    {% endcase %}
+{% endfor %}
+
+    </div>
+</div>
+
+
+</section>
+

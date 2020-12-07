@@ -227,13 +227,12 @@ main {
       padding: 0;
       font-size: 1rem;
 
-      @media (min-width: #{$screen-lg}) {
+      @media (min-width: #{$screen-md}) {
         padding: 0 5px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
       }
 
-
-      @media (min-width: #{$screen-xxl}) {
+      @media (min-width: 1600px) {
         padding: 0 20px;
         font-size: 1rem;
       }

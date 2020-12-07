@@ -372,6 +372,29 @@
         @media (min-width: #{$screen-lg}) {
           flex-direction: row-reverse;
         }
+
+        .about1 {
+          grid-area: 1 / 1 / 2 / 2;
+
+          @media (min-width: #{$screen-lg}) {
+            grid-area: 1 / 2 / 2 / 3;
+          }
+        }
+        .about2 {
+          grid-area: 4 / 1 / 5 / 2;
+
+          @media (min-width: #{$screen-lg}) {
+            grid-area: 2 / 2 / 3 / 3;
+          }
+        }
+        .about3 {
+          grid-area: 2 / 1 / 4 / 2;
+
+          @media (min-width: #{$screen-lg}) {
+            grid-area: 1 / 1 / 3 / 2;
+            @include center-start;
+          }
+        }
       }
     }
   }
@@ -425,11 +448,69 @@
 }
 
 .about-us-section {
-  @include center-center-column;
+  display: grid;
+  grid-template-columns: 1fr;
+  // grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-auto-rows: minmax(min-content, max-content);
+
+  @media (min-width: #{$screen-lg}) {
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.about1 {
+  grid-area: 1 / 1 / 2 / 2;
+  text-align: center;
+
+  @media (min-width: #{$screen-lg}) {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: left;
+    @include start-end-column;
+  }
+}
+.about2 {
+  grid-area: 4 / 1 / 5 / 2;
+
+  @media (min-width: #{$screen-lg}) {
+    grid-area: 2 / 1 / 3 / 2;
+    @include start-end-column;
+  }
+}
+.about3 {
+  @include center-center;
+  grid-area: 2 / 1 / 4 / 2;
+
+  @media (min-width: #{$screen-lg}) {
+    grid-area: 1 / 2 / 3 / 3;
+    @include center-end;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 25px;
+
+    @media (min-width: #{$screen-lg}) {
+      width: auto;
+      margin-bottom: 0;
+      max-height: 70vh;
+      max-width: 80%;
+    }
+  }
+}
+
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+.about-us-section {
+  // @include center-center-column;
   padding: 5vh 0;
 
   @media (min-width: #{$screen-lg}) {
-    @include center-between;
+    // @include center-between;
     padding: 10vh 0;
   }
 
@@ -437,18 +518,28 @@
   .about-text-area {
     width: 100%;
     padding: 25px 0;
-    text-align: center;
+    text-align: left;
+    // display: flex;
 
     @media (min-width: #{$screen-lg}) {
-      width: 45%;
+      // width: 45%;
       padding: 0;
-      text-align: left;
     }
 
     .illo {
       width: 100%;
       height: auto;
       object-fit: cover;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+
+      @media (min-width: #{$screen-lg}) {
+        width: 80%;
+      }
     }
   }
 }
@@ -468,7 +559,6 @@
     @media (min-width: #{$screen-md}) {
       max-width: 80%;
     }
-
   }
 }
 
@@ -600,8 +690,6 @@
 .delivery-options {
   @include center-start-column;
   margin: 25px 0;
-
-
 }
 
 .delivery-box {
@@ -613,8 +701,6 @@
   width: 100%;
   padding: 15px 5px;
 
-
-
   &:first-of-type {
     margin-left: 0;
   }
@@ -623,7 +709,7 @@
 .delivery-text {
   padding: 0 15px;
   text-align: left;
-  @include center-between;
+  @include start-between;
   width: 100%;
 
   .font-bolder {
@@ -642,6 +728,10 @@
 .delivery-price {
   width: 100%;
   padding: 0 15px;
+
+  p {
+    text-align: left;
+  }
 }
 
 // Frequently Asked Questions
@@ -677,7 +767,6 @@
         padding-top: 0;
 
         h6 {
-
           margin-bottom: 15px;
           max-width: 80%;
           line-height: 1.5;
@@ -711,14 +800,12 @@
   }
 }
 
-
 .collection-anchor-title.middle-highlight-faq {
   margin: 25px auto;
 
   @media (min-width: #{$screen-lg}) {
     margin: 25px 0;
   }
-
 }
 
 #shopify-section-faq-page {
@@ -741,23 +828,18 @@
   text-align: center;
   margin-bottom: 0px;
 
-
   .button {
     z-index: 1;
-
   }
 }
 
 .contact-form__section {
-    flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
 
-    @media (min-width: #{$screen-lg}) {
-      flex-direction: row !important;
-    }
-
+  @media (min-width: #{$screen-lg}) {
+    flex-direction: row !important;
+  }
 }
-
-
 
 .image-section-one-tree {
   display: grid;
@@ -773,50 +855,43 @@
     grid-template-rows: repeat(2, 1fr);
   }
 
-  .div1 { 
+  .div1 {
     grid-area: 1 / 1 / 3 / 3;
 
     @media (min-width: #{$screen-lg}) {
-      grid-area: 1 / 1 / 3 / 3; 
+      grid-area: 1 / 1 / 3 / 3;
     }
-
   }
-  .div2 { 
+  .div2 {
     grid-area: 3 / 1 / 4 / 3;
 
     @media (min-width: #{$screen-lg}) {
-      grid-area: 1 / 3 / 2 / 5; 
+      grid-area: 1 / 3 / 2 / 5;
     }
-
   }
-  .div3 { 
+  .div3 {
     grid-area: 4 / 1 / 5 / 3;
 
     @media (min-width: #{$screen-lg}) {
-      grid-area: 2 / 3 / 3 / 5; 
+      grid-area: 2 / 3 / 3 / 5;
     }
-
   }
-  .div4 { 
+  .div4 {
     grid-area: 5 / 1 / 7 / 3;
 
     @media (min-width: #{$screen-lg}) {
-      grid-area: 1 / 5 / 3 / 7; 
+      grid-area: 1 / 5 / 3 / 7;
     }
-
   }
 }
 
 .one-tree-div {
-
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-
 }
-
 
 .one-tree-text-section {
   @include center-center-column;
@@ -824,7 +899,6 @@
   @media (min-width: #{$screen-lg}) {
     @include start-between;
   }
-
 
   .inner-text {
     width: 100%;
@@ -842,7 +916,6 @@ section.hutch-section {
   @media (min-width: #{$screen-lg}) {
     margin: 2em 0;
   }
-
 }
 
 .hutch__info-bottom {
@@ -912,4 +985,34 @@ section.hutch-section {
 
 .middle_title-section {
   text-align: center;
+}
+
+// 50-50 Section
+
+.fifty-section {
+  @include center-center-column;
+  padding: 5vh 0;
+
+  @media (min-width: #{$screen-lg}) {
+    @include center-between;
+    padding: 10vh 0;
+  }
+
+  .fifty-image,
+  .fifty-text-area {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 45%;
+      text-align: left;
+    }
+
+    .illo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 }

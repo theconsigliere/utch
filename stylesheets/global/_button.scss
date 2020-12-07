@@ -6,16 +6,17 @@
 }
 
 .button,
-#mc_embed_signup .button{
- // @include reset-input;
+#mc_embed_signup .button {
+  // @include reset-input;
   text-align: center;
   font-size: 1rem;
   color: $white;
-//  border: 3px solid $white;
+  //  border: 3px solid $white;
   border-radius: 100em;
   position: relative;
   padding: 10px 20px;
   display: inline-block;
+  z-index: 1;
 
   &:before {
     background-color: $brown;
@@ -29,15 +30,15 @@
     z-index: -1;
     height: 100%;
     border-radius: 2.4rem;
-    transform: translate3d(-50%,0,0) scale(1);
-    transition: opacity .33s linear,width .5s cubic-bezier(.26,1,.48,1),background-color .6s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.26,1,.48,1);
+    transform: translate3d(-50%, 0, 0) scale(1);
+    transition: opacity 0.33s linear, width 0.5s cubic-bezier(0.26, 1, 0.48, 1),
+      background-color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+      transform 0.5s cubic-bezier(0.26, 1, 0.48, 1);
   }
-
 
   @media (min-width: #{$screen-md}) {
     padding: 20px 40px 20px 40px;
   }
-
 
   &:disabled {
     opacity: 0.5;
@@ -45,23 +46,19 @@
   }
 
   &:not(:disabled):hover {
-
     &:before {
-      transform: translate3d(-50%,0,0) scale(1.05);
+      transform: translate3d(-50%, 0, 0) scale(1.05);
       background-color: darken($brown, 5%);
     }
     color: $white;
- 
-  
   }
 
   &:hover {
     &:before {
-      transform: translate3d(-50%,0,0) scale(1.05);
+      transform: translate3d(-50%, 0, 0) scale(1.05);
       background-color: darken($brown, 5%);
     }
     color: $white;
-
   }
 
   &.button-cta {
@@ -81,11 +78,11 @@
 }
 
 .block-button {
- // @include reset-input;
+  // @include reset-input;
   text-align: center;
   font-size: 1rem;
   color: $white;
-//  border: 3px solid $white;
+  //  border: 3px solid $white;
   border-radius: 100em;
   position: relative;
   padding: 10px 20px;
@@ -103,15 +100,15 @@
     z-index: -1;
     height: 100%;
     border-radius: 2.4rem;
-    transform: translate3d(-50%,0,0) scale(1);
-    transition: opacity .33s linear,width .5s cubic-bezier(.26,1,.48,1),background-color .6s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.26,1,.48,1);
+    transform: translate3d(-50%, 0, 0) scale(1);
+    transition: opacity 0.33s linear, width 0.5s cubic-bezier(0.26, 1, 0.48, 1),
+      background-color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+      transform 0.5s cubic-bezier(0.26, 1, 0.48, 1);
   }
-
 
   @media (min-width: #{$screen-md}) {
     padding: 20px 40px 20px 40px;
   }
-
 
   &:disabled {
     opacity: 0.5;
@@ -119,14 +116,11 @@
   }
 
   &:not(:disabled):hover {
-
     &:before {
-      transform: translate3d(-50%,0,0) scale(1.05);
+      transform: translate3d(-50%, 0, 0) scale(1.05);
       background-color: darken($dark-green, 5%);
     }
     color: $white;
- 
-  
   }
 
   .money {
@@ -135,11 +129,10 @@
 
   &:hover {
     &:before {
-      transform: translate3d(-50%,0,0) scale(1.05);
+      transform: translate3d(-50%, 0, 0) scale(1.05);
       background-color: darken($dark-green, 5%);
     }
     color: $white;
-
   }
 
   &.button-cta {
@@ -158,8 +151,8 @@
   }
 }
 
-
-.add-to-cart-button, input[type=submit] {
+.add-to-cart-button,
+input[type="submit"] {
   @include reset-input;
   display: inline-block;
   padding: ($line-global/2) $line-global;
@@ -174,7 +167,6 @@
   width: 100%;
   padding: 15px 20px;
 
-
   @media (min-width: #{$screen-sm}) {
     font-size: $type-body-med;
   }
@@ -185,7 +177,6 @@
     letter-spacing: 2px;
     color: $black;
     transition: all 0.3s ease-in-out;
-
   }
 
   &:disabled {
@@ -238,8 +229,6 @@
     margin-bottom: 0;
   }
 }
-
-
 
 .item-button {
   color: white;
@@ -318,7 +307,8 @@
   }
 }
 
-.black-button, .green-button {
+.black-button,
+.green-button {
   @include reset-input;
   display: inline-block;
   width: auto;
@@ -332,7 +322,6 @@
   transition: all 0.3s ease-in-out;
   border-radius: 15px;
 
-
   @media (min-width: #{$screen-sm}) {
     font-size: $type-body-med;
   }
@@ -341,9 +330,8 @@
     font-size: 0.8rem;
     font-weight: $type-bold;
     letter-spacing: 2px;
-    color:  $dark-green;
+    color: $dark-green;
     transition: all 0.3s ease-in-out;
-
   }
 
   &:disabled {
@@ -469,7 +457,6 @@
     text-transform: uppercase;
     line-height: $line-global;
     font-weight: $type-bold;
-
   }
 }
 
@@ -481,4 +468,3 @@
 .article-button {
   margin: 0 auto;
 }
-

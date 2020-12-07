@@ -27,9 +27,15 @@
                     "info": "Delivery Option Title"
                 }, 
                 {
+                    "type": "color",
+                    "id": "delivery_color",
+                    "label": "Delivery Option Background color",
+                    "default": "#d7e4d7"
+                 },
+                {
                     "type": "text",
                     "id": "deliveryarea",
-                    "label": "Postcode",
+                    "label": "Text Area",
                     "info": "Delivery area description"
                 }, 
                 {
@@ -38,6 +44,13 @@
                     "label": "Price",
                     "info": "Delivery Price"
                 }, 
+
+                {
+                    "type": "color",
+                    "id": "delivery_colortwo",
+                    "label": "Delivery Option Background color",
+                    "default": "#d7e4d7"
+                 },
                 {
                     "type": "text",
                     "id": "deliveryoptiontwo",
@@ -47,7 +60,7 @@
                 {
                     "type": "text",
                     "id": "deliveryareatwo",
-                    "label": "Postcode",
+                    "label": "Text Area",
                     "info": "Text"
                 }, 
                 {
@@ -57,6 +70,12 @@
                     "info": "Delivery Price"
                 }, 
                 {
+                    "type": "color",
+                    "id": "delivery_colorthree",
+                    "label": "Delivery Option Background color",
+                    "default": "#d7e4d7"
+                 },
+                {
                     "type": "text",
                     "id": "deliveryoptionthree",
                     "label": "Delivery Option",
@@ -65,7 +84,7 @@
                 {
                     "type": "text",
                     "id": "deliveryareathree",
-                    "label": "Postcode",
+                    "label": "Text Area",
                     "info": "Delivery area description"
                 }, 
                 {
@@ -74,15 +93,31 @@
                     "label": "Price",
                     "info": "Delivery Price"
                 }, 
-                
-                
                 {
-                    "type": "textarea",
-                    "id": "textarea",
-                    "label": "Add a text section",
-                    "info": "Text",
-                    "placeholder": "Type here..."
+                    "type": "color",
+                    "id": "delivery_colorfour",
+                    "label": "Delivery Option Background color",
+                    "default": "#d7e4d7"
+                 },
+                {
+                    "type": "text",
+                    "id": "deliveryoptionfour",
+                    "label": "Delivery Option",
+                    "info": "Delivery Option Title"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliveryareafour",
+                    "label": "Text Area",
+                    "info": "Delivery area description"
+                }, 
+                {
+                    "type": "text",
+                    "id": "deliverypricefour",
+                    "label": "Price",
+                    "info": "Delivery Price"
                 }
+
             ]
         }
     ],
@@ -102,14 +137,14 @@
 		{% for block in section.blocks %}
 
 
-			<section class="about-us-section">
+			<section class="fifty-section">
 
-				<div class="about-image">
+				<div class="fifty-image">
                     <img data-src="{{ 'delivery.svg' | asset_url }}" class='illo lazyload'> 
 				</div>
 
 
-				<div class="about-text-area">
+				<div class="fifty-text-area">
 				
                     <div class="title-area">
 
@@ -122,7 +157,10 @@
 
 
                     <div class="delivery-options">
-                        <div class="delivery-box">
+
+                        {% if block.settings.deliveryoption != blank %}
+
+                        <div class="delivery-box" style="background-color:{{ block.settings.delivery_color }}">
                             <div class="delivery-text">
                                 <p class="font-bolder">{{ block.settings.deliveryoption }}</p>
                                 <p class="font-bolder">{{ block.settings.deliveryprice }}</p>
@@ -133,7 +171,11 @@
                             </div>
                         </div>
 
-                        <div class="delivery-box">
+                        {% endif %}
+
+                        {% if block.settings.deliveryoptiontwo != blank %}
+
+                        <div class="delivery-box" style="background-color:{{ block.settings.delivery_colortwo }}">
                             <div class="delivery-text">
                                 <p class="font-bolder">{{ block.settings.deliveryoptiontwo }}</p>
                                 <p class="font-bolder">{{ block.settings.deliverypricetwo  }}</p>
@@ -144,22 +186,41 @@
                             </div>
                         </div>
 
-                        <div class="delivery-box">
-                            <div class="delivery-text">
-                                <p class="font-bolder">{{ block.settings.deliveryoptionthree }}</p>
-                                <p class="font-bolder">{{ block.settings.deliverypricethree }}</p>
+
+                        {% endif %}
+
+                        {% if block.settings.deliveryoptionthree != blank %}
+
+                            <div class="delivery-box" style="background-color:{{ block.settings.delivery_colorthree }}">
+                                <div class="delivery-text">
+                                    <p class="font-bolder">{{ block.settings.deliveryoptionthree }}</p>
+                                    <p class="font-bolder">{{ block.settings.deliverypricethree }}</p>
+                                </div>
+                                <div class="delivery-price">
+                                    <p class='small-p'>{{ block.settings.deliveryareathree | strip_html  }}</p>
+                                </div>
                             </div>
-                            <div class="delivery-price">
-                                <p class='small-p'>{{ block.settings.deliveryareathree | strip_html  }}</p>
+
+                        {% endif %}
+
+                        {% if block.settings.deliveryoptionfour != blank %}
+
+                            <div class="delivery-box" style="background-color:{{ block.settings.delivery_colorfour }}">
+                                <div class="delivery-text">
+                                    <p class="font-bolder">{{ block.settings.deliveryoptionfour }}</p>
+                                    <p class="font-bolder">{{ block.settings.deliverypricefour }}</p>
+                                </div>
+                                <div class="delivery-price">
+                                    <p class='small-p'>{{ block.settings.deliveryareafour | strip_html  }}</p>
+                                </div>
                             </div>
-                        </div>
+                            
+                        {% endif %}
+
+                      
                     </div>
 					
-					<div class="about-para">
-						<p>
-							{{ block.settings.textarea }}
-						</p>
-					</div>
+
 				
 				</div>
 

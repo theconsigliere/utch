@@ -89,18 +89,17 @@
         
             {% when 'about-section' %}
 
-            <section class="full-width-section">
+            <section class="full-width-section no-bottom-margin">
 
                 <div class="inner about-us-section">
 
-				<div class="about-image">
-                    <img data-src="{{ block.settings.about_image | img_url: 'master' }}" alt="{{ block.settings.about_image.alt }}" class="lazyload about-image-img"/>
-				</div>
+                    <div class="about-image about3">
+                        <img data-src="{{ block.settings.about_image | img_url: 'master' }}" alt="{{ block.settings.about_image.alt }}" class="lazyload about-image-img"/>
+                    </div>
 
 
-				<div class="about-text-area">
 				
-                    <div class="title-area">
+                    <div class="title-area about1">
                         <h2>
                             {{ block.settings.about_title }}
                         </h2>
@@ -108,13 +107,13 @@
                     </div>
 
 					
-					<div class="about-para">
+					<div class="about-para about2">
 						<p>
 							{{ block.settings.about_content }}
 						</p>
 					</div>
 				
-                </div>
+              
                 
             </div>
 

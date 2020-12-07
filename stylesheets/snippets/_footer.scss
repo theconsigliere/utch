@@ -315,8 +315,8 @@ input.required {
 .payment-list-logos {
   padding: 0;
   @include center-center;
-    margin-bottom: 5px;
-    margin-top: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 
   li {
     @include center-center;
@@ -336,7 +336,7 @@ input.required {
   @media (min-width: #{$screen-md}) {
     width: 2em;
   }
-  
+
   @media (min-width: #{$screen-lg}) {
     width: 3.5em;
   }
@@ -370,7 +370,6 @@ input.required {
       width: 100%;
     }
 
-
     h6 {
       margin-bottom: 10px;
     }
@@ -386,11 +385,9 @@ input.required {
   display: block;
 
   @media (min-width: #{$screen-md}) {
-  display: none;
+    display: none;
+  }
 }
-
-}
-
 
 .mobile-footer-nav-inner {
   ul {
@@ -403,7 +400,79 @@ input.required {
         content: none;
       }
     }
+  }
+}
 
+// newsletter
+
+.newsletter-section {
+  background: $brown;
+  padding: 2em 0;
+}
+
+.newsletter--box-text {
+  p {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+  }
+}
+
+.label-newsletter {
+  @extend .h6;
+  margin-bottom: 25px;
+}
+
+.newsletter-inner {
+  @include center-center;
+}
+
+.newsletter--box {
+  width: 120px;
+  padding: 10px;
+  display: none;
+
+  @media (min-width: #{$screen-lg}) {
+    display: block;
+  }
+}
+
+#mc_embed_signup_scroll {
+  * {
+    margin-bottom: 10px;
+    text-align: center;
+
+    @media (min-width: #{$screen-lg}) {
+      text-align: left;
+    }
   }
 
+  .main-contact-buttons {
+    padding: 7px 0;
+
+    input {
+      width: 90%;
+    }
+
+    #mc-embedded-subscribe {
+      width: 100%;
+      margin: 5px;
+      border-radius: 15px;
+      line-height: 1.5;
+      height: 4rem;
+      background: $green;
+      text-align: center;
+
+      &:hover {
+        background: $dark-green;
+      }
+    }
+  }
+}
+
+.newsletter--box-text {
+  margin-left: none;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-left: 50px;
+  }
 }

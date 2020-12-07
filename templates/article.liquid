@@ -1,41 +1,104 @@
 {% assign number_of_comments = article.comments_count %}
 {% if comment and comment.created_at %}
-  {% assign number_of_comments = article.comments_count %}
+	{% assign number_of_comments = article.comments_count %}
 {% endif %}
 
-<h1>{{ article.title }}</h1>
-{% capture author %}<strong>{{ article.author }}</strong>{% endcapture %}
-{% capture date %}<time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>{% endcapture %}
-{{ article.author }} @ {{ article.created_at }}
 
-<div>{{ article.content }}</div>
+<section class="extra-page" id="article-page">
+
+	<div class="article-header">
+		<img data-src="{{ 'blog-img.svg' | asset_url }}" class="article-header-img" class="lazyload"/>
+
+		<div class="article-title inner">
+
+			<div class="article-buttons">
+				<a href="{{ blog.previous_article }}" class="article-btn">
+          <div class="collection-anchor-title middle-highlight-faq">
+            <p class="collection-mark">
+              Previous post
+            </p>
+        </div>
+				
+				</a>
+				<a href="{{ blog.next_article }}" class="article-btn">
+          <div class="collection-anchor-title middle-highlight-faq">
+            <p class="collection-mark">
+              Next post
+            </p>
+        </div>
+				
+				</a>
+			</div>
+
+			<article class="article-group">
+
+				<h2>{{ article.title }}</h2>
+
+				<h6>{{ article.published_at | date: format: 'abbreviated_date' }}</h6>
+
+				<div class="underline"></div>
+			</article>
+
+		</div>
+	</div>
+
+
+	<article class="article-content">
+		<div class="inner">
+
+			<div class="article-image">
+				<img data-src="{{ article.image.src | img_url: 'master' }}" alt="{{ article.image.alt }}" class="lazyload"/>
+			</div>
+
+			<div class="article-group">
+				<p>{{ article.content }}</p>
+			</div>
+
+
+			<div class="excerpt">
+				<h4>{{ article.excerpt }}</h4>
+			</div>
+
+			<div class="main-contact-buttons">
+				<a href="{{ blog.url }}" class="article-button button">{{ 'blog.back' | t }}</a>
+			</div>
+		</div>
+	</article>
+
+
+</section>
+
+
 {% if blog.comments_enabled? %}
-  <h2>{{ number_of_comments }} comments</h2>
-  {% paginate article.comments by 5 %}
-    {% for comment in article.comments %}
-      <div>
-        <div>{{ comment.content }}</div>
-        {{ comment.author }} @ {{ comment.created_at }}
-      </div>
-    {% endfor %}
-    {% if paginate.pages > 1 %}
-      {{ paginate | default_pagination }}
-    {% endif %}
-  {% endpaginate %}
+	<h2>{{ number_of_comments }}
+		comments</h2>
+	{% paginate article.comments by 5 %}
+		{% for comment in article.comments %}
+			<div>
+				<div>{{ comment.content }}</div>
+				{{ comment.author }}
+				@
+				{{ comment.created_at }}
+			</div>
+		{% endfor %}
+		{% if paginate.pages > 1 %}
+			{{ paginate | default_pagination }}
+		{% endif %}
+	{% endpaginate %}
 
-  <div>
-    {% form 'new_comment', article %}
-      {{ form.errors | default_errors }}
-      <label for="CommentAuthor">name</label>
-      <input type="text" name="comment[author]" id="CommentAuthor" placeholder="name" value="{{ form.author }}" autocapitalize="words">
+	<div>
+		{% form 'new_comment', article %}
+			{{ form.errors | default_errors }}
+			<label for="CommentAuthor">name</label>
+			<input type="text" name="comment[author]" id="CommentAuthor" placeholder="name" value="{{ form.author }}" autocapitalize="words">
 
-      <label for="CommentEmail">email</label>
-      <input type="email" name="comment[email]" id="CommentEmail" placeholder="email" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+			<label for="CommentEmail">email</label>
+			<input type="email" name="comment[email]" id="CommentEmail" placeholder="email" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
 
-      <label for="CommentBody">message</label>
-      <textarea name="comment[body]" id="CommentBody" placeholder="message">{{ form.body }}</textarea>
+			<label for="CommentBody">message</label>
+			<textarea id="CommentBody" name="comment[body]" placeholder="message">{{ form.body }}</textarea>
 
-      <input type="submit" value="post">
-    {% endform %}
-  </div>
+			<input type="submit" value="post">
+		{% endform %}
+	</div>
 {% endif %}

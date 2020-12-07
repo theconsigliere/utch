@@ -38,10 +38,11 @@
                     "id": "title",
                     "label": "Title"
                 },{
-                    "type": "textarea",
+                    "type": "richtext",
                     "id": "desc",
-                    "label": "Description"
-                }, {
+                    "label": "Description",
+                    "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+                },  {
                     "id": "info_image",
                     "type": "image_picker",
                     "label": "Image"
@@ -52,6 +53,11 @@
             "type": "map-block",
             "name": "Map Block",
             "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
                 {
                     "type": "html",
                     "id": "map_iframe",
@@ -88,14 +94,14 @@
         
             {% when 'page-header' %}
 
-			<section class="about-us-section">
+			<section class="fifty-section">
 
-				<div class="about-image">
+				<div class="fifty-image">
                     <img data-src="{{ 'visiting-us.svg' | asset_url }}" class='illo lazyload'> 
 				</div>
 
 
-				<div class="about-text-area">
+				<div class="fifty-text-area">
 				
                     <div class="title-area">
                         {% if block.settings.title != blank %}
@@ -144,7 +150,7 @@
                     </div>
                 </div>
 
-                <div class="inner about-us-section">
+                <div class="about-us-section">
 
 				<div class="about-image">
                     <img data-src="{{ block.settings.info_image | img_url: 'master' }}" alt="{{ block.settings.info_image.alt }}" class="lazyload about-image-img"/>
@@ -174,6 +180,11 @@
 
                 <section class="map-block">
                     <div class="inner">
+
+                        <div class="title-section">
+                            <h2>{{ block.settings.title }}</h2>
+                        </div>
+
                         <div class="map-inner">
                             <div class="map-top">
                                 {{ block.settings.map_iframe }}

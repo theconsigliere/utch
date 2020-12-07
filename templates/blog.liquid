@@ -1,22 +1,77 @@
-{% paginate blog.articles by 5 %}
+<section class="extra-page" id="blog-page">
 
-<h1>{{ blog.title }}</h1>
-{% for article in blog.articles %}
-  <div>
-    <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
-    {{ article.author }} @ {{ article.created_at }}
-    <div>
-      {% if article.excerpt.size > 0 %}
-        {{ article.excerpt }}
-      {% else %}
-        <p>{{ article.content | strip_html | truncatewords: 100 }}</p>
-      {% endif %}
-    </div>
+
+  <div class="blog-page-header">
+      {% assign featured_article = blog.articles[0] %}
+
+
+      <div class="blog-hero">
+          <div class="blog-hero-img">
+              <img alt="{{ featured_article.title }}" data-src="{{ featured_article.image.src | img_url: '1024x' }}" class='lazyload'>
+          </div>
+          <div class="blog-hero-text">
+
+              <div class="blog-hero-text-inner">
+
+
+                <div class="collection-anchor-title middle-highlight-faq">
+                  <h6 class="collection-mark">
+                      {{ page_title }}
+                  </h6>
+              </div>
+
+               
+
+
+                  <h2>{{ featured_article.title }}</h2>
+                  <p class="font-bolder">{{ featured_article.published_at  | date: format: 'abbreviated_date' }}</p>
+                  <p class="grid-product__price">{{ featured_article.excerpt | strip_html | truncate: 200  }}</p>
+                  <a href="{{ featured_article.url }}" class="button">Read More</a>
+              </div>
+          </div>
+      </div>
   </div>
-{% endfor %}
 
-{% if paginate.pages > 1 %}
-  {{ paginate | default_pagination }}
-{% endif %}
+  <div class="blog-page-bottom ">
 
-{% endpaginate %}
+
+      <div class="inner">
+
+          <div class="title_section">
+              <p class="font-bolder">{{ 'blog.title' | t }}</p>
+          </div>
+
+          <div class="blog-grid">
+
+
+              {% for article in blog.articles offset:1 %}
+
+
+                  <div class="blog_item">
+                      <a aria-label="Read more about {{article.title }}" href="{{ article.url }}">
+                          <img alt="{{article.title }}" data-src="{{ article.image.src | img_url: '1024x' }}" class="lazyload">
+                          <div class="grid-product__meta">
+                              <div class="article__content-meta">
+
+                                  <div class="blog_item_text">
+                                      <p>{{ article.published_at  | date: format: 'abbreviated_date' }}</p>
+                                      <h6>
+                                          {{article.title }}
+                                      </h6>
+
+                                  </div>
+
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+
+
+              {% endfor %}
+
+          </div>
+
+      </div>
+
+  </div>
+</section>

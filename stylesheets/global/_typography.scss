@@ -156,7 +156,8 @@ h5 {
   }
 }
 
-h6 {
+h6,
+.h6 {
   font-weight: $type-thin;
   font-size: 1rem;
   font-family: $text-font;
@@ -217,8 +218,6 @@ ul {
   }
 }
 
-
-
 .h1-big {
   font-size: 4.2rem;
   line-height: 1;
@@ -232,7 +231,6 @@ ul {
     font-size: 5.6rem;
   }
 }
-
 
 .p-large {
   font-family: $text-font, sans-serif;
@@ -300,7 +298,7 @@ a {
 }
 
 span {
-  font-family: $light-font; 
+  font-family: $light-font;
 }
 
 .text-align {

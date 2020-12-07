@@ -46,18 +46,16 @@
     margin: 0 auto;
 
     @media (min-width: #{$screen-lg}) {
-  
       margin: 0;
     }
 
     .hero-logo {
       width: 45vw;
       margin-bottom: 10px;
-    //  margin-top: 20px;
+      //  margin-top: 20px;
 
       @media (min-width: #{$screen-sm}) {
         width: 250px;
-
       }
 
       @media (min-width: #{$screen-lg}) {
@@ -131,11 +129,10 @@
     width: 100%;
     position: absolute;
     bottom: 50%;
-    transform: translate( 0, 50%);
+    transform: translate(0, 50%);
     padding: 10px;
     left: 0;
     right: 0;
-
 
     @media (min-width: #{$screen-lg}) {
       padding: 40px 10vw;
@@ -208,7 +205,7 @@
 /* Animation */
 
 .parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
@@ -228,17 +225,17 @@
 }
 @keyframes move-forever {
   0% {
-   transform: translate3d(-90px,0,0);
+    transform: translate3d(-90px, 0, 0);
   }
-  100% { 
-    transform: translate3d(85px,0,0);
+  100% {
+    transform: translate3d(85px, 0, 0);
   }
 }
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height:40px;
-    min-height:40px;
+    height: 40px;
+    min-height: 40px;
   }
 }
 
@@ -276,9 +273,6 @@
     }
   }
 }
-
-
-
 
 // VIDEO
 //----------------------------------
@@ -1050,7 +1044,6 @@
   }
 }
 
-
 .homepage-category {
   margin: 5vh 0;
 }
@@ -1072,7 +1065,6 @@
 
 // Portfolio
 
-
 .portfolio__categories {
   @include center-center-column;
   padding: 2em 0;
@@ -1080,15 +1072,11 @@
 }
 
 .portfolio-link {
-  font-size: 2rem;
+  font-size: 5vh;
   margin: 10px 0;
   font-family: $text-font;
   color: #485448;
   z-index: 1;
-
-  @media (min-width: #{$screen-lg}) {
-    font-size: 3.5rem;
-  }
 }
 
 .portfolio__categories a:hover {
@@ -1156,7 +1144,6 @@
   background-size: cover;
 }
 
-
 .category-item-group {
   padding-bottom: 2em;
 }
@@ -1167,7 +1154,6 @@
   .instafeed-container {
     width: 30%;
     border: 3px solid white;
-
   }
 }
 
@@ -1180,16 +1166,11 @@ section.instafeed-container {
   margin-bottom: 2em;
 }
 
-
 // Testimonial Sliders
 
-
 .testimonial-group {
-
- // max-width: 80% !important;
-
+  // max-width: 80% !important;
 }
-
 
 .testimonial-section {
   margin: 5vh 0;
@@ -1197,7 +1178,6 @@ section.instafeed-container {
   @media (min-width: #{$screen-lg}) {
     margin: 10vh 0;
   }
-
 
   .swiper-wrapper {
     margin-bottom: 4em;
@@ -1207,11 +1187,11 @@ section.instafeed-container {
 .testimonial-title-inner {
   position: relative;
   margin: 0 auto;
-max-width: 90%;
+  max-width: 90%;
 
-@media (min-width: #{$screen-lg}) {
-  max-width: 70%;
-}
+  @media (min-width: #{$screen-lg}) {
+    max-width: 70%;
+  }
 
   @media (min-width: #{$screen-xl}) {
     max-width: 60%;
@@ -1244,7 +1224,6 @@ max-width: 90%;
     max-width: 80%;
   }
 
-
   .comma {
     position: absolute;
     width: 1em;
@@ -1252,31 +1231,29 @@ max-width: 90%;
     @media (min-width: #{$screen-lg}) {
       width: 4em;
     }
-}
+  }
 
-.comma-top {
-  top: 0;
-  left: 0;
-}
+  .comma-top {
+    top: 0;
+    left: 0;
+  }
 
-.comma-bottom {
-  bottom: 0;
-  right: 0;
-  transform: rotate(180deg);
-}
+  .comma-bottom {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+  }
 
-* {
-  text-align: center;
-}
+  * {
+    text-align: center;
+  }
 }
 
 .review-stars {
   text-align: center;
   margin-bottom: 2em;
 
-    .review-star {
-      width: 2em;
-    }
-
+  .review-star {
+    width: 2em;
+  }
 }
-

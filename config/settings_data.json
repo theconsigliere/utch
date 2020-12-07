@@ -121,8 +121,12 @@
               "fourth_image": "shopify:\/\/shop_images\/cpntact-mini.png",
               "fourth_title": "Contact Us",
               "fourth_url": "shopify:\/\/pages\/contact-us",
-              "fifth_title": "",
-              "sixth_title": "",
+              "fifth_image": "shopify:\/\/shop_images\/Group_885.png",
+              "fifth_title": "One Tree Planted",
+              "fifth_url": "shopify:\/\/pages\/one-tree-planted",
+              "sixth_image": "shopify:\/\/shop_images\/Group_887.png",
+              "sixth_title": "Visiting Us",
+              "sixth_url": "shopify:\/\/pages\/visiting-us",
               "seventh_title": ""
             }
           }
@@ -558,19 +562,11 @@
               "about_title": "We’re one big family at Hutch",
               "about_content": "We have an amazing team of talented people who make Hutch what it is!  A big thank you to Lucie, our newest team member, who will sell you plants by day, and  is an incredible artist by night; this illustration of us is all her work.\n<p>\n<br>\nFind Lucie on instagram @luciejemima<\/p>"
             }
-          },
-          "27fef558-2ffb-4c58-b7be-ccc95384059e": {
-            "type": "mission",
-            "settings": {
-              "mission_title": "Our Mission",
-              "our_mission": "To make the experience of \ndiscovering the perfect houseplants as \nwonderful as the plants \nthemselves."
-            }
           }
         },
         "block_order": [
           "e326d3e0-43cf-428e-82c4-456db32805ce",
-          "6e2bb85d-c770-4aa3-95b7-b7225f0f7ef7",
-          "27fef558-2ffb-4c58-b7be-ccc95384059e"
+          "6e2bb85d-c770-4aa3-95b7-b7225f0f7ef7"
         ],
         "settings": {
           "textintro": "We are Hutch",
@@ -805,7 +801,7 @@
               "title": "Visiting Us",
               "desc": "Situated on Paris St, in the heart of Exeter, we are a stone’s throw from the \nBampfylde Street and Princesshay car parks. We are also located next to the \nbus station and many of the park and ride buses stop opposite the shop.",
               "opening_title": "Opening Hours",
-              "opening_times": "Monday - Friday: 10am - 4pm\n<br>\nSaturday: 10am - 5pm\n<br>\nSundays and Bank Holidays: Closed\n<br>\n​Tuesday 1st September: Closed"
+              "opening_times": "<p>Monday - Friday: 10am - 4pm<\/p><p><br\/>Saturday: 10am - 5pm<\/p><p><br\/>Sundays and Bank Holidays: Closed<\/p><p><br\/>​Tuesday 1st September: Closed<\/p>"
             }
           },
           "fe71a826-0451-467b-af3f-ac74524a4dd9": {
@@ -820,8 +816,8 @@
             "type": "map-block",
             "settings": {
               "map_iframe": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d10102.875941898134!2d-3.5261239!3d50.7251524!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6626b6afceb7ba6!2sHutch%20Houseplants!5e0!3m2!1sen!2suk!4v1606924088206!5m2!1sen!2suk\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"><\/iframe>",
-              "logo_image": "shopify:\/\/shop_images\/logo-social-sharing-image_5f0b0dbb-fedb-420b-9fa4-db4b68454690.png",
-              "desc": "9 Paris Street, Exeter, Devon EX1 2JB\n<br>\nE:  info@hutchplants.co.uk<\n<br>\nT:  01392 758 130"
+              "logo_image": "shopify:\/\/shop_images\/huth.png",
+              "desc": "9 Paris Street, Exeter, Devon EX1 2JB\n<br>\nE:  info@hutchplants.co.uk\n<br>\nT:  01392 758 130"
             }
           }
         },
@@ -831,6 +827,49 @@
           "935aad5a-0efe-4e7e-b041-6632056d97b5"
         ],
         "settings": {}
+      },
+      "one-tree": {
+        "type": "one-tree",
+        "blocks": {
+          "44ee8573-3130-4df7-9394-21d7cc3a126c": {
+            "type": "image-section",
+            "settings": {
+              "image_one": "shopify:\/\/shop_images\/Mask_Group_113_1.jpg",
+              "image_two": "shopify:\/\/shop_images\/Mask_Group_114_1.jpg",
+              "image_three": "shopify:\/\/shop_images\/Mask_Group_115_1.jpg",
+              "image_four": "shopify:\/\/shop_images\/Mask_Group_116_1.jpg"
+            }
+          },
+          "9c89e44f-f8fb-4761-bbeb-fa1fff14d353": {
+            "type": "about-section",
+            "settings": {
+              "textintro": "A  Little bit about One Tree Planted",
+              "section_title": "One Tree Planted’s Goal",
+              "section_desc": "<p>One tree Planted is a 501C3 non-profit environmental charity with a focus on global reforestation. We work with amazing<\/p><p>Planters in North America, South America, Asia and Africa to get Trees in the ground and restore forests after fires and floods, Create jobs, build communities and protect habitat for bio-diversisty.<\/p><p><\/p><p><\/p>",
+              "section_title_two": "in 2018 One Tree Planted 1.3 million trees",
+              "section_desc_two": "<p>One tree Planted has planting projects in four global regions: North America, Latin America, Africa and Asia. Within these regions, in 2019 we had projects in 17 different Countries.<\/p><p>Planting trees in each of these regions comes with its own diverse benefits, challenges, and Rewards. And Every reforestation project has its own unique impact on forests, communities, animals and the planet overall. Read more about this at their <a href=\"https:\/\/onetreeplanted.org\/\" title=\"https:\/\/onetreeplanted.org\/\" target=\"_blank\">website here<\/a><\/p>"
+            }
+          },
+          "75e4955c-b119-4b18-9ab1-c9d730a5ea59": {
+            "type": "hutch-section",
+            "settings": {
+              "hutch_image": "shopify:\/\/shop_images\/huth.png",
+              "hutch_title": "For Each Plant sold we donate 10p!",
+              "hutch_desc": "We’re happy to announce that we’ve partnered with One Tree Planted\/@onetreeplanted\nto plant trees! One Tree Planted is a 501(c)(3) nonprofit dedicated to global reforestation."
+            }
+          }
+        },
+        "block_order": [
+          "44ee8573-3130-4df7-9394-21d7cc3a126c",
+          "9c89e44f-f8fb-4761-bbeb-fa1fff14d353",
+          "75e4955c-b119-4b18-9ab1-c9d730a5ea59"
+        ],
+        "settings": {
+          "textintro": "One Tree Planted",
+          "title_image": "shopify:\/\/shop_images\/one-tree-planted-header_1.jpg",
+          "subtitle": "Hutch is proud to announce we are now working with One Tree Planted!",
+          "textintroarea": "We’re happy to announce that we’ve partnered with One Tree Planted\/@onetreeplanted to plant trees One Tree Planted is a 501(c)(3) nonprofit dedicated to \nglobal reforestation. They plant trees to restore nature and biodiversity. They also raise awareness about the importance of trees, offer businesses like\nours a simple sustainability solution, and motivate younger generations to do something positive for the environment. For every product sold \nHutch Houseplants will plant  trees!"
+        }
       }
     },
     "content_for_index": [
