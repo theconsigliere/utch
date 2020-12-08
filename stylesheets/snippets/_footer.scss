@@ -406,7 +406,7 @@ input.required {
 // newsletter
 
 .newsletter-section {
-  background: $brown;
+  background: #f9f9f9;
   padding: 2em 0;
 }
 
@@ -427,12 +427,21 @@ input.required {
 }
 
 .newsletter--box {
-  width: 120px;
+  width: 150px;
+  height: 150px;
   padding: 10px;
   display: none;
 
   @media (min-width: #{$screen-lg}) {
     display: block;
+    border-radius: 50%;
+    background: #95a994;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+   // object-fit: cover;
   }
 }
 
@@ -459,7 +468,7 @@ input.required {
       border-radius: 15px;
       line-height: 1.5;
       height: 4rem;
-      background: $green;
+      background: $brown;
       text-align: center;
 
       &:hover {

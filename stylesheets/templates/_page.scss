@@ -1016,3 +1016,41 @@ section.hutch-section {
     }
   }
 }
+
+
+// logos
+
+.logo-section--inner {
+  max-width: 80%;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 70%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    max-width: 60%;
+  }
+
+  @include center-between;
+  flex-wrap: wrap;
+  margin: 5vh auto;
+
+  .logo-item {
+    width: 50%;
+    @include start-center;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 25%;
+    }
+
+    img {
+      max-width: 80px;
+      padding: 10px 0;
+
+      @media (min-width: #{$screen-lg}) {
+        max-width: 120px;
+      }
+    }
+}
+}
+

@@ -1108,7 +1108,7 @@ background: $light-white;
     padding: 2em;
     @include center-between-column;
 
-    @media (min-width: #{$screen-md}) {
+    @media (min-width: #{$screen-xxl}) {
       @include center-between;
     }
 
@@ -1126,7 +1126,7 @@ background: $light-white;
       margin: 25px 0;
       @include center-between-column;
 
-      @media (min-width: #{$screen-md}) {
+      @media (min-width: #{$screen-xl}) {
         @include center-between;
         width: fit-content;
       }
@@ -1136,7 +1136,7 @@ background: $light-white;
         width: 100%;
         text-align: center;
 
-        @media (min-width: #{$screen-md}) {
+        @media (min-width: #{$screen-xl}) {
           margin: 0 10px;
              width: fit-content;
              text-align: left;
@@ -1337,22 +1337,33 @@ background: $light-white;
     width: 37px;
     height: 60px;
     top: -15px;
-    right: -30px;
+    left: -10px;
     background-size: cover;
     background-image:  asset-url('animation.gif');
     background-position: left center;
     background-repeat: no-repeat;
     margin-left: -30px;
     margin-bottom: 15px;
+    transform: rotate(220deg);
 
 
     @media (min-width: #{$screen-md}) {
       width: 82px;
       height: 100px;
-      top: -10px;
-      right: -80px;
+      top: -30px;
+      left: -50px;
+   
      }
 }
 
   }
 
+
+
+  .collection_image_title-full {
+    width: 100%;
+
+    * {
+      text-align: center;
+    }
+  }

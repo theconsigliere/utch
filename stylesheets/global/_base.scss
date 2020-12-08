@@ -505,3 +505,43 @@ label {
     height: 150px;
   }
 }
+
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+  .clearfix:after { clear: both; }
+  .clearfix { zoom: 1; }
+  /* Subnavigation styles */
+  .subnav { clear: both; list-style-type: none; margin: 35px 0; padding: 0; }
+  .subnav li { display: block; float: left; }
+  .subnav li a {
+    display: block;
+   // height: 28px;
+    line-height: 28px;
+    padding: 10px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background: #eee;
+    margin: 0 7px 7px 0;
+    color: #666;
+    transition: 0.3s ease-in-out;
+  }
+  .subnav li a:hover, .subnav li.active a {
+    background: $green;
+    color: #fff;
+  }
+
+  .subnav {
+    li {
+      margin: 5px !important;
+
+      &:before {
+        content: '';
+        padding: 0;
+      }
+
+      a {
+       
+      }
+    }
+  }
