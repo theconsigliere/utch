@@ -1,0 +1,30 @@
+{% assign description = product.description | strip_html %}
+
+{% if description contains '---' %}
+
+  {% assign quickdescription = description | split: '---' | first %}
+  {% assign description_array = description | split: '---' %}
+
+  {% assign productInfoKeys = 'Subtitle|Latin|Why|How|Unique' | split: '|' %}
+    {% for key in productInfoKeys %}
+
+    {% assign split_key = key | prepend: '~*~' | append: '~*~' %}
+      {% if description contains split_key %}
+        {% if key == 'Subtitle' %}
+        {% assign Subtitle = description | split: split_key | last | split: '---' | first %}
+          {% elsif key == 'Latin' %}
+          {% assign latin = description | split: split_key | last | split: '---' | first %}
+        {% elsif key == 'Why' %}
+          {% assign why = description | split: split_key | last | split: '---' | first %}
+        {% elsif key == 'How' %}  
+          {% assign how = description | split: split_key | last | split: '---' | first %}
+          {% assign watering = how | split: 'Watering:' | last | split: '.' | first %}
+          {% assign light = how | split: 'Light:' | last | split: '.' | first %}
+        {% elsif key == 'Unique' %}  
+          {% assign unique = description | split: split_key | last | split: '---' | first %}
+        {% endif %}   
+      {% endif %} 
+
+    {% endfor %}
+
+{% endif %}

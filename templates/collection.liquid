@@ -88,13 +88,7 @@
                 </div>
 
                 <div class="collection-illustration">
-
-                  <div class="collection_image_title">
-    
-                    <h3 class="">{{ collection.title }}</h3>
-                    <p class="">{{ collection.description }}</p>
-        
-                  </div>
+  
                   <img src="{{ 'pet-friendly.svg' | asset_url }}" class='illo'> 
                 </div>
 
@@ -202,21 +196,23 @@
                 </ul>
     
     
-                {% for option in collection.sort_options %}
+                <div class="high-options">
+                  {% for option in collection.sort_options %}
                   {% if option.value contains 'price-' %}
-    
+
                     <a class="text-link {% if collection.sort_by == option.value %}active{% endif %}" href="?sort_by={{ option.value }}">
-    
+
                       {% if option.value contains 'ascending' %}
-                        <h6 class="">{{ "collection.sort.price_low_high" | t }}</h6>
+                        <p class="">{{ "collection.sort.price_low_high" | t }}</p>
                       {% else %}
-                        <h6 class="">{{ "collection.sort.price_high_low" | t }}</h6>
+                        <p class="">{{ "collection.sort.price_high_low" | t }}</p>
                       {% endif %}
                     </a>
-    
+
                   {% endif %}
 
                 {% endfor %}
+                </div>
     
     
                 {% comment %}
@@ -245,8 +241,18 @@
 			</div>
 
 			<div class="all-collection-products  big-inner">
-				{% for product in collection.products %}
-					{% include 'product-card' %}
+        {% for product in collection.products %}
+        
+          {% if product.collections.size > 0 %}
+          
+          {% include 'product-card' %}
+
+          {% else %}
+            
+          <p>Sorry we have no products</p>
+          
+          {% endif %}
+				
 				{%endfor %}
 			</div>
 		</div>

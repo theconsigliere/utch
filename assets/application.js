@@ -24,11 +24,11 @@ let productForm = {
 
        // console.log("thumbnail updated", variant)
 
-        if ( variant.featured_image != null && variant.featured_image.alt != null) {
+        if ( variant.featured_image != null) {
           // show thumbnail for selected color
       // [data-thumnbail-color='red']
 
-
+      console.log( variant.featured_image )
 
 
         // hide all thumbnails 

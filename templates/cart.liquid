@@ -11,15 +11,20 @@
       <div class="cart-item-two">
           <div class="cart-item-inner">
 
-              <h4 class="uppercase ta-center">{{ 'cart.filled.title' | t }}</h4>
+              <h4 class="ta-center">{{ 'cart.filled.title' | t }}</h4>
 
 
               <div class="cart-page-contents js-cart-page-contents" data-cart-item-count="{{ cart.item_count }}">
                   {% include 'cart-contents' %}
+
+
+                
               </div>
 
 
               {% section 'cart-collection' %}
+
+              
           </div>
 
 

@@ -11,8 +11,8 @@
           {%- endif -%}
         {%- endif -%}
 
-        {%- if section.settings.subheader != blank -%}
-          <p class="text-center">{{ section.settings.subheader}}</p>
+        {%- if section.settings.column_richtext != blank -%}
+          <p class="text-center">{{ section.settings.column_richtext}}</p>
         {%- endif -%}
       </div>
     <div id="instafeed-container"></div>
@@ -46,11 +46,11 @@
         "default": "Instagram"
       },
       {
-        "type": "text",
-        "id": "subheader",
-        "label": "Subheader",
-        "info": "Shown above images"
-      }
+        "type": "richtext",
+        "id": "column_richtext",
+        "label": "text",
+        "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+     }
       
       ],
       "presets": [

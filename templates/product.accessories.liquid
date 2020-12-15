@@ -66,25 +66,28 @@
     <h6>{{ product.description | strip_html }}</h6>
     {% endif %}
     
+    {% if product.variants.size == 1 %}
 
-<div class="variants_product-box">
-  <p class="font-bolder">
-    {% for option in product.options %}
-  {{ option }}
-{% endfor %}
-  </p>
+      <div class="variants_product-box">
+        <p class="font-bolder">
+          {% for option in product.options %}
+        {{ option }}
+      {% endfor %}
+        </p>
 
-<p>
-  {% for variant in product.variants %}
+      <p>
+        {% for variant in product.variants %}
 
-    {% for option in variant.options %}
-    <span> {{ option }}, </span>
-    {% endfor %}
+          {% for option in variant.options %}
+          <span> {{ option }}, </span>
+          {% endfor %}
 
-{% endfor %}
+      {% endfor %}
 
-</p>
-</div>
+      </p>
+      </div>
+
+     {% endif %}
 
     {% include 'add-to-cart-form' %}
 
@@ -130,9 +133,40 @@
     {% comment %}Begin Product Bottom{% endcomment %}
     <div id="product-bottom" class="wrapper grid">
 
-  {% include 'product-more' with collection: collection, limit: 6, exclude: product.handle %}
-  {% endif %}
   
+          {% for collection in product.collections %}
+
+      
+          {% if collection.handle contains 'accessories' %}
+
+            {% assign plants = 'all-plants' %}
+
+            {% include 'product-more' with collection: collections[plants], limit: 6, exclude: product.handle %}
+            {% include 'product-more' with collection: collection, limit: 6, exclude: product.handle %}
+
+
+          {% endif %}
+
+        
+
+
+        {% endfor %}
+
+  </div>
+
+
+  {% else %}
+
+  <div id="product-bottom" class="wrapper grid">
+
+  {% include 'product-more' with collection: collection, limit: 6, exclude: product.handle %}
+
+  </div>
+          
+
+  {% endif %}
+
+
 
 </div>
 

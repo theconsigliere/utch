@@ -68,10 +68,31 @@
                     "id": "logo_image",
                     "type": "image_picker",
                     "label": "Logo"
-                },{
-                    "type": "textarea",
-                    "id": "desc",
-                    "label": "Description"
+                }, {
+                    "type": "text",
+                    "id": "address",
+                    "label": "Address" 
+                },
+                {
+                    "id": "email_link",
+                    "type": "url",
+                    "label": "Email Link"
+                  },
+                {
+                    "type": "text",
+                    "id": "email",
+                    "label": "Email"
+                }, 
+                {
+                    "id": "phone_link",
+                    "type": "url",
+                    "label": "Telephone Link"
+                  },
+                
+                {
+                    "type": "text",
+                    "id": "telephone",
+                    "label": "Telephone"
                 }
             ]
         }
@@ -179,7 +200,7 @@
             {% if block.settings.map_iframe != blank %}
 
                 <section class="map-block">
-                    <div class="inner">
+              
 
                         <div class="title-section">
                             <h2>{{ block.settings.title }}</h2>
@@ -201,14 +222,25 @@
                                             </div>
                                         {% endif %}
             
-                                        {% if block.settings.desc != blank %}
+                                      
             
+                                        
+
                                             <div class="hutch-text">
-                                                <h6>{{ block.settings.desc }}</h6>
+
+                                                <h6>{{ block.settings.address }}</h6>
+
+
+                                                <a href="{{ block.settings.email_link }}">
+                                                    <h6>{{ block.settings.email }}</h6>
+                                                </a>
+                                                <a href="{{ block.settings.phone_link }}">
+                                                    <h6>{{ block.settings.telephone }}</h6>
+                                                </a>
+                                               
                                             </div>
-                                            
-                                        {% endif %}
-            
+
+                                    
             
                                     </div>
                                 </div>
@@ -217,7 +249,7 @@
 
                         
                         </div>
-                    </div>
+                
                 </section>
                 
             {% endif %}

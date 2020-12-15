@@ -23,3 +23,28 @@
     width: auto;
   }
 }
+
+
+.search__label {
+  @include center-between;
+  margin-bottom: 2em;
+
+  @media (min-width: #{$screen-lg}) {
+   margin-bottom: 4em;
+  }
+
+  .collection-illustration {
+    padding: 2em 0;
+
+    .illo {
+
+      width: 120px;
+
+      @media (min-width: #{$screen-lg}) {
+        width: 250px;
+       }
+
+    
+    }
+}
+}

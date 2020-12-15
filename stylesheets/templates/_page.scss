@@ -965,6 +965,10 @@ section.hutch-section {
         width: 70%;
         text-align: left;
       }
+
+      * {
+        margin-bottom: 10px;
+      }
     }
   }
 }
@@ -1054,3 +1058,52 @@ section.hutch-section {
 }
 }
 
+.influence_logos {
+  padding-bottom: 5vh;
+
+  @media (min-width: #{$screen-lg}) {
+    padding-bottom: 10vh;
+  }
+
+  img {
+    max-width: 40px !important;
+
+    @media (min-width: #{$screen-md}) {
+      max-width: 80px !important;
+    }
+
+
+    @media (min-width: #{$screen-lg}) {
+      max-width: 100px !important;
+    }
+    
+
+  }
+}
+
+.intro-business-im {
+  margin-bottom: 0 !important;
+}
+
+
+.logo-business-local {
+
+
+  margin-bottom: 5vh;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-bottom: 10vh;
+  }
+
+}
+
+
+// contact page
+
+.main-contact-form {
+
+  input  {
+    margin: 15px 0;
+  }
+
+}

@@ -12,11 +12,12 @@
 
     @media (min-width: #{$screen-lg}) {
       width: 40%;
+      min-height: 150vh;
     }
 
     img {
-      width: auto;
-      height: 100%;
+      width: 100%;
+      min-height: 150vh;
       object-fit: cover;
       vertical-align: bottom;
       display: none;
@@ -79,17 +80,45 @@
 
 .mini-cart-title {
   border-bottom: 1px solid $dark-green;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .mini-cart-buttons {
   @include center-center-column;
   padding: 10px 0;
+  margin-bottom: 4em;
+
+
+  @media (min-width: #{$screen-lg}) {
+    margin-bottom: 0;
+  }
 
   * {
     width: 100%;
     margin: 5px 0;
     height: 3rem;
+  }
+
+}
+
+
+.cart-note {
+  border-top: 1px solid $dark-green;
+  @include start-center-column;
+
+  label {
+    margin: 10px 0;
+
+  }
+
+  textarea {
+    width: 100%;
+    border: 0;
+    min-height: 80px;
+    background: #f1f1f1;
+    margin-bottom: 10px;
+    font-weight: $type-thin;
+    font-family: $light-font;
   }
 
 }

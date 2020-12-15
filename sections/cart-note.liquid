@@ -1,0 +1,23 @@
+{% schema %}
+  {
+    "name": "Cart page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cart_notes_enable",
+        "label": "Enable cart notes",
+        "default": false
+      }
+    ]
+  }
+{% endschema %}
+
+
+<div class="cart-notes">
+    {% if section.settings.cart_notes_enable %}
+    <div class="grid__item medium-up--one-half cart-note">
+      <label for="CartSpecialInstructions" class="cart-note__label small--text-center">{{ 'cart.general.note' | t }}</label>
+      <textarea name="note" id="CartSpecialInstructions" class="cart-note__input">{{ cart.note }}</textarea>
+    </div>
+  {% endif %}
+</div>

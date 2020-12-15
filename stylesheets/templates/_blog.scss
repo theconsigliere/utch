@@ -9,6 +9,10 @@
     margin-top: 2em;
 
     @media (min-width: #{$screen-md}) {
+      height: 60vh;
+    }
+
+    @media (min-width: #{$screen-xxxl}) {
       height: 40vh;
     }
 
@@ -28,6 +32,7 @@
 
       @media (min-width: #{$screen-lg}) {
         position: absolute;
+        margin-top: 2em;
       }
 
       .article-buttons {
@@ -125,6 +130,7 @@
 
 .blog-page-header {
   padding-top: 5vh;
+  margin-top: 2em;
 }
 
 .blog-hero {

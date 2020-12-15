@@ -1,36 +1,4 @@
-{% assign current_variant = product.selected_or_first_available_variant %}
-{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
-
-{% assign description = product.description | strip_html %}
-
-{% if description contains '---' %}
-
-  {% assign quickdescription = description | split: '---' | first %}
-  {% assign description_array = description | split: '---' %}
-
-  {% assign productInfoKeys = 'Subtitle|Latin|Why|How|Unique' | split: '|' %}
-    {% for key in productInfoKeys %}
-
-    {% assign split_key = key | prepend: '~*~' | append: '~*~' %}
-      {% if description contains split_key %}
-        {% if key == 'Subtitle' %}
-        {% assign Subtitle = description | split: split_key | last | split: '---' | first %}
-          {% elsif key == 'Latin' %}
-          {% assign latin = description | split: split_key | last | split: '---' | first %}
-        {% elsif key == 'Why' %}
-          {% assign why = description | split: split_key | last | split: '---' | first %}
-        {% elsif key == 'How' %}  
-          {% assign how = description | split: split_key | last | split: '---' | first %}
-          {% assign watering = how | split: 'Watering:' | last | split: '.' | first %}
-          {% assign light = how | split: 'Light:' | last | split: '.' | first %}
-        {% elsif key == 'Unique' %}  
-          {% assign unique = description | split: split_key | last | split: '---' | first %}
-        {% endif %}   
-      {% endif %} 
-
-    {% endfor %}
-
-{% endif %}
+{% include 'desc-box' %}
 
 <div id="page-product">
 
@@ -190,14 +158,51 @@
     
 
 
-  {% if collection %}
+
 
     {% comment %}Begin Product Bottom{% endcomment %}
     <div id="product-bottom" class="wrapper grid">
+   
+    
 
-  {% include 'product-more' with collection: collection, limit: 6, exclude: product.handle %}
-  {% endif %}
+      {% comment %}findout we are on plant products if so display pots underneath{% endcomment %}
+      {% for collection in product.collections %}
+
+
+        {% if collection.handle contains 'plants' %}
+        {% assign mycollection = 'pots' %}
   
+          {% include 'product-more' with collection: collections[mycollection], limit: 6, exclude: product.handle %}
+
+          {% unless collection.handle contains 'pots' %}
+
+            {% include 'product-more' with collection: collection, limit: 6, exclude: product.handle %}
+
+          {% endunless %}
+
+          {% break %}
+
+        {% endif %}
+
+
+        {% if collection.handle contains 'accessories' %}
+
+
+        {% assign plants = 'all-plants' %}
+
+          {% include 'product-more' with collection: collections[plants], limit: 6, exclude: product.handle %}
+
+        {% endif %}
+
+
+
+
+      
+      {% endfor %}
+
+
+  
+
 
 </div>
 

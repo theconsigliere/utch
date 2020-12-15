@@ -13,6 +13,30 @@
             "type": "image_picker",
             "label": "Page Header Image"
         },
+
+        {
+            "id": "hutch_title",
+            "type": "text",
+            "label": "Title",
+            "placeholder": "Title"
+        },
+        {
+            "id": "image_one",
+            "type": "image_picker",
+            "label": "Image"
+        },{
+            "id": "image_two",
+            "type": "image_picker",
+            "label": "Image"
+        },{
+            "id": "image_three",
+            "type": "image_picker",
+            "label": "Image"
+        },{
+            "id": "image_four",
+            "type": "image_picker",
+            "label": "Image"
+        },
         {
             "type": "text",
             "id": "subtitle",
@@ -73,7 +97,10 @@
                 "label": "Image"
             }
             ]
-        }, {
+        }, 
+
+        
+        {
             "type": "hutch-section",
             "name": "Hutch Section",
             "settings": [
@@ -102,7 +129,7 @@
 
 <div class="about-page-content">
 
-    <div class="about-intro inner">
+    <div class="about-intro intro-business-im inner">
         {% if section.settings.textintro != blank %}
             <img data-src="{{ section.settings.title_image | img_url: 'master' }}" alt="{{ section.settings.title_image.alt }}" class="about-image-img  lazyload"/>
 
@@ -111,6 +138,31 @@
             </div>
         {% endif %}
     </div>
+
+<section class="influence_logos">
+   <div class="inner">
+    <div class="image-logo-bar">
+
+        {% if section.settings.hutch_title %}
+
+            <p class='logo-bar-title'>{{ section.settings.hutch_title }}</p>
+            
+        {% endif %}
+        
+
+        {% if section.settings.image_one %}
+    <div class="image-bar">
+
+        <img data-src="{{ section.settings.image_one | img_url: 'master' }}" alt="{{ section.settings.image_one.alt }}" class="lazyload"/>
+        <img data-src="{{ section.settings.image_two | img_url: 'master' }}" alt="{{ section.settings.image_two.alt }}" class="lazyload"/>
+        <img data-src="{{ section.settings.image_three | img_url: 'master' }}" alt="{{ section.settings.image_three.alt }}" class="lazyload"/>
+        <img data-src="{{ section.settings.image_four | img_url: 'master' }}" alt="{{ section.settings.image_four.alt }}" class="lazyload"/>
+
+    </div>
+    {% endif %}
+</div>
+   </div>
+</section>
 
     {% if section.settings.textintroarea != blank %}
 

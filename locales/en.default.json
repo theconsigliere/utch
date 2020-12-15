@@ -50,6 +50,20 @@
     }
   },
   "cart": {
+    "general": {
+      "title": "Your cart",
+      "note": "Add a gift note to your order!",
+      "remove": "Remove",
+      "subtotal": "Subtotal",
+      "savings": "You're saving",
+      "shipping_at_checkout": "Shipping & taxes calculated at checkout",
+      "update": "Update",
+      "checkout": "Check out",
+      "empty": "Your cart is currently empty.",
+      "edit": "Edit",
+      "cancel": "Cancel",
+      "continue_shopping": "Continue shopping"
+    },
     "button": {
       "count_html": "<span class=\"cart-item-count yellow-background js-cart-item-count\">{{ itemCount }}<\/span>",
       "count_empty_html": "<span class=\"cart-item-count yellow-background dont-display-count js-cart-item-count\">{{ itemCount }}<\/span>"

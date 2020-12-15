@@ -756,11 +756,12 @@
 
   .collection-block-info {
     width: 100%;
-    border-bottom: 2px solid $dark-green;
+   // border-bottom: 2px solid $dark-green;
     //margin-bottom: $offset-global;
 
     * {
       text-align: left;
+      margin: 0;
     }
   }
 
@@ -1101,6 +1102,7 @@
   @include center-between;
   max-width: 90%;
   margin: 0 auto;
+  margin-bottom: 15px;
 
   .topper-inner {
 background: $light-white;
@@ -1131,8 +1133,15 @@ background: $light-white;
         width: fit-content;
       }
 
+      .subnav {
+        max-width: 100%;
+        @media (min-width: #{$screen-lg}) {
+          max-width: 65%;
+        }
+      }
+
       * {
-        margin: 7px 0;
+        margin: 10px 5px;
         width: 100%;
         text-align: center;
 
@@ -1289,9 +1298,12 @@ background: $light-white;
 
   .collection_image_title {
     width: 100%;
+    margin-top: 10px;
+    text-align: center;
 
     @media (min-width: #{$screen-md}) {
      width: 40%;
+     text-align: left;
     }
 
   }
@@ -1336,23 +1348,22 @@ background: $light-white;
     position: absolute;
     width: 37px;
     height: 60px;
-    top: -15px;
-    left: -10px;
+    top: -30px;
+    left: 10px;
     background-size: cover;
     background-image:  asset-url('animation.gif');
     background-position: left center;
     background-repeat: no-repeat;
     margin-left: -30px;
     margin-bottom: 15px;
-    transform: rotate(220deg);
+    transform: rotate(250deg);
 
 
     @media (min-width: #{$screen-md}) {
       width: 82px;
       height: 100px;
-      top: -30px;
-      left: -50px;
-   
+      top: -45px;
+      left: -15px;
      }
 }
 
@@ -1366,4 +1377,18 @@ background: $light-white;
     * {
       text-align: center;
     }
+  }
+
+
+  .high-options {
+    @include start-between-column;
+
+    p {
+
+      &:first-of-type {
+        margin-bottom: 10px !important;
+      }
+    
+    }
+
   }

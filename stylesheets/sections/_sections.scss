@@ -246,7 +246,7 @@
   @include center-center-column;
 
   @media (min-width: #{$screen-lg}) {
-    @include center-between;
+    @include start-between;
   }
 }
 

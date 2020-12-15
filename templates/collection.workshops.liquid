@@ -41,56 +41,7 @@
 
             {% case collection.handle %}
 
-                {% when 'accessories' %}
-
-                <div class="collection-illustration">
-                  <img src="{{ 'accessories.svg' | asset_url }}" class='illo'> 
-                </div>
-
-
-                {% when 'terrariums' %}
-
-                <div class="collection-illustration">
-                  <img src="{{ 'terrarium.svg' | asset_url }}" class='illo'> 
-                </div>
-                
-
-                {% when 'low-light' %}
-
-                <div class="collection-illustration">
-                  <img src="{{ 'low-light.svg' | asset_url }}" class='illo'> 
-                </div>
-
-                {% when 'pet-friendly' %}
-
-                <div class="collection-illustration">
-                  <img src="{{ 'pet-friendly.svg' | asset_url }}" class='illo'> 
-                </div>
-
-                {% when 'sun-worshippers' %}
-
-                <div class="collection-illustration">
-                  <img src="{{ 'sun-worshippers.svg' | asset_url }}" class='illo'> 
-                </div>
-
-                {% when 'trailing-plants' %}
-
-                <div class="collection-illustration">
-                  <img src="{{ 'trailing.svg' | asset_url }}" class='illo'> 
-                </div>
-
-                {% when 'easy-care' %}
-
-                <div class="collection-illustration">
-                  <img src="{{ 'easy-care.svg' | asset_url }}" class='illo'> 
-                </div>
-
-                {% when 'air-purifying' %}
-
-                <div class="collection-illustration">
-                  <img src="{{ 'air-purifying.svg' | asset_url }}" class='illo'> 
-                </div>
-
+ 
                 {% when 'terrarium-workshops' %}
 
 
@@ -120,21 +71,23 @@
                 {%- comment -%}<h5 class="uppercase">{{ "collection.sort.title" | t }}</h5>{%- endcomment -%}
     
     
-                {% for option in collection.sort_options %}
+                <div class="high-options">
+                  {% for option in collection.sort_options %}
                   {% if option.value contains 'price-' %}
-    
+
                     <a class="text-link {% if collection.sort_by == option.value %}active{% endif %}" href="?sort_by={{ option.value }}">
-    
+
                       {% if option.value contains 'ascending' %}
-                        <h6 class="">{{ "collection.sort.price_low_high" | t }}</h6>
+                        <p class="">{{ "collection.sort.price_low_high" | t }}</p>
                       {% else %}
-                        <h6 class="">{{ "collection.sort.price_high_low" | t }}</h6>
+                        <p class="">{{ "collection.sort.price_high_low" | t }}</p>
                       {% endif %}
                     </a>
-    
+
                   {% endif %}
 
                 {% endfor %}
+                </div>
     
     
                 {% comment %}
@@ -163,9 +116,16 @@
 			</div>
 
 			<div class="all-collection-products  big-inner">
-				{% for product in collection.products %}
-					{% include 'product-card' %}
-				{%endfor %}
+        {% for product in collection.products %}
+        
+
+        {% include 'product-card' %}
+
+
+
+
+        {%endfor %}
+        
 			</div>
 		</div>
 	</div>

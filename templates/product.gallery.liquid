@@ -195,7 +195,28 @@
     {% comment %}Begin Product Bottom{% endcomment %}
     <div id="product-bottom" class="wrapper grid">
 
-  {% include 'product-more' with collection: collection, limit: 6, exclude: product.handle %}
+ 
+
+      {% comment %}findout we are on plant products if so display pots underneath{% endcomment %}
+      {% for collection in product.collections %}
+
+        {% if collection.handle contains 'plants' %}
+
+        {% assign mycollection = 'pots' %}
+
+          {% include 'product-more' with collection: collections[mycollection], limit: 6, exclude: product.handle %}
+
+        {% endif %}
+
+        {% if collection.handle contains 'accessories' %}
+
+        {% assign plants = 'all-plants' %}
+
+          {% include 'product-more' with collection: collections[plants], limit: 6, exclude: product.handle %}
+
+        {% endif %}
+       
+      {% endfor %}
   {% endif %}
   
 

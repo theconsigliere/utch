@@ -126,6 +126,19 @@
                     "id": "seventh_url",
                     "type": "url",
                     "label": "seventh Block Item URL"
+                },  {
+                    "id": "eight_image",
+                    "type": "image_picker",
+                    "label": "Eight Block Image"
+                }, {
+                    "id": "eight_title",
+                    "type": "text",
+                    "label": "Eight Block Title",
+                    "placeholder": "Eight Block Title"
+                }, {
+                    "id": "eight_url",
+                    "type": "url",
+                    "label": "Eight Block Item URL"
                 }
             ]
         }
@@ -139,7 +152,7 @@
     <div class="mobile-nav-inner">
         
         {% assign mobileList = section.settings.mobile_nav %}
-        {% include 'nav-list', handle: mobileList, class: 'mobile-list' %}
+        {% include 'mobile-list', handle: mobileList, class: 'mobile-list' %}
 
         {%- comment -%}
             <div class="mobile-currency">
@@ -285,6 +298,19 @@
                                             </a>
                                         </div>
                                         {% endif %}
+
+                                        {% if block.settings.eight_image != blank %}
+                                        <div class="nav-column">
+                                            <a href="{{ block.settings.eight_url }}" class='nav-column-link'>
+                                                <div class="nav-item-image">
+                                                        <img data-src="{{ block.settings.eight_image | img_url: 'master' }}" alt="{{ block.settings.eight_image.alt }}" class="lazyload"/>
+                                                </div>
+                                                <div class="nav-item-title">
+                                                    <p class='font-bolder'>{{ block.settings.eight_title }}</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -305,6 +331,8 @@
             Menu links, define handle for navList variable within nav-list.liquid. This is important as we can use the same loop menu code for both footer and main-menu menu's
         {% endcomment %}
         {% include 'nav-list', handle: 'main-menu', class: 'header-nav-list' %}
+
+        
     {% endif %}
     
 

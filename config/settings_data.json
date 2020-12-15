@@ -51,9 +51,9 @@
               "nav_item_title": "Plant Collections",
               "nav_item_title_url": "#",
               "show_megamenu": true,
-              "first_image": "shopify:\/\/shop_images\/Low_light.png",
-              "first_title": "Low Light",
-              "first_url": "shopify:\/\/collections\/low-light",
+              "first_image": "shopify:\/\/shop_images\/gg.png",
+              "first_title": "All Plants",
+              "first_url": "shopify:\/\/collections\/all-plants",
               "second_image": "shopify:\/\/shop_images\/Trailing.png",
               "second_title": "Trailing",
               "second_url": "shopify:\/\/collections\/trailing-plants",
@@ -71,7 +71,10 @@
               "sixth_url": "shopify:\/\/collections\/air-purifying",
               "seventh_image": "shopify:\/\/shop_images\/d.png",
               "seventh_title": "Terrariums",
-              "seventh_url": "shopify:\/\/collections\/terrariums"
+              "seventh_url": "shopify:\/\/collections\/terrariums",
+              "eight_image": "shopify:\/\/shop_images\/ss.png",
+              "eight_title": "Low Light",
+              "eight_url": "shopify:\/\/collections\/low-light"
             }
           },
           "7e16304b-209e-4ed5-b40c-72decb6108a0": {
@@ -86,22 +89,8 @@
               "fourth_title": "",
               "fifth_title": "",
               "sixth_title": "",
-              "seventh_title": ""
-            }
-          },
-          "e7cce121-38fd-4b6d-a704-a8bcc9be27fc": {
-            "type": "nav_item",
-            "settings": {
-              "nav_item_title": "All Plants",
-              "nav_item_title_url": "shopify:\/\/collections\/all-plants",
-              "show_megamenu": false,
-              "first_title": "",
-              "second_title": "",
-              "third_title": "",
-              "fourth_title": "",
-              "fifth_title": "",
-              "sixth_title": "",
-              "seventh_title": ""
+              "seventh_title": "",
+              "eight_title": ""
             }
           },
           "2624b3d5-7cdb-455e-8f4e-e87f4a69ef9d": {
@@ -115,9 +104,9 @@
               "second_image": "shopify:\/\/shop_images\/Group_863.png",
               "second_title": "About",
               "second_url": "shopify:\/\/pages\/about",
-              "third_image": "shopify:\/\/shop_images\/Group_864.png",
-              "third_title": "FAQs",
-              "third_url": "shopify:\/\/pages\/frequently-asked-questions",
+              "third_image": "shopify:\/\/shop_images\/Group_915.png",
+              "third_title": "Our Workshops",
+              "third_url": "shopify:\/\/collections\/terrarium-workshops",
               "fourth_image": "shopify:\/\/shop_images\/cpntact-mini.png",
               "fourth_title": "Contact Us",
               "fourth_url": "shopify:\/\/pages\/contact-us",
@@ -127,15 +116,18 @@
               "sixth_image": "shopify:\/\/shop_images\/Group_887.png",
               "sixth_title": "Visiting Us",
               "sixth_url": "shopify:\/\/pages\/visiting-us",
-              "seventh_image": "shopify:\/\/shop_images\/111_8bc68f19-4380-4196-9231-157650abac59.png",
-              "seventh_title": "Our Workshops",
-              "seventh_url": "shopify:\/\/collections\/terrarium-workshops"
+              "seventh_image": "shopify:\/\/shop_images\/Group_864.png",
+              "seventh_title": "FAQs",
+              "seventh_url": "shopify:\/\/pages\/frequently-asked-questions",
+              "eight_image": "shopify:\/\/shop_images\/hutvhh.png",
+              "eight_title": "Work with Hutch",
+              "eight_url": "shopify:\/\/pages\/work-with-hutch"
             }
           },
           "43f6ecb0-5c82-42f7-8755-984cd990c4be": {
             "type": "nav_item",
             "settings": {
-              "nav_item_title": "Blog",
+              "nav_item_title": "Journal",
               "nav_item_title_url": "shopify:\/\/blogs\/news",
               "show_megamenu": false,
               "first_title": "",
@@ -144,14 +136,14 @@
               "fourth_title": "",
               "fifth_title": "",
               "sixth_title": "",
-              "seventh_title": ""
+              "seventh_title": "",
+              "eight_title": ""
             }
           }
         },
         "block_order": [
           "fcc5c330-c27a-46ae-a65e-e9dba7fe39c3",
           "7e16304b-209e-4ed5-b40c-72decb6108a0",
-          "e7cce121-38fd-4b6d-a704-a8bcc9be27fc",
           "2624b3d5-7cdb-455e-8f4e-e87f4a69ef9d",
           "43f6ecb0-5c82-42f7-8755-984cd990c4be"
         ],
@@ -299,7 +291,7 @@
           "access_token": "",
           "limit": 10,
           "header": "Hutch on the gram",
-          "subheader": "@hutchhouseplants #hutchhouseplants"
+          "column_richtext": "<p><a title=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" href=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" target=\"_blank\">@hutchhouseplants <\/a>#hutchhouseplants<\/p>"
         }
       },
       "160363890093de0868": {
@@ -463,6 +455,21 @@
       },
       "cart-collection": {
         "type": "cart-collection",
+        "blocks": {
+          "0d3848ef-0d4c-4422-9e4d-e90ea1ee82a9": {
+            "type": "collection",
+            "settings": {
+              "collection": "accessories",
+              "max_products": 6,
+              "title": "Why not add a pot to your order?",
+              "show_button": false,
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "0d3848ef-0d4c-4422-9e4d-e90ea1ee82a9"
+        ],
         "settings": {}
       },
       "16040664432d54a6e4": {
@@ -546,7 +553,7 @@
               "title": "Delivery information",
               "deliveryoption": "Local Delivery",
               "delivery_color": "#d7e4d7",
-              "deliveryarea": "Residents living within 5 miles of our Exeter store, simply select Local Delivery at the checkout. Once your order is placed, you will be contacted to notify you of a delivery day. <p> <br>Please note, there are a limited number of local slots available; specific time requests are not always possible. <\/p><p> <br>Delivery instructions are provided at your own risk and discretion. Hutch cannot accept liability for any parcels left in accordance with any specific instructions (e.g leave outside or with neighbour).<\/p>",
+              "deliveryarea": "Residents living within 5 miles of our Exeter store, simply select Local Delivery at the checkout. Once your order is placed, you will be contacted to notify you of a delivery day. <p> <br>Please note, there are a limited number of local slots available; specific time requests are not always possible. <\/p><p> <br>Delivery instructions are provided at your own risk and discretion. Hutch cannot accept liability for any parcels left in accordance with any specific instructions (e.g leave outside or with neighbour)<\/p>",
               "deliveryprice": "£2.50",
               "delivery_colortwo": "#d7e4d7",
               "deliveryoptiontwo": "UK Delivery via Royal Mail",
@@ -557,9 +564,9 @@
               "deliveryareathree": "Customers are able to collect their orders for free from our Exeter store. You will be sent a notification email once your order is ready to collect; please have this with you when you pop along to collect your order. <p> <br> During Lockdown 2.0, we are open for collections 11am-3pm Monday, Wednesday and Friday. For collections outside of these hours, please contact us in advance of placing your order.<\/p>",
               "deliverypricethree": "Free",
               "delivery_colorfour": "#ded0d0",
-              "deliveryoptionfour": "Free Shipping on all orders over £35",
-              "deliveryareafour": "Please note that, during the COVID-19 pandemic, whilst we will work hard to avoid delays, customers should allow extra time on all orders. Just use offer code FREESHIP35",
-              "deliverypricefour": "FREESHIP35"
+              "deliveryoptionfour": "Christmas Shipping Deadlines",
+              "deliveryareafour": "We recommend placing any Christmas orders by Sunday 20th December at the latest for the best chance of our plants arriving in time for Christmas Day. Our last local deliveries will run on 23rd December. Any orders after the 23rd December will be shipped on the 4th January.",
+              "deliverypricefour": ""
             }
           }
         },
@@ -825,15 +832,7 @@
               "title": "Visiting Us",
               "desc": "Situated on Paris St, in the heart of Exeter, we are a stone’s throw from the \nBampfylde Street and Princesshay car parks. We are also located next to the \nbus station and many of the park and ride buses stop opposite the shop.",
               "opening_title": "Opening Hours",
-              "opening_times": "<p>Monday - Friday: 10am - 5pm<\/p><p><br\/>Saturday: 10am - 6pm<\/p><p><br\/>Sundays: 11am - 3pm<\/p>"
-            }
-          },
-          "fe71a826-0451-467b-af3f-ac74524a4dd9": {
-            "type": "info-block",
-            "settings": {
-              "title": "Covid Update",
-              "desc": "<p>We want everyone who visits us to feel as safe and secure as possible. As a result, we wanted to let you know what we’re doing to ensure that you have a comfortable experience shopping with us.<br\/><br\/>We have spent a lot of time refitting the shop to ensure that everyone can socially distance and to make space for online orders, deliveries and a new click and collect option we’ll be launching really soon. <\/p><p>If you do not feel comfortable heading into town or feel unwell, we ask that you stay home and we’ll bring the jungle to your doorstep! We are able to offer a contactless local delivery option and can ship a wide range  of our products around the UK.<br\/><br\/>​We will only allow 2 people into the shop at any one time. Should the shop already be full when you arrive, we have marked out points for queuing outside. We thank you for your patience with this and ask for your consideration of our neighbours and their customers (Bake and Kids Hub Coffee) if you do have to queue.<br\/><br\/>We are providing hand sanitiser at the entrance and till point, and ask that everyone uses this prior to entering the shop.<br\/><br\/>We have marked 2 metre spacing on the shop floor and ask all of our customers to maintain a 2 metre distance from each other and from our team whilst in store.<br\/><br\/>​We are not requiring customers to wear face coverings, but are happy if you choose to do so. Don’t be surprised if you see our team wearing them too!<br\/><br\/>​We will not be accepting cash payments and would prefer contactless where possible.<br\/><br\/>​We will be regularly cleaning and sanitising the shop, particularly high contact points like the front door and card reader.<br\/><br\/>​Where the weather permits, we will have the front door open. ​Most importantly, we want to thank everyone for their understanding and simply ask that people be kind to one another, wherever you are and whatever you’re doing.<\/p>",
-              "info_image": "shopify:\/\/shop_images\/Image_112_2.jpg"
+              "opening_times": "<p>Monday - Friday: 10am - 5pm<br\/>Saturday: 10am - 6pm<br\/>Sundays: 11am - 3pm<\/p>"
             }
           },
           "935aad5a-0efe-4e7e-b041-6632056d97b5": {
@@ -842,14 +841,26 @@
               "title": "Get Directions",
               "map_iframe": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d10102.875941898134!2d-3.5261239!3d50.7251524!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6626b6afceb7ba6!2sHutch%20Houseplants!5e0!3m2!1sen!2suk!4v1606924088206!5m2!1sen!2suk\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"><\/iframe>",
               "logo_image": "shopify:\/\/shop_images\/huth.png",
-              "desc": "9 Paris Street, Exeter, Devon EX1 2JB\n<br>\nE:  info@hutchplants.co.uk\n<br>\nT:  01392 758 130"
+              "address": "9 Paris Street, Exeter, Devon EX1 2JB",
+              "email_link": "mailto:info@hutchplants.co.uk",
+              "email": "info@hutchplants.co.uk",
+              "phone_link": "tel:01392758130",
+              "telephone": "01392 758 130"
+            }
+          },
+          "fe71a826-0451-467b-af3f-ac74524a4dd9": {
+            "type": "info-block",
+            "settings": {
+              "title": "Christmas Update",
+              "desc": "<p>We are open every day until Christmas Eve when we will close at 2pm. We will then be closed until the 4th January 2021. <\/p><p>Our website will remain live throughout the Christmas period for all your plant shopping needs, and any orders placed after 23rd December 2020 will be shipped on the 4th January.<\/p><p><span style=\"text-decoration:underline\">National Shipping<\/span><\/p><p>We ship all of our national orders using the Royal Mail Tracked 48 service. Whilst this means that orders should be expected to arrive arrive 2 days after shipping, during the Christmas period, and with the COVID-19 pandemic, we are advising customers to anticipate some delays.<\/p><p>As a result, we recommend placing any orders for Christmas as soon as possible and no later than Sunday 20th December, to give us the best chance of getting your plants to you or your loved ones before the big day! <\/p><p><span style=\"text-decoration:underline\">Local Deliveries<\/span><\/p><p>Our last local deliveries will take place on 23rd December. Again, we recommend getting any orders in as soon as possible and no later than Sunday 20th December to ensure we can get your plants to you before the big day! <\/p>",
+              "info_image": "shopify:\/\/shop_images\/Image_112_2.jpg"
             }
           }
         },
         "block_order": [
           "dd2b0c3b-d3a2-4b3c-85dc-fbfd4374f36a",
-          "fe71a826-0451-467b-af3f-ac74524a4dd9",
-          "935aad5a-0efe-4e7e-b041-6632056d97b5"
+          "935aad5a-0efe-4e7e-b041-6632056d97b5",
+          "fe71a826-0451-467b-af3f-ac74524a4dd9"
         ],
         "settings": {}
       },
@@ -868,19 +879,19 @@
           "9c89e44f-f8fb-4761-bbeb-fa1fff14d353": {
             "type": "about-section",
             "settings": {
-              "textintro": "A  Little bit about One Tree Planted",
+              "textintro": "A little bit about One Tree Planted",
               "section_title": "One Tree Planted’s Goal",
-              "section_desc": "<p>One tree Planted is a 501C3 non-profit environmental charity with a focus on global reforestation. We work with amazing<\/p><p>Planters in North America, South America, Asia and Africa to get Trees in the ground and restore forests after fires and floods, Create jobs, build communities and protect habitat for bio-diversisty.<\/p><p><\/p><p><\/p>",
-              "section_title_two": "in 2018 One Tree Planted 1.3 million trees",
-              "section_desc_two": "<p>One tree Planted has planting projects in four global regions: North America, Latin America, Africa and Asia. Within these regions, in 2019 we had projects in 17 different Countries.<\/p><p>Planting trees in each of these regions comes with its own diverse benefits, challenges, and Rewards. And Every reforestation project has its own unique impact on forests, communities, animals and the planet overall. Read more about this at their <a href=\"https:\/\/onetreeplanted.org\/\" title=\"https:\/\/onetreeplanted.org\/\" target=\"_blank\">website here<\/a><\/p>"
+              "section_desc": "<p>One tree Planted is a non-profit environmental charity with a focus on global reforestation. The system is simple: for every US dollar that they raise, they put a tree in the ground. <\/p><p>They work with amazing planters in North America, South America, Asia and Africa to get trees in the ground and restore forests after fires and floods, create jobs, build communities and protect habitat for bio-diversisty.<\/p><p><\/p><p><\/p>",
+              "section_title_two": "In 2018 One Tree Planted 1.3 million trees",
+              "section_desc_two": "<p>One tree Planted has planting projects in four global regions: North America, Latin America, Africa and Asia. Within these regions, in 2019 they had projects in 17 different Countries.<\/p><p>Planting trees in each of these regions comes with its own diverse benefits, challenges, and rewards. And every reforestation project has its own unique impact on forests, communities, animals and the planet overall. Read more about this at their <a href=\"https:\/\/onetreeplanted.org\/\" title=\"https:\/\/onetreeplanted.org\/\" target=\"_blank\">website here<\/a><\/p>"
             }
           },
           "75e4955c-b119-4b18-9ab1-c9d730a5ea59": {
             "type": "hutch-section",
             "settings": {
               "hutch_image": "shopify:\/\/shop_images\/huth.png",
-              "hutch_title": "For Each Plant sold we donate 10p!",
-              "hutch_desc": "We’re happy to announce that we’ve partnered with One Tree Planted\/@onetreeplanted\nto plant trees! One Tree Planted is a 501(c)(3) nonprofit dedicated to global reforestation."
+              "hutch_title": "Planting trees through our new paper bag tax",
+              "hutch_desc": "We’re happy to announce that we’ve partnered with One Tree Planted\nto plant trees! One Tree Planted is a nonprofit dedicated to global reforestation."
             }
           }
         },
@@ -893,7 +904,145 @@
           "textintro": "One Tree Planted",
           "title_image": "shopify:\/\/shop_images\/one-tree-planted-header_1.jpg",
           "subtitle": "Hutch is proud to announce we are now working with One Tree Planted!",
-          "textintroarea": "We’re happy to announce that we’ve partnered with One Tree Planted\/@onetreeplanted to plant trees One Tree Planted is a 501(c)(3) nonprofit dedicated to \nglobal reforestation. They plant trees to restore nature and biodiversity. They also raise awareness about the importance of trees, offer businesses like\nours a simple sustainability solution, and motivate younger generations to do something positive for the environment. For every product sold \nHutch Houseplants will plant  trees!"
+          "textintroarea": "Through our new 10p paper bag tax which is charged on all bags we provide in store and incorporated into our shipping costs for every order that we ship, we are planting trees around the world. For every US Dollar that we provide to One Tree Planted, they'll get a tree in the ground.  \n<p>\n<\/p><p>\nOne Tree Planted is a nonprofit dedicated to \nglobal reforestation. They plant trees to restore nature and biodiversity. They also raise awareness about the importance of trees, offer businesses like\nours a simple sustainability solution, and motivate younger generations to do something positive for the environment.<\/p>"
+        }
+      },
+      "local-business": {
+        "type": "local-business",
+        "blocks": {
+          "26c78067-3d3f-4733-8bd4-47d2f5ce30c7": {
+            "type": "image-section",
+            "settings": {
+              "image_one": "shopify:\/\/shop_images\/Mask_Group_120_1.jpg",
+              "image_two": "shopify:\/\/shop_images\/Mask_Group_122_1.jpg",
+              "image_three": "shopify:\/\/shop_images\/Mask_Group_121_1.jpg",
+              "image_four": "shopify:\/\/shop_images\/Mask_Group_119_1.jpg"
+            }
+          },
+          "78c0a944-27c1-480f-ac87-73f3341aff3b": {
+            "type": "hutch-section",
+            "settings": {
+              "hutch_image": "shopify:\/\/shop_images\/huth.png",
+              "hutch_title": "Contact us today",
+              "hutch_desc": "Hutch has a team of passionate plant parents\nready to help you no matter your requirement. Use our Contact Us page, drop us an email, give us a  call or visit our Paris Street shop."
+            }
+          }
+        },
+        "block_order": [
+          "26c78067-3d3f-4733-8bd4-47d2f5ce30c7",
+          "78c0a944-27c1-480f-ac87-73f3341aff3b"
+        ],
+        "settings": {
+          "textintro": "Work with us",
+          "title_image": "shopify:\/\/shop_images\/Mask_Group_117gfd_1.jpg",
+          "hutch_title": "We have worked with",
+          "image_one": "shopify:\/\/shop_images\/Image_164.jpg",
+          "image_two": "shopify:\/\/shop_images\/Image_168.jpg",
+          "image_three": "shopify:\/\/shop_images\/Image_165.jpg",
+          "image_four": "shopify:\/\/shop_images\/Mask_Group_111.jpg",
+          "subtitle": "Improve your mental wellbeing, with a touch of green",
+          "textintroarea": "Did you know that being surrounded by plants is proven to be good for your mental well being? Research has shown that plants not only reduce stress and \nimprove your mood, they also increase productivity, reduce fatigue and one study has found that they can in fact reduce pain.\n\nSo why would you not want plants to be a key part of your business? We’re passionate about working with other businesses to share our love of all things\n leafy. Whether you’re looking to add a touch of green to your office, or have a restaurant you want to turn into a jungle, whatever the space, we’re here to \nhelp you fill it with plants!"
+        }
+      },
+      "local-business-logo": {
+        "type": "local-business-logo",
+        "blocks": {
+          "04590fca-78f0-4c47-86d3-b00f77c3828f": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_164.jpg"
+            }
+          },
+          "8f4fb219-6248-48c3-bba9-922e99233f21": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_165.jpg"
+            }
+          },
+          "0b12b758-2cc3-4340-a108-6f947bb24b2e": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_167.jpg"
+            }
+          },
+          "65151c3f-b457-48bd-b1ad-b917bca92f74": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Mask_Group_111.jpg"
+            }
+          },
+          "a4fb09c2-3168-481b-b1ac-e18b900abcff": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_166.jpg"
+            }
+          },
+          "2d6204ae-816b-4df2-9a61-784e71a7c545": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_168.jpg"
+            }
+          },
+          "23632769-2759-4a62-96df-76762addfbe8": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_176.jpg"
+            }
+          },
+          "804eef0b-c343-41b0-ab37-abd7a20a52ee": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_170.jpg"
+            }
+          },
+          "567c6ac3-8be1-489d-b1c2-9afce0828dc4": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_172.jpg"
+            }
+          },
+          "3c913a6d-beae-4658-b5fd-02098e674da3": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_173.jpg"
+            }
+          },
+          "b85a59f0-cc77-4eed-854b-bb2b93bb7415": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_175.jpg"
+            }
+          },
+          "f7ef3a15-63c3-4ebb-b2fc-67f3019af770": {
+            "type": "logo-item",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/Image_174.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "04590fca-78f0-4c47-86d3-b00f77c3828f",
+          "8f4fb219-6248-48c3-bba9-922e99233f21",
+          "0b12b758-2cc3-4340-a108-6f947bb24b2e",
+          "65151c3f-b457-48bd-b1ad-b917bca92f74",
+          "a4fb09c2-3168-481b-b1ac-e18b900abcff",
+          "2d6204ae-816b-4df2-9a61-784e71a7c545",
+          "23632769-2759-4a62-96df-76762addfbe8",
+          "804eef0b-c343-41b0-ab37-abd7a20a52ee",
+          "567c6ac3-8be1-489d-b1c2-9afce0828dc4",
+          "3c913a6d-beae-4658-b5fd-02098e674da3",
+          "b85a59f0-cc77-4eed-854b-bb2b93bb7415",
+          "f7ef3a15-63c3-4ebb-b2fc-67f3019af770"
+        ],
+        "settings": {
+          "textintro": "We are proud",
+          "textintroarea": "To work with some amazing businesses, including:"
+        }
+      },
+      "cart-note": {
+        "type": "cart-note",
+        "settings": {
+          "cart_notes_enable": true
         }
       }
     },

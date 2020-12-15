@@ -11,18 +11,23 @@
   }
 
   .line-image {
-    width: 30%;
+    width: fit-content;
     margin-right: $line-global;
 
     img {
-      width: 100%;
+      width: auto;
       border-radius: 15px;
+      max-height: 180px;
   }
   }
 
   .line-info {
     width: 60%;
     @include center-between-column;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 80%;
+    }
   }
 
   .info-content,

@@ -182,8 +182,9 @@ a {
   margin-bottom: 1rem;
   line-height: 1.5;
   font-weight: $type-thin;
-  font-size: 0.8rem;
   font-family: $light-font;
+  font-size: 0.8rem;
+
 
   @media (min-width: #{$screen-sm}) {
     margin-bottom: 1.5rem;
