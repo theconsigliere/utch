@@ -291,7 +291,7 @@
           "access_token": "",
           "limit": 10,
           "header": "Hutch on the gram",
-          "column_richtext": "<p><a title=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" href=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" target=\"_blank\">@hutchhouseplants <\/a>#hutchhouseplants<\/p>"
+          "column_richtext": "<p><a href=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" title=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" target=\"_blank\">@hutchhouseplants <\/a><a title=\"https:\/\/www.instagram.com\/explore\/tags\/hutchhouseplants\/\" href=\"https:\/\/www.instagram.com\/explore\/tags\/hutchhouseplants\/\" target=\"_blank\">#hutchhouseplants<\/a><\/p>"
         }
       },
       "160363890093de0868": {
