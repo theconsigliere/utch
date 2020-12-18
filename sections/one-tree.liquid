@@ -112,9 +112,16 @@
                     "id": "hutch_desc",
                     "type": "textarea",
                     "label": "Our Mission"
+                },
+                {
+                    "id": "hutch_counter",
+                    "type": "text",
+                    "label": "How many trees have been planted?",
+                    "placeholder": "15"
                 }
             ]
         }
+
     ]
 }
 
@@ -226,6 +233,38 @@
                     </div>
                
             </section>
+
+
+            {% when 'counter' %}
+
+<section class="one-tree-counter__section">
+    <div class="inner__counter">
+
+        {% if block.settings.hutch_image != blank %}
+        <div class="trees-logo">
+            <img data-src="{{ block.settings.hutch_image | img_url: 'master' }}" alt="{{ block.settings.hutch_image.alt }}" class="lazyload"/>
+        </div>
+
+    {% endif %}
+
+        {% if block.settings.hutch_title != blank %}
+
+        <div class="hutch-text">
+            <h6 class='white'>{{ block.settings.hutch_title }}</h6>
+            <p class='white'>{{ block.settings.hutch_desc }}</p>
+            <h2 class='hutch-counter white'>{{ block.settings.hutch_counter }}</h2>
+
+        </div>
+        
+    {% endif %}
+
+
+
+
+    </div>
+
+</section>
+
 
 
 		{% endcase %}

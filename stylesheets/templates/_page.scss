@@ -1151,3 +1151,28 @@ section.hutch-section {
     width: 120px !important; 
   }
 }
+
+// counter
+
+
+.one-tree-counter__section {
+  background: $green;
+
+  .inner__counter {
+    max-width: 80%;
+    margin: 0 auto;
+    @include center-center-column;
+    text-align: center;
+padding: 25px 0;
+
+    .trees-logo {
+      max-width: 250px;
+      margin: 10px 0;
+
+
+      @media (min-width: #{$screen-lg}) {
+        margin: 20px 0;
+      }
+    }
+}
+}
