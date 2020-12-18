@@ -503,6 +503,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 15px;
+    vertical-align: bottom;
 
     @media (min-width: #{$screen-md}) {
       border-radius: 25px;
