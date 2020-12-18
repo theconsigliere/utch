@@ -1050,7 +1050,7 @@
 }
 
 .category-item-group {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 
   @media (min-width: #{$screen-lg}) {
@@ -1066,6 +1066,35 @@
 
 // Portfolio
 
+.portfolio-item {
+  width: 95%;
+  text-align: center;
+  height: 25vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 10px 0;
+  background: $dark-green;
+
+  @media (min-width: #{$screen-lg}) {
+    height: 8vh;
+    margin: 0;
+    background: transparent;
+  }
+}
+
+.portfolio--item_image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  min-height: 25vh;
+  opacity: 0.8;
+
+  @media (min-width: #{$screen-lg}) {
+    display: none;
+  }
+}
+
 .portfolio__categories {
   @include center-center-column;
   padding: 2em 0;
@@ -1073,11 +1102,27 @@
 }
 
 .portfolio-link {
-  font-size: 5vh;
+  font-size: 3vh;
   margin: 10px 0;
   font-family: $text-font;
-  color: #485448;
+  color: $white;
   z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  &:hover {
+    color: $white;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    color: #485448;
+    font-size: 5vh;
+  }
+
+
 }
 
 .portfolio__categories a:hover {
@@ -1095,9 +1140,11 @@
   background-color: $white;
   visibility: hidden;
   border-radius: 25px;
+  display: none;
 
   @media (min-width: #{$screen-lg}) {
     width: 28vw;
+    display: block;
   }
 }
 .portfolio__image--l {
@@ -1147,6 +1194,7 @@
 
 .category-item-group {
   padding-bottom: 2em;
+  
 }
 
 #insta-feed {

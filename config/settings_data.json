@@ -82,14 +82,28 @@
             "settings": {
               "nav_item_title": "Accessories",
               "nav_item_title_url": "shopify:\/\/collections\/accessories",
-              "show_megamenu": false,
-              "first_title": "",
-              "second_title": "",
-              "third_title": "",
-              "fourth_title": "",
-              "fifth_title": "",
-              "sixth_title": "",
-              "seventh_title": "",
+              "show_megamenu": true,
+              "first_image": "shopify:\/\/shop_images\/Group_946.png",
+              "first_title": "Pots",
+              "first_url": "shopify:\/\/collections\/pots",
+              "second_image": "shopify:\/\/shop_images\/Group_945.png",
+              "second_title": "Hanging Planters",
+              "second_url": "shopify:\/\/collections\/hanging",
+              "third_image": "shopify:\/\/shop_images\/Group_944.png",
+              "third_title": "Planters",
+              "third_url": "shopify:\/\/collections\/planters",
+              "fourth_image": "shopify:\/\/shop_images\/Group_943.png",
+              "fourth_title": "Plant Care",
+              "fourth_url": "shopify:\/\/collections\/plant-care",
+              "fifth_image": "shopify:\/\/shop_images\/Group_942.png",
+              "fifth_title": "Shoppers",
+              "fifth_url": "shopify:\/\/collections\/shoppers",
+              "sixth_image": "shopify:\/\/shop_images\/Group_947.png",
+              "sixth_title": "Baskets",
+              "sixth_url": "shopify:\/\/collections\/baskets",
+              "seventh_image": "shopify:\/\/shop_images\/Group_941.png",
+              "seventh_title": "Gift Vouchers",
+              "seventh_url": "shopify:\/\/products\/hutch-gift-voucher",
               "eight_title": ""
             }
           },
@@ -291,7 +305,7 @@
           "access_token": "",
           "limit": 10,
           "header": "Hutch on the gram",
-          "column_richtext": "<p><a href=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" title=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" target=\"_blank\">@hutchhouseplants <\/a><a title=\"https:\/\/www.instagram.com\/explore\/tags\/hutchhouseplants\/\" href=\"https:\/\/www.instagram.com\/explore\/tags\/hutchhouseplants\/\" target=\"_blank\">#hutchhouseplants<\/a><\/p>"
+          "column_richtext": "<p><a href=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" title=\"https:\/\/www.instagram.com\/hutchhouseplants\/\" target=\"_blank\">@hutchhouseplants <\/a><a href=\"https:\/\/www.instagram.com\/explore\/tags\/hutchhouseplants\/\" title=\"https:\/\/www.instagram.com\/explore\/tags\/hutchhouseplants\/\" target=\"_blank\">#hutchhouseplants<\/a><\/p>"
         }
       },
       "160363890093de0868": {
@@ -317,10 +331,10 @@
       "160364103275634db7": {
         "type": "homepage-as-featured",
         "blocks": {
-          "8a9d1836-8e2c-476d-b795-e309fe94450a": {
+          "784ac6ee-4301-45ca-bd38-82bb975c355d": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Image_153.png"
+              "image": "shopify:\/\/shop_images\/Image_149.png"
             }
           },
           "8d68cc09-7cbb-4696-964b-bb62de637896": {
@@ -329,16 +343,16 @@
               "image": "shopify:\/\/shop_images\/Image_154.png"
             }
           },
-          "784ac6ee-4301-45ca-bd38-82bb975c355d": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Image_149.png"
-            }
-          },
           "2242c086-2887-42f3-b9ec-4d004234b361": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Image_152.png"
+            }
+          },
+          "8a9d1836-8e2c-476d-b795-e309fe94450a": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Image_153.png"
             }
           },
           "df6fac6f-bbc1-42cd-a8a0-f76a3dcae0e9": {
@@ -349,10 +363,10 @@
           }
         },
         "block_order": [
-          "8a9d1836-8e2c-476d-b795-e309fe94450a",
-          "8d68cc09-7cbb-4696-964b-bb62de637896",
           "784ac6ee-4301-45ca-bd38-82bb975c355d",
+          "8d68cc09-7cbb-4696-964b-bb62de637896",
           "2242c086-2887-42f3-b9ec-4d004234b361",
+          "8a9d1836-8e2c-476d-b795-e309fe94450a",
           "df6fac6f-bbc1-42cd-a8a0-f76a3dcae0e9"
         ],
         "settings": {

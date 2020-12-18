@@ -36,7 +36,7 @@ function createPortfolioHover(e) {
 		installMediaQueryWatcher("(min-width: 992px)", function(matches) {
   
 			if (matches) {
-			  
+			  // big screen
 				tl
 				.set(sInside, {backgroundImage: `url(${imagesmall})`})
 				.set(lInside, {backgroundImage: `url(${imagelarge})`}, 0)
@@ -46,41 +46,64 @@ function createPortfolioHover(e) {
 				.to(pageBackground, {backgroundColor: color}, 0)
 			  
 			} else {
+			  // small screen
 			  
 				tl
-				.set(sInside, {backgroundImage: `url(${imagesmall})`})
-				.set(lInside, {backgroundImage: `url(${imagelarge})`}, 0)
-				.to([imageSmall, imageLarge], {autoAlpha: 1}, 0)
-				.to(allSiblings, {color: "#fff", autoAlpha: 0.4 }, 0)
+				// .set(sInside, {backgroundImage: `url(${imagesmall})`})
+				// .set(lInside, {backgroundImage: `url(${imagelarge})`}, 0)
+				// .to([imageSmall, imageLarge], {autoAlpha: 1}, 0)
+				 .to(allSiblings, {color: "#fff", autoAlpha: 0.4 }, 0)
 				.to(activeLink, {color: "#fff", autoAlpha: 1 }, 0)
-				.to(pageBackground, {backgroundColor: color}, 0)
+				// .to(pageBackground, {backgroundColor: color}, 0)
 			}
 		  });
 
 
 			
 	} else if (e.type === "mouseleave") {
+
+
 		const tl = gsap.timeline()
+
+installMediaQueryWatcher("(min-width: 992px)", function(matches) {
+
+	if (matches) {
 		tl
 			.to([imageSmall, imageLarge], {autoAlpha: 0}, 0)
 			.to(allLinks, {color: "#485448", autoAlpha: 1  },0)
 		//	.to(pageBackground, {backgroundColor: "#fafafa"})
+
+	} else {
+		tl.kill()
+	}
+
+})
 
 	}
 }
 
 function createPortfolioMove(e) {
 	const {clientY} = e
-	gsap.to(imageLarge, {
-		duration: 1.2,
-		y: getPortfolioOffset(clientY)/3,
-		ease: "power3.out"
-	})
 
-	gsap.to(imageSmall, {
-		duration: 1.5,
-		y: getPortfolioOffset(clientY)/6,
-		ease: "power3.out"
+	installMediaQueryWatcher("(min-width: 992px)", function(matches) {
+
+		if (matches) {
+
+			gsap.to(imageLarge, {
+				duration: 1.2,
+				y: getPortfolioOffset(clientY)/3,
+				ease: "power3.out"
+			})
+
+			gsap.to(imageSmall, {
+				duration: 1.5,
+				y: getPortfolioOffset(clientY)/6,
+				ease: "power3.out"
+				})
+			} 
+
+
+
 	})
 }
 
@@ -93,5 +116,9 @@ function init(){
 }
 
 window.addEventListener('load', function(){
+    init();
+});
+
+window.addEventListener('resize', function(){
     init();
 });

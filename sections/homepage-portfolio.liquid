@@ -93,6 +93,12 @@
                 
                 {% for block in section.blocks %}
 
+
+                <div class="portfolio-item">
+                    <img data-src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" class="portfolio--item_image lazyload"/>
+
+
+
                     <a class='portfolio-link'
                     href="{{ block.settings.button_url }}"
                     data-color="{{ block.settings.background_colour }}"
@@ -100,10 +106,12 @@
                     data-imagesmall="{{ block.settings.imageTwo | img_url: 'master' }}"
                     >{{ block.settings.title }}
                     </a>
+                </div>
+
+
         
                  
                 {% endfor %}
-
 
                 </div>
 

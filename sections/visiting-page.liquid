@@ -14,6 +14,12 @@
                     "label": "Title"
                 },
                 {
+                    "type": "checkbox",
+                    "id": "enable_shop",
+                    "label": "Show shop illustration",
+                    "default": true
+                  },
+                {
                     "type": "textarea",
                     "id": "desc",
                     "label": "Description"
@@ -140,18 +146,38 @@
                     
 
                     <div class="title-area">
-                        {% if block.settings.opening_title != blank %}
-                            <h4>{{ block.settings.opening_title }}</h4>
-                        {% endif %}
-                    </div>
-                    
-                    {% if block.settings.opening_times != blank %}
-                        <div class="about-para">
-                            <p>
-                                {{ block.settings.opening_times }}
-                            </p>
+
+                        <div class="opening-hours-box">
+                            <div class="opening-hours-inner">
+
+                            {% if block.settings.enable_shop != false %}
+                                <div class="oh-image">
+                                    {% include 'inline-icon' with svg: 'hutch-logo.svg', alt: shop_title, class: 'illo-opening' %}
+                                </div>                                
+                            {% endif %}
+
+                                <div class="oh-text">
+
+                                    {% if block.settings.opening_title != blank %}
+                                    <h5>{{ block.settings.opening_title }}</h5>
+                                    {% endif %}
+                                    
+                                    {% if block.settings.opening_times != blank %}
+                                        <div class="about-para">
+                                            <p>
+                                                {{ block.settings.opening_times }}
+                                            </p>
+                                        </div>
+                                    {% endif %}
+
+                                </div>
+
+                            </div>
                         </div>
-                    {% endif %}
+              
+                    </div>
+
+
 				
 				</div>
 

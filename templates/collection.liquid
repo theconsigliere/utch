@@ -62,6 +62,74 @@
                 <div class="collection-illustration">
                   <img src="{{ 'terrarium.svg' | asset_url }}" class='illo'> 
                 </div>
+
+                {% when 'pots' %}
+                
+                <div class="collection_image_title">
+    
+                  <h3 class="">{{ collection.title }}</h3>
+                  <p class="">{{ collection.description }}</p>
+      
+                </div>
+
+                <div class="collection-illustration">
+                  <img src="{{ 'pots.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'hanging-planters' %}
+                
+                <div class="collection_image_title">
+    
+                  <h3 class="">{{ collection.title }}</h3>
+                  <p class="">{{ collection.description }}</p>
+      
+                </div>
+
+                <div class="collection-illustration">
+                  <img src="{{ 'hanging-planters.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'baskets' %}
+                
+                <div class="collection_image_title">
+    
+                  <h3 class="">{{ collection.title }}</h3>
+                  <p class="">{{ collection.description }}</p>
+      
+                </div>
+
+                <div class="collection-illustration">
+                  <img src="{{ 'baskets.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'plant-care' %}
+                
+                <div class="collection_image_title">
+    
+                  <h3 class="">{{ collection.title }}</h3>
+                  <p class="">{{ collection.description }}</p>
+      
+                </div>
+
+                <div class="collection-illustration">
+                  <img src="{{ 'plant-care.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'planters' %}
+                
+                <div class="collection_image_title">
+    
+                  <h3 class="">{{ collection.title }}</h3>
+                  <p class="">{{ collection.description }}</p>
+      
+                </div>
+
+                <div class="collection-illustration">
+                  <img src="{{ 'planters.svg' | asset_url }}" class='illo'> 
+                </div>
+                
+                
+                
                 
 
                 {% when 'low-light' %}
@@ -129,6 +197,19 @@
 
                 <div class="collection-illustration">
                   <img src="{{ 'easy-care.svg' | asset_url }}" class='illo'> 
+                </div>
+
+                {% when 'shoppers' %}
+
+                <div class="collection_image_title">
+    
+                  <h3 class="">{{ collection.title }}</h3>
+                  <p class="">{{ collection.description }}</p>
+      
+                </div>
+
+                <div class="collection-illustration">
+                  <img src="{{ 'shoppers.svg' | asset_url }}" class='illo'> 
                 </div>
 
                 {% when 'air-purifying' %}

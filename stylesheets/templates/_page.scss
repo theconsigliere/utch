@@ -1107,3 +1107,47 @@ section.hutch-section {
   }
 
 }
+
+// opening hours
+
+.opening-hours-box {
+  width: 100%;
+  border-radius: 15px;
+  background: #d8c6bd;
+
+  @media (min-width: #{$screen-lg}) {
+    width: fit-content;
+  }
+
+
+  .opening-hours-inner {
+    @include center-center;
+    width: 100%;
+    padding: 10px;
+
+    @media (min-width: #{$screen-lg}) {
+      width: fit-content;
+      margin: 0 10px;
+    }
+
+    .oh-image, .oh-text {
+      text-align: left;
+      padding: 10px;
+      margin: 0;
+
+      @media (min-width: #{$screen-xl}) {
+        margin: 0 25px;
+      }
+    }
+
+  }
+
+}
+
+.illo-opening {
+  width: 80px !important; 
+
+  @media (min-width: #{$screen-lg}) {
+    width: 120px !important; 
+  }
+}
