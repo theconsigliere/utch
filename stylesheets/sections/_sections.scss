@@ -1067,18 +1067,19 @@
 // Portfolio
 
 .portfolio-item {
-  width: 95%;
+  width: 45%;
   text-align: center;
   height: 25vh;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  margin: 10px 0;
+  margin: 5px;
   background: $dark-green;
 
   @media (min-width: #{$screen-lg}) {
     height: 8vh;
     margin: 0;
+    width: 95%;
     background: transparent;
   }
 }
@@ -1096,9 +1097,24 @@
 }
 
 .portfolio__categories {
-  @include center-center-column;
+  @include center-center;
   padding: 2em 0;
   position: relative;
+  flex-wrap: wrap;
+
+  @media (min-width: #{$screen-lg}) {
+    @include center-center-column;
+    flex-wrap: nowrap;
+  }
+
+  &:nth-child(odd) {
+    .portfolio-item {
+      &:last-of-type {
+        width: 90%;
+        display: flex;
+      }
+    }
+  }
 }
 
 .portfolio-link {
@@ -1112,6 +1128,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  // opacity: 1 !important;
 
   &:hover {
     color: $white;
@@ -1120,9 +1137,8 @@
   @media (min-width: #{$screen-lg}) {
     color: #485448;
     font-size: 5vh;
+    opacity: auto;
   }
-
-
 }
 
 .portfolio__categories a:hover {
@@ -1194,7 +1210,6 @@
 
 .category-item-group {
   padding-bottom: 2em;
-  
 }
 
 #insta-feed {

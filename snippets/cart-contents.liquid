@@ -15,10 +15,14 @@
 
                 <div class="cart-totals">
 
-                    <div class="grid__item medium-up--one-half cart-note">
-                        <label for="CartSpecialInstructions" class="cart-note__label small--text-center">{{ 'cart.general.note' | t }}</label>
-                        <textarea name="note" id="CartSpecialInstructions" class="cart-note__input">{{ cart.note }}</textarea>
-                      </div>
+
+
+                    <details class='grid__item medium-up--one-half cart-note'>
+                        <summary> <label for="CartSpecialInstructions" class="cart-note__label small--text-center">{{ 'cart.general.note' | t }}</label></summary>
+                        <div class="content">
+                            <textarea name="note" id="CartSpecialInstructions" class="cart-note__input">{{ cart.note }}</textarea>
+                        </div>
+                    </details>
                       
                     <div class="subtotal-line">
                         <p class="">{{ 'cart.filled.subtotal' | t }}</p>

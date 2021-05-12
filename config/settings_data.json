@@ -352,13 +352,13 @@
           "8a9d1836-8e2c-476d-b795-e309fe94450a": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Image_153.png"
+              "image": "shopify:\/\/shop_images\/BBC-logo.jpg"
             }
           },
           "df6fac6f-bbc1-42cd-a8a0-f76a3dcae0e9": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Mask_Group_93.png"
+              "image": "shopify:\/\/shop_images\/stylist_logo_black.png"
             }
           }
         },
@@ -575,7 +575,7 @@
               "deliverypricetwo": "£4.95",
               "delivery_colorthree": "#d7e4d7",
               "deliveryoptionthree": "Click & Collect",
-              "deliveryareathree": "Customers are able to collect their orders for free from our Exeter store. You will be sent a notification email once your order is ready to collect; please have this with you when you pop along to collect your order. <p> <br> During Lockdown 3.0, we are open for collections 10am-3pm Monday, Wednesday and Saturday. For collections outside of these hours, please contact us in advance of placing your order.<\/p>",
+              "deliveryareathree": "Customers are able to collect their orders for free from our Exeter store. You will be sent a notification email once your order is ready to collect; please have this with you when you pop along to collect your order. <p> <br> Ahead of reopening on the 12th April, we will be open for click and collect on Weds 31\/03 10am - 3pm, Sat 03\/04 10am - 2pm, Mon 05\/04 10am - 3pm, Fri 09\/04 10am - 3pm and Sat 10\/04 10am - 3pm.<\/p>",
               "deliverypricethree": "Free",
               "delivery_colorfour": "#ded0d0",
               "deliveryoptionfour": "Free Shipping",
@@ -847,7 +847,7 @@
               "enable_shop": true,
               "desc": "Situated on Paris St, in the heart of Exeter, we are a stone’s throw from the \nBampfylde Street and Princesshay car parks. We are also located next to the \nbus station and many of the park and ride buses stop opposite the shop.",
               "opening_title": "Opening Hours",
-              "opening_times": "<p><strong>Monday - Friday: 10am - 5pm<\/strong><\/p><p><strong>Saturday: 10am - 6pm<\/strong><\/p><p><strong>Sundays: 11am - 3pm<\/strong><\/p><p><strong>Thurs 24th Dec: 10am - 2pm<\/strong><\/p><p><strong>25th Dec - 3rd Jan: CLOSED<\/strong><\/p>"
+              "opening_times": "<p><strong>Monday - Friday: 10am - 5pm<\/strong><\/p><p><strong>Saturday: 10am - 6pm<\/strong><\/p><p><strong>Sundays: CLOSED<\/strong><\/p>"
             }
           },
           "935aad5a-0efe-4e7e-b041-6632056d97b5": {
@@ -866,8 +866,8 @@
           "fe71a826-0451-467b-af3f-ac74524a4dd9": {
             "type": "info-block",
             "settings": {
-              "title": "Christmas Update",
-              "desc": "<p>We are open every day until Christmas Eve when we will close at 2pm. We will then be closed until the 4th January 2021. <\/p><p>Our website will remain live throughout the Christmas period for all your plant shopping needs, and any orders placed after 23rd December 2020 will be shipped on the 4th January.<\/p><p><span style=\"text-decoration:underline\">National Shipping<\/span><\/p><p>We ship all of our national orders using the Royal Mail Tracked 48 service. Whilst this means that orders should be expected to arrive arrive 2 days after shipping, during the Christmas period, and with the COVID-19 pandemic, we are advising customers to anticipate some delays.<\/p><p>As a result, we recommend placing any orders for Christmas as soon as possible and no later than Sunday 20th December, to give us the best chance of getting your plants to you or your loved ones before the big day! <\/p><p><span style=\"text-decoration:underline\">Local Deliveries<\/span><\/p><p>Our last local deliveries will take place on 23rd December. Again, we recommend getting any orders in as soon as possible and no later than Sunday 20th December to ensure we can get your plants to you before the big day! <\/p>",
+              "title": "COVID Update",
+              "desc": "<p>Following the reopening of our shop on the 12th April, we wanted to let you know what we&#x27;re putting in place to ensure that everyone who visits us has a safe and comfortable experience.<\/p><p><span style=\"text-decoration:underline\">Visiting Us<\/span><\/p><p>If you are planning on heading in to our Exeter shop, we cannot wait to welcome you in! During your visit, we ask that you please:<\/p><p>Wear a face covering at all times in the shop.<\/p><p>Use the hand sanitiser provided at the entrance before entering. <\/p><p>We are limiting numbers to 6 customers in store at any one time.<\/p><p>We will not be accepting cash at present - please pay be contactless or card.<\/p><p>Keep your distance and respect the space of other customers and staff in store, so that everyone can have an enjoyable experience.<\/p><p><span style=\"text-decoration:underline\">Deliveries and Click &amp; Collect<\/span><\/p><p>If you are unable to make it in to us, or feel uncomfortable heading into town, we are continuing to offer nationwide shipping, local deliveries and a click &amp; collect service. <\/p><p>You can browse our online shop from the comfort of your own home, or give us a call and we&#x27;ll see what we can do over the phone.<\/p><p><\/p>",
               "info_image": "shopify:\/\/shop_images\/Image_112_2.jpg"
             }
           }

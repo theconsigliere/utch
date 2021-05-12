@@ -238,7 +238,7 @@
 
           </div>
 
-          <div class="all-collection-topper">
+          <div class="all-collection-topper" id='collection-filter'>
 
 
             <div class="topper-inner">
@@ -256,11 +256,11 @@
                 <ul class="subnav clearfix">
                   <li{% unless current_tags %} class="active"{% endunless %}>
                     {% if collection.handle %}
-                    <a class='font-bolder' href="/collections/{{ collection.handle }}{% if collection.sort_by %}?sort_by={{ collection.sort_by }}{% endif %}">All</a>
+                    <a class='font-bolder' href="/collections/{{ collection.handle }}{% if collection.sort_by %}?sort_by={{ collection.sort_by }}{% endif %}#collection-filter">All</a>
                     {% elsif collection.current_type %}
-                    <a class='font-bolder' href="{{ collection.current_type | url_for_type | sort_by: collection.sort_by }}">All</a>
+                    <a class='font-bolder' href="{{ collection.current_type | url_for_type | sort_by: collection.sort_by }}#collection-filter">All</a>
                     {% elsif collection.current_vendor %}
-                    <a class='font-bolder' href="{{ collection.current_vendor | url_for_vendor | sort_by: collection.sort_by }}">All</a>
+                    <a class='font-bolder' href="{{ collection.current_vendor | url_for_vendor | sort_by: collection.sort_by }}#collection-filter">All</a>
                     {% endif %}
                   </li>
                   {% for tag in collection.all_tags %}
@@ -270,7 +270,14 @@
                   </li>
                   {% else %}
                   <li>
-                    {{ tag | link_to_tag: tag }}
+                    
+                   {%- comment -%} 
+                   <p>{{ tag }}</p>
+
+                   link through to collection-filter after reloading page, see id above
+                   
+                   {{ tag | link_to_tag: tag }}{%- endcomment -%}
+                    <a href="/collections/{{ collection.handle }}/{{ tag | handleize }}?sort_by=#collection-filter" title="Show products matching tag {{ tag }}">{{ tag }}</a>
                   </li>
                   {% endif %}
                   {% endfor %}
