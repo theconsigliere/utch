@@ -1,0 +1,67 @@
+.giftcard__header.text-center {
+    text-align: center;
+    position: initial;
+}
+
+.template-giftcard {
+    height: 100vh;
+}
+
+
+
+.giftcard-wrapper {
+    margin-top: 10vh;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    border: 5px solid $green;
+    border-radius: 25px;
+    background: #d0bb94;
+}
+
+.h1.giftcard__amount.giftcard__amount--medium {
+    text-align: center;
+    margin: 10px 0;
+    color: $dark-green;
+}
+
+input#GiftCardDigits {
+    text-align: center;
+    border: 5px solid $green;
+}
+
+.giftcard__code {
+    margin-bottom: 1em;
+}
+
+.gc-disclaim {
+    text-align: center;
+}
+
+ul.giftcard-action-list.text-center {
+    @include center-between;
+    padding: 0;
+
+    li {
+        &:before {
+            content:'';
+        }
+    }
+}
+
+li.giftcard-action-list__item {
+    margin: 0;
+
+    button.button.btn--secondary.print-link {
+        border: 3px solid $dark-green;
+
+        &:hover {
+            border: 3px solid $brown;
+        }
+    }
+}
+
+.giftcard__amount.money {
+    font-weight: bolder;
+    color: $dark-green;
+} 

@@ -567,7 +567,7 @@
               "title": "Delivery information",
               "deliveryoption": "Local Delivery",
               "delivery_color": "#d7e4d7",
-              "deliveryarea": "Residents living within 5 miles of our Exeter store, simply select Local Delivery at the checkout. Once your order is placed, you will be contacted to notify you of a delivery day. <p> <br>Please note, there are a limited number of local slots available; specific time requests are not always possible. <\/p><p> <br>Delivery instructions are provided at your own risk and discretion. Hutch cannot accept liability for any parcels left in accordance with any specific instructions (e.g leave outside or with neighbour)<\/p>",
+              "deliveryarea": "Residents living within 5 miles of our Exeter store, simply select Local Delivery at the checkout. <p> <br> Please note, there are a limited number of local slots available; specific time requests are not always possible. <\/p><p> <br>Delivery instructions are provided at your own risk and discretion. Hutch cannot accept liability for any parcels left in accordance with any specific instructions (e.g leave outside or with neighbour)<\/p>",
               "deliveryprice": "£2.50",
               "delivery_colortwo": "#d7e4d7",
               "deliveryoptiontwo": "UK Delivery via Royal Mail",
@@ -575,11 +575,11 @@
               "deliverypricetwo": "£4.95",
               "delivery_colorthree": "#d7e4d7",
               "deliveryoptionthree": "Click & Collect",
-              "deliveryareathree": "Customers are able to collect their orders for free from our Exeter store. You will be sent a notification email once your order is ready to collect; please have this with you when you pop along to collect your order. <p> <br> During Lockdown 2.0, we are open for collections 11am-3pm Monday, Wednesday and Friday. For collections outside of these hours, please contact us in advance of placing your order.<\/p>",
+              "deliveryareathree": "Customers are able to collect their orders for free from our Exeter store. You will be sent a notification email once your order is ready to collect; please have this with you when you pop along to collect your order. <p> <br> During Lockdown 3.0, we are open for collections 10am-3pm Monday, Wednesday and Saturday. For collections outside of these hours, please contact us in advance of placing your order.<\/p>",
               "deliverypricethree": "Free",
               "delivery_colorfour": "#ded0d0",
-              "deliveryoptionfour": "Christmas Shipping Deadlines",
-              "deliveryareafour": "We recommend placing any Christmas orders by Sunday 20th December at the latest for the best chance of our plants arriving in time for Christmas Day. Our last local deliveries will run on 23rd December. Any orders after the 23rd December will be shipped on the 4th January.",
+              "deliveryoptionfour": "Free Shipping",
+              "deliveryareafour": "All orders over £35 are eligible for free shipping with discount code FREESHIP35.",
               "deliverypricefour": ""
             }
           }
@@ -844,9 +844,10 @@
             "type": "page-header",
             "settings": {
               "title": "Visiting Us",
+              "enable_shop": true,
               "desc": "Situated on Paris St, in the heart of Exeter, we are a stone’s throw from the \nBampfylde Street and Princesshay car parks. We are also located next to the \nbus station and many of the park and ride buses stop opposite the shop.",
               "opening_title": "Opening Hours",
-              "opening_times": "<p>Monday - Friday: 10am - 5pm<br\/>Saturday: 10am - 6pm<br\/>Sundays: 11am - 3pm<\/p>"
+              "opening_times": "<p><strong>Monday - Friday: 10am - 5pm<\/strong><\/p><p><strong>Saturday: 10am - 6pm<\/strong><\/p><p><strong>Sundays: 11am - 3pm<\/strong><\/p><p><strong>Thurs 24th Dec: 10am - 2pm<\/strong><\/p><p><strong>25th Dec - 3rd Jan: CLOSED<\/strong><\/p>"
             }
           },
           "935aad5a-0efe-4e7e-b041-6632056d97b5": {
@@ -907,12 +908,22 @@
               "hutch_title": "Planting trees through our new paper bag tax",
               "hutch_desc": "We’re happy to announce that we’ve partnered with One Tree Planted\nto plant trees! One Tree Planted is a nonprofit dedicated to global reforestation."
             }
+          },
+          "1c6b8cd8-5deb-4560-bb57-d5c5a3f8d81e": {
+            "type": "counter",
+            "settings": {
+              "hutch_image": "shopify:\/\/shop_images\/Path_1_832ecf9b-937a-4306-bd61-095cecd7e81e.png",
+              "hutch_title": "Together we have planted:",
+              "hutch_desc": "",
+              "hutch_counter": "260 trees"
+            }
           }
         },
         "block_order": [
           "44ee8573-3130-4df7-9394-21d7cc3a126c",
           "9c89e44f-f8fb-4761-bbeb-fa1fff14d353",
-          "75e4955c-b119-4b18-9ab1-c9d730a5ea59"
+          "75e4955c-b119-4b18-9ab1-c9d730a5ea59",
+          "1c6b8cd8-5deb-4560-bb57-d5c5a3f8d81e"
         ],
         "settings": {
           "textintro": "One Tree Planted",

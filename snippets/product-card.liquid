@@ -31,7 +31,16 @@
         <div class="card-info">
             <div class="card-info-top">
                 <div class="product-title">
-                    <p class="small-p c">{{ latin | strip_html }}</p>
+
+
+
+                    {% if product.template_suffix == 'accessories' %}
+
+                    {% else %}
+                    <p class="small-p c">{{ latin | strip_html }}</p>   
+                    {% endif %}
+
+                       
                     <p class="font-bolder">{{ product.title }}</p>
                 </div>
                 <div class="product-price">
